@@ -1,8 +1,18 @@
+# ignore non-proprietary plugins
 wp-content/plugins/sfwd-lms/
 wp-content/plugins/astra-addon/
 wp-content/plugins/astra-sites/
 wp-content/plugins/bbpress/
 wp-content/plugins/advanced-custom-fields/
+wp-content/plugins/design-upgrade-learndash/
+wp-content/plugins/disable-wp-rest-api/
+wp-content/plugins/gdpr-cookie-compliance/
+wp-content/plugins/elementor/
+wp-content/plugins/group-comments-for-learndash/
+wp-content/plugins/header-footer-elementor/
+wp-content/plugins/learndash-bbpress/
+wp-content/plugins/learndash-course-grid/
+wp-content/plugins/loco-translate/
 wp-content/uploads/
 wp-content/ai1wm-backups/
 wp-content/upgrade/
@@ -19,6 +29,14 @@ index.php
 wp-load.php
 wp-blog-header.php
 wp-settings.php
+wp-activate.php
+wp-links-opml.php
+wp-comments-post.php
+wp-login.php
+wp-trackback.php
+xmlrpc.php
+license.txt
+readme.html
 
 # ignore node dependency directories
 node_modules/
