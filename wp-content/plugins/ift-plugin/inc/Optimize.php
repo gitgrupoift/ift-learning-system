@@ -15,6 +15,9 @@ class Optimize {
     
     public function __construct() {   
         
+        add_filter( 'script_loader_src', array($this, '_remove_script_version'), 15, 1 );
+        add_filter( 'style_loader_src', array($this, '_remove_script_version'), 15, 1 );
+        
         $this->wp_head_cleanup();
         
     }
@@ -32,5 +35,10 @@ class Optimize {
         remove_action('wp_head', 'adjacent_posts_rel_link');
         
     }
+    
+    public function _remove_script_version( $src ){ 
+        $parts = explode( '?', $src ); 	
+        return $parts[0]; 
+    } 
 
 }
