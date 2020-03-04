@@ -1,0 +1,7 @@
+# Sublime files
+*.sublime-workspace
+*.sublime-project
+
+# Language files
+*.po
+*.mo

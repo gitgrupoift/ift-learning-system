@@ -1,0 +1,89 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Widget Areas for LearnDash\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-28 15:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#. Description of the plugin
+msgid ""
+"Adds multiple widget areas throughout the LearnDash interface. This plugin "
+"enables you to add unlimited widgets to several areas of Focus Mode & "
+"LearnDash course pages."
+msgstr ""
+
+#: inc/register-sidebars.php:42
+msgid ""
+"At the bottom of the sidebar of all Focus Mode pages, after the navigation."
+msgstr ""
+
+#: inc/register-sidebars.php:94
+msgid "At the very bottom of course pages, after the course content listing."
+msgstr ""
+
+#: inc/register-sidebars.php:81
+msgid ""
+"At the very top of course pages, just below the page title & before any "
+"course status or content."
+msgstr ""
+
+#: inc/register-sidebars.php:55
+msgid ""
+"At the very top of Focus Mode page content, directly above the page title."
+msgstr ""
+
+#: inc/register-sidebars.php:68
+msgid ""
+"Below all Focus Mode content. In between next/previous navigation &amp; "
+"comments (if enabled)."
+msgstr ""
+
+#. Author of the plugin
+msgid "Escape Creative"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://escapecreative.com/"
+msgstr ""
+
+#: inc/register-sidebars.php:29
+msgid "In the sidebar of all Focus Mode pages, just before the navigation."
+msgstr ""
+
+#: inc/register-sidebars.php:93
+msgid "LD Course: Content: End"
+msgstr ""
+
+#: inc/register-sidebars.php:80
+msgid "LD Course: Content: Start"
+msgstr ""
+
+#: inc/register-sidebars.php:67
+msgid "LD Focus Mode: Below Content"
+msgstr ""
+
+#: inc/register-sidebars.php:54
+msgid "LD Focus Mode: Content: Start"
+msgstr ""
+
+#: inc/register-sidebars.php:41
+msgid "LD Focus Mode: Sidebar: After Navigation"
+msgstr ""
+
+#: inc/register-sidebars.php:28
+msgid "LD Focus Mode: Sidebar: Before Navigation"
+msgstr ""
+
+#. Name of the plugin
+msgid "Widget Areas for LearnDash"
+msgstr ""

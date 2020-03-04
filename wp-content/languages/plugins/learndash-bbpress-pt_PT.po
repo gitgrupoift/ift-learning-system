@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnDash LMS - bbPress Integration\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 16:02+0000\n"
+"PO-Revision-Date: 2020-02-19 16:04+0000\n"
+"Last-Translator: carlos <geral@meuppt.pt>\n"
+"Language-Team: Português\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: learndash-bbpress.php:168
+msgid "All"
+msgstr ""
+
+#: learndash-bbpress.php:169
+msgid "Any"
+msgstr ""
+
+#: learndash-bbpress.php:146
+msgid "Associated Course(s)"
+msgstr "Formações Associadas"
+
+#: includes/functions.php:158
+msgid "Associated Courses"
+msgstr "Formação Associada"
+
+#: learndash-bbpress.php:187
+msgid ""
+"Check this box to allow non-enrolled users to view forum threads and topics "
+"(they will not be able to post replies)."
+msgstr ""
+
+#: learndash-bbpress.php:161
+msgid "Clear All"
+msgstr "Limpar Tudo"
+
+#: includes/class-course-forum-widget.php:9
+#: includes/class-course-forum-widget.php:11
+msgid "Course Forum"
+msgstr "Fórum da Formação"
+
+#: includes/class-forum-course-widget.php:14
+msgid ""
+"Display courses links that belong to a particular forum. This widget will be "
+"displayed only on bbpress pages."
+msgstr ""
+
+#: includes/class-forum-course-widget.php:18
+msgid "Forum Course"
+msgstr ""
+
+#: learndash-bbpress.php:184
+msgid "Forum View"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.learndash.com"
+msgstr ""
+
+#: learndash-bbpress.php:171
+msgid ""
+"If you select ALL, then users must have access to all of the associated "
+"courses in order to post."
+msgstr ""
+
+#: learndash-bbpress.php:172
+msgid ""
+"If you select ANY, then users only need to have access to any one of the "
+"selected courses in order to post."
+msgstr ""
+
+#. Author of the plugin
+msgid "LearnDash"
+msgstr ""
+
+#: learndash-bbpress.php:116
+msgid "LearnDash bbPress Settings"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"LearnDash integration with the bbPress plugin that allows to create private "
+"forums for user's enrolled to a course."
+msgstr ""
+
+#. Name of the plugin
+msgid "LearnDash LMS - bbPress Integration"
+msgstr ""
+
+#: includes/class-translations-ld-bbpress.php:16
+msgid "LearnDash Notifications"
+msgstr ""
+
+#: learndash-bbpress.php:177
+msgid "Message shown to users without access"
+msgstr ""
+
+#: learndash-bbpress.php:61
+msgid ""
+"Please activate BBPress & Learndash plugins before activation LearnDash - "
+"BBPress integration."
+msgstr ""
+
+#: learndash-bbpress.php:166
+msgid "Post Limit Access"
+msgstr "Limite de Postagens"
+
+#: learndash-bbpress.php:149
+msgid "Select Courses"
+msgstr "Selecionar Formações"
+
+#: learndash-bbpress.php:127
+msgid "This forum is restricted to members of the associated course(s)."
+msgstr "Este fórum é restrito a formandos do curso associado."
+
+#: includes/class-forum-course-widget.php:30
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-course-forum-widget.php:103
+msgid "Title:"
+msgstr "Título:"
