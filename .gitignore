@@ -1,18 +1,24 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
-
-# ignore these plugins
-wp-content/plugins/hello.php
+wp-content/plugins/sfwd-lms/
+wp-content/plugins/astra-addon/
+wp-content/plugins/astra-sites/
+wp-content/plugins/bbpress/
+wp-content/plugins/advanced-custom-fields/
+wp-content/uploads/
+wp-content/ai1wm-backups/
+wp-content/upgrade/
 
 # ignore specific themes
 wp-content/themes/twenty*/
+
+# ignore Wordpress core
+wp-admin/
+wp-includes/
+.htaccess
+wp-config.php
+index.php
+wp-load.php
+wp-blog-header.php
+wp-settings.php
 
 # ignore node dependency directories
 node_modules/
