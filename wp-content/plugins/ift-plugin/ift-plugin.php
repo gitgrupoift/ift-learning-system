@@ -19,6 +19,7 @@ use IFT\Optimize;
 use IFT\Security;
 use IFT\Bbpress;
 use IFT\Backend;
+use IFT\Customizer;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -33,6 +34,9 @@ new Security();
 new Rest();
 new Bbpress();
 new Optimize();
+
+
+add_action('after_setup_theme', 'override_theme', 999);
 
 /**
  * Redirect non-admins to the homepage after logging into the site.

@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-03-04 15:46+0000\n"
+"PO-Revision-Date: 2020-03-05 03:40+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -1754,6 +1754,8 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:344
 msgid "Add a list of needed documents or URLs. This field supports HTML."
 msgstr ""
+"Adicione uma lista dos documentos ou URLs necessários. Este campo suporta "
+"HTML."
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-display-content.php:189
@@ -2698,6 +2700,8 @@ msgid ""
 "enrollment, or integration (shopping cart or membership) enrollment. No "
 "enrollment button will be displayed, unless a URL is set (optional)."
 msgstr ""
+"A formação apenas pode ser acedida com a inscrição pelo Grupo IFT ou "
+"integrações e parceiros. Não será mostrado botão para inscrição na página."
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-access-settings.php:346
@@ -5027,7 +5031,7 @@ msgstr "Inserir Shortcode"
 
 #: includes/settings/settings-fields/class-ld-settings-fields-media-upload.php:69
 msgid "remove image"
-msgstr ""
+msgstr "remover imagem"
 
 #: includes/settings/settings-fields/class-ld-settings-fields-media-upload.php:69
 msgctxt "placeholder: clear image"
@@ -6390,7 +6394,7 @@ msgstr ""
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:86
 msgctxt "placeholder: Course"
 msgid "%s Auto-enrollment"
-msgstr ""
+msgstr "Autoinscrição na formação"
 
 #. translators: placeholder: courses, course.
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:91
@@ -9423,7 +9427,7 @@ msgstr "Ver todos os documentos"
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:66
 msgctxt "placeholder: Lesson"
 msgid "Click the '+' to add a new %s"
-msgstr ""
+msgstr "Clique em \"+\" para adicionar uma nova aula"
 
 #. translators: placeholder: Topic.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:73
@@ -9447,7 +9451,7 @@ msgstr "Solte a %s Aqui"
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:95
 msgctxt "placeholder: Lesson, Topics"
 msgid "Drop %1$s %2$s Here"
-msgstr ""
+msgstr "Solte Aulas e Tópicos Aqui"
 
 #. translators: placeholder: Quizzes.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:103
@@ -9459,7 +9463,7 @@ msgstr ""
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:111
 msgctxt "placeholder: Lesson, Quizzes"
 msgid "Drop %1$s %2$s Here"
-msgstr ""
+msgstr "Solte Aulas e Tópicos Aqui"
 
 #. translators: placeholder: Topic, Quizzes.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:118
@@ -9558,7 +9562,7 @@ msgstr "Ver a %s (nova janela)"
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:734
 msgctxt "placeholders: Lesson, Course"
 msgid "Remove %1$s from %2$s"
-msgstr ""
+msgstr "Remover aula da formação"
 
 #. translators: placeholder: Topic.
 #. translators: placeholder: placeholder: Topic.
@@ -10674,7 +10678,7 @@ msgstr "Adicionar Conteúdo"
 #: includes/admin/class-learndash-admin-menus-tabs.php:1255
 msgctxt "Content type, e.g. lesson"
 msgid "or add an existing one from the sidebar"
-msgstr ""
+msgstr "ou adicione uma existente a partir da barra lateral"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1256
 msgctxt "Type of essay answer"
@@ -11995,6 +11999,8 @@ msgstr ""
 msgid ""
 "ANY (default) - The student must complete at least one of the prerequisites"
 msgstr ""
+"QUALQUER (padrão) - O aluno precisa de completar ao menos um dos pré-"
+"requisitos"
 
 #: includes/class-ld-lms.php:1534
 msgid "ALL - The student must complete all the prerequisites"
@@ -12569,13 +12575,13 @@ msgstr "Selecione um Rótulo para a Aula"
 #: includes/class-ld-lms.php:3979
 msgctxt "placeholder: Lesson"
 msgid "Search or select a %s"
-msgstr ""
+msgstr "Procurar ou selecionar uma aula"
 
 #. translators: placeholder: Lesson.
 #: includes/class-ld-lms.php:3987
 msgctxt "placeholder: Lesson"
 msgid "Select a %s"
-msgstr ""
+msgstr "Selecionar uma aula"
 
 #: includes/class-ld-cpt.php:39
 msgctxt "placeholder: Post Name"
@@ -15086,7 +15092,7 @@ msgstr "É preciso definir um termo de busca para ordenar por relevância."
 #: includes/rest-api/v1/class-ld-rest-users-courses-controller.php:193
 #: includes/rest-api/v1/class-ld-rest-users-course-progress-controller.php:132
 msgid "You need to define an include parameter to order by include."
-msgstr ""
+msgstr "Precisa definir um parâmetro de inclusão para ordenar deste modo."
 
 #: includes/rest-api/v1/class-ld-rest-groups-courses-controller.php:299
 #: includes/rest-api/v1/class-ld-rest-users-groups-controller.php:306
@@ -16072,7 +16078,7 @@ msgstr "Você realizou as seguintes avaliações e testes:"
 #: themes/legacy/templates/course_info_shortcode.php:142
 msgctxt "placeholder: Quiz"
 msgid "Are you sure that you want to remove this %s item?"
-msgstr ""
+msgstr "Está seguro de que quer remover este item?"
 
 #: themes/legacy/templates/learndash_lesson_assignment_upload_form.php:34
 #: themes/ld30/templates/assignment/upload.php:43

@@ -920,9 +920,33 @@
         }
     },
     {
+        "Baloo 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Baloo Bhai": {
             "variants": [
                 "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Baloo Bhai 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
             ],
             "category": "display"
         }
@@ -944,9 +968,33 @@
         }
     },
     {
+        "Baloo Bhaina 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Baloo Chettan": {
             "variants": [
                 "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Baloo Chettan 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
             ],
             "category": "display"
         }
@@ -960,9 +1008,33 @@
         }
     },
     {
+        "Baloo Da 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Baloo Paaji": {
             "variants": [
                 "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Baloo Paaji 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
             ],
             "category": "display"
         }
@@ -976,6 +1048,18 @@
         }
     },
     {
+        "Baloo Tamma 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Baloo Tammudu": {
             "variants": [
                 "regular"
@@ -984,9 +1068,33 @@
         }
     },
     {
+        "Baloo Tammudu 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Baloo Thambi": {
             "variants": [
                 "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Baloo Thambi 2": {
+            "variants": [
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
             ],
             "category": "display"
         }
@@ -1191,6 +1299,32 @@
                 "regular"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Bellota": {
+            "variants": [
+                "300",
+                "300italic",
+                "regular",
+                "italic",
+                "700",
+                "700italic"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Bellota Text": {
+            "variants": [
+                "300",
+                "300italic",
+                "regular",
+                "italic",
+                "700",
+                "700italic"
+            ],
+            "category": "display"
         }
     },
     {
@@ -1591,6 +1725,17 @@
                 "900"
             ],
             "category": "sans-serif"
+        }
+    },
+    {
+        "Caladea": {
+            "variants": [
+                "regular",
+                "italic",
+                "700",
+                "700italic"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -3582,6 +3727,14 @@
         }
     },
     {
+        "Gotu": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Goudy Bookletter 1911": {
             "variants": [
                 "regular"
@@ -4176,6 +4329,19 @@
         }
     },
     {
+        "Inria Sans": {
+            "variants": [
+                "300",
+                "300italic",
+                "regular",
+                "italic",
+                "700",
+                "700italic"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Inria Serif": {
             "variants": [
                 "300",
@@ -4186,6 +4352,22 @@
                 "700italic"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Inter": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -4300,14 +4482,18 @@
         "Josefin Sans": {
             "variants": [
                 "100",
-                "100italic",
+                "200",
                 "300",
-                "300italic",
                 "regular",
-                "italic",
+                "500",
                 "600",
-                "600italic",
                 "700",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
                 "700italic"
             ],
             "category": "sans-serif"
@@ -4816,7 +5002,7 @@
             "variants": [
                 "regular"
             ],
-            "category": "sans-serif"
+            "category": "display"
         }
     },
     {
@@ -6809,6 +6995,20 @@
         }
     },
     {
+        "Oxanium": {
+            "variants": [
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Oxygen": {
             "variants": [
                 "300",
@@ -7931,7 +8131,10 @@
         "Ruda": {
             "variants": [
                 "regular",
+                "500",
+                "600",
                 "700",
+                "800",
                 "900"
             ],
             "category": "sans-serif"
@@ -8282,6 +8485,16 @@
                 "regular"
             ],
             "category": "handwriting"
+        }
+    },
+    {
+        "Sen": {
+            "variants": [
+                "regular",
+                "700",
+                "800"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -8643,6 +8856,22 @@
                 "700italic"
             ],
             "category": "monospace"
+        }
+    },
+    {
+        "Spartan": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
         }
     },
     {
@@ -9395,6 +9624,14 @@
                 "900"
             ],
             "category": "serif"
+        }
+    },
+    {
+        "Viaoda Libre": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
         }
     },
     {

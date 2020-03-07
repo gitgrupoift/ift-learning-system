@@ -1,5 +1,5 @@
 /**
- * Install Astra Starter Sites
+ * Install Starter Templates
  *
  *
  * @since 1.2.4
@@ -110,7 +110,7 @@
 					},
 				})
 				.done(function (result) {
-					
+
 					if( result.success ) {
 						var output  = '<a href="#" class="astra-deactivate-recommended-plugin" data-init="'+ $init +'" data-settings-link="'+ settingsLink +'" data-settings-link-text="'+ deactivateText +'" aria-label="'+ deactivateText +'">'+ deactivateText +'</a>';
 							output += ( typeof settingsLink === 'string' && settingsLink != 'undefined' ) ? '<a href="' + settingsLink +'" aria-label="'+ settingsLinkText +'">' + settingsLinkText +' </a>' : '';
@@ -121,12 +121,12 @@
 						$message.parent('.ast-addon-link-wrapper').parent('.astra-recommended-plugin').addClass('active');
 						$message.parents('.ast-addon-link-wrapper').html( output );
 
-						jQuery(document).trigger( 'ast-after-plugin-active', [astraSitesLink, activatedSlug] );
+						var starterSitesRedirectionUrl = astraSitesLink + result.data.starter_template_slug;
+						jQuery(document).trigger( 'ast-after-plugin-active', [starterSitesRedirectionUrl, activatedSlug] );
 
 					} else {
 
 						$message.removeClass( 'updating-message' );
-
 					}
 
 				});
@@ -228,7 +228,6 @@
 			});
 		},
 
-
 		/**
 		 * After plugin active redirect and deactivate activation notice
 		 */
@@ -236,15 +235,13 @@
 		{
 			event.preventDefault();
 
-			if ( activatedSlug.indexOf( 'astra-sites' ) >= 0 ) {
+			if ( activatedSlug.indexOf( 'astra-sites' ) >= 0 || activatedSlug.indexOf( 'astra-pro-sites' ) >= 0 ) {
 				if ( 'undefined' != typeof AstraNotices ) {
 			    	AstraNotices._ajax( 'astra-sites-on-active', '' );
 				}
 				window.location.href = astraSitesLink + '&ast-disable-activation-notice';
 			}
-
 		},
-
 	};
 
 	/**

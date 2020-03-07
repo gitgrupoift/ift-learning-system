@@ -68,7 +68,8 @@ endif; ?>
 						echo wp_kses_post( get_avatar( $user_id, 150 ) );
 						?>
 					</div> <!--/.ld-profile-avatar-->
-					<?php
+					<div class="ld-resuming"><?php echo do_shortcode('[uo_learndash_resume]'); ?></div>
+                    <?php
 					if ( ! empty( $current_user->user_lastname ) || ! empty( $current_user->user_firstname ) ) :
 						?>
 						<div class="ld-profile-heading">
