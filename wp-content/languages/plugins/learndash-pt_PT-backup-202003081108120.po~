@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-03-05 03:38+0000\n"
+"PO-Revision-Date: 2020-03-08 11:02+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -2149,7 +2149,7 @@ msgstr "%s"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:499
 msgid "Default maximum file size supported is controlled by your host."
-msgstr ""
+msgstr "Tamanho máximo de ficheiro suportado pelo seu host por defeito."
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:507
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:503
@@ -2250,6 +2250,8 @@ msgid ""
 "Controls how users interact with the content and their navigational "
 "experience"
 msgstr ""
+"Controla o modo com que os utilizadores interagem com o conteúdo e nele "
+"navegam"
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-navigation-settings.php:64
@@ -2361,7 +2363,7 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:31
 msgctxt "placeholder: quiz"
 msgid "Controls the requirement for accessing and completing the %s"
-msgstr ""
+msgstr "Controla os requisitos para aceder ou completar o questionário"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:235
 msgid "Passing Score"
@@ -2585,7 +2587,7 @@ msgstr "%s Definições de Acesso"
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-access-settings.php:34
 msgctxt "placeholder: course"
 msgid "Controls how users will gain access to the %s"
-msgstr ""
+msgstr "Controla o modo com que os utilizadores ganham acesso à formação"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-access-settings.php:79
 #: includes/class-ld-semper-fi-module.php:648
@@ -2917,7 +2919,7 @@ msgstr "Esta aula ficará disponível em uma data específica."
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-display-content.php:37
 msgctxt "placeholder: quiz"
 msgid "Controls how the %s will look and what will be displayed"
-msgstr ""
+msgstr "Controla o modo com que o questionário será exibido"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-display-content.php:307
 msgid "Display Back button"
@@ -5318,7 +5320,7 @@ msgstr "REST API"
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:33
 msgid "Control and customize the REST API endpoints."
-msgstr ""
+msgstr "Controla e customiza os endpoints da API."
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:87
 msgid "Enabled REST API"
@@ -6308,7 +6310,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:39
 msgid "Control the LearnDash Assignment Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Trabalho."
 
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:70
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:71
@@ -6352,7 +6354,7 @@ msgstr "%s Opções do CPT"
 #: includes/settings/settings-sections/class-ld-settings-section-courses-cpt.php:45
 msgctxt "placeholder: Course"
 msgid "Control the LearnDash %s Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Formação."
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-sections/class-ld-settings-section-courses-cpt.php:105
@@ -6509,7 +6511,7 @@ msgstr "%s Opções do CPT"
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-cpt.php:44
 msgctxt "placeholder: Quizzes"
 msgid "Control the LearnDash %s Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Questionário."
 
 #. translators: placeholder: Quiz.
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-cpt.php:104
@@ -7390,6 +7392,7 @@ msgstr "%s Opções do CPT"
 msgctxt "placeholder: Questions"
 msgid "<p>Control the LearnDash %s Custom Post Type Options.</p>"
 msgstr ""
+"<p>Controla as Opções Específicas do Tipo de Conteúdo Questionário.</p>"
 
 #. translators: placeholder: Quiz.
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-management-display.php:38
@@ -11999,6 +12002,8 @@ msgstr ""
 msgid ""
 "ANY (default) - The student must complete at least one of the prerequisites"
 msgstr ""
+"QUALQUER (padrão) - O aluno precisa de completar ao menos um dos pré-"
+"requisitos"
 
 #: includes/class-ld-lms.php:1534
 msgid "ALL - The student must complete all the prerequisites"

@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: LearnDash LMS - Notifications\n"
 "POT-Creation-Date: 2017-10-18 14:51+0700\n"
-"PO-Revision-Date: 2020-03-04 15:48+0000\n"
+"PO-Revision-Date: 2020-03-08 11:13+0000\n"
 "Last-Translator: carlos <geral@meuppt.pt>\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:109
 #: includes/meta-box.php:115
 msgid "Email trigger"
-msgstr ""
+msgstr "Gatilho do E-mail"
 
 #: ignore/learndash-notifications/includes/meta-box.php:110
 #: includes/meta-box.php:116
@@ -98,12 +98,12 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:114
 #: includes/meta-box.php:123
 msgid "User completes a course"
-msgstr ""
+msgstr "Utilizador completar uma formação"
 
 #: ignore/learndash-notifications/includes/meta-box.php:115
 #: includes/meta-box.php:124
 msgid "User completes a lesson"
-msgstr ""
+msgstr "Utilizador completar uma aula"
 
 #: ignore/learndash-notifications/includes/meta-box.php:116
 #: includes/meta-box.php:125
@@ -118,7 +118,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:118
 #: includes/meta-box.php:127
 msgid "User passes a quiz"
-msgstr ""
+msgstr "Utilizador ser aprovado num questionário"
 
 #: ignore/learndash-notifications/includes/meta-box.php:119
 #: includes/meta-box.php:128
@@ -128,7 +128,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:120
 #: includes/meta-box.php:129
 msgid "User completes a quiz"
-msgstr ""
+msgstr "Utilizador completar um questionário"
 
 #: ignore/learndash-notifications/includes/meta-box.php:121
 #: includes/meta-box.php:130
@@ -179,7 +179,7 @@ msgstr "Todas as Formações"
 #: ignore/learndash-notifications/includes/meta-box.php:142
 #: includes/meta-box.php:164
 msgid "Lesson"
-msgstr ""
+msgstr "Aula"
 
 #: ignore/learndash-notifications/includes/meta-box.php:143
 #: includes/meta-box.php:165
@@ -239,7 +239,7 @@ msgstr "Todos os Questionários"
 #: ignore/learndash-notifications/includes/meta-box.php:175
 #: includes/meta-box.php:200
 msgid "After how many days?"
-msgstr ""
+msgstr "Após quantos dias?"
 
 #: ignore/learndash-notifications/includes/meta-box.php:176
 #: ignore/learndash-notifications/includes/meta-box.php:186
@@ -253,27 +253,27 @@ msgstr ""
 #: includes/meta-box.php:202 includes/meta-box.php:212
 #: includes/meta-box.php:252
 msgid "day(s)"
-msgstr ""
+msgstr "dia(s)"
 
 #: ignore/learndash-notifications/includes/meta-box.php:185
 #: includes/meta-box.php:210
 msgid "Before how many days?"
-msgstr ""
+msgstr "Quantos dias antes?"
 
 #: ignore/learndash-notifications/includes/meta-box.php:205
 #: includes/meta-box.php:230
 msgid "Recipient"
-msgstr ""
+msgstr "Destinatário"
 
 #: ignore/learndash-notifications/includes/meta-box.php:206
 #: includes/meta-box.php:231
 msgid "Recipient of this email."
-msgstr ""
+msgstr "Destinatário deste e-mail"
 
 #: ignore/learndash-notifications/includes/meta-box.php:209
 #: includes/meta-box.php:235
 msgid "User"
-msgstr ""
+msgstr "Utilizador"
 
 #: ignore/learndash-notifications/includes/meta-box.php:210
 #: includes/meta-box.php:236
@@ -309,7 +309,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:397
 #: includes/meta-box.php:444
 msgid "Display user's email."
-msgstr ""
+msgstr "Mostra o e-mail do utilizador."
 
 #: ignore/learndash-notifications/includes/meta-box.php:398
 #: includes/meta-box.php:445
@@ -319,17 +319,17 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:399
 #: includes/meta-box.php:446
 msgid "Display user's first name."
-msgstr ""
+msgstr "Mostra o nome do utilizador."
 
 #: ignore/learndash-notifications/includes/meta-box.php:400
 #: includes/meta-box.php:447
 msgid "Display user's last name."
-msgstr ""
+msgstr "Mostra o apelido do utilizador."
 
 #: ignore/learndash-notifications/includes/meta-box.php:404
 #: includes/meta-box.php:455
 msgid "Display course title."
-msgstr ""
+msgstr "Mostrar o título da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:408
 #: includes/meta-box.php:460
@@ -380,7 +380,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:416
 #: includes/meta-box.php:468
 msgid "Display sum of points scored across all quizzes on the course."
-msgstr ""
+msgstr "Mostra a soma das pontuações em todos as avaliações da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:417
 #: includes/meta-box.php:469
@@ -414,12 +414,12 @@ msgstr "Mostrar o título do tópico."
 
 #: ignore/learndash-notifications/includes/meta-box.php:432
 msgid "Display time when the quiz is taken."
-msgstr ""
+msgstr "Mostra a hora em que o questionário foi feito."
 
 #: ignore/learndash-notifications/includes/meta-box.php:433
 #: includes/meta-box.php:488
 msgid "Display correct percentage of the quiz."
-msgstr ""
+msgstr "Mostra a porcentagem atingida no questionário."
 
 #: ignore/learndash-notifications/includes/meta-box.php:434
 #: includes/meta-box.php:489
@@ -440,12 +440,12 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:437
 #: includes/meta-box.php:492
 msgid "Display how long is taken to complete the quiz."
-msgstr ""
+msgstr "Mostrar quanto foi o tempo para completar a avaliação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:441
 #: includes/meta-box.php:496
 msgid "Display total points earned."
-msgstr ""
+msgstr "Mostra o total de horas acumuladas."
 
 #: ignore/learndash-notifications/includes/meta-box.php:442
 #: includes/meta-box.php:497
@@ -500,7 +500,7 @@ msgstr ""
 #: includes/notification.php:949
 #, php-format
 msgid "Comment: %s"
-msgstr ""
+msgstr "Comentário: %s"
 
 #: ignore/learndash-notifications/includes/notification.php:479
 #: includes/notification.php:950
@@ -538,7 +538,7 @@ msgstr "Adicionar Notificação"
 #: ignore/learndash-notifications/includes/post-type.php:16
 #: includes/post-type.php:16
 msgid "Edit Notification"
-msgstr ""
+msgstr "Editar Notificação"
 
 #: ignore/learndash-notifications/includes/post-type.php:17
 #: includes/post-type.php:17
@@ -558,7 +558,7 @@ msgstr "Procurar Notificação"
 #: ignore/learndash-notifications/includes/post-type.php:20
 #: includes/post-type.php:20
 msgid "No Notification found"
-msgstr ""
+msgstr "Nenhuma Notificação Encontrada"
 
 #: ignore/learndash-notifications/includes/post-type.php:21
 #: includes/post-type.php:21
@@ -616,12 +616,12 @@ msgstr "Notificação submetida."
 #: ignore/learndash-notifications/includes/post-type.php:74
 #: includes/post-type.php:74
 msgid "Notification draft updated."
-msgstr ""
+msgstr "Rascunho atualizado."
 
 #: ignore/learndash-notifications/includes/post-type.php:96
 #: includes/post-type.php:96
 msgid "Trigger"
-msgstr ""
+msgstr "Gatilho"
 
 #: ignore/learndash-notifications/includes/post-type.php:141
 #: includes/post-type.php:141
@@ -658,12 +658,12 @@ msgstr "Escolher o Gatilho"
 #: ignore/learndash-notifications/includes/shortcode.php:246
 #: includes/shortcode.php:281
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: ignore/learndash-notifications/includes/shortcode.php:246
 #: includes/shortcode.php:281
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: includes/admin/class-settings.php:133
 msgid "Add New"
@@ -705,11 +705,11 @@ msgstr ""
 
 #: includes/meta-box.php:451
 msgid "Display group title."
-msgstr ""
+msgstr "Mostra o título do grupo."
 
 #: includes/meta-box.php:456
 msgid "Display course URL."
-msgstr ""
+msgstr "Mostra o URL da formação."
 
 #: includes/meta-box.php:477
 msgid "Display lesson URL."
@@ -717,11 +717,11 @@ msgstr "Mostrar o URL da aula."
 
 #: includes/meta-box.php:482
 msgid "Display topic URL."
-msgstr ""
+msgstr "Mostra o URL do tópico."
 
 #: includes/meta-box.php:486
 msgid "Display quiz URL."
-msgstr ""
+msgstr "Mostra o URL do questionário."
 
 #: includes/meta-box.php:487
 msgid ""

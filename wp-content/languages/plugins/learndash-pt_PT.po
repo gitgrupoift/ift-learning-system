@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-03-05 03:40+0000\n"
+"PO-Revision-Date: 2020-03-08 11:08+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: includes/settings/settings-pages/class-ld-settings-page-certificate-shortcodes.php:36
 msgid "Certificate Shortcodes"
-msgstr ""
+msgstr "Shortcodes para Certificados"
 
 #: includes/settings/settings-pages/class-ld-settings-page-certificate-shortcodes.php:41
 msgid ""
@@ -1345,7 +1345,7 @@ msgstr ""
 #: includes/settings/settings-pages/class-ld-settings-page-addons.php:255
 msgctxt "Plugin installer section title"
 msgid "Changelog"
-msgstr ""
+msgstr "Log de Mudanças"
 
 #: includes/settings/settings-pages/class-ld-settings-page-addons.php:256
 msgctxt "Plugin installer section title"
@@ -1747,6 +1747,8 @@ msgstr ""
 msgctxt "placeholder: Course"
 msgid "Any content added below is displayed on the main %s page"
 msgstr ""
+"Qualquer conteúdo adicionado abaixo é mostrado na página principal da "
+"formação"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-display-content.php:178
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:352
@@ -2149,7 +2151,7 @@ msgstr "%s"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:499
 msgid "Default maximum file size supported is controlled by your host."
-msgstr ""
+msgstr "Tamanho máximo de ficheiro suportado pelo seu host por defeito."
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:507
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:503
@@ -2250,6 +2252,8 @@ msgid ""
 "Controls how users interact with the content and their navigational "
 "experience"
 msgstr ""
+"Controla o modo com que os utilizadores interagem com o conteúdo e nele "
+"navegam"
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-navigation-settings.php:64
@@ -2361,7 +2365,7 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:31
 msgctxt "placeholder: quiz"
 msgid "Controls the requirement for accessing and completing the %s"
-msgstr ""
+msgstr "Controla os requisitos para aceder ou completar o questionário"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:235
 msgid "Passing Score"
@@ -2585,7 +2589,7 @@ msgstr "%s Definições de Acesso"
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-access-settings.php:34
 msgctxt "placeholder: course"
 msgid "Controls how users will gain access to the %s"
-msgstr ""
+msgstr "Controla o modo com que os utilizadores ganham acesso à formação"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-access-settings.php:79
 #: includes/class-ld-semper-fi-module.php:648
@@ -2862,7 +2866,7 @@ msgstr "dia(s)"
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-access-settings.php:162
 msgctxt "placeholder: Course"
 msgid "Associated %s"
-msgstr ""
+msgstr "Formação Associada"
 
 #. translators: placeholder: Lesson.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-access-settings.php:176
@@ -2917,7 +2921,7 @@ msgstr "Esta aula ficará disponível em uma data específica."
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-display-content.php:37
 msgctxt "placeholder: quiz"
 msgid "Controls how the %s will look and what will be displayed"
-msgstr ""
+msgstr "Controla o modo com que o questionário será exibido"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-display-content.php:307
 msgid "Display Back button"
@@ -2962,6 +2966,7 @@ msgstr ""
 msgctxt "placeholder: Quiz"
 msgid "Any content added below is displayed on the %s page"
 msgstr ""
+"Qualquer conteúdo adicionado abaixo é mostrado na página do questionário"
 
 #. translators: placeholder: Quiz.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-display-content.php:436
@@ -3191,7 +3196,7 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:331
 msgctxt "placeholder: topic"
 msgid "Any content added below is displayed on the %s page"
-msgstr ""
+msgstr "Qualquer conteúdo adicionado abaixo é mostrado na página do tópico"
 
 #. translators: placeholder: Topic.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:373
@@ -3239,7 +3244,7 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:558
 msgctxt "placeholder: Topic"
 msgid "%s Timer"
-msgstr ""
+msgstr "Contador do Tópico"
 
 #. translators: placeholder: topic.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:566
@@ -5318,7 +5323,7 @@ msgstr "REST API"
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:33
 msgid "Control and customize the REST API endpoints."
-msgstr ""
+msgstr "Controla e customiza os endpoints da API."
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:87
 msgid "Enabled REST API"
@@ -6308,7 +6313,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:39
 msgid "Control the LearnDash Assignment Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Trabalho."
 
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:70
 #: includes/settings/settings-sections/class-ld-settings-section-assignments-cpt.php:71
@@ -6352,7 +6357,7 @@ msgstr "%s Opções do CPT"
 #: includes/settings/settings-sections/class-ld-settings-section-courses-cpt.php:45
 msgctxt "placeholder: Course"
 msgid "Control the LearnDash %s Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Formação."
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-sections/class-ld-settings-section-courses-cpt.php:105
@@ -6483,7 +6488,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/_class-ld-settings-section-lessons-display-order.php:116
 msgid "Choose the sort direction."
-msgstr ""
+msgstr "Escolha a forma de ordenação."
 
 #: includes/settings/settings-sections/_class-ld-settings-section-lessons-display-order.php:121
 msgid "Descending (default)"
@@ -6509,7 +6514,7 @@ msgstr "%s Opções do CPT"
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-cpt.php:44
 msgctxt "placeholder: Quizzes"
 msgid "Control the LearnDash %s Custom Post Type Options."
-msgstr ""
+msgstr "Controla as Opções Específicas do Tipo de Conteúdo Questionário."
 
 #. translators: placeholder: Quiz.
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-cpt.php:104
@@ -6891,7 +6896,7 @@ msgstr ""
 #: includes/settings/settings-sections/class-ld-settings-section-support-learndash.php:547
 #: includes/admin/_class-learndash-admin-settings-support-panel.php:961
 msgid "Assignment Upload Dir"
-msgstr ""
+msgstr "Diretório de Trabalhos Enviados"
 
 #: includes/settings/settings-sections/class-ld-settings-section-support-learndash.php:556
 #: includes/settings/settings-sections/class-ld-settings-section-support-learndash.php:584
@@ -7390,6 +7395,7 @@ msgstr "%s Opções do CPT"
 msgctxt "placeholder: Questions"
 msgid "<p>Control the LearnDash %s Custom Post Type Options.</p>"
 msgstr ""
+"<p>Controla as Opções Específicas do Tipo de Conteúdo Questionário.</p>"
 
 #. translators: placeholder: Quiz.
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-management-display.php:38
@@ -7573,7 +7579,7 @@ msgstr "Habilitar Progressão do Vídeo"
 #: includes/course/ld-course-video.php:45
 #: includes/course/ld-course-video.php:107
 msgid "Check this if you want to show a video as part of the progression."
-msgstr ""
+msgstr "Marque este campo se quer mostrar um vídeo como parte da progressão."
 
 #: includes/course/ld-course-video.php:51
 msgctxt "placeholder: Lesson, admin URL to [ld_video] shortcode."
@@ -9433,7 +9439,7 @@ msgstr "Clique em \"+\" para adicionar uma nova aula"
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:73
 msgctxt "placeholder: Topic"
 msgid "Click the '+' to add a new %s"
-msgstr ""
+msgstr "Clique em '+' para adicionar um novo tópico"
 
 #. translators: placeholder: Quiz.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:80
@@ -10100,7 +10106,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:574
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:579
 msgid "\"Different points for each answer\" enabled"
-msgstr ""
+msgstr "\"Pontuação diferente para cada resposta\" acionado"
 
 #: includes/admin/classes-posts-edits/class-learndash-admin-question-edit.php:763
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:576
@@ -12136,7 +12142,7 @@ msgstr ""
 
 #: includes/class-ld-lms.php:1667 includes/class-ld-lms.php:1855
 msgid "Check this if you want to make it mandatory to upload assignment"
-msgstr ""
+msgstr "Marque isto se quer tornar o upload do trabalho obrigatório"
 
 #: includes/class-ld-lms.php:1672 includes/class-ld-lms.php:1860
 msgid "Auto Approve Assignment"
@@ -12264,7 +12270,7 @@ msgstr ""
 #: includes/class-ld-lms.php:1831
 msgctxt "placeholders: topic, course"
 msgid "Associate this %s with a %s."
-msgstr ""
+msgstr "Associação deste tópico com uma aula."
 
 #: includes/class-ld-lms.php:1837 includes/class-ld-lms.php:2022
 #: includes/ld-assignment-uploads.php:1087
@@ -12356,7 +12362,7 @@ msgstr ""
 #: includes/class-ld-lms.php:2024
 msgctxt "Associate this quiz with a lesson."
 msgid "Associate this %s with a %s."
-msgstr ""
+msgstr "Associação deste questionário com uma aula."
 
 #: includes/class-ld-lms.php:2030
 msgctxt "Optionally associate a quiz with a certificate."
@@ -12488,7 +12494,7 @@ msgstr ""
 
 #: includes/class-ld-lms.php:2191
 msgid "Click the Export button below to export the transaction list."
-msgstr ""
+msgstr "Clique no botão de Exportar para exportar a lista de transações."
 
 #: includes/class-ld-lms.php:2776
 msgid "week(s)"
@@ -12866,7 +12872,7 @@ msgstr "É preciso nomear o modelo."
 
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Admin.php:192
 msgid "Cannot delete only answer"
-msgstr ""
+msgstr "Não é possível remover uma resposta única"
 
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Admin.php:196
 msgid "Today"
@@ -12875,7 +12881,7 @@ msgstr "Hoje"
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Admin.php:228
 msgctxt "Advanced Quiz"
 msgid "Advanced %s"
-msgstr ""
+msgstr "Questionário Avançado"
 
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Question.php:67
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Question.php:71
@@ -15701,11 +15707,11 @@ msgstr "%s página"
 
 #: includes/ld-assignment-uploads.php:81
 msgid "Assignment successfully deleted."
-msgstr ""
+msgstr "Trabalho deletado com sucesso."
 
 #: includes/ld-assignment-uploads.php:378
 msgid "Assignment successfully uploaded."
-msgstr ""
+msgstr "Trabalho transferido com sucesso."
 
 #: includes/ld-assignment-uploads.php:1017
 #: includes/ld-assignment-uploads.php:1292
@@ -15715,7 +15721,7 @@ msgstr "Trabalho"
 #: includes/ld-assignment-uploads.php:1082
 msgctxt "Associate with a course."
 msgid "Associate with a %s."
-msgstr ""
+msgstr "Associação com uma formação."
 
 #: includes/ld-assignment-uploads.php:1112
 #: includes/ld-assignment-uploads.php:1134
@@ -15953,7 +15959,7 @@ msgstr "Ver"
 #: themes/legacy/templates/learndash_lesson_assignment_uploads_list.php:72
 msgctxt "placeholder: commentd count"
 msgid "Comments (%d)"
-msgstr ""
+msgstr "Comentários (%d)"
 
 #: themes/legacy/templates/course_navigation_admin.php:100
 #: themes/legacy/templates/course_navigation_admin.php:134
