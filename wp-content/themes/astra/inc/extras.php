@@ -112,6 +112,15 @@ if ( ! function_exists( 'astra_body_classes' ) ) {
 			$classes[] = 'ast-header-custom-item-inside';
 		}
 
+		/**
+		 * Add class for header width
+		 */
+		$header_content_layout = astra_get_option( 'header-main-layout-width' );
+
+		if ( 'full' == $header_content_layout ) {
+			$classes[] = 'ast-full-width-primary-header';
+		}
+
 		return $classes;
 	}
 }

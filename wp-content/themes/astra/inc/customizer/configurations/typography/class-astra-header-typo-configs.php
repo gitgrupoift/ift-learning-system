@@ -79,41 +79,6 @@ if ( ! class_exists( 'Astra_Header_Typo_Configs' ) ) {
 
 			$configurations = array_merge( $configurations, $_configs );
 
-			// Learn More link if Astra Pro is not activated.
-			if ( ! defined( 'ASTRA_EXT_VER' ) ) {
-
-				$_configs = array(
-
-					/**
-					 * Option: Divider
-					 */
-					array(
-						'name'     => ASTRA_THEME_SETTINGS . '[ast-header-typography-more-feature-divider]',
-						'type'     => 'control',
-						'control'  => 'ast-divider',
-						'section'  => 'section-header-typo',
-						'priority' => 999,
-						'settings' => array(),
-					),
-
-					/**
-					 * Option: Learn More about Typography
-					 */
-					array(
-						'name'     => ASTRA_THEME_SETTINGS . '[ast-header-typography-more-feature-description]',
-						'type'     => 'control',
-						'control'  => 'ast-description',
-						'section'  => 'section-header-typo',
-						'priority' => 999,
-						'title'    => '',
-						'help'     => '<p>' . __( 'More Options Available for Typography in Astra Pro!', 'astra' ) . '</p><a href="' . astra_get_pro_url( 'https://wpastra.com/docs/typography-module/', 'customizer', 'learn-more', 'upgrade-to-pro' ) . '" class="button button-primary"  target="_blank" rel="noopener">' . __( 'Learn More', 'astra' ) . '</a>',
-						'settings' => array(),
-					),
-				);
-
-				$configurations = array_merge( $configurations, $_configs );
-			}
-
 			return $configurations;
 		}
 	}

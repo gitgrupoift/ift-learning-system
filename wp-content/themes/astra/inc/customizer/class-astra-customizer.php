@@ -101,6 +101,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			add_action( 'customize_register', array( $this, 'customize_register_panel' ), 2 );
 			add_action( 'customize_register', array( $this, 'customize_register' ) );
 			add_action( 'customize_save_after', array( $this, 'customize_save' ) );
+			add_action( 'wp_head', array( $this, 'preview_styles' ) );
 		}
 
 		/**
@@ -712,6 +713,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				}
 			}
 
+			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'astra-color-alpha' );
 
 			wp_enqueue_script( 'thickbox' );
@@ -846,10 +848,11 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			wp_enqueue_script( 'astra-customizer-preview-js', ASTRA_THEME_URI . 'assets/js/' . $dir . '/customizer-preview' . $js_prefix, array( 'customize-preview' ), ASTRA_THEME_VERSION, null );
 
 			$localize_array = array(
-				'headerBreakpoint'              => astra_header_break_point(),
-				'includeAnchorsInHeadindsCss'   => Astra_Dynamic_CSS::anchors_in_css_selectors_heading(),
-				'googleFonts'                   => Astra_Font_Families::get_google_fonts(),
-				'page_builder_button_style_css' => Astra_Dynamic_CSS::page_builder_button_style_css(),
+				'headerBreakpoint'                     => astra_header_break_point(),
+				'includeAnchorsInHeadindsCss'          => Astra_Dynamic_CSS::anchors_in_css_selectors_heading(),
+				'googleFonts'                          => Astra_Font_Families::get_google_fonts(),
+				'page_builder_button_style_css'        => Astra_Dynamic_CSS::page_builder_button_style_css(),
+				'elementor_default_color_font_setting' => Astra_Dynamic_CSS::elementor_default_color_font_setting(),
 			);
 
 			wp_localize_script( 'astra-customizer-preview-js', 'astraCustomizer', $localize_array );
@@ -938,6 +941,73 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 						}
 					}
 				}
+			}
+		}
+
+		/**
+		 * Customizer Preview icon CSS
+		 *
+		 * @since 1.0.0
+		 * @return void
+		 */
+		public function preview_styles() {
+			if ( is_customize_preview() ) {
+				echo '<style class="astra-custom-shortcut-edit-icons">
+					.customize-partial-edit-shortcut-astra-settings-footer-adv {
+						position: relative;
+					    top: -1em;
+					    left: -1.8em;
+					}
+					.customize-partial-edit-shortcut-astra-settings-breadcrumb-position .customize-partial-edit-shortcut-button{
+						top: -0.5em;
+					}
+					.ast-small-footer-section-1 .ast-footer-widget-1-area .customize-partial-edit-shortcut,
+					.ast-small-footer-section-2 .ast-footer-widget-2-area .customize-partial-edit-shortcut {
+						position: absolute;
+					    left: 47%;
+					}
+					.ast-small-footer-section-1.ast-small-footer-section-equally .ast-footer-widget-1-area .customize-partial-edit-shortcut,
+					.ast-small-footer-section-2.ast-small-footer-section-equally .ast-footer-widget-2-area .customize-partial-edit-shortcut {
+						position: absolute;
+					    left: 42%;
+					}
+					.ast-small-footer-section-1.ast-small-footer-section-equally .ast-footer-widget-1-area .ast-no-widget-row .customize-partial-edit-shortcut-astra-settings-footer-sml-section-1 {
+						position: absolute;
+					    left: 1em;
+					}
+					.ast-small-footer-section-2.ast-small-footer-section-equally .ast-footer-widget-2-area .ast-no-widget-row .customize-partial-edit-shortcut-astra-settings-footer-sml-section-2 {
+						left: 83.5%;
+					}
+					.ast-small-footer-section-1.ast-small-footer-section-equally .nav-menu .customize-partial-edit-shortcut-astra-settings-footer-sml-section-1 {
+						position: absolute;
+					    left: 1em;
+					}
+					.ast-small-footer-section-2.ast-small-footer-section-equally .nav-menu .customize-partial-edit-shortcut-astra-settings-footer-sml-section-2 {
+						position: absolute;
+					    left: 44.5%;
+					}
+					.ast-small-footer .ast-container .ast-small-footer-section-1 .footer-primary-navigation > .customize-partial-edit-shortcut,
+					.ast-small-footer .ast-container .ast-small-footer-section-2 .footer-primary-navigation > .customize-partial-edit-shortcut{
+						display: none;
+					}
+					.ast-small-footer .customize-partial-edit-shortcut-astra-settings-footer-sml-layout {
+						    position: absolute;
+						    top: 3%;
+						    left: 10%;
+					}
+					.customize-partial-edit-shortcut button:hover {
+						border-color: #fff;
+					}
+					.ast-main-header-bar-alignment .main-header-bar-navigation .customize-partial-edit-shortcut-button {
+						display: none;
+					}
+				</style>';
+				echo '<style class="astra-theme-custom-shortcut-edit-icons">
+					.ast-replace-site-logo-transparent.ast-theme-transparent-header .customize-partial-edit-shortcut-astra-settings-transparent-header-logo,
+					.ast-replace-site-logo-transparent.ast-theme-transparent-header .customize-partial-edit-shortcut-astra-settings-transparent-header-enable {
+					    z-index: 6;
+					}
+				</style>';
 			}
 		}
 	}

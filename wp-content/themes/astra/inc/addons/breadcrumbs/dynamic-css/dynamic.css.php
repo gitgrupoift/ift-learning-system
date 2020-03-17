@@ -48,7 +48,7 @@ function astra_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 			),
 			'.trail-items li::after'              => array(
 				'padding' => '0 0.3em',
-				'content' => '"»"',
+				'content' => '"\00bb"',
 			),
 			'.trail-items li:last-of-type::after' => array(
 				'display' => 'none',
@@ -111,7 +111,7 @@ function astra_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 	$css .= astra_parse_css(
 		array(
 			'.trail-items li::after' => array(
-				'content' => '"' . astra_get_option( 'breadcrumb-separator', '»' ) . '"',
+				'content' => '"' . astra_get_option( 'breadcrumb-separator', '\00bb' ) . '"',
 			),
 		),
 		'',

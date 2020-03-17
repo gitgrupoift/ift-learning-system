@@ -54,7 +54,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Configs' ) ) {
 							'description' => '<p><b>' . __( 'Helpful Information', 'astra' ) . '</b></p>',
 							'links'       => array(
 								array(
-									'text'  => __( 'Breadcrumb Overview', 'astra' ) . ' »',
+									'text'  => __( 'Breadcrumb Overview', 'astra' ) . ' &#187;',
 									'attrs' => array(
 										'href' => astra_get_pro_url( 'https://wpastra.com/docs/add-breadcrumbs-with-astra/', 'customizer', 'sidebar', 'helpful-information' ),
 									),
@@ -80,6 +80,10 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Configs' ) ) {
 						'astra_masthead_content'    => __( 'Inside Header', 'astra' ),
 						'astra_header_markup_after' => __( 'After Header', 'astra' ),
 						'astra_entry_top'           => __( 'Before Title', 'astra' ),
+					),
+					'partial'  => array(
+						'selector'            => '.ast-breadcrumbs-wrapper .ast-breadcrumbs .trail-items',
+						'container_inclusive' => false,
 					),
 				),
 
@@ -107,7 +111,7 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Configs' ) ) {
 					'type'            => 'control',
 					'control'         => 'text',
 					'section'         => 'section-breadcrumb',
-					'default'         => astra_get_option( 'breadcrumb-separator' ) ? astra_get_option( 'breadcrumb-separator' ) : '»',
+					'default'         => astra_get_option( 'breadcrumb-separator' ) ? astra_get_option( 'breadcrumb-separator' ) : '\00bb',
 					'required'        => array( ASTRA_THEME_SETTINGS . '[breadcrumb-position]', '!=', 'none' ),
 					'priority'        => 15,
 					'title'           => __( 'Separator', 'astra' ),

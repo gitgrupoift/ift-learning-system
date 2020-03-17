@@ -10879,6 +10879,7 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
         'GuzzleHttp\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/UriTemplate.php',
+        'IFT\\Ads' => __DIR__ . '/../..' . '/inc/Ads.php',
         'IFT\\Backend' => __DIR__ . '/../..' . '/inc/Backend.php',
         'IFT\\Bbpress' => __DIR__ . '/../..' . '/inc/Bbpress.php',
         'IFT\\Config' => __DIR__ . '/../..' . '/inc/Config.php',

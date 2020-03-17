@@ -635,14 +635,113 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					),
 				);
 
+				$btn_text_color_selectors = '.wp-block-button .wp-block-button__link, ';
+
+				if ( 'color-typo' === self::elementor_default_color_font_setting() || 'color' === self::elementor_default_color_font_setting() || 'typo' === self::elementor_default_color_font_setting() ) {
+					$ele_btn_default_desktop = array(
+						'.elementor-button-wrapper .elementor-button' => array(
+							'border-style'        => 'solid',
+							'border-top-width'    => ( isset( $global_custom_button_border_size['top'] ) && '' !== $global_custom_button_border_size['top'] ) ? astra_get_css_value( $global_custom_button_border_size['top'], 'px' ) : '0',
+							'border-right-width'  => ( isset( $global_custom_button_border_size['right'] ) && '' !== $global_custom_button_border_size['right'] ) ? astra_get_css_value( $global_custom_button_border_size['right'], 'px' ) : '0',
+							'border-left-width'   => ( isset( $global_custom_button_border_size['left'] ) && '' !== $global_custom_button_border_size['left'] ) ? astra_get_css_value( $global_custom_button_border_size['left'], 'px' ) : '0',
+							'border-bottom-width' => ( isset( $global_custom_button_border_size['bottom'] ) && '' !== $global_custom_button_border_size['bottom'] ) ? astra_get_css_value( $global_custom_button_border_size['bottom'], 'px' ) : '0',
+						),
+						'body .elementor-button.elementor-size-sm, body .elementor-button.elementor-size-xs, body .elementor-button.elementor-size-md, body .elementor-button.elementor-size-lg, body .elementor-button.elementor-size-xl, body .elementor-button' => array(
+							'border-radius'  => astra_get_css_value( $btn_border_radius, 'px' ),
+							'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'desktop' ),
+							'padding-right'  => astra_responsive_spacing( $theme_btn_padding, 'right', 'desktop' ),
+							'padding-bottom' => astra_responsive_spacing( $theme_btn_padding, 'bottom', 'desktop' ),
+							'padding-left'   => astra_responsive_spacing( $theme_btn_padding, 'left', 'desktop' ),
+						),
+					);
+
+					/* Parse CSS from array() */
+					$parse_css .= astra_parse_css( $ele_btn_default_desktop );
+
+					$ele_btn_default_tablet = array(
+						'.elementor-button-wrapper .elementor-button.elementor-size-sm, .elementor-button-wrapper .elementor-button.elementor-size-xs, .elementor-button-wrapper .elementor-button.elementor-size-md, .elementor-button-wrapper .elementor-button.elementor-size-lg, .elementor-button-wrapper .elementor-button.elementor-size-xl, .elementor-button-wrapper .elementor-button' => array(
+							'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'tablet' ),
+							'padding-right'  => astra_responsive_spacing( $theme_btn_padding, 'right', 'tablet' ),
+							'padding-bottom' => astra_responsive_spacing( $theme_btn_padding, 'bottom', 'tablet' ),
+							'padding-left'   => astra_responsive_spacing( $theme_btn_padding, 'left', 'tablet' ),
+						),
+					);
+
+					/* Parse CSS from array() */
+					$parse_css .= astra_parse_css( $ele_btn_default_tablet, '', '768' );
+
+					$ele_btn_default_mobile = array(
+						'.elementor-button-wrapper .elementor-button.elementor-size-sm, .elementor-button-wrapper .elementor-button.elementor-size-xs, .elementor-button-wrapper .elementor-button.elementor-size-md, .elementor-button-wrapper .elementor-button.elementor-size-lg, .elementor-button-wrapper .elementor-button.elementor-size-xl, .elementor-button-wrapper .elementor-button' => array(
+							'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'mobile' ),
+							'padding-right'  => astra_responsive_spacing( $theme_btn_padding, 'right', 'mobile' ),
+							'padding-bottom' => astra_responsive_spacing( $theme_btn_padding, 'bottom', 'mobile' ),
+							'padding-left'   => astra_responsive_spacing( $theme_btn_padding, 'left', 'mobile' ),
+						),
+					);
+
+					/* Parse CSS from array() */
+					$parse_css .= astra_parse_css( $ele_btn_default_mobile, '', '544' );
+				}
+
+				if ( 'color-typo' === self::elementor_default_color_font_setting() || 'color' === self::elementor_default_color_font_setting() ) {
+					// Check if Global Elementor - Theme Style - button color is set. If yes then remove ( :visited ) CSS for the compatibility.
+					if ( false === self::is_elementor_kit_button_color_set() ) {
+						$btn_text_color_selectors .= '.elementor-button-wrapper .elementor-button, .elementor-button-wrapper .elementor-button:visited';
+					} else {
+						$btn_text_color_selectors .= '.elementor-button-wrapper .elementor-button';
+					}
+
+					$ele_btn_color_builder_desktop = array(
+						'.elementor-button-wrapper .elementor-button' => array(
+							'border-color'     => empty( $btn_border_color ) ? esc_attr( $btn_bg_color ) : esc_attr( $btn_border_color ),
+							'background-color' => esc_attr( $btn_bg_color ),
+						),
+						'.elementor-button-wrapper .elementor-button:hover, .elementor-button-wrapper .elementor-button:focus' => array(
+							'color'            => esc_attr( $btn_text_hover_color ),
+							'background-color' => esc_attr( $btn_bg_hover_color ),
+							'border-color'     => empty( $btn_border_h_color ) ? esc_attr( $btn_bg_hover_color ) : esc_attr( $btn_border_h_color ),
+
+						),
+					);
+
+					/* Parse CSS from array() */
+					$parse_css .= astra_parse_css( $ele_btn_color_builder_desktop );
+				}
+
+				$global_button_page_builder_text_color_desktop = array(
+					$btn_text_color_selectors => array(
+						'color' => esc_attr( $btn_text_color ),
+					),
+				);
+
+				/* Parse CSS from array() */
+				$parse_css .= astra_parse_css( $global_button_page_builder_text_color_desktop );
+
+				if ( 'color-typo' === self::elementor_default_color_font_setting() || 'typo' === self::elementor_default_color_font_setting() ) {
+					$ele_btn_typo_builder_desktop = array(
+						'.elementor-button-wrapper .elementor-button' => array(
+							'font-family'    => astra_get_font_family( $theme_btn_font_family ),
+							'font-weight'    => esc_attr( $theme_btn_font_weight ),
+							'line-height'    => esc_attr( $theme_btn_line_height ),
+							'text-transform' => esc_attr( $theme_btn_text_transform ),
+							'letter-spacing' => astra_get_css_value( $theme_btn_letter_spacing, 'px' ),
+						),
+						'body .elementor-button.elementor-size-sm, body .elementor-button.elementor-size-xs, body .elementor-button.elementor-size-md, body .elementor-button.elementor-size-lg, body .elementor-button.elementor-size-xl, body .elementor-button' => array(
+							'font-size' => astra_responsive_font( $theme_btn_font_size, 'desktop' ),
+						),
+					);
+
+					/* Parse CSS from array() */
+					$parse_css .= astra_parse_css( $ele_btn_typo_builder_desktop );
+				}
+
 				$global_button_page_builder_desktop = array(
-					'.elementor-button-wrapper .elementor-button, .elementor-button-wrapper .elementor-button:visited, .wp-block-button .wp-block-button__link' => array(
+					'.wp-block-button .wp-block-button__link' => array(
 						'border-style'        => 'solid',
 						'border-top-width'    => ( isset( $global_custom_button_border_size['top'] ) && '' !== $global_custom_button_border_size['top'] ) ? astra_get_css_value( $global_custom_button_border_size['top'], 'px' ) : '0',
 						'border-right-width'  => ( isset( $global_custom_button_border_size['right'] ) && '' !== $global_custom_button_border_size['right'] ) ? astra_get_css_value( $global_custom_button_border_size['right'], 'px' ) : '0',
 						'border-left-width'   => ( isset( $global_custom_button_border_size['left'] ) && '' !== $global_custom_button_border_size['left'] ) ? astra_get_css_value( $global_custom_button_border_size['left'], 'px' ) : '0',
 						'border-bottom-width' => ( isset( $global_custom_button_border_size['bottom'] ) && '' !== $global_custom_button_border_size['bottom'] ) ? astra_get_css_value( $global_custom_button_border_size['bottom'], 'px' ) : '0',
-						'color'               => esc_attr( $btn_text_color ),
 						'border-color'        => empty( $btn_border_color ) ? esc_attr( $btn_bg_color ) : esc_attr( $btn_border_color ),
 						'background-color'    => esc_attr( $btn_bg_color ),
 						'font-family'         => astra_get_font_family( $theme_btn_font_family ),
@@ -651,7 +750,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'text-transform'      => esc_attr( $theme_btn_text_transform ),
 						'letter-spacing'      => astra_get_css_value( $theme_btn_letter_spacing, 'px' ),
 					),
-					'body .elementor-button.elementor-size-sm, body .elementor-button.elementor-size-xs, body .elementor-button.elementor-size-md, body .elementor-button.elementor-size-lg, body .elementor-button.elementor-size-xl, body .elementor-button, .wp-block-button .wp-block-button__link' => array(
+					'.wp-block-button .wp-block-button__link' => array(
 						'font-size'      => astra_responsive_font( $theme_btn_font_size, 'desktop' ),
 						'border-radius'  => astra_get_css_value( $btn_border_radius, 'px' ),
 						'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'desktop' ),
@@ -659,7 +758,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'padding-bottom' => astra_responsive_spacing( $theme_btn_padding, 'bottom', 'desktop' ),
 						'padding-left'   => astra_responsive_spacing( $theme_btn_padding, 'left', 'desktop' ),
 					),
-					'.elementor-button-wrapper .elementor-button:hover, .elementor-button-wrapper .elementor-button:focus, .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus' => array(
+					'.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus' => array(
 						'color'            => esc_attr( $btn_text_hover_color ),
 						'background-color' => esc_attr( $btn_bg_hover_color ),
 						'border-color'     => empty( $btn_border_h_color ) ? esc_attr( $btn_bg_hover_color ) : esc_attr( $btn_border_h_color ),
@@ -689,7 +788,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $global_button_page_builder_desktop );
 
 				$global_button_page_builder_tablet = array(
-					'.elementor-button-wrapper .elementor-button.elementor-size-sm, .elementor-button-wrapper .elementor-button.elementor-size-xs, .elementor-button-wrapper .elementor-button.elementor-size-md, .elementor-button-wrapper .elementor-button.elementor-size-lg, .elementor-button-wrapper .elementor-button.elementor-size-xl, .elementor-button-wrapper .elementor-button, .wp-block-button .wp-block-button__link' => array(
+					'.wp-block-button .wp-block-button__link' => array(
 						'font-size'      => astra_responsive_font( $theme_btn_font_size, 'tablet' ),
 						'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'tablet' ),
 						'padding-right'  => astra_responsive_spacing( $theme_btn_padding, 'right', 'tablet' ),
@@ -702,7 +801,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $global_button_page_builder_tablet, '', '768' );
 
 				$global_button_page_builder_mobile = array(
-					'.elementor-button-wrapper .elementor-button.elementor-size-sm, .elementor-button-wrapper .elementor-button.elementor-size-xs, .elementor-button-wrapper .elementor-button.elementor-size-md, .elementor-button-wrapper .elementor-button.elementor-size-lg, .elementor-button-wrapper .elementor-button.elementor-size-xl, .elementor-button-wrapper .elementor-button, .wp-block-button .wp-block-button__link' => array(
+					'.wp-block-button .wp-block-button__link' => array(
 						'font-size'      => astra_responsive_font( $theme_btn_font_size, 'mobile' ),
 						'padding-top'    => astra_responsive_spacing( $theme_btn_padding, 'top', 'mobile' ),
 						'padding-right'  => astra_responsive_spacing( $theme_btn_padding, 'right', 'mobile' ),
@@ -1193,9 +1292,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			if ( apply_filters( 'astra_enable_default_fonts', true ) ) {
 				$astra_fonts          = '@font-face {';
 					$astra_fonts     .= 'font-family: "Astra";';
-					$astra_fonts     .= 'src: url( ' . ASTRA_THEME_URI . 'assets/fonts/astra.woff) format("woff"),';
-						$astra_fonts .= 'url( ' . ASTRA_THEME_URI . 'assets/fonts/astra.ttf) format("truetype"),';
-						$astra_fonts .= 'url( ' . ASTRA_THEME_URI . 'assets/fonts/astra.svg#astra) format("svg");';
+					$astra_fonts     .= 'src: url(' . ASTRA_THEME_URI . 'assets/fonts/astra.woff) format("woff"),';
+						$astra_fonts .= 'url(' . ASTRA_THEME_URI . 'assets/fonts/astra.ttf) format("truetype"),';
+						$astra_fonts .= 'url(' . ASTRA_THEME_URI . 'assets/fonts/astra.svg#astra) format("svg");';
 					$astra_fonts     .= 'font-weight: normal;';
 					$astra_fonts     .= 'font-style: normal;';
 					$astra_fonts     .= 'font-display: ' . astra_get_fonts_display_property() . ';';
@@ -1586,6 +1685,66 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$astra_settings                                  = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['pb-button-color-compatibility'] = ( isset( $astra_settings['pb-button-color-compatibility'] ) && false === $astra_settings['pb-button-color-compatibility'] ) ? false : true;
 			return apply_filters( 'astra_page_builder_button_style_css', $astra_settings['pb-button-color-compatibility'] );
+		}
+
+		/**
+		 * Elementor Theme Style - Button Text Color compatibility. This should be looked in the future for proper solution.
+		 *
+		 * Reference: https://github.com/elementor/elementor/issues/10733
+		 * Reference: https://github.com/elementor/elementor/issues/10739
+		 *
+		 * @since 2.3.3
+		 *
+		 * @return mixed
+		 */
+		public static function is_elementor_kit_button_color_set() {
+			$ele_btn_global_text_color = false;
+			$ele_kit_id                = get_option( 'elementor_active_kit', false );
+			if ( false !== $ele_kit_id ) {
+				$ele_global_btn_data = get_post_meta( $ele_kit_id, '_elementor_page_settings' );
+				// Elementor Global theme style button text color fetch value from database.
+				$ele_btn_global_text_color = isset( $ele_global_btn_data[0]['button_text_color'] ) ? $ele_global_btn_data[0]['button_text_color'] : $ele_btn_global_text_color;
+			}
+			return $ele_btn_global_text_color;
+		}
+
+		/**
+		 * Check if Elementor - Disable Default Colors or Disable Default Fonts checked or unchecked.
+		 *
+		 * @since  2.3.3
+		 *
+		 * @return mixed String if any of the settings are enabled. False if no settings are enabled.
+		 */
+		public static function elementor_default_color_font_setting() {
+			$ele_default_color_setting = get_option( 'elementor_disable_color_schemes' );
+			$ele_default_typo_setting  = get_option( 'elementor_disable_typography_schemes' );
+
+			if ( ( 'yes' === $ele_default_color_setting && 'yes' === $ele_default_typo_setting ) || ( false === self::is_elementor_default_color_font_comp() ) ) {
+				return 'color-typo';
+			}
+
+			if ( 'yes' === $ele_default_color_setting ) {
+				return 'color';
+			}
+
+			if ( 'yes' === $ele_default_typo_setting ) {
+				return 'typo';
+			}
+
+			return false;
+
+		}
+
+		/**
+		 * For existing users, do not provide Elementor Default Color Typo settings compatibility by default.
+		 *
+		 * @since 2.3.3
+		 * @return boolean true if elementor default color and typo setting should work with theme, False if not.
+		 */
+		public static function is_elementor_default_color_font_comp() {
+			$astra_settings                                        = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings['ele-default-color-typo-setting-comp'] = ( isset( $astra_settings['ele-default-color-typo-setting-comp'] ) && false === $astra_settings['ele-default-color-typo-setting-comp'] ) ? false : true;
+			return apply_filters( 'astra_elementor_default_color_font_comp', $astra_settings['ele-default-color-typo-setting-comp'] );
 		}
 	}
 }

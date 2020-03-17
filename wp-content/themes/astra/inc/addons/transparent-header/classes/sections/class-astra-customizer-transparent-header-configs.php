@@ -196,6 +196,10 @@ if ( ! class_exists( 'Astra_Customizer_Transparent_Header_Configs' ) ) {
 					'priority'       => 30,
 					'title'          => __( 'Logo', 'astra' ),
 					'library_filter' => array( 'gif', 'jpg', 'jpeg', 'png', 'ico' ),
+					'partial'        => array(
+						'selector'            => '.ast-replace-site-logo-transparent .site-branding .site-logo-img',
+						'container_inclusive' => false,
+					),
 				),
 
 				/**

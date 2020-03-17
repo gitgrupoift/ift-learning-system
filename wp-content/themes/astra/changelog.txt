@@ -1,3 +1,21 @@
+v2.3.4
+- Fix: Lightning icon not appearing on astra options page.
+- Fix: Breadcrumb separator appearing as HTML entity for new users.
+
+v2.3.3
+- Improvement: Compatibility with Elementor Theme Style.
+- Improvement: Theme Button options dependency on Elementor global color/font settings.
+- Improvement: Deprecated ast-spacing param.
+- Improvement: Customizer - changed 'Learn More' button to secondary button from primary button for UX.
+- Improvement: Added new Edit Shortcuts in the Customizer Preview.
+- Fix: Elementor Theme Style button color conflict with customizer global button color.
+- Fix: Theme check warnings and recommendations.
+- Fix: Conflict with Fast Velocity Minify plugin.
+- Fix: Unable to copy paste or type RGBA color code in color picker.
+- Fix: Updated Iris library for Color Picker param.
+- Fix: Google Font not loading when FS_METHOD set to ftpext in some cases.
+- Fix: Lifter LMS certificate CSS issue with Boxed and Content Boxed layout.
+
 v2.3.2
 - Fix: Updated links for Starter Templates plugin.
 

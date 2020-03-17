@@ -10746,6 +10746,7 @@ return array(
     'GuzzleHttp\\RetryMiddleware' => $vendorDir . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
     'GuzzleHttp\\TransferStats' => $vendorDir . '/guzzlehttp/guzzle/src/TransferStats.php',
     'GuzzleHttp\\UriTemplate' => $vendorDir . '/guzzlehttp/guzzle/src/UriTemplate.php',
+    'IFT\\Ads' => $baseDir . '/inc/Ads.php',
     'IFT\\Backend' => $baseDir . '/inc/Backend.php',
     'IFT\\Bbpress' => $baseDir . '/inc/Bbpress.php',
     'IFT\\Config' => $baseDir . '/inc/Config.php',

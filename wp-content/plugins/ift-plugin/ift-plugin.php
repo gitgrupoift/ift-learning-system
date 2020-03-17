@@ -20,6 +20,7 @@ use IFT\Security;
 use IFT\Bbpress;
 use IFT\Backend;
 use IFT\Customizer;
+use IFT\Ads;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -34,6 +35,7 @@ new Security();
 new Rest();
 new Bbpress();
 new Optimize();
+new Ads();
 
 
 add_action('after_setup_theme', 'override_theme', 999);
@@ -81,3 +83,5 @@ function remove_jquery_migrate( $scripts ) {
  }
  }
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+

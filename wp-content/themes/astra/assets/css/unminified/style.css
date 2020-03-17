@@ -3855,6 +3855,210 @@ li.ast-masthead-custom-menu-items .ast-search-icon .astra-search-icon {
   }
 }
 
+/* Customize Preview */
+/**
+ * Customizer Edit pencil - Set Position
+ */
+.customize-partial-edit-shortcut-blogname button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.ast-site-title-wrap:hover .customize-partial-edit-shortcut-blogname button.customize-partial-edit-shortcut-button {
+  display: inline-block;
+}
+
+.customize-partial-edit-shortcut-blogdescription button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.ast-site-title-wrap:hover .customize-partial-edit-shortcut-blogdescription button.customize-partial-edit-shortcut-button {
+  display: inline-block;
+}
+
+.customize-partial-edit-shortcut-astra-settings-display-site-title button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.customize-partial-edit-shortcut-astra-settings-display-site-tagline button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.customize-partial-edit-shortcut-custom_logo button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.site-logo-img:hover .customize-partial-edit-shortcut-custom_logo button.customize-partial-edit-shortcut-button {
+  display: inline-block;
+}
+
+.customize-partial-edit-shortcut-astra-settings-disable-primary-nav button.customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.main-navigation:hover .customize-partial-edit-shortcut-astra-settings-disable-primary-nav button.customize-partial-edit-shortcut-button {
+  display: inline-block;
+}
+
+/* Sticky Header CSS */
+.ast-primary-sticky-header-active .customize-partial-edit-shortcut-astra-settings-header-main-stick .customize-partial-edit-shortcut-button {
+  left: 100px;
+}
+
+.ast-primary-sticky-header-active.ast-full-width-header .customize-partial-edit-shortcut-astra-settings-header-main-stick .customize-partial-edit-shortcut-button {
+  left: 5px;
+}
+
+/* Primary Header common CSS */
+.customize-partial-edit-shortcut-astra-settings-disable-primary-nav .customize-partial-edit-shortcut-button {
+  top: 15px;
+}
+
+.ast-masthead-custom-menu-items.search-custom-menu-item .customize-partial-edit-shortcut-astra-settings-header-main-rt-section .customize-partial-edit-shortcut-button {
+  left: -30px;
+  top: -7px;
+  display: none;
+}
+
+.ast-masthead-custom-menu-items.search-custom-menu-item:hover .customize-partial-edit-shortcut-astra-settings-header-main-rt-section .customize-partial-edit-shortcut-button {
+  display: block;
+}
+
+.ast-masthead-custom-menu-items.button-custom-menu-item .customize-partial-edit-shortcut-astra-settings-header-main-rt-section-button-text .customize-partial-edit-shortcut-button {
+  top: -14px;
+  display: none;
+}
+
+.ast-masthead-custom-menu-items.button-custom-menu-item:hover .customize-partial-edit-shortcut-astra-settings-header-main-rt-section-button-text .customize-partial-edit-shortcut-button {
+  display: block;
+}
+
+.ast-masthead-custom-menu-items.text-html-custom-menu-item .customize-partial-edit-shortcut-astra-settings-header-main-rt-section-html .customize-partial-edit-shortcut-button {
+  left: -30px;
+  top: 15px;
+  display: none;
+}
+
+.ast-masthead-custom-menu-items.text-html-custom-menu-item:hover .customize-partial-edit-shortcut-astra-settings-header-main-rt-section-html .customize-partial-edit-shortcut-button {
+  display: block;
+}
+
+.ast-masthead-custom-menu-items.widget-custom-menu-item {
+  text-align: left;
+}
+
+.ast-masthead-custom-menu-items.widget-custom-menu-item .customize-partial-edit-shortcut .customize-partial-edit-shortcut-button {
+  left: -25px;
+  top: -8px;
+  display: none;
+}
+
+.ast-masthead-custom-menu-items.widget-custom-menu-item:hover .customize-partial-edit-shortcut .customize-partial-edit-shortcut-button {
+  display: block;
+}
+
+.ast-masthead-custom-menu-items.woocommerce-custom-menu-item .customize-partial-edit-shortcut-astra-settings-header-main-rt-section .customize-partial-edit-shortcut-button {
+  top: -20px;
+  left: -25px;
+  display: none;
+}
+
+.ast-masthead-custom-menu-items.woocommerce-custom-menu-item:hover .customize-partial-edit-shortcut-astra-settings-header-main-rt-section .customize-partial-edit-shortcut-button {
+  display: block;
+}
+
+/* Below Header common CSS */
+.ast-below-header .below-header-user-select .ast-site-header-cart,
+.ast-below-header .below-header-user-select .ast-search-menu-icon, .ast-below-header .below-header-user-select.below-header-widget {
+  text-align: left;
+}
+
+.ast-below-header .customize-partial-edit-shortcut {
+  top: 1em;
+}
+
+/* Above Header common CSS */
+.ast-above-header-section .user-select .ast-search-menu-icon {
+  text-align: left;
+}
+
+.ast-above-header .customize-partial-edit-shortcut {
+  top: 0.3em;
+}
+
+/* Above Header Section 1 */
+.ast-above-header-section-1 .ast-above-header-navigation .customize-partial-edit-shortcut-astra-settings-above-header-section-1 .customize-partial-edit-shortcut-button {
+  left: -14px;
+}
+
+.ast-above-header-section-1 .ast-search-menu-icon .customize-partial-edit-shortcut-astra-settings-above-header-section-1-search-box-type .customize-partial-edit-shortcut-button {
+  left: -25px;
+  top: -10px;
+}
+
+.ast-above-header-section-1.woocommerce-above-header .customize-partial-edit-shortcut-astra-settings-above-header-section-1 .customize-partial-edit-shortcut-button {
+  left: -25px;
+  top: -15px;
+}
+
+.ast-above-header-section-1 .customize-partial-edit-shortcut-astra-settings-above-header-section-1-html .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+/* Above Header Section 2 */
+.ast-above-header-section-2 .ast-above-header-navigation .customize-partial-edit-shortcut-astra-settings-above-header-section-2 .customize-partial-edit-shortcut-button {
+  left: -14px;
+}
+
+.ast-above-header-section-2 .ast-search-menu-icon .customize-partial-edit-shortcut-astra-settings-above-header-section-2-search-box-type .customize-partial-edit-shortcut-button {
+  top: -10px;
+  left: -25px;
+}
+
+.ast-above-header-section-2.woocommerce-above-header .customize-partial-edit-shortcut-astra-settings-above-header-section-2 .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+/* Below Header Section 1 */
+.below-header-section-1.ast-below-header-navigation .customize-partial-edit-shortcut-astra-settings-below-header-section-1 .customize-partial-edit-shortcut-button {
+  left: -14px;
+}
+
+.below-header-section-1 .ast-search-menu-icon .customize-partial-edit-shortcut-astra-settings-below-header-section-1-search-box-type .customize-partial-edit-shortcut-button {
+  top: -10px;
+  left: -25px;
+}
+
+.below-header-section-1 .ast-site-header-cart .customize-partial-edit-shortcut-astra-settings-below-header-section-1 .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+.below-header-section-1 .customize-partial-edit-shortcut-astra-settings-below-header-section-1-html .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+/* Below Header Section 2 */
+.below-header-section-2.ast-below-header-navigation .customize-partial-edit-shortcut-astra-settings-below-header-section-2 .customize-partial-edit-shortcut-button {
+  left: -14px;
+}
+
+.below-header-section-2 .ast-search-menu-icon .customize-partial-edit-shortcut-astra-settings-below-header-section-2-search-box-type .customize-partial-edit-shortcut-button {
+  top: -10px;
+  left: -25px;
+}
+
+.below-header-section-2 .ast-site-header-cart .customize-partial-edit-shortcut-astra-settings-below-header-section-2 .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+.below-header-section-2 .customize-partial-edit-shortcut-astra-settings-below-header-section-2-html .customize-partial-edit-shortcut-button {
+  left: -25px;
+}
+
+.customize-partial-edit-shortcut-astra-settings-above-header-layout .customize-partial-edit-shortcut-button,
+.customize-partial-edit-shortcut-astra-settings-below-header-layout .customize-partial-edit-shortcut-button {
+  left: -60px;
+}
+
 /* 7 - Header Toggle Buttons */
 .ast-header-break-point .ast-mobile-menu-buttons {
   text-align: right;

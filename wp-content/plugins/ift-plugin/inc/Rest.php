@@ -21,6 +21,8 @@ class Rest {
     function api_prefix_change( $slug ) {
         
         
-    } 
+    }
+    
+ 
 
 }

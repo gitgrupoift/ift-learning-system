@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.3.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-05 16:02:29+0000\n"
+"PO-Revision-Date: 2020-03-09 12:17:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -581,7 +581,7 @@ msgstr "Cor principal"
 
 #: wp-includes/js/dist/block-library.js:15154
 msgid "All around this is an almost totally black screen. Now, as the camera moves slowly towards the window which is almost a postage stamp in the frame, other forms appear;"
-msgstr "Ao redor há um ecrã quase totalmente negro. Agora, à medida que a câmara se move devagar em direção à janela, que mais parece um selo de correios no quadro, surgem outras formas;"
+msgstr "Ao redor há um ecrã quase totalmente negro. Agora, à medida que a câmara se move devagar em direcção à janela, que mais parece um selo de correios no quadro, surgem outras formas;"
 
 #: wp-includes/js/dist/block-library.js:15154
 msgid "Window, very small in the distance, illuminated."

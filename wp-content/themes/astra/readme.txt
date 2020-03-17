@@ -5,7 +5,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-menu, custom-logo, entertainment, featured-images, full-width-template, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
 Tested up to: 5.3.2
 Requires PHP: 5.3
-Stable tag: 2.3.2
+Stable tag: 2.3.4
 
 Astra is fast, fully customizable & beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront.
 
@@ -51,8 +51,7 @@ Astra has up to 4 widget area. 1 in your header, 1 for each sidebar and up to 2 
 There are multiple ways you can use a child theme with the Astra Theme, Use any one method mentoned below to create a child theme or use a child theme we have created.
 
 1. Download the child theme from Github - https://github.com/brainstormforce/astra-child/releases/latest/
-2. Using Plugin One click Child theme - https://wordpress.org/plugins/one-click-child-theme/
-3. More information on creating child theme. - https://codex.wordpress.org/Child_Themes
+2. More information on creating child theme. - https://developer.wordpress.org/themes/advanced-topics/child-themes/
 
 
 = Screenshot Licenses =

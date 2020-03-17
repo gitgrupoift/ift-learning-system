@@ -58,17 +58,25 @@ endif; ?>
 		if ( isset( $shortcode_atts['show_header'] ) && 'yes' === $shortcode_atts['show_header'] ) :
 			?>
 			<div class="ld-profile-summary">
-				<div class="ld-profile-card">
-					<div class="ld-profile-avatar">
-						<?php
+				<div class="ld-profile-card">					
+						<?php                        
 						/**
 						 * related to the CSS themes/ld30/assets/css/learndash.css
 						 * .learndash-wrapper .ld-profile-summary .ld-profile-card .ld-profile-avatar
+                         <div class="ld-profile-avatar">
+                         <?php echo wp_kses_post( get_avatar( $user_id, 150 ) ); ?>
+                         </div>
 						 */
-						echo wp_kses_post( get_avatar( $user_id, 150 ) );
 						?>
-					</div> <!--/.ld-profile-avatar-->
-					<div class="ld-resuming"><?php echo do_shortcode('[uo_learndash_resume]'); ?></div>
+					<!--/.ld-profile-avatar-->
+                    <div class="extra-ld-profile">
+					    <div class="ld-resuming">
+                            <?php echo do_shortcode('[uo_learndash_resume]'); ?>
+                        </div>
+                        <div class="ld-hours-container">
+                            <?php echo do_shortcode('[ld-courses-and-hours]'); ?>
+                        </div>
+                    </div>
                     <?php
 					if ( ! empty( $current_user->user_lastname ) || ! empty( $current_user->user_firstname ) ) :
 						?>
