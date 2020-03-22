@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-17 16:30+0000\n"
+"PO-Revision-Date: 2020-03-17 16:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11202,12 +11202,12 @@ msgstr ""
 #: bp-activity/bp-activity-admin.php:32
 msgctxt "Admin Dashbord SWA page title"
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-activity/bp-activity-admin.php:33
 msgctxt "Admin Dashbord SWA menu"
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-activity/bp-activity-admin.php:248
 msgctxt "activity admin edit screen"
@@ -11293,32 +11293,32 @@ msgstr ""
 #: bp-activity/classes/class-bp-activity-component.php:245
 msgctxt "Profile activity screen nav"
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-activity/classes/class-bp-activity-component.php:255
 msgctxt "Profile activity screen sub nav"
 msgid "Personal"
-msgstr ""
+msgstr "Pessoal"
 
 #: bp-activity/classes/class-bp-activity-component.php:266
 msgctxt "Profile activity screen sub nav"
 msgid "Mentions"
-msgstr ""
+msgstr "Menções"
 
 #: bp-activity/classes/class-bp-activity-component.php:279
 msgctxt "Profile activity screen sub nav"
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: bp-activity/classes/class-bp-activity-component.php:292
 msgctxt "Profile activity screen sub nav"
 msgid "Friends"
-msgstr ""
+msgstr "Colegas"
 
 #: bp-activity/classes/class-bp-activity-component.php:305
 msgctxt "Profile activity screen sub nav"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #. translators: %s: Unread mention count for the current user
 #: bp-activity/classes/class-bp-activity-component.php:343
@@ -11334,12 +11334,12 @@ msgstr ""
 #: bp-activity/classes/class-bp-activity-component.php:355
 msgctxt "My Account Activity sub nav"
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-activity/classes/class-bp-activity-component.php:363
 msgctxt "My Account Activity sub nav"
 msgid "Personal"
-msgstr ""
+msgstr "Pessoal"
 
 #: bp-activity/classes/class-bp-activity-component.php:384
 msgctxt "My Account Activity sub nav"
@@ -11525,7 +11525,7 @@ msgstr ""
 #: bp-core/bp-core-functions.php:753
 msgctxt "Page title for the Activity directory."
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-core/bp-core-functions.php:754
 msgctxt "Page title for the Groups directory."
@@ -12109,7 +12109,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/classes.php:285
 msgctxt "Group screen navigation title"
 msgid "Home (Activity)"
-msgstr ""
+msgstr "Home (Atividade)"
 
 #: bp-templates/bp-nouveau/includes/groups/classes.php:287
 msgctxt "Group screen navigation title"
@@ -12120,7 +12120,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/classes.php:292
 msgctxt "My Group screen nav"
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: bp-groups/classes/class-bp-groups-component.php:652
 msgctxt "My Group screen nav"

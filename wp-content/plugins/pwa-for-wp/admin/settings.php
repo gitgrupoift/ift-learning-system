@@ -1569,7 +1569,16 @@ function pwaforwp_custom_add_to_home_callback(){
         <div class="afw_hide pwaforwp-enable-on-desktop"><input type="checkbox" name="pwaforwp_settings[enable_add_to_home_desktop_setting]" id="enable_add_to_home_desktop_setting" class="" <?php echo (isset( $settings['enable_add_to_home_desktop_setting'] ) &&  $settings['enable_add_to_home_desktop_setting'] == 1 ? 'checked="checked"' : ''); ?> value="1"><strong><?php echo esc_html__('Enable On Desktop', 'pwa-for-wp'); ?></strong>
             <p><?php echo esc_html__('Note: By default pop up will appear on mobile device, to appear on desktop check enable on desktop', 'pwa-for-wp'); ?></p>
         </div>
-        <?php } ?>
+        <?php }
+        //option for static websites
+         ?>
+        <div class="show-banner-on-static-website">
+        	<input type="checkbox" name="pwaforwp_settings[show_banner_without_scroll]" id="show_banner_without_scroll" value="1" <?php echo (isset( $settings['show_banner_without_scroll'] ) &&  $settings['show_banner_without_scroll'] == 1 ? 'checked="checked"' : ''); ?> >
+        	<label for="show_banner_without_scroll" style="font-weight:600">Show banner without scroll</label>
+        	<p><?php echo esc_html__('By default pop up will appear on scroll', 'pwa-for-wp'); ?></p>
+        </div>
+
+
 	<?php
 	pwaforwp_custom_banner_design_callback();
 }
@@ -1830,6 +1839,7 @@ function pwaforwp_enqueue_style_js( $hook ) {
 	if ( !is_admin() ) {
 		return;
 	}	
+	if($hook!='toplevel_page_pwaforwp'){return ; }
 	// Color picker CSS
 	// @refer https://make.wordpress.org/core/2012/11/30/new-color-picker-in-wp-3-5/
         wp_enqueue_style( 'wp-color-picker' );	

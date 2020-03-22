@@ -19,12 +19,20 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         array (
             'phpseclib\\' => 10,
         ),
+        'S' => 
+        array (
+            'Symfony\\Component\\OptionsResolver\\' => 34,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Cache\\' => 10,
+        ),
+        'N' => 
+        array (
+            'NextcloudApiWrapper\\' => 20,
         ),
         'M' => 
         array (
@@ -62,6 +70,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'Symfony\\Component\\OptionsResolver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/options-resolver',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -77,6 +89,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'NextcloudApiWrapper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sysmoh/nextcloud-api-wrapper/src/NextcloudApiWrapper',
         ),
         'Monolog\\' => 
         array (

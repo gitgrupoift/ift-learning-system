@@ -1091,5 +1091,105 @@
             }
         ],
         "description": "A polyfill for getallheaders."
+    },
+    {
+        "name": "symfony/options-resolver",
+        "version": "v3.4.38",
+        "version_normalized": "3.4.38.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/options-resolver.git",
+            "reference": "730ef56164ed6c9356c159e9f5ff2b84d753b9ed"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/730ef56164ed6c9356c159e9f5ff2b84d753b9ed",
+            "reference": "730ef56164ed6c9356c159e9f5ff2b84d753b9ed",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5.9|>=7.0.8"
+        },
+        "time": "2020-01-01T11:03:25+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\OptionsResolver\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony OptionsResolver Component",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "config",
+            "configuration",
+            "options"
+        ]
+    },
+    {
+        "name": "sysmoh/nextcloud-api-wrapper",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sysmoh/nextcloud-api-wrapper.git",
+            "reference": "0df912f6fe4c74c989f4b4e07485f2ae2fd3f114"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sysmoh/nextcloud-api-wrapper/zipball/0df912f6fe4c74c989f4b4e07485f2ae2fd3f114",
+            "reference": "0df912f6fe4c74c989f4b4e07485f2ae2fd3f114",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.3",
+            "symfony/options-resolver": "^3.4"
+        },
+        "time": "2018-02-27T10:18:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "NextcloudApiWrapper\\": "src/NextcloudApiWrapper"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "sysmoh",
+                "email": "guillaume.hochet@gmail.com"
+            }
+        ],
+        "description": "A simple wrapper around nextcloud user provisioning api",
+        "keywords": [
+            "api",
+            "nextcloud",
+            "wrapper"
+        ]
     }
 ]

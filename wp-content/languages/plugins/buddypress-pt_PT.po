@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-17 16:46+0000\n"
+"PO-Revision-Date: 2020-03-21 20:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,7 +80,7 @@ msgstr ""
 #. Name] | Mentions"
 #: bp-activity/actions/feeds.php:144
 msgid "%1$s | %2$s | Mentions"
-msgstr ""
+msgstr "%1$s | %2$s | Menções"
 
 #: bp-activity/actions/feeds.php:147
 msgid "Activity feed mentioning %s."
@@ -249,6 +249,8 @@ msgid ""
 "<a href=\"https://codex.buddypress.org/administrator-guide/activity-stream-"
 "management-panels/\">Managing Activity</a>"
 msgstr ""
+"<a href=\"https://codex.buddypress.org/administrator-guide/activity-stream-"
+"management-panels/\">Gerenciando Atividades</a>"
 
 #: bp-activity/bp-activity-admin.php:244 bp-activity/bp-activity-admin.php:295
 #: bp-core/admin/bp-core-admin-functions.php:478
@@ -1710,12 +1712,12 @@ msgstr "BuddyPress"
 #: bp-core/admin/bp-core-admin-functions.php:762
 #: bp-core/admin/bp-core-admin-functions.php:771
 msgid "Logged-In"
-msgstr ""
+msgstr "Logado"
 
 #: bp-core/admin/bp-core-admin-functions.php:765
 #: bp-core/admin/bp-core-admin-functions.php:780
 msgid "Logged-Out"
-msgstr ""
+msgstr "Não Logado"
 
 #: bp-core/admin/bp-core-admin-functions.php:772
 msgid ""
@@ -2098,7 +2100,7 @@ msgstr ""
 
 #: bp-core/bp-core-attachments.php:657
 msgid "An error occurred. Please try again later."
-msgstr ""
+msgstr "Um erro ocorreu. Favor tentar novamente."
 
 #: bp-core/bp-core-attachments.php:658
 msgid ""
@@ -2331,8 +2333,8 @@ msgstr "%s atrás"
 #: bp-core/bp-core-functions.php:1265
 msgid "%s year"
 msgid_plural "%s years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s ano"
+msgstr[1] "%s anos"
 
 #: bp-core/bp-core-functions.php:1268 bp-core/bp-core-functions.php:1302
 msgid "%s month"
@@ -2343,8 +2345,8 @@ msgstr[1] ""
 #: bp-core/bp-core-functions.php:1271 bp-core/bp-core-functions.php:1305
 msgid "%s week"
 msgid_plural "%s weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s semana"
+msgstr[1] "%s semanas"
 
 #: bp-core/bp-core-functions.php:1274 bp-core/bp-core-functions.php:1308
 msgid "%s day"
@@ -2918,7 +2920,7 @@ msgstr ""
 
 #: bp-core/bp-core-functions.php:3599
 msgid "A member has sent a friend request to the recipient."
-msgstr ""
+msgstr "Um membro enviou um convite de amizade para o destinatário."
 
 #: bp-core/bp-core-functions.php:3602
 msgid ""
@@ -4378,8 +4380,8 @@ msgstr "Adicionar amigo"
 #: bp-friends/bp-friends-template.php:719
 msgid "%s friend"
 msgid_plural "%s friends"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s amigo"
+msgstr[1] "%s amigos"
 
 #: bp-friends/bp-friends-widgets.php:89 bp-members/bp-members-widgets.php:101
 msgid "There were no members found, please try another filter."
@@ -4700,7 +4702,7 @@ msgstr "Editar Grupo"
 #: bp-groups/bp-groups-admin.php:586 bp-groups/bp-groups-admin.php:596
 #: bp-groups/bp-groups-admin.php:772 bp-groups/bp-groups-admin.php:787
 msgid "Add New"
-msgstr ""
+msgstr "Adicionar"
 
 #: bp-groups/bp-groups-admin.php:617
 msgid "Name and Description"
@@ -4712,7 +4714,7 @@ msgstr ""
 #: bp-groups/bp-groups-functions.php:3022
 #: bp-groups/bp-groups-functions.php:3092
 msgid "Group Name"
-msgstr ""
+msgstr "Nome do Grupo"
 
 #: bp-groups/bp-groups-admin.php:625
 msgid "Permalink:"
@@ -4732,7 +4734,7 @@ msgstr ""
 
 #: bp-groups/bp-groups-admin.php:710
 msgid "Delete Groups"
-msgstr ""
+msgstr "Deletar Grupos"
 
 #: bp-groups/bp-groups-admin.php:711
 msgid "You are about to delete the following groups:"
@@ -4858,13 +4860,13 @@ msgstr ""
 #: bp-groups/bp-groups-admin.php:1007 bp-groups/bp-groups-functions.php:1204
 #: bp-groups/bp-groups-functions.php:2888
 msgid "Moderator"
-msgstr ""
+msgstr "Moderador"
 
 #: bp-groups/bp-groups-admin.php:1008 bp-groups/bp-groups-functions.php:1212
 #: bp-groups/bp-groups-functions.php:2890
 #: bp-members/classes/class-bp-members-admin.php:819
 msgid "Member"
-msgstr ""
+msgstr "Membro"
 
 #: bp-groups/bp-groups-admin.php:1010 bp-groups/bp-groups-functions.php:1220
 msgid "Banned"
@@ -5184,7 +5186,7 @@ msgstr "Entrar no Grupo"
 
 #: bp-groups/bp-groups-template.php:3372
 msgid "Accept Invitation"
-msgstr ""
+msgstr "Aceitar Convite"
 
 #: bp-groups/bp-groups-template.php:3387
 #: bp-templates/bp-legacy/buddypress-functions.php:1585
@@ -5342,8 +5344,8 @@ msgstr "Feed RSS da atividade do grupo"
 #: bp-groups/bp-groups-template.php:6218
 msgid "%s group"
 msgid_plural "%s groups"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s amigo"
+msgstr[1] "%s grupos"
 
 #: bp-groups/bp-groups-widgets.php:68
 #: bp-groups/classes/class-bp-groups-widget.php:148
@@ -5806,7 +5808,7 @@ msgstr ""
 
 #: bp-groups/classes/class-bp-rest-groups-endpoint.php:302
 msgid "Cannot create new group."
-msgstr ""
+msgstr "Não foi possível criar o grupo."
 
 #: bp-groups/classes/class-bp-rest-groups-endpoint.php:387
 msgid "Cannot update existing group."
@@ -6214,7 +6216,7 @@ msgstr ""
 
 #: bp-members/bp-members-functions.php:1906
 msgid "Could not create user"
-msgstr ""
+msgstr "Não foi possível criar o utilizador"
 
 #: bp-members/bp-members-functions.php:1920
 msgid "That username is already activated."
@@ -6412,6 +6414,8 @@ msgid ""
 "<a href=\"https://codex.buddypress.org/administrator-guide/extended-"
 "profiles/\">Managing Profiles</a>"
 msgstr ""
+"<a href=\"https://codex.buddypress.org/administrator-guide/extended-"
+"profiles/\">Gerenciando Perfis</a>"
 
 #: bp-members/classes/class-bp-members-admin.php:916
 msgid "Edit User"
@@ -6623,7 +6627,7 @@ msgstr ""
 
 #: bp-members/classes/class-bp-members-admin.php:2187
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #: bp-members/classes/class-bp-members-admin.php:2221
 #: bp-members/classes/class-bp-members-admin.php:2223
@@ -6668,7 +6672,7 @@ msgstr ""
 #: bp-members/classes/class-bp-members-list-table.php:187
 #: bp-members/classes/class-bp-members-ms-list-table.php:173
 msgid "No pending accounts found."
-msgstr ""
+msgstr "Nenhuma conta pendente encontrada."
 
 #: bp-members/classes/class-bp-members-list-table.php:193
 #: bp-members/classes/class-bp-members-list-table.php:195
@@ -7779,7 +7783,7 @@ msgstr "Capacidades"
 #: bp-settings/classes/class-bp-settings-component.php:198
 #: bp-settings/classes/class-bp-settings-component.php:275
 msgid "Export Data"
-msgstr ""
+msgstr "Exportar Dados"
 
 #: bp-templates/bp-legacy/buddypress/activity/activity-loop.php:34
 msgid "Load More"
@@ -9236,7 +9240,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/messages/index.php:104
 msgid "All Messages"
-msgstr ""
+msgstr "Todas as Mensagens"
 
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/messages/index.php:108
 msgid "Select bulk action"
@@ -9393,7 +9397,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/buddypress/groups/single/parts/item-nav.php:10
 msgid "Group menu"
-msgstr ""
+msgstr "Menu do grupo"
 
 #: bp-templates/bp-nouveau/buddypress/members/activate.php:23
 msgid ""
@@ -9642,7 +9646,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/functions.php:125
 #: bp-templates/bp-nouveau/includes/members/functions.php:49
 msgid "All Members"
-msgstr ""
+msgstr "Todos os Membros"
 
 #: bp-templates/bp-nouveau/includes/activity/functions.php:256
 #: bp-templates/bp-nouveau/includes/groups/functions.php:529
@@ -9651,7 +9655,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/includes/activity/functions.php:496
 msgid "New mentions"
-msgstr ""
+msgstr "Novas menções"
 
 #: bp-templates/bp-nouveau/includes/activity/functions.php:501
 msgid "New update replies"
@@ -10157,7 +10161,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/includes/groups/functions.php:513
 msgid "All Groups"
-msgstr ""
+msgstr "Todos os Grupos"
 
 #: bp-templates/bp-nouveau/includes/groups/functions.php:698
 msgid "Group front page"
@@ -10213,7 +10217,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/includes/groups/functions.php:864
 msgid "Group > Members"
-msgstr ""
+msgstr "Grupo > Membros"
 
 #: bp-templates/bp-nouveau/includes/groups/functions.php:871
 msgid "Use column navigation for the Groups directory."
@@ -10399,7 +10403,7 @@ msgstr ""
 
 #: bp-templates/bp-nouveau/includes/template-tags.php:2336
 msgid "Confirm new password"
-msgstr ""
+msgstr "Confirmar nova password"
 
 #. translators: Do not translate placeholders. 2 = form field name, 3 =
 #. "(required)".
@@ -10934,7 +10938,7 @@ msgstr ""
 
 #: bp-xprofile/classes/class-bp-xprofile-field-type-datebox.php:492
 msgid "Example:"
-msgstr ""
+msgstr "Exemplo:"
 
 #: bp-xprofile/classes/class-bp-xprofile-field-type-datebox.php:494
 msgid "Documentation on date and time formatting"
@@ -11092,7 +11096,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-field.php:1402
 #: bp-xprofile/classes/class-bp-xprofile-group.php:863
 msgid "Add description"
-msgstr ""
+msgstr "Adicionar descrição"
 
 #: bp-xprofile/classes/class-bp-xprofile-field.php:1433
 msgid "Member Types"
@@ -11354,7 +11358,7 @@ msgstr ""
 #: bp-activity/classes/class-bp-activity-component.php:406
 msgctxt "My Account Activity sub nav"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-activity/classes/class-bp-activity-component.php:429
 msgctxt "Page and <title>"
@@ -11487,7 +11491,7 @@ msgstr ""
 #: bp-core/bp-core-customizer-email.php:137
 msgctxt "email"
 msgid "Body"
-msgstr ""
+msgstr "Corpo"
 
 #: bp-core/bp-core-customizer-email.php:142
 msgctxt "email"
@@ -11530,7 +11534,7 @@ msgstr "Atividade"
 #: bp-core/bp-core-functions.php:754
 msgctxt "Page title for the Groups directory."
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-core/bp-core-functions.php:755
 msgctxt "Page title for the Sites directory."
@@ -11565,7 +11569,7 @@ msgstr ""
 #: bp-core/bp-core-functions.php:2897
 msgctxt "email post type label"
 msgid "Add a New Email"
-msgstr ""
+msgstr "Adicionar um Novo E-mail"
 
 #: bp-core/bp-core-functions.php:2898
 msgctxt "email post type label"
@@ -11600,7 +11604,7 @@ msgstr ""
 #: bp-core/bp-core-functions.php:2905
 msgctxt "email post type label"
 msgid "New Email"
-msgstr ""
+msgstr "Novo E-mail"
 
 #: bp-core/bp-core-functions.php:2906
 msgctxt "email post type label"
@@ -11735,7 +11739,7 @@ msgstr ""
 #: bp-core/bp-core-template.php:538
 msgctxt "search form"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-core/bp-core-template.php:542
 msgctxt "search form"
@@ -11770,7 +11774,7 @@ msgstr ""
 #: bp-core/bp-core-update.php:657
 msgctxt "component directory title"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-core/bp-core-update.php:658
 msgctxt "component directory title"
@@ -11899,7 +11903,7 @@ msgstr ""
 #: bp-friends/classes/class-bp-friends-component.php:249
 msgctxt "My Account Friends menu sub nav"
 msgid "No Pending Requests"
-msgstr ""
+msgstr "Nenhum Pedido Pendente"
 
 #: bp-friends/classes/class-bp-friends-component.php:264
 msgctxt "My Account Friends menu sub nav"
@@ -11909,12 +11913,12 @@ msgstr ""
 #: bp-groups/bp-groups-admin.php:32
 msgctxt "Admin Groups page title"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/bp-groups-admin.php:33
 msgctxt "Admin Groups menu"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/bp-groups-admin.php:128
 msgctxt "group admin edit screen"
@@ -11944,7 +11948,7 @@ msgstr ""
 #: bp-groups/bp-groups-admin.php:163
 msgctxt "Groups per page (screen options)"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/bp-groups-admin.php:977
 msgctxt "Group member user_id in group admin"
@@ -12017,7 +12021,7 @@ msgstr ""
 #: bp-groups/bp-groups-notifications.php:1122
 msgctxt "Group settings on notification settings page"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/bp-groups-notifications.php:1131
 msgctxt "group settings on notification settings page"
@@ -12098,7 +12102,7 @@ msgstr ""
 #: bp-groups/classes/class-bp-groups-component.php:540
 msgctxt "Group screen nav without counter"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/classes/class-bp-groups-component.php:606
 #: bp-templates/bp-nouveau/includes/groups/classes.php:257
@@ -12146,17 +12150,17 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/classes.php:301
 msgctxt "My Group screen nav"
 msgid "Members"
-msgstr ""
+msgstr "Membros"
 
 #: bp-groups/classes/class-bp-groups-component.php:794
 msgctxt "My Account Groups"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-groups/classes/class-bp-groups-component.php:795
 msgctxt "My Account Groups sub nav"
 msgid "No Pending Invites"
-msgstr ""
+msgstr "Nenhum Convite Pendente"
 
 #. translators: %s: Group invitation count for the current user
 #: bp-groups/classes/class-bp-groups-component.php:806
@@ -12228,7 +12232,7 @@ msgstr "&rarr;"
 #: bp-groups/classes/class-bp-groups-theme-compat.php:177
 msgctxt "Group creation page"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-members/bp-members-template.php:126
 msgctxt "member type URL base"
@@ -12566,7 +12570,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/invites/index.php:120
 msgctxt "button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: bp-templates/bp-nouveau/buddypress/assets/_attachments/avatars/camera.php:22
 msgctxt "button"
@@ -12657,7 +12661,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/buddypress/members/single/parts/profile-visibility.php:25
 msgctxt "button"
 msgid "Change"
-msgstr ""
+msgstr "Mudar"
 
 #: bp-templates/bp-nouveau/includes/activity/template-tags.php:336
 msgctxt "button"
@@ -12685,7 +12689,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/members/template-tags.php:289
 msgctxt "button"
 msgid "Accept"
-msgstr ""
+msgstr "Aceitar"
 
 #: bp-templates/bp-nouveau/includes/members/template-tags.php:305
 msgctxt "button"
@@ -12884,7 +12888,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/functions.php:857
 msgctxt "Customizer control label"
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: bp-xprofile/bp-xprofile-admin.php:28
 msgctxt "xProfile admin page title"
@@ -12914,7 +12918,7 @@ msgstr ""
 #: bp-xprofile/bp-xprofile-admin.php:316
 msgctxt "Add New Profile Fields Group"
 msgid "Add New Group"
-msgstr ""
+msgstr "Adicionar Novo Grupo"
 
 #: bp-xprofile/bp-xprofile-admin.php:409
 msgctxt "Error when deleting profile fields group"

@@ -6,6 +6,7 @@
     },
     "require": {
         "google/apiclient": "~2.0",
-        "cache/filesystem-adapter": "^1.0"
+        "cache/filesystem-adapter": "^1.0",
+        "sysmoh/nextcloud-api-wrapper": "^0.1.1"
     }
 }

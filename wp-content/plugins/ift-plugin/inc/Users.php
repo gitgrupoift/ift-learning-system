@@ -1,17 +1,20 @@
 <?php
 
 namespace IFT;
+use NextcloudApiWrapper\Wrapper;
 
 class Users {
     
     
     public function __construct() {
 
-        $this->avatar = $user_photo;
+      
         $this->remove_fields();
         
-        add_action( 'after_setup_theme', array($this, 'remove_admin_bar') );
+        add_action( 'init', array($this, 'remove_admin_bar') );
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
+        
+        add_action( 'user_register', array($this, 'generate_cloud_user') );
         
     }
     
@@ -63,9 +66,46 @@ class Users {
     
     function remove_admin_bar() {
         
-        if (!current_user_can('administrator') && !is_admin()) {
+        if (!current_user_can('administrator')) {
                 show_admin_bar(false);
         }
+    }
+    
+    function generate_cloud_user( $user_id ) {
+        
+        
+        $user = get_user_by( 'id', $user_id );
+        $login_cloud = $user->user_email;
+        $pass_cloud = $user->user_pass;
+        $fields = array(
+            'userid' => $login_cloud,
+            'password' => $pass_cloud,
+            'email' => $login_cloud
+        );
+        
+        foreach($fields as $key=>$value) { 
+            $fields_string .= $key.'='.$value.'&'; 
+        }
+        
+        rtrim($fields_string, '&');
+        
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'http://carlos:Lipsw0rld001@app.grupoift.pt/ocs/v1.php/cloud/users');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, count($fields));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string );
+
+        $headers = array();
+        $headers[] = 'Ocs-Apirequest: true';
+        $headers[] = 'Content-Type: application/x-www-form-urlencoded';
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+        curl_close($ch);
     }
 
 
