@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: LearnDash LMS - Notifications\n"
 "POT-Creation-Date: 2017-10-18 14:51+0700\n"
-"PO-Revision-Date: 2020-03-09 11:51+0000\n"
+"PO-Revision-Date: 2020-03-24 03:54+0000\n"
 "Last-Translator: carlos <geral@meuppt.pt>\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,7 @@ msgstr "Gatilho do E-mail"
 #: ignore/learndash-notifications/includes/meta-box.php:110
 #: includes/meta-box.php:116
 msgid "When this email will be sent."
-msgstr ""
+msgstr "Quando este e-mail será enviado."
 
 #: ignore/learndash-notifications/includes/meta-box.php:112
 #: includes/meta-box.php:120
@@ -133,7 +133,7 @@ msgstr "Utilizador completar um questionário"
 #: ignore/learndash-notifications/includes/meta-box.php:121
 #: includes/meta-box.php:130
 msgid "An Assignment is uploaded"
-msgstr ""
+msgstr "Um Trabalho Foi Carregado"
 
 #: ignore/learndash-notifications/includes/meta-box.php:122
 #: includes/meta-box.php:131
@@ -283,7 +283,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:211
 #: includes/meta-box.php:237
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 #: ignore/learndash-notifications/includes/meta-box.php:216
 #: includes/meta-box.php:250
@@ -352,7 +352,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:411
 #: includes/meta-box.php:463
 msgid "Display average total points got across all quizzes on the course."
-msgstr ""
+msgstr "Mostra o total de pontos em todos os questionários da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:412
 #: includes/meta-box.php:464
@@ -363,7 +363,7 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:413
 #: includes/meta-box.php:465
 msgid "Display average time spent across all quizzes on the course."
-msgstr ""
+msgstr "Mostra o tempo médio gasto em todas as avaliações do curso."
 
 #: ignore/learndash-notifications/includes/meta-box.php:414
 #: includes/meta-box.php:466
@@ -375,7 +375,7 @@ msgstr ""
 #: includes/meta-box.php:467
 msgid ""
 "Display sum of correct answers percentage across all quizzes on the course."
-msgstr ""
+msgstr "Mostra a porcentagem em soma em todos os questionários da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:416
 #: includes/meta-box.php:468
@@ -402,6 +402,7 @@ msgstr "Mostra o tempo total gasto em todas as avaliações da formação."
 #: includes/meta-box.php:472
 msgid "Display sum of correct answer counted across all quizzes on the course."
 msgstr ""
+"Mostra a soma das questões corretas em todos os questionários da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:424
 #: includes/meta-box.php:476
@@ -476,13 +477,13 @@ msgstr "Mostra o nome da lição à qual relaciona-se o trabalho."
 #: ignore/learndash-notifications/includes/meta-box.php:450
 #: includes/meta-box.php:505
 msgid "Display lesson type that the assignment belongs to."
-msgstr ""
+msgstr "Mostra o tipo de aula à qual o trabalho pertence."
 
 #: ignore/learndash-notifications/includes/notification.php:474
 #: includes/notification.php:945
 #, php-format
 msgid "New comment on assignment \"%s\""
-msgstr ""
+msgstr "Novo comentário no trabalho \"%s\""
 
 #. translators: 1: comment author, 2: author IP, 3: author domain
 #: ignore/learndash-notifications/includes/notification.php:476

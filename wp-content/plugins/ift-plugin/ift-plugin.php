@@ -36,6 +36,7 @@ new Rest();
 new Bbpress();
 new Optimize();
 new Ads();
+new Backend();
 
 
 add_action('after_setup_theme', 'override_theme', 999);

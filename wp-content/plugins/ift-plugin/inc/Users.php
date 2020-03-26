@@ -13,8 +13,11 @@ class Users {
         
         add_action( 'init', array($this, 'remove_admin_bar') );
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
+  
         
-        add_action( 'user_register', array($this, 'generate_cloud_user') );
+        add_action( 'init', array($this, 'generate_cloud_groups') );
+        //add_action( 'init', array($this, 'users_groups') );
+   
         
     }
     
@@ -71,16 +74,21 @@ class Users {
         }
     }
     
-    function generate_cloud_user( $user_id ) {
+    
+    function generate_cloud_groups() {
+        
+        $args = array(
+            'post_type' => 'sfwd-courses',
+            'post_status' => 'publish'
+        );
         
         
-        $user = get_user_by( 'id', $user_id );
-        $login_cloud = $user->user_email;
-        $pass_cloud = $user->user_pass;
+        $rooms = get_posts( $args );
+        
+        foreach($rooms as $room) {
+        
         $fields = array(
-            'userid' => $login_cloud,
-            'password' => $pass_cloud,
-            'email' => $login_cloud
+            'groupid' => $room->post_title
         );
         
         foreach($fields as $key=>$value) { 
@@ -91,7 +99,7 @@ class Users {
         
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, 'http://carlos:Lipsw0rld001@app.grupoift.pt/ocs/v1.php/cloud/users');
+        curl_setopt($ch, CURLOPT_URL, 'http://carlos:Lipsw0rld@app.grupoift.pt/ocs/v1.php/cloud/groups');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, count($fields));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string );
@@ -106,7 +114,9 @@ class Users {
             echo 'Error:' . curl_error($ch);
         }
         curl_close($ch);
+            
+        }
     }
-
+    
 
 }

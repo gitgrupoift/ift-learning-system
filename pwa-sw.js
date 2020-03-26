@@ -1,4 +1,4 @@
-const CACHE_VERSION = '1.7.9.2';
+const CACHE_VERSION = '1.7.9.3';
 
 const BASE_CACHE_FILES = [
     'https://aulas.grupoift.pt/wp-content/uploads/2020/01/logo-sem-fundo.png',
@@ -8,15 +8,15 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://aulas.grupoift.pt/changelog-controlo-de-versoes/',
+     'https://aulas.grupoift.pt/',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    'https://aulas.grupoift.pt/changelog-controlo-de-versoes/',
+    'https://aulas.grupoift.pt/',
 ];
 
-const OFFLINE_PAGE = 'https://aulas.grupoift.pt/changelog-controlo-de-versoes/';
-const NOT_FOUND_PAGE = 'https://aulas.grupoift.pt/changelog-controlo-de-versoes/';
+const OFFLINE_PAGE = 'https://aulas.grupoift.pt/';
+const NOT_FOUND_PAGE = 'https://aulas.grupoift.pt/';
 
 const CACHE_VERSIONS = {
     content: 'content-v' + CACHE_VERSION,

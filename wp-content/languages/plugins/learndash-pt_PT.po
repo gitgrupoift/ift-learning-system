@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-03-08 11:08+0000\n"
+"PO-Revision-Date: 2020-03-26 22:48+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -610,7 +610,7 @@ msgstr ""
 
 #: includes/settings/settings-pages/class-ld-settings-page-overview.php:943
 msgid "Search documentation"
-msgstr ""
+msgstr "Procurar documentação"
 
 #: includes/settings/settings-pages/class-ld-settings-page-overview.php:944
 #: includes/admin/class-learndash-admin-binary-selector.php:314
@@ -1546,6 +1546,8 @@ msgid ""
 "Enable this option to gather data from your users before or after the %1$s. "
 "All data is stored in the %2$s Statistics."
 msgstr ""
+"Habilite esta opção para angariar dados dos utilizadores antes ou depois do "
+"questionário. Todos os dados são guardados para as estatísticas."
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-admin-data-handling-settings.php:457
 msgid "Display Position"
@@ -1655,7 +1657,7 @@ msgstr "Notificações por E-mail"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-admin-data-handling-settings.php:651
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-admin-data-handling-settings.php:666
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_AdminToplist.php:55
@@ -1692,7 +1694,7 @@ msgstr "Definições Avançadas"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-admin-data-handling-settings.php:723
 msgid "Browser Cookie Answer Protection"
-msgstr ""
+msgstr "Proteção às Respostas por Cookie"
 
 #. translators: placeholder: quizzes
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-admin-data-handling-settings.php:727
@@ -2359,7 +2361,7 @@ msgstr "Apenas formandos registados podem aceder ao questionário"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:27
 msgid "Progression and Restriction Settings"
-msgstr ""
+msgstr "Definições de Progressão e Restrição"
 
 #. translators: placeholder: quiz.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:31
@@ -2386,6 +2388,8 @@ msgid ""
 "Set the score needed to receive a certificate. This can be different from "
 "the \"Passing Score\"."
 msgstr ""
+"Indique as horas para conseguir o certificado. Diferente da pontuação para "
+"aprovação na avaliação."
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:268
 msgid "% score"
@@ -2416,6 +2420,7 @@ msgstr "Apenas utilizadores anónimos"
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:330
 msgid "Use a cookie to restrict ALL users, including anonymous visitors"
 msgstr ""
+"Usar um cookie para restringir a todos os utilizadores, inclusive anónimos"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:340
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:270
@@ -2488,7 +2493,7 @@ msgstr "Exibição Customizada dos Resultados"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-results-display-content-options.php:255
 msgid "Enable the items you wish to display on the Result Page"
-msgstr ""
+msgstr "Habilite os itens que pretende mostrar na Página de Resultados"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-results-display-content-options.php:263
 msgid "Average Score"
@@ -4145,7 +4150,7 @@ msgstr "DESC - do maior para o menor valor (padrão)"
 #: includes/settings/shortcodes-sections/ld_profile.php:65
 #: includes/gutenberg/blocks/ld-profile/index.js:158
 msgid "Show Search"
-msgstr ""
+msgstr "Mostrar Resultados"
 
 #: includes/settings/shortcodes-sections/ld_profile.php:71
 #: includes/gutenberg/blocks/ld-profile/index.js:161
@@ -5183,7 +5188,7 @@ msgstr ""
 
 #: includes/settings/settings-fields/class-ld-settings-fields-quiz-templates-load.php:105
 msgid "Search or select a template…"
-msgstr ""
+msgstr "Procurar e selecionar um modelo..."
 
 #: includes/settings/settings-fields/class-ld-settings-fields-quiz-templates-load.php:107
 #: includes/admin/classes-posts-edits/class-learndash-admin-quiz-edit.php:530
@@ -5337,7 +5342,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:94
 msgid "REST API must be enabled"
-msgstr ""
+msgstr "A API precisa de ser habilitada"
 
 #. translators: placeholder: Course.
 #: includes/settings/settings-sections/class-ld-settings-section-general-rest-api.php:107
@@ -6035,7 +6040,7 @@ msgstr "Reiniciar Traduções"
 
 #: includes/settings/settings-sections/class-ld-settings-section-translations-refresh.php:56
 msgid "Updated"
-msgstr ""
+msgstr "Atualizado"
 
 #: includes/settings/settings-sections/class-ld-settings-section-translations-refresh.php:58
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:183
@@ -6299,7 +6304,7 @@ msgstr ""
 #: includes/settings/settings-sections/_class-ld-settings-section-quizzes-template-management.php:132
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-management-display.php:517
 msgid "Template updated."
-msgstr ""
+msgstr "Modelo atualizado."
 
 #: includes/settings/settings-sections/class-ld-settings-section-questions-management-display.php:153
 #: includes/settings/settings-sections/_class-ld-settings-section-quizzes-template-management.php:147
@@ -6436,6 +6441,8 @@ msgid ""
 "Allow admin users to access %s content in any order bypassing progression "
 "and access limitations"
 msgstr ""
+"Permitir aos administradores o acesso ao conteúdo em qualquer ordem e sem "
+"limitações"
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:124
 msgid "Admin must follow the progression and access rules"
@@ -7147,7 +7154,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-login-registration.php:31
 msgid "Login / Registration Settings"
-msgstr ""
+msgstr "Definições de Login e Registo"
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-login-registration.php:60
 msgid "Login Logo"
@@ -7493,7 +7500,7 @@ msgstr "Guardar Mudanças"
 
 #: includes/settings/class-ld-settings-pages.php:504
 msgid "You have errors on the following settings"
-msgstr ""
+msgstr "Você possui erros nas seguintes definições"
 
 #: includes/class-ld-cpt-instance.php:58
 msgid " Options"
@@ -7901,7 +7908,7 @@ msgstr "Descrição do Utilizador"
 
 #: includes/ld-convert-post-pdf.php:106
 msgid "Post does not exist."
-msgstr ""
+msgstr "O post não existe."
 
 #: includes/ld-convert-post-pdf.php:616
 msgid ""
@@ -7975,7 +7982,7 @@ msgstr "Novo Grupo"
 
 #: includes/ld-groups.php:148
 msgid "Group Updated."
-msgstr ""
+msgstr "Grupo Atualizado."
 
 #: includes/ld-groups.php:149
 msgid "View Group"
@@ -8020,7 +8027,7 @@ msgstr ""
 #: includes/ld-groups.php:341
 #: includes/admin/class-learndash-admin-groups-users-list.php:205
 msgid "Please login as a Group Administrator"
-msgstr ""
+msgstr "Favor logar como Gestor das Turmas"
 
 #: includes/ld-groups.php:350 includes/ld-groups.php:359
 msgid "S. No."
@@ -8139,6 +8146,8 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-course-info/index.php:170
 msgid "Please enable one or more 'Show' options within the Block Settings."
 msgstr ""
+"Favor habilitar uma ou mais das opções de \"Mostrar\" nas Definições dos "
+"Blocos"
 
 #: includes/gutenberg/lib/class-ld-rest-gutenberg-posts-controller.php:30
 #: includes/rest-api/v1/class-ld-rest-groups-courses-controller.php:39
@@ -8540,7 +8549,7 @@ msgstr "Novo"
 
 #: includes/admin/class-learndash-admin-builder.php:268
 msgid "Search..."
-msgstr ""
+msgstr "Busca..."
 
 #: includes/admin/class-learndash-admin-builder.php:319
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:406
@@ -8847,6 +8856,8 @@ msgid ""
 "The user can only progress if the essay is marked as \"Graded\" and if the "
 "user has enough points to move on."
 msgstr ""
+"O utilizador apenas prossegue se for aprovado e obtiver a pontuação "
+"determinada."
 
 #. translators: placeholders: quiz
 #: includes/admin/ld-quiz-builder-helpers.php:130
@@ -9178,7 +9189,7 @@ msgstr "Ativar Plugins"
 #: includes/admin/class-learndash-admin-menus-tabs.php:1401
 #: includes/admin/class-learndash-admin-menus-tabs.php:1410
 msgid "Group Administration"
-msgstr ""
+msgstr "Gestão das Turmas"
 
 #: includes/admin/class-learndash-admin-groups-users-list.php:156
 msgid "per Page"
@@ -9475,7 +9486,7 @@ msgstr "Solte Aulas e Tópicos Aqui"
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:118
 msgctxt "placeholder: Topic, Quizzes"
 msgid "Drop %1$s %2$s Here"
-msgstr ""
+msgstr "Solte Tópicos e Questionários Aqui"
 
 #. translators: placeholder: number of steps.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:154
@@ -9615,7 +9626,7 @@ msgstr ""
 #: includes/admin/classes-builders/class-learndash-admin-quiz-builder-metabox.php:75
 msgctxt "placeholder: Questions"
 msgid "Drop %s Here"
-msgstr ""
+msgstr "Solte as Questões Aqui"
 
 #. translators: placeholder: Questions label, number of questions.
 #: includes/admin/classes-builders/class-learndash-admin-quiz-builder-metabox.php:114
@@ -9708,7 +9719,7 @@ msgstr "%s Utilizadores"
 #: includes/admin/class-learndash-admin-binary-selector.php:660
 msgctxt "Search All Course Users"
 msgid "Search All %s Users"
-msgstr ""
+msgstr "Selecionar Todos os Utilizadores da %s"
 
 #. translators: placeholder: Course.
 #: includes/admin/class-learndash-admin-binary-selector.php:665
@@ -9718,7 +9729,7 @@ msgstr ""
 
 #: includes/admin/class-learndash-admin-binary-selector.php:700
 msgid "Search All Group Users"
-msgstr ""
+msgstr "Selecionar Todos os Utilizadores do Grupo"
 
 #: includes/admin/class-learndash-admin-binary-selector.php:701
 msgid "Search Assigned Group Users"
@@ -9726,7 +9737,7 @@ msgstr ""
 
 #: includes/admin/class-learndash-admin-binary-selector.php:734
 msgid "Search All Group Leaders"
-msgstr ""
+msgstr "Selecionar Todos os Líderes do Grupo"
 
 #: includes/admin/class-learndash-admin-binary-selector.php:735
 msgid "Search Assigned Group Leaders"
@@ -9742,7 +9753,7 @@ msgstr ""
 #: includes/admin/class-learndash-admin-binary-selector.php:1010
 msgctxt "Search All Group Courses Label"
 msgid "Search All Group %s"
-msgstr ""
+msgstr "Selecionar Todos os %s do Grupo"
 
 #. translators: placeholder: courses.
 #: includes/admin/class-learndash-admin-binary-selector.php:1015
@@ -9760,7 +9771,7 @@ msgstr ""
 #: includes/admin/class-learndash-admin-binary-selector.php:1141
 #: includes/admin/class-learndash-admin-binary-selector.php:1176
 msgid "Search All Groups"
-msgstr ""
+msgstr "Buscar em todos os Grupos"
 
 #. translators: placeholder: Course.
 #: includes/admin/class-learndash-admin-binary-selector.php:1058
@@ -9778,7 +9789,7 @@ msgstr "Utilizador Inscrito na %s"
 #: includes/admin/class-learndash-admin-binary-selector.php:1100
 msgctxt "Search All Courses Label"
 msgid "Search All %s"
-msgstr ""
+msgstr "Selecionar Todos os %s"
 
 #. translators: placeholder: Courses.
 #: includes/admin/class-learndash-admin-binary-selector.php:1105
@@ -10014,7 +10025,7 @@ msgstr ""
 #: includes/admin/classes-posts-edits/class-learndash-admin-question-edit.php:559
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:157
 msgid "Here you can enter solution hint."
-msgstr ""
+msgstr "Aqui poderá adicionar uma dica para a solução."
 
 #: includes/admin/classes-posts-edits/class-learndash-admin-question-edit.php:563
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:161
@@ -10136,7 +10147,7 @@ msgstr ""
 
 #: includes/admin/class-learndash-admin-groups-users-list-table.php:95
 msgid "List Users"
-msgstr ""
+msgstr "Listagem de Utilizadores"
 
 #: includes/admin/class-learndash-admin-groups-users-list-table.php:99
 #: includes/admin/class-learndash-admin-groups-users-list-table.php:113
@@ -10298,7 +10309,7 @@ msgstr ""
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1052
 msgid "Solution hint"
-msgstr ""
+msgstr "Dica da questão"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1054
 msgid "Click here to edit the answer"
@@ -10306,7 +10317,7 @@ msgstr "Clique aqui para editar a resposta"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1055
 msgid "Update Answer"
-msgstr ""
+msgstr "Atualizar Resposta"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1056
 msgid "Answer is missing"
@@ -10482,19 +10493,19 @@ msgstr "Procurar %1$s"
 #: includes/admin/class-learndash-admin-menus-tabs.php:1140
 msgctxt "placeholders: quizzes"
 msgid "Search %1$s"
-msgstr ""
+msgstr "Busca de %1$s"
 
 #. translators: placeholders: topics
 #: includes/admin/class-learndash-admin-menus-tabs.php:1145
 msgctxt "placeholders: topics"
 msgid "Search %1$s"
-msgstr ""
+msgstr "Busca de %1$s"
 
 #. translators: placeholders: questions
 #: includes/admin/class-learndash-admin-menus-tabs.php:1150
 msgctxt "placeholders: questions"
 msgid "Search %1$s"
-msgstr ""
+msgstr "Busca de %1$s"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1154
 msgctxt "List of recent lessons, topics, quizzes or questions"
@@ -10608,19 +10619,19 @@ msgstr "Não há resultados"
 #: includes/admin/class-learndash-admin-menus-tabs.php:1212
 msgctxt "placeholder: Lessons"
 msgid "Drop %1$s here"
-msgstr ""
+msgstr "Solte as Aulas Aqui"
 
 #. translators: placeholders: Question
 #: includes/admin/class-learndash-admin-menus-tabs.php:1217
 msgctxt "placeholder: Question"
 msgid "Drop %1$s here"
-msgstr ""
+msgstr "Solte a questão aqui"
 
 #. translators: placeholders: Quizzes
 #: includes/admin/class-learndash-admin-menus-tabs.php:1222
 msgctxt "placeholder: Quizzes"
 msgid "Drop %1$s here"
-msgstr ""
+msgstr "Solte os questionários aqui"
 
 #. translators: placeholders: %1$s: Topics, %2$s: Quizzes
 #: includes/admin/class-learndash-admin-menus-tabs.php:1227
@@ -11124,7 +11135,7 @@ msgstr "Ver %s"
 #: includes/class-ld-lms.php:850
 msgctxt "Search Topic Label"
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar %s"
 
 #: includes/class-ld-lms.php:851
 msgctxt "No Topic found Label"
@@ -11184,7 +11195,7 @@ msgstr "Ver %s"
 #: includes/class-ld-lms.php:874
 msgctxt "Search Quiz Label"
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar %s"
 
 #: includes/class-ld-lms.php:875
 msgctxt "No Quiz found Label"
@@ -11249,7 +11260,7 @@ msgstr "Ver %s"
 #: includes/class-ld-lms.php:898
 msgctxt "Search Question Label"
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar %s"
 
 #: includes/class-ld-lms.php:899
 msgctxt "No Question found Label"
@@ -11314,7 +11325,7 @@ msgstr "Ver %s"
 #: includes/class-ld-lms.php:922
 msgctxt "Search Lesson Label"
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar %s"
 
 #: includes/class-ld-lms.php:923
 msgctxt "No Lesson found Label"
@@ -11379,7 +11390,7 @@ msgstr "Ver %s"
 #: includes/class-ld-lms.php:946
 msgctxt "Search Courses Label"
 msgid "Search %s"
-msgstr ""
+msgstr "Procurar %s"
 
 #: includes/class-ld-lms.php:947
 msgctxt "No Courses found Label"
@@ -11469,7 +11480,7 @@ msgstr "%s Tag"
 #: includes/class-ld-lms.php:1053
 msgctxt "placeholder: Course"
 msgid "Search %s Tag"
-msgstr ""
+msgstr "Procurar Tag de %s"
 
 #: includes/class-ld-lms.php:1054
 msgctxt "placeholder: Course"
@@ -11559,7 +11570,7 @@ msgstr "%s Tag"
 #: includes/class-ld-lms.php:1124
 msgctxt "placeholder: Lesson"
 msgid "Search %s Tag"
-msgstr ""
+msgstr "Procurar Tag de %s"
 
 #: includes/class-ld-lms.php:1125
 msgctxt "placeholder: Lesson"
@@ -11649,7 +11660,7 @@ msgstr "%s Tag"
 #: includes/class-ld-lms.php:1195
 msgctxt "placeholder: Topic"
 msgid "Search %s Tag"
-msgstr ""
+msgstr "Procurar Tag de %s"
 
 #: includes/class-ld-lms.php:1196
 msgctxt "placeholder: Topic"
@@ -11739,7 +11750,7 @@ msgstr "%s Tag"
 #: includes/class-ld-lms.php:1258
 msgctxt "placeholder: Quiz"
 msgid "Search %s Tag"
-msgstr ""
+msgstr "Procurar Tag de %s"
 
 #: includes/class-ld-lms.php:1259
 msgctxt "placeholder: Quiz"
@@ -11829,7 +11840,7 @@ msgstr "%s Tag"
 #: includes/class-ld-lms.php:1329
 msgctxt "placeholder: Question"
 msgid "Search %s Tag"
-msgstr ""
+msgstr "Procurar Tag de %s"
 
 #: includes/class-ld-lms.php:1330
 msgctxt "placeholder: Question"
@@ -12229,7 +12240,7 @@ msgstr ""
 #: includes/class-ld-lms.php:1735
 msgctxt "Make Lesson Visible X Days After Sign-up"
 msgid "Make %s visible X Days After Sign-up"
-msgstr ""
+msgstr "Tornar a Aula visível X dias após a inscrição"
 
 #: includes/class-ld-lms.php:1739
 msgctxt "Make lesson visible ____ days after sign-up"
@@ -12239,7 +12250,7 @@ msgstr ""
 #: includes/class-ld-lms.php:1744
 msgctxt "Make Lesson Visible on Specific Date"
 msgid "Make %s Visible on Specific Date"
-msgstr ""
+msgstr "Tornar a Aula Visível em uma Data Específica"
 
 #: includes/class-ld-lms.php:1747
 msgctxt "Set the date that you would like this lesson to become available."
@@ -13148,7 +13159,7 @@ msgstr "apenas utilizadores anónimos"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:262
 msgid "user identification by cookie"
-msgstr ""
+msgstr "usar identificação via cookies"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:265
 msgid ""
@@ -13296,6 +13307,8 @@ msgid ""
 "If you enable this option, an email is sent with his %s result to the user. "
 "(only registered users)"
 msgstr ""
+"Se habilitar esta opção, um e-mail é enviado com os resultados do utilizador "
+"na avaliação (apenas utilizadores registados)."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:497
 msgctxt "placeholders: quiz"
@@ -13303,6 +13316,7 @@ msgid ""
 "If you enable this option, the %s will start automatically after the page is "
 "loaded."
 msgstr ""
+"Se habilitar esta opção, o questionário inicia após o carregamento da página."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:504
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:509
@@ -13350,6 +13364,8 @@ msgid ""
 "If you enable this option, the results of each category is displayed on the "
 "results page."
 msgstr ""
+"Se habilitar esta opção, os resultados de cada categoria são mostrados na "
+"página de resultados."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:621
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:626
@@ -13521,6 +13537,8 @@ msgid ""
 "If you enable this option, additional captcha will be displayed for users "
 "who are not registered."
 msgstr ""
+"Se habilitar esta opção, um CAPTCHA adicional é mostrado para os "
+"utilizadores não registados."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:914
 msgid "This option requires additional plugin:"
@@ -15766,7 +15784,7 @@ msgstr "Ver Trabalho"
 
 #: includes/ld-assignment-uploads.php:1295
 msgid "Search Assignments"
-msgstr ""
+msgstr "Procurar Trabalhos"
 
 #: includes/ld-assignment-uploads.php:1296
 msgid "No assignment found"
@@ -15867,7 +15885,7 @@ msgstr ""
 #: includes/ld-misc-functions.php:1298 includes/ld-misc-functions.php:1301
 msgctxt "placeholder: Post Type Singlular Label"
 msgid "%s updated."
-msgstr ""
+msgstr "%s atualizado."
 
 #. translators: %s: date and time of the revision
 #: includes/ld-misc-functions.php:1303
