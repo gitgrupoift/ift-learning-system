@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: LearnDash LMS - Notifications\n"
 "POT-Creation-Date: 2017-10-18 14:51+0700\n"
-"PO-Revision-Date: 2020-03-24 03:54+0000\n"
+"PO-Revision-Date: 2020-03-27 15:21+0000\n"
 "Last-Translator: carlos <geral@meuppt.pt>\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
@@ -59,21 +59,23 @@ msgid ""
 "Select an email trigger on the notification settings above to see available "
 "shortcodes."
 msgstr ""
+"Selecione um evento de disparo da notificação para ver a lista disponível de "
+"shortcodes."
 
 #: ignore/learndash-notifications/includes/meta-box.php:46
 #: includes/meta-box.php:46
 msgid "Here are the available shortcodes for the email trigger selected:"
-msgstr ""
+msgstr "Aqui seguem os shortcodes para o email."
 
 #: ignore/learndash-notifications/includes/meta-box.php:61
 #: includes/meta-box.php:61
 msgid "<em>Cumulative</em> is average for all quizzes of the course."
-msgstr ""
+msgstr "O cumulativo é a média de todas as avaliações da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:63
 #: includes/meta-box.php:63
 msgid "<em>Aggregate</em> is sum for all quizzes of the course."
-msgstr ""
+msgstr "A somatória é a soma para todas as avaliações da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:109
 #: includes/meta-box.php:115
@@ -278,7 +280,7 @@ msgstr "Utilizador"
 #: ignore/learndash-notifications/includes/meta-box.php:210
 #: includes/meta-box.php:236
 msgid "Group Leader"
-msgstr ""
+msgstr "Líder de Turma"
 
 #: ignore/learndash-notifications/includes/meta-box.php:211
 #: includes/meta-box.php:237
@@ -342,12 +344,12 @@ msgstr ""
 #: ignore/learndash-notifications/includes/meta-box.php:409
 #: includes/meta-box.php:461
 msgid "Display average points scored across all quizzes on the course."
-msgstr ""
+msgstr "Mostra a média de pontuação nas avaliações todas do curso."
 
 #: ignore/learndash-notifications/includes/meta-box.php:410
 #: includes/meta-box.php:462
 msgid "Display average points got across all quizzes on the course."
-msgstr ""
+msgstr "Mostra a média de pontuação nas avaliações todas do curso."
 
 #: ignore/learndash-notifications/includes/meta-box.php:411
 #: includes/meta-box.php:463
@@ -685,7 +687,7 @@ msgstr "Grupo"
 
 #: includes/meta-box.php:141
 msgid "Group that the notification is assigned to."
-msgstr ""
+msgstr "Grupo ao qual a notificação está relacionada."
 
 #: includes/meta-box.php:146
 msgid "-- Select Group --"
@@ -738,7 +740,7 @@ msgstr "Trabalho"
 
 #: includes/notification.php:935
 msgid "Essay"
-msgstr ""
+msgstr "Ensaio ou Trabalho"
 
 #. translators: 1: title, 2: post title
 #: includes/notification.php:955
@@ -748,7 +750,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "LearnDash LMS - Notifications"
-msgstr ""
+msgstr "IFT Learning - Notificações"
 
 #. Description of the plugin/theme
 msgid "Create and send notification emails to the users."

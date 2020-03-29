@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: LearnDash ProPanel 2.1.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/learndash-propanel\n"
 "POT-Creation-Date: 2018-03-21 07:22-0500\n"
-"PO-Revision-Date: 2020-01-28 15:04+0000\n"
-"Last-Translator: carlos <geral@meuppt.pt>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2020-03-28 20:47+0000\n"
+"Last-Translator: Carlos Artur Curvelo Matos <geral@meuppt.pt>\n"
+"Language-Team: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: includes/class-ld-propanel-activity.php:663
 msgid "View Quiz Statistics"
-msgstr ""
+msgstr "Ver as Estatísticas das Avaliações"
 
 #: includes/class-ld-propanel-activity.php:663
 msgid "Statistics"
-msgstr ""
+msgstr "Estatísticas"
 
 #: includes/class-ld-propanel-base-widget.php:85
 msgid "ProPanel Email: AJAX submission could not complete, please try again."
@@ -58,7 +58,7 @@ msgstr ""
 #: includes/class-ld-propanel-filtering.php:31
 #: templates/ld-propanel-full-page.php:54
 msgid "ProPanel Filtering"
-msgstr ""
+msgstr "Filtros"
 
 #: includes/class-ld-propanel-filtering.php:293
 #: includes/class-ld-propanel-reporting.php:284
@@ -83,12 +83,12 @@ msgstr ""
 #: includes/class-ld-propanel-overview.php:27
 #: templates/ld-propanel-full-page.php:48
 msgid "ProPanel Overview"
-msgstr ""
+msgstr "Visão Global"
 
 #: includes/class-ld-propanel-progress-chart.php:27
 #: templates/ld-propanel-full-page.php:60
 msgid "ProPanel Progress Chart"
-msgstr ""
+msgstr "Gráfico"
 
 #: includes/class-ld-propanel-progress-chart.php:36
 #: includes/class-ld-tinymce-courseinfo.php:71
@@ -98,13 +98,13 @@ msgstr ""
 #: templates/reporting-filters/status/ld-propanel-reporting-filter-status.php:38
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user-row.php:34
 msgid "Not Started"
-msgstr ""
+msgstr "Não Iniciada"
 
 #: includes/class-ld-propanel-progress-chart.php:42
 #: includes/class-ld-tinymce-courseinfo.php:72
 #: templates/reporting-filters/status/ld-propanel-reporting-filter-status.php:42
 msgid "In Progress"
-msgstr ""
+msgstr "Em Curso"
 
 #: includes/class-ld-propanel-progress-chart.php:48
 #: includes/class-ld-tinymce-courseinfo.php:73
@@ -136,7 +136,7 @@ msgstr ""
 #: includes/class-ld-propanel.php:67 includes/class-ld-propanel.php:68
 #: templates/ld-propanel-full-page.php:35
 msgid "ProPanel Reporting"
-msgstr ""
+msgstr "Painel de Relatórios"
 
 #: includes/class-ld-propanel-shortcodes.php:57
 msgid "Show ProPanel Full Page"
@@ -150,11 +150,11 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:9
 msgid "ProPanel"
-msgstr ""
+msgstr "IFT Learning"
 
 #: includes/class-ld-tinymce-courseinfo.php:11
 msgid "This shortcode displays widgets from ProPanel."
-msgstr ""
+msgstr "Este shortcode mostra os widgets dos painéis de relatórios."
 
 #: includes/class-ld-tinymce-courseinfo.php:22
 msgid "Widget"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:27
 msgid "Overview Widget"
-msgstr ""
+msgstr "Visão Geral"
 
 #: includes/class-ld-tinymce-courseinfo.php:28
 msgid "Filtering Widget"
@@ -178,11 +178,11 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:29
 msgid "Reporting Widget"
-msgstr ""
+msgstr "Relatórios"
 
 #: includes/class-ld-tinymce-courseinfo.php:30
 msgid "Activity Widget"
-msgstr ""
+msgstr "Atividade"
 
 #: includes/class-ld-tinymce-courseinfo.php:31
 msgid "Progress Chart Widget"
@@ -190,7 +190,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:38
 msgid "Filter Groups"
-msgstr ""
+msgstr "Filtrar Grupos"
 
 #: includes/class-ld-tinymce-courseinfo.php:39
 msgid "Filter Widget by Group ID"
@@ -198,7 +198,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:47
 msgid "Filter Courses"
-msgstr ""
+msgstr "Filtrar Formações"
 
 #: includes/class-ld-tinymce-courseinfo.php:48
 msgid "Filter Widget by Course ID"
@@ -206,7 +206,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:56
 msgid "Filter Users"
-msgstr ""
+msgstr "Filtrar Utilizadores"
 
 #: includes/class-ld-tinymce-courseinfo.php:57
 msgid "Filter Widget by User ID"
@@ -226,7 +226,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:82
 msgid "Display Chart"
-msgstr ""
+msgstr "Mostrar Gráfico"
 
 #: includes/class-ld-tinymce-courseinfo.php:83
 msgid "Display Chart Orientation"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: includes/class-ld-tinymce-courseinfo.php:87
 msgid "Side by Side"
-msgstr ""
+msgstr "Lado a Lado"
 
 #: includes/class-ld-tinymce-courseinfo.php:95
 msgid "Per Page"
@@ -260,7 +260,7 @@ msgstr ""
 #: includes/class-ld-translations-propanel.php:17
 #: templates/ld-propanel-full-page.php:20
 msgid "LearnDash ProPanel"
-msgstr ""
+msgstr "Relatórios"
 
 #: learndash-propanel.php:68
 #, php-format
@@ -269,12 +269,12 @@ msgstr ""
 
 #: learndash-propanel.php:130
 msgid "ProPanel License"
-msgstr ""
+msgstr "Licença"
 
 #: templates/_ld-propanel-reporting.php:20
 #: templates/ld-propanel-filtering.php:20
 msgid "Filters"
-msgstr ""
+msgstr "Filtros"
 
 #: templates/_ld-propanel-reporting.php:23
 #: templates/ld-propanel-filtering.php:23
@@ -294,7 +294,7 @@ msgstr ""
 #: templates/ld-propanel-activity-pagination-shortcode.php:9
 msgctxt "activity widget pagnation previous page link"
 msgid "&laquo; Previous"
-msgstr ""
+msgstr "&laquo; Anterior"
 
 #: templates/ld-propanel-activity-pagination-shortcode.php:13
 msgctxt "activity widget pagnation next page link"
@@ -304,22 +304,22 @@ msgstr ""
 #: templates/ld-propanel-activity-pagination.php:21
 #: templates/ld-propanel-reporting-pager.php:1
 msgid "First Page"
-msgstr ""
+msgstr "Primeira Página"
 
 #: templates/ld-propanel-activity-pagination.php:22
 #: templates/ld-propanel-reporting-pager.php:1
 msgid "Previous Page"
-msgstr ""
+msgstr "Página Anterior"
 
 #: templates/ld-propanel-activity-pagination.php:23
 #: templates/ld-propanel-reporting-pager.php:1
 msgid "page"
-msgstr ""
+msgstr "página"
 
 #: templates/ld-propanel-activity-pagination.php:24
 #: templates/ld-propanel-reporting-pager.php:1
 msgid "Next Page"
-msgstr ""
+msgstr "Próxima Página"
 
 #: templates/ld-propanel-activity-pagination.php:25
 #: templates/ld-propanel-reporting-pager.php:1
@@ -331,7 +331,7 @@ msgstr ""
 #, php-format
 msgctxt "Export Course Data"
 msgid "Export %s Data"
-msgstr ""
+msgstr "Exportar CSV da Formação"
 
 #: templates/ld-propanel-activity-report-header.php:6
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:354
@@ -346,7 +346,7 @@ msgstr ""
 #, php-format
 msgctxt "Export Quiz Data"
 msgid "Export %s Data"
-msgstr ""
+msgstr "Exportar CSV das Avaliações"
 
 #: templates/ld-propanel-activity-report-header.php:7
 #, php-format
@@ -360,15 +360,15 @@ msgstr ""
 
 #: templates/ld-propanel-activity-rows.php:25
 msgid "Completed Date"
-msgstr ""
+msgstr "Data de Conclusão"
 
 #: templates/ld-propanel-activity-rows.php:35
 msgid "Started Date (Duration)"
-msgstr ""
+msgstr "Data de Início (duração)"
 
 #: templates/ld-propanel-activity-rows.php:37
 msgid "Started Date"
-msgstr ""
+msgstr "Data de Início"
 
 #: templates/ld-propanel-activity-rows.php:44
 #: templates/ld-propanel-activity-rows.php:111
@@ -377,7 +377,7 @@ msgstr ""
 #: templates/ld-propanel-activity-rows.php:243
 #: templates/ld-propanel-activity-rows.php:304
 msgid "See User Progress"
-msgstr ""
+msgstr "Ver Progressão"
 
 #: templates/ld-propanel-activity-rows.php:56
 #, php-format
@@ -419,15 +419,15 @@ msgstr ""
 
 #: templates/ld-propanel-activity-rows.php:86
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
 
 #: templates/ld-propanel-activity-rows.php:88
 msgid "Passed"
-msgstr ""
+msgstr "Aprovado"
 
 #: templates/ld-propanel-activity-rows.php:88
 msgid "Failed"
-msgstr ""
+msgstr "Erro"
 
 #: templates/ld-propanel-activity-rows.php:99
 msgid "Points:"
@@ -464,15 +464,15 @@ msgstr ""
 
 #: templates/ld-propanel-filtering-emails.php:8
 msgid "Please select user(s) to send an email to."
-msgstr ""
+msgstr "Selecione o utilizador para o qual enviar o e-mail."
 
 #: templates/ld-propanel-filtering-emails.php:12
 msgid "Your Message"
-msgstr ""
+msgstr "A Sua Mensagem"
 
 #: templates/ld-propanel-filtering-emails.php:13
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: templates/ld-propanel-filtering-emails.php:13
 #: templates/ld-propanel-filtering-filters.php:26
@@ -481,11 +481,11 @@ msgstr ""
 
 #: templates/ld-propanel-filtering-emails.php:15
 msgid "Sending..."
-msgstr ""
+msgstr "A Enviar..."
 
 #: templates/ld-propanel-filtering-filters.php:8
 msgid "Filter By:"
-msgstr ""
+msgstr "Filtrar Por:"
 
 #: templates/ld-propanel-filtering-filters.php:11
 msgid "Per Page:"
@@ -493,7 +493,7 @@ msgstr ""
 
 #: templates/ld-propanel-filtering-filters.php:26
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: templates/ld-propanel-full-admin.php:7
 msgid "LearnDash ProPanel Reporting"
@@ -501,16 +501,16 @@ msgstr ""
 
 #: templates/ld-propanel-full-page.php:41
 msgid "ProPanel Progress Activity"
-msgstr ""
+msgstr "Atividade"
 
 #: templates/ld-propanel-no-results.php:8
 #: templates/ld-propanel-reporting-no-results.php:7
 msgid "No Results Found."
-msgstr ""
+msgstr "Nenhum Resultado."
 
 #: templates/ld-propanel-overview.php:20
 msgid "Total Students"
-msgstr ""
+msgstr "Formandos no Total"
 
 #: templates/ld-propanel-overview.php:56
 #, php-format
@@ -544,7 +544,7 @@ msgstr ""
 
 #: templates/ld-propanel-reporting-choose-filter.php:8
 msgid "Please choose a filter in ProPanel Reporting."
-msgstr ""
+msgstr "Selecione os filtros que desejar."
 
 #: templates/ld-propanel-reporting-download-button.php:1
 msgid "Download"
@@ -562,11 +562,11 @@ msgstr ""
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user-row.php:30
 #, php-format
 msgid "%d of %d steps completed"
-msgstr ""
+msgstr "%d de %d passos concluídos"
 
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:7
 msgid "Search Users"
-msgstr ""
+msgstr "Procurar Utilizadores"
 
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:89
 #, php-format
@@ -586,7 +586,7 @@ msgstr ""
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:253
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:284
 msgid "User"
-msgstr ""
+msgstr "Utilizador"
 
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:239
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:247
@@ -598,17 +598,17 @@ msgstr ""
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:362
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:368
 msgid "Progress"
-msgstr ""
+msgstr "Progresso"
 
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:245
 msgid "User ID"
-msgstr ""
+msgstr "ID do Utilizador"
 
 #: templates/reporting-filters/courses/ld-propanel-reporting-filter-course.php:248
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:286
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:363
 msgid "Completed On"
-msgstr ""
+msgstr "Concluído Em"
 
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group-row.php:33
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user-row.php:25
@@ -619,17 +619,17 @@ msgstr ""
 
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:7
 msgid "Search Groups"
-msgstr ""
+msgstr "Procurar Grupos"
 
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:111
 msgid "All Groups"
-msgstr ""
+msgstr "Todos os Grupos"
 
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:274
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:282
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:290
 msgid "Course"
-msgstr ""
+msgstr "Formação"
 
 #: templates/reporting-filters/groups/ld-propanel-reporting-filter-group.php:281
 msgid "C-ID"
@@ -647,11 +647,11 @@ msgstr ""
 
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:162
 msgid "All Users"
-msgstr ""
+msgstr "Todos os Utilizadores"
 
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:162
 msgid "Select User"
-msgstr ""
+msgstr "Selecionar Utilizador"
 
 #: templates/reporting-filters/users/ld-propanel-reporting-filter-user.php:360
 #, php-format
@@ -665,7 +665,7 @@ msgstr ""
 
 #: wp_autoupdate_propanel.php:290
 msgid "settings saved."
-msgstr ""
+msgstr "definições guardadas."
 
 #: wp_autoupdate_propanel.php:305
 msgid "License Settings"

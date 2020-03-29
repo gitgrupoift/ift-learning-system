@@ -1,7 +1,6 @@
 <?php
 
 namespace IFT;
-use NextcloudApiWrapper\Wrapper;
 
 class Users {
     
@@ -15,8 +14,8 @@ class Users {
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
   
         
-        add_action( 'init', array($this, 'generate_cloud_groups') );
-        //add_action( 'init', array($this, 'users_groups') );
+        //add_action( 'init', array($this, 'generate_cloud_groups') );
+        //add_action( 'init', array($this, 'course_rooms') );
    
         
     }
@@ -33,7 +32,7 @@ class Users {
     
     public function add_limited_admin_role() {
 
-        add_role( 'entity', __( 'Entidade', 'ift-plugin' ), $capabilities );
+        add_role( 'entity', __( 'Entidade', 'ift-plugin' ) );
         
         $entity = get_role('entity');
         $entity->add_cap('edit_users');
@@ -99,7 +98,7 @@ class Users {
         
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, 'http://carlos:Lipsw0rld@app.grupoift.pt/ocs/v1.php/cloud/groups');
+        curl_setopt($ch, CURLOPT_URL, 'https://carlos:Lipsw0rld@app.grupoift.pt/ocs/v1.php/cloud/groups');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, count($fields));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string );

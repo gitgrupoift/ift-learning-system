@@ -3,6 +3,7 @@ const CACHE_VERSION = '1.7.9.3';
 const BASE_CACHE_FILES = [
     'https://aulas.grupoift.pt/wp-content/uploads/2020/01/logo-sem-fundo.png',
 'https://aulas.grupoift.pt/wp-content/plugins/pwa-for-wp/images/logo-512x512.png',
+'https://aulas.grupoift.pt/fghfhfgjjhg/',
 'https://aulas.grupoift.pt/ola-mundo/',
 
 ];

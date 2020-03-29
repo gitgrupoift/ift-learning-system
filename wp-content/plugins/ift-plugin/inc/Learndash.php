@@ -99,5 +99,45 @@ class Learndash {
         return $item_li;
         
     }
+    
+    public function learndash_user_course_hours() {
+        
+        $user_id = get_current_user_id();
+        $user_courses = ld_get_mycourses( $user_id );
+        
+        $item_li = '<ul class="user-course-list">' . PHP_EOL;      
+        
+        foreach ( $user_courses as $course_item ) {
+            
+            $is_completed = learndash_course_completed( $user_id, $course_item );           
+            $item_hours = get_post_meta( $course_item, 'course_points', true );
+            
+            $item_li .= '<li class="user-course-list-item">' . get_the_title($course_item);
+            
+            if ( $item_hours == null ) {                
+                 $item_li .= ' | <strong>sem atribuição de horas.</strong>';
+                
+            } else {                
+                $item_li .= ' | <span class="ld-courses-hours">' . $item_hours . '  Horas</span>';
+                
+                if ($is_completed == true) {
+                    $item_li .= ' | <strong><span class="ld-course-finished">Concluído</span></strong>';
+                    
+                } else {
+                    $item_li .= ' | <span class="ld-course-ongoing">Em Curso</span>';
+                }
+                
+            }
+            
+            $item_li .= '</li>';
+                        
+        }
+        
+        
+        $item_li .= '</ul>';
+        
+        return $item_li;
+        
+    }
 
 }

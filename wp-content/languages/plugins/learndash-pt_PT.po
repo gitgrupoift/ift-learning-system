@@ -5,13 +5,13 @@ msgstr ""
 "Project-Id-Version: LearnDash LMS 3.1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learndash-core-3."
 "1.1.1.master\n"
-"Last-Translator: carlos <geral@meuppt.pt>\n"
+"Last-Translator: Carlos Artur Curvelo Matos <geral@meuppt.pt>\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-03-26 22:48+0000\n"
+"PO-Revision-Date: 2020-03-28 20:51+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -4474,7 +4474,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-course-list/index.js:258
 msgctxt "placeholders: courses"
 msgid "Show All %s (default)"
-msgstr ""
+msgstr "Mostrar Todas as %s"
 
 #: includes/settings/shortcodes-sections/ld_course_list.php:67
 #: includes/gutenberg/blocks/ld-course-list/index.js:262
@@ -4502,7 +4502,7 @@ msgstr "mostra %s conteúdo."
 #: includes/settings/shortcodes-sections/ld_course_info.php:32
 msgctxt "placeholder: Course"
 msgid "Show %s Thumbnail"
-msgstr ""
+msgstr "Mostrar a Miniatura da Formação"
 
 #: includes/settings/shortcodes-sections/ld_course_list.php:88
 #: includes/settings/shortcodes-sections/ld_course_info.php:33
@@ -7800,17 +7800,17 @@ msgstr "%s Navegação"
 #: includes/course/ld-course-info-widget.php:443
 msgctxt "Show Course Quizzes?"
 msgid "Show %1$s %2$s?"
-msgstr ""
+msgstr "Mostrar %1$s %2$s?"
 
 #: includes/course/ld-course-info-widget.php:447
 msgctxt "Show Lesson Quizzes"
 msgid "Show %1$s %2$s?"
-msgstr ""
+msgstr "Mostrar %1$s %2$s?"
 
 #: includes/course/ld-course-info-widget.php:451
 msgctxt "Show Topic Quizzes?"
 msgid "Show %1$s %2$s?"
-msgstr ""
+msgstr "Mostrar %1$s %2$s?"
 
 #. translators: placeholders: Course.
 #: includes/course/ld-course-info-widget.php:742
@@ -8984,22 +8984,22 @@ msgstr "Filtrar por %s"
 #: includes/admin/ld-admin.php:832 includes/admin/ld-admin.php:2075
 msgctxt "Show All Courses Option Label"
 msgid "Show All %s"
-msgstr ""
+msgstr "Mostrar Todas as %s"
 
 #: includes/admin/ld-admin.php:849
 msgctxt "Show All Lessons Option Label"
 msgid "Show All %s"
-msgstr ""
+msgstr "Mostrar Todas as %s"
 
 #: includes/admin/ld-admin.php:939
 msgctxt "Show All Topics Option Label"
 msgid "Show All %s"
-msgstr ""
+msgstr "Mostrar Todos os %s"
 
 #: includes/admin/ld-admin.php:1013 includes/admin/ld-admin.php:1028
 msgctxt "Show All Quizzes Option Label"
 msgid "Show All %s"
-msgstr ""
+msgstr "Mostrar Todas as %s"
 
 #: includes/admin/ld-admin.php:1054
 msgid "Approval Status"
@@ -13175,7 +13175,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:282
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:287
 msgid "Show only specific number of questions"
-msgstr ""
+msgstr "Mostrar um número específico de questões"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:294
 msgid ""
@@ -13357,7 +13357,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:602
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:607
 msgid "Show category score"
-msgstr ""
+msgstr "Mostrar pontuação na categoria"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:614
 msgid ""
@@ -13962,7 +13962,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:205
 msgctxt "Show only users, who solved the quiz:"
 msgid "Show only users, who solved the %s:"
-msgstr ""
+msgstr "Mostrar apenas os formandos que resolveram o %s:"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:293
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:98
@@ -16981,7 +16981,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-user-course-points/index.js:83
 #: includes/gutenberg/blocks/ld-profile/index.js:194
 msgid "Show Preview"
-msgstr ""
+msgstr "Mostrar Preview"
 
 #: includes/gutenberg/blocks/ld-usermeta/index.js:136
 #: includes/gutenberg/blocks/ld-course-list/index.js:413

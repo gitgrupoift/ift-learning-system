@@ -21,6 +21,7 @@ use IFT\Bbpress;
 use IFT\Backend;
 use IFT\Customizer;
 use IFT\Ads;
+use IFT\Talk;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -37,6 +38,7 @@ new Bbpress();
 new Optimize();
 new Ads();
 new Backend();
+new Talk();
 
 
 add_action('after_setup_theme', 'override_theme', 999);
