@@ -75,6 +75,7 @@ endif; ?>
                         </div>
                         <div class="ld-hours-container">
                             <?php echo do_shortcode('[ld-courses-and-hours]'); ?>
+                            <div class="acess-table"><?php echo do_shortcode('[user_login_history columns="duration,time_last_seen" time_format="i"]'); ?></div>
                         </div>
                     </div>
                     <?php

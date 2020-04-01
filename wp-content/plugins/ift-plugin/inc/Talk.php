@@ -7,6 +7,7 @@ class Talk {
     public function __construct() {
         
         add_action( 'acf/save_post', array($this, 'group_room') );
+        add_shortcode( 'ift-talk', array($this, 'group_room_link'));
         
     }
     
@@ -72,15 +73,48 @@ class Talk {
         $json2 = json_decode($json, true);
         $token = $json2['data'][0]['token'];
         
+        $this->group_public($token);
+        // $this->add_group($token, 'ana.seg');
         update_field( 'sala_sincrona', $token, $post_id);
         
     }
     
-    public function group_room_link($user_id) {
+    
+    /*
+     * Torna público um grupo adicionado ao Nextcloud
+     * @since 1.1.0
+     *
+     */
+    public function group_public($token) {
         
-        $user = new WP_User(get_current_user_id());
-        $user_id = $user-ID;
-        //learndash_get_users_group_ids
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://carlos:Lipsw0rld@app.grupoift.pt/ocs/v2.php/apps/spreed/api/v1/room/' . $token . '/public');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+
+        $headers = array();
+        $headers[] = 'Ocs-Apirequest: true';
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+        curl_close($ch);
+        
+    }    
+    
+    public function group_room_link($atts, $content = null) {
+        $atts = shortcode_atts( array(
+            'token'  => 'blue'
+        ), $atts, 'ift-talk' );
+            
+        $button = '<button class="ift-talk"><a href="https://app.grupoift.pt/index.php/call/' . esc_attr( $atts['token'] ) . '">' . $content . '</a></button>';
+        
+        return $button;
+        
     }
+    
     
 }

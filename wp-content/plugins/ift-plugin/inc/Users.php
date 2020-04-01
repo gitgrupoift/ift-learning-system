@@ -14,8 +14,8 @@ class Users {
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
   
         
-        //add_action( 'init', array($this, 'generate_cloud_groups') );
-        //add_action( 'init', array($this, 'course_rooms') );
+        add_action( 'publish_groups', array($this, 'generate_cloud_groups') );
+    
    
         
     }
@@ -77,7 +77,7 @@ class Users {
     function generate_cloud_groups() {
         
         $args = array(
-            'post_type' => 'sfwd-courses',
+            'post_type' => 'groups',
             'post_status' => 'publish'
         );
         
@@ -112,10 +112,48 @@ class Users {
         if (curl_errno($ch)) {
             echo 'Error:' . curl_error($ch);
         }
-        curl_close($ch);
+        curl_close($ch);        
             
         }
     }
     
+   /*
+     * Adiciona utilizadores de uma turma ao grupo e à conversa respetivos
+     * @since 1.1.0
+     *
+     */
+    public function user_to_group($user_name, $group_name) {
+
+        $fields = array(
+            'groupid' => $group_name
+        );
+
+        foreach($fields as $key=>$value) { 
+            $fields_string .= $key.'='.$value.'&'; 
+        }
+
+        rtrim($fields_string, '&');
+
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL, 'https://carlos:Lipsw0rld@app.grupoift.pt/ocs/v1.php/cloud/users/' . $user_name . '/groups');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POST, count($fields));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string );
+
+            $headers = array();
+            $headers[] = 'Ocs-Apirequest: true';
+            $headers[] = 'Content-Type: application/x-www-form-urlencoded';
+
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+            $result = curl_exec($ch);
+            if (curl_errno($ch)) {
+                echo 'Error:' . curl_error($ch);
+            }
+            curl_close($ch);
+
+
+    }
 
 }

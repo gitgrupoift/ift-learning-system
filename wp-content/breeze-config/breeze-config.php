@@ -5,13 +5,13 @@
   'cache_options' => 
   array (
     'breeze-active' => '1',
-    'breeze-ttl' => 1440,
+    'breeze-ttl' => 120,
     'breeze-minify-html' => '0',
     'breeze-minify-css' => '1',
     'breeze-minify-js' => '1',
     'breeze-gzip-compression' => '1',
-    'breeze-browser-cache' => '1',
     'breeze-desktop-cache' => 1,
+    'breeze-browser-cache' => '1',
     'breeze-mobile-cache' => 1,
     'breeze-disable-admin' => '0',
     'breeze-display-clean' => '1',

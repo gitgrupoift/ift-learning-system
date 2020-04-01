@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-04-01 10:08+0000\n"
+"PO-Revision-Date: 2020-04-01 10:07+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -4693,7 +4693,7 @@ msgstr ""
 #: includes/settings/shortcodes-sections/ld_course_info.php:98
 msgctxt "placeholder: Courses"
 msgid "%s order by"
-msgstr "ordenar por"
+msgstr ""
 
 #: includes/settings/shortcodes-sections/ld_course_info.php:112
 msgctxt "placeholder: Courses"
@@ -7781,7 +7781,7 @@ msgstr "%s por página:"
 #: includes/course/ld-course-info-widget.php:250
 msgctxt "placeholder: quizzes"
 msgid "%s order by:"
-msgstr "ordenar por:"
+msgstr ""
 
 #: includes/course/ld-course-info-widget.php:260
 msgctxt "placeholder: quizzes"
