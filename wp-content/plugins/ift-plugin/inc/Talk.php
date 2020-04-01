@@ -7,10 +7,18 @@ class Talk {
     public function __construct() {
         
         add_action( 'acf/save_post', array($this, 'group_room') );
+        add_action( 'learndash-focus-sidebar-heading-after', array($this, 'user_group_chats') );
+        
         add_shortcode( 'ift-talk', array($this, 'group_room_link'));
         
     }
-    
+
+    /*
+     * Converte um retorno XML para uma Array.
+     * @since 1.1.0
+     *
+     *  @param  $xml  string    URL ou Path do ficheiro ou resposta em XML
+     */
     public function xml2array($xml){
         $arr = array();
 
@@ -33,6 +41,7 @@ class Talk {
      * Cria um novo grupo no Nextcloud Talks sempre que um grupo novo é adicionado. Ignora grupos existentes e gera o token de acesso para o URL
      * @since 1.1.0
      *
+     * @param   $post_id    string  ID do grupo no IFT Learning.
      */
     public function group_room($post_id) {
         
@@ -84,6 +93,7 @@ class Talk {
      * Torna público um grupo adicionado ao Nextcloud
      * @since 1.1.0
      *
+     * @param   $token  string
      */
     public function group_public($token) {
         
@@ -107,14 +117,36 @@ class Talk {
     
     public function group_room_link($atts, $content = null) {
         $atts = shortcode_atts( array(
-            'token'  => 'blue'
+            'token'  => 'opzn2dt3'
         ), $atts, 'ift-talk' );
             
-        $button = '<button class="ift-talk"><a href="https://app.grupoift.pt/index.php/call/' . esc_attr( $atts['token'] ) . '">' . $content . '</a></button>';
+        $button = '<button class="ift-talk"><a href="https://app.grupoift.pt/index.php/call/' . esc_attr( $atts['token'] ) . '" target="_blank">' . $content . '</a></button>';
         
         return $button;
         
     }
     
+    /*
+     * Insere links diretos para os chats dos grupos nos quais o aluno está matriculado, na área do e-learning no site.
+     * @since 1.1.0
+     *
+     */
+    public function user_group_chats() {
+        
+        $user_id = get_current_user_id();
+        
+        $group_ids = learndash_get_users_group_ids($user_id);
+        
+        echo '<div class="ift-messenger" style="border-top: solid 1px #ddd;"><span>CHAT E DISCUSSÃO</span>';
+        
+        foreach($group_ids as $group_id) {
+            $salas = get_field('sala_sincrona', $group_id);
+            $nome = get_the_title($group_id);
+            echo do_shortcode('[ift-talk token="' . $salas . '"]' . $nome . '[/ift-talk]');
+        }
+        
+        echo '</div>';
+        
+    }
     
 }

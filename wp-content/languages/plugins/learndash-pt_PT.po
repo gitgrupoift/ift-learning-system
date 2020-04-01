@@ -11,12 +11,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-10T15:13:39+00:00\n"
-"PO-Revision-Date: 2020-04-01 10:08+0000\n"
+"PO-Revision-Date: 2020-04-01 14:43+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.1; wp-5.4"
 
 #. Plugin Name of the plugin
 #: includes/settings/settings-sections/class-ld-settings-section-translations-learndash.php:34
@@ -4164,7 +4164,7 @@ msgstr ""
 #: includes/settings/shortcodes-sections/ld_profile.php:79
 #: includes/gutenberg/blocks/ld-profile/index.js:164
 msgid "Show Profile Header"
-msgstr ""
+msgstr "Mostra o Cabeçalho do Perfil"
 
 #. translators: placeholder: Course.
 #: includes/settings/shortcodes-sections/ld_profile.php:81
@@ -4746,6 +4746,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-login/index.js:40
 msgid "This shortcode adds the login button on any page"
 msgstr ""
+"Este shortcode adiciona o botão de LOGIN em qualquer página ou conteúdo"
 
 #: includes/settings/shortcodes-sections/learndash_login.php:25
 msgid "Controls the Login functionality."
@@ -5524,7 +5525,7 @@ msgstr "Horas obtidos"
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:307
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:397
 msgid "IP-address of the user"
-msgstr ""
+msgstr "Endereço de IP do utilizador"
 
 #: includes/settings/settings-sections/_class-ld-settings-section-quizzes-admin-email.php:185
 #: includes/settings/settings-sections/_class-ld-settings-section-quizzes-user-email.php:174
@@ -14115,7 +14116,7 @@ msgstr ""
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:642
 msgid "You must specify an email address."
-msgstr ""
+msgstr "Precisa adicionar um endereço de e-mail"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_FrontQuiz.php:643
 msgid "You must specify a date."
@@ -14616,7 +14617,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:259
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:349
 msgid "The value entered is not a valid email address"
-msgstr ""
+msgstr "O campo não foi preenchido com um e-mail válido"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:266
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:356
@@ -14875,7 +14876,7 @@ msgstr ""
 
 #: includes/class-ld-gdpr.php:225 includes/class-ld-gdpr.php:229
 msgid "Street Address"
-msgstr ""
+msgstr "Morada"
 
 #: includes/class-ld-gdpr.php:233
 msgid "City"
@@ -17284,7 +17285,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-course-info/index.js:147
 msgctxt "placeholder: Course"
 msgid "Show %s Progess"
-msgstr ""
+msgstr "Mostra o Progresso na Formação"
 
 #: includes/gutenberg/blocks/ld-course-info/index.js:152
 msgctxt "placeholder: Quiz"
@@ -17311,6 +17312,8 @@ msgid ""
 "This block shows the content if the user is enrolled into the %s but not yet "
 "completed."
 msgstr ""
+"Este bloco mostra o conteúdo se o utilizador estiver matriculado na formação,"
+" mas ainda não a tenha completado."
 
 #: includes/gutenberg/blocks/ld-course-notstarted/index.js:40
 msgctxt "placeholder: Course"
@@ -17323,6 +17326,8 @@ msgid ""
 "This block shows the content if the user is enrolled into the %s but not yet "
 "started."
 msgstr ""
+"Este bloco mostra o conteúdo se o utilizador estiver matriculado na formação,"
+" mas ainda não a iniciou."
 
 #: includes/gutenberg/blocks/ld-course-expire-status/index.js:38
 msgctxt "placeholder: Course"
@@ -17357,6 +17362,8 @@ msgid ""
 "This block shows the content if the user is enrolled into the %s and it is "
 "completed."
 msgstr ""
+"Este bloco mostra o conteúdo se o utilizador estiver matriculado na formação "
+"e a concluiu."
 
 #: includes/gutenberg/blocks/ld-visitor/index.js:40
 msgid "LearnDash Visitor"
@@ -17414,7 +17421,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-quiz-list/index.js:41
 msgctxt "placeholders: quizzes"
 msgid "This block shows a list of %s."
-msgstr ""
+msgstr "Este bloco mostra uma lista dos questionários todos."
 
 #: includes/gutenberg/blocks/ld-quiz-list/index.js:195
 #: includes/gutenberg/blocks/ld-lesson-list/index.js:195
@@ -17458,7 +17465,7 @@ msgstr "Definições de Tags em %s"
 #: includes/gutenberg/blocks/ld-quiz-list/index.js:300
 msgctxt "placeholder: quizzes"
 msgid "shows %s with mentioned tag slug."
-msgstr ""
+msgstr "mostra os questionários com a respetiva tag"
 
 #: includes/gutenberg/blocks/ld-quiz-list/index.js:306
 msgctxt "placeholder: Quiz"
