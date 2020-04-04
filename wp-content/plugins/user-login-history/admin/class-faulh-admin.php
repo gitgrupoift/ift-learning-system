@@ -218,8 +218,8 @@ if (!class_exists('Faulh_Admin')) {
 	 * 
 	 */
 	public function check_update_version() {
-	    
-	         
+
+
 	    if (!is_admin()) {
 		return;
 	    }
@@ -234,7 +234,7 @@ if (!class_exists('Faulh_Admin')) {
 		$this->add_admin_notice(esc_html__('Plugin Updated!'));
 
 		if (version_compare($current_version, '1.7.0', '>=')) {
-		    
+
 		    if (!function_exists('is_plugin_active_for_network')) {
 			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		    }
@@ -262,11 +262,12 @@ if (!class_exists('Faulh_Admin')) {
 	public function plugin_menu() {
 	    $menu_slug = $this->plugin_name . "-admin-listing";
 	    $hook = add_menu_page(
-		    Faulh_Template_Helper::plugin_name(), Faulh_Template_Helper::plugin_name(), 'manage_options', $menu_slug, array($this, 'render_list_table'), plugin_dir_url(__FILE__) . 'images/icon.png', 30
+		    Faulh_Template_Helper::plugin_name(), Faulh_Template_Helper::plugin_name(), 'administrator', $menu_slug, array($this, 'render_list_table'), plugin_dir_url(__FILE__) . 'images/icon.png', 30
 	    );
-	    add_submenu_page($menu_slug, esc_html__('Login List', 'faulh'), esc_html__('Login List', 'faulh'), 'manage_options', $menu_slug, array($this, 'render_list_table'));
-	    add_submenu_page($menu_slug, esc_html__('About', 'faulh'), esc_html__('About', 'faulh'), 'manage_options', $this->plugin_name . '-about', array($this, 'render_about_page'));
-	    add_submenu_page($menu_slug, esc_html__('Help', 'faulh'), esc_html__('Help', 'faulh'), 'manage_options', $this->plugin_name . '-help', array($this, 'render_help_page'));
+	    add_submenu_page($menu_slug, esc_html__('Login List', 'faulh'), esc_html__('Login List', 'faulh'), 'administrator', $menu_slug, array($this, 'render_list_table'));
+	    add_submenu_page($menu_slug, esc_html__('About', 'faulh'), esc_html__('About', 'faulh'), 'administrator', $this->plugin_name . '-about', array($this, 'render_about_page'));
+	    add_submenu_page($menu_slug, esc_html__('Help', 'faulh'), esc_html__('Help', 'faulh'), 'administrator', $this->plugin_name . '-help', array($this, 'render_help_page'));
+	    //   add_submenu_page($menu_slug, esc_html__('Go Pro', 'faulh'), esc_html__('Go Pro', 'faulh'), 'administrator', $this->plugin_name . '-go-pro', array($this, 'render_go_pro_page'));
 	    add_action("load-$hook", array($this, 'screen_option'));
 	}
 
@@ -312,6 +313,13 @@ if (!class_exists('Faulh_Admin')) {
 	 */
 	public function render_help_page() {
 	    require_once plugin_dir_path(dirname(__FILE__)) . 'admin/partials/help.php';
+	}
+
+	/**
+	 * Callback function to render help page.
+	 */
+	public function render_go_pro_page() {
+	    require_once plugin_dir_path(dirname(__FILE__)) . 'admin/partials/go_pro.php';
 	}
 
 	/**

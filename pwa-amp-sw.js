@@ -7,15 +7,15 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-     'https://aulas.grupoift.pt/changelog-controlo-de-versoes/?amp=1',
+     'https://aulas.grupoift.pt/?amp=1',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    'https://aulas.grupoift.pt/changelog-controlo-de-versoes/?amp=1',
+    'https://aulas.grupoift.pt/?amp=1',
 ];
 
-const OFFLINE_PAGE = 'https://aulas.grupoift.pt/changelog-controlo-de-versoes/?amp=1';
-const NOT_FOUND_PAGE = 'https://aulas.grupoift.pt/changelog-controlo-de-versoes/?amp=1';
+const OFFLINE_PAGE = 'https://aulas.grupoift.pt/?amp=1';
+const NOT_FOUND_PAGE = 'https://aulas.grupoift.pt/?amp=1';
 
 const CACHE_VERSIONS = {
     content: 'content-v' + CACHE_VERSION,

@@ -43,5 +43,18 @@
         });
     });
 
+    /* Custom Scroll-bar at top and bottom */
+    $(function(){
+    	$(".content1, .content2").width($(".faulh_admin_users").width());
+		$(".wrapper1").scroll(function(){
+		    $(".wrapper2")
+		        .scrollLeft($(".wrapper1").scrollLeft());
+		});
+		$(".wrapper2").scroll(function(){
+		    $(".wrapper1")
+		        .scrollLeft($(".wrapper2").scrollLeft());
+		});
+		});
+
 })(jQuery);
 

@@ -8,8 +8,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-02-19 16:05+0000\n"
-"Last-Translator: carlos <geral@meuppt.pt>\n"
+"PO-Revision-Date: 2020-04-02 11:20+0000\n"
+"Last-Translator: Carlos Artur Curvelo Matos\n"
 "Language-Team: Português\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -23,11 +23,11 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.2; wp-5.4"
 
 #: comments.php:52 comments.php:75
 msgid "Comments Navigation"
-msgstr ""
+msgstr "Navegação dos Comentários"
 
 #: inc/addons/breadcrumbs/class-astra-breadcrumb-trail.php:394
 msgid "Browse:"
@@ -55,12 +55,12 @@ msgstr ""
 #. Translators: %s is the page number.
 #: inc/addons/breadcrumbs/class-astra-breadcrumb-trail.php:402
 msgid "Page %s"
-msgstr ""
+msgstr "Página %s"
 
 #. Translators: %s is the page number.
 #: inc/addons/breadcrumbs/class-astra-breadcrumb-trail.php:404
 msgid "Comment Page %s"
-msgstr ""
+msgstr "Página %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
 #: inc/addons/breadcrumbs/class-astra-breadcrumb-trail.php:406
@@ -77,7 +77,7 @@ msgstr "Semana de %s"
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:260
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:458
 msgid "Colors"
-msgstr ""
+msgstr "Cores"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-color-configs.php:72
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-typo-configs.php:72
@@ -85,7 +85,7 @@ msgstr ""
 #: inc/customizer/configurations/colors-background/class-astra-advanced-footer-colors-configs.php:71
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:251
 msgid "Content"
-msgstr ""
+msgstr "Conteúdo"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-color-configs.php:85
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-color-configs.php:100
@@ -137,7 +137,7 @@ msgstr "Cor de Fundo"
 #: inc/customizer/configurations/colors-background/class-astra-body-colors-configs.php:44
 #: inc/customizer/configurations/colors-background/class-astra-footer-colors-configs.php:45
 msgid "Text Color"
-msgstr ""
+msgstr "Cor do Texto"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-color-configs.php:117
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-color-configs.php:132
@@ -214,7 +214,7 @@ msgstr ""
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:248
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:290
 msgid "Helpful Information"
-msgstr ""
+msgstr "Informação Útil"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-configs.php:57
 msgid "Breadcrumb Overview"
@@ -315,7 +315,7 @@ msgstr "Alinhamento"
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:581
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:303
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-configs.php:246
 msgid "Center"
@@ -331,7 +331,7 @@ msgstr "Centro"
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:579
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:301
 msgid "Right"
-msgstr ""
+msgstr "Direita"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-configs.php:261
 #: inc/core/class-astra-admin-settings.php:891
@@ -348,7 +348,7 @@ msgstr ""
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:578
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:300
 msgid "Top"
-msgstr ""
+msgstr "Acima"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-configs.php:267
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:151
@@ -370,7 +370,7 @@ msgstr "Base"
 #: inc/customizer/configurations/typography/class-astra-archive-typo-configs.php:43
 #: inc/customizer/configurations/typography/class-astra-single-typo-configs.php:46
 msgid "Typography"
-msgstr ""
+msgstr "Tipografia"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-typo-configs.php:89
 #: inc/addons/heading-colors/customizer/class-astra-heading-colors-configs.php:60
@@ -397,7 +397,7 @@ msgstr ""
 #: inc/customizer/configurations/typography/class-astra-header-typo-configs.php:69
 #: inc/customizer/configurations/typography/class-astra-single-typo-configs.php:72
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 #: inc/addons/breadcrumbs/customizer/class-astra-breadcrumbs-typo-configs.php:128
 #: inc/addons/heading-colors/customizer/class-astra-heading-colors-configs.php:75
@@ -486,7 +486,7 @@ msgstr ""
 #: inc/addons/transparent-header/classes/class-astra-ext-transparent-header-markup.php:329
 #: inc/addons/transparent-header/classes/class-astra-transparent-header-panels-and-sections.php:48
 msgid "Transparent Header"
-msgstr ""
+msgstr "Cabeçalho Transparente"
 
 #: inc/addons/transparent-header/classes/class-astra-ext-transparent-header-markup.php:332
 #: inc/compatibility/lifterlms/class-astra-lifterlms.php:687
@@ -498,12 +498,12 @@ msgstr ""
 
 #: inc/addons/transparent-header/classes/class-astra-ext-transparent-header-markup.php:333
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: inc/addons/transparent-header/classes/class-astra-ext-transparent-header-markup.php:334
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:49
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: inc/addons/transparent-header/classes/class-astra-transparent-header-panels-and-sections.php:57
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:83
@@ -626,7 +626,7 @@ msgstr "Cor da Borda na Base"
 #: inc/customizer/configurations/colors-background/class-astra-advanced-footer-colors-configs.php:42
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:222
 msgid "Colors & Background"
-msgstr ""
+msgstr "Cores e Fundo"
 
 #: inc/addons/transparent-header/classes/sections/class-astra-customizer-transparent-header-configs.php:313
 #: inc/customizer/configurations/colors-background/class-astra-advanced-footer-colors-configs.php:56
@@ -654,7 +654,7 @@ msgstr ""
 #: inc/admin-functions.php:30
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:144
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: inc/admin-functions.php:31
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:92
@@ -666,7 +666,7 @@ msgstr "Menu de Rodapé"
 #. Translators: Author Name.
 #: inc/blog/blog-config.php:148
 msgid "View all posts by %1$s"
-msgstr ""
+msgstr "Ver todos os posts por nome do autor"
 
 #: inc/blog/blog-config.php:201 inc/blog/blog-config.php:457
 msgid "Read More &raquo;"
@@ -752,7 +752,7 @@ msgstr "Após o Post"
 
 #: inc/compatibility/class-astra-beaver-themer.php:361
 msgid "Before Comments"
-msgstr ""
+msgstr "Antes dos Comentários"
 
 #: inc/compatibility/class-astra-beaver-themer.php:362
 msgid "After Comments"
@@ -772,7 +772,7 @@ msgstr ""
 #: inc/compatibility/edd/class-astra-edd.php:344
 #: inc/compatibility/woocommerce/class-astra-woocommerce.php:1058
 msgid "View your shopping cart"
-msgstr ""
+msgstr "Ver o seu carrinho"
 
 #: inc/compatibility/edd/class-astra-edd.php:572
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:74
@@ -828,7 +828,7 @@ msgstr ""
 #: inc/customizer/configurations/layout/class-astra-site-container-layout-configs.php:116
 #: inc/metabox/class-astra-meta-boxes.php:249
 msgid "Boxed"
-msgstr ""
+msgstr "Em Caixa"
 
 #: inc/compatibility/edd/customizer/sections/class-astra-edd-container-configs.php:61
 #: inc/compatibility/learndash/customizer/sections/class-astra-learndash-container-configs.php:62
@@ -841,7 +841,7 @@ msgstr ""
 #: inc/customizer/configurations/layout/class-astra-site-container-layout-configs.php:117
 #: inc/metabox/class-astra-meta-boxes.php:250
 msgid "Content Boxed"
-msgstr ""
+msgstr "Conteúdo em Caixa"
 
 #: inc/compatibility/edd/customizer/sections/class-astra-edd-container-configs.php:62
 #: inc/compatibility/learndash/customizer/sections/class-astra-learndash-container-configs.php:63
@@ -899,7 +899,7 @@ msgstr ""
 #: inc/customizer/configurations/layout/class-astra-sidebar-layout-configs.php:117
 #: inc/metabox/class-astra-meta-boxes.php:233
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Barra Lateral Esquerda"
 
 #: inc/compatibility/edd/customizer/sections/class-astra-edd-sidebar-configs.php:62
 #: inc/compatibility/edd/customizer/sections/class-astra-edd-sidebar-configs.php:81
@@ -931,7 +931,7 @@ msgstr ""
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:69
 msgid "Image"
-msgstr ""
+msgstr "Imagem"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:70
 #: inc/compatibility/woocommerce/customizer/sections/layout/class-astra-woo-shop-layout-configs.php:92
@@ -943,17 +943,17 @@ msgstr "Categoria"
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:71
 #: inc/compatibility/woocommerce/customizer/sections/layout/class-astra-woo-shop-layout-configs.php:87
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:72
 #: inc/compatibility/woocommerce/customizer/sections/layout/class-astra-woo-shop-layout-configs.php:88
 msgid "Price"
-msgstr ""
+msgstr "Preço"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:73
 #: inc/compatibility/woocommerce/customizer/sections/layout/class-astra-woo-shop-layout-configs.php:90
 msgid "Short Description"
-msgstr ""
+msgstr "Breve Descrição"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:89
 msgid "Cart Button Text"
@@ -971,7 +971,7 @@ msgstr "Botão"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:106
 msgid "Options"
-msgstr ""
+msgstr "Opções"
 
 #: inc/compatibility/edd/customizer/sections/layout/class-astra-edd-archive-layout-configs.php:121
 msgid "Variable Product Button Text"
@@ -1073,7 +1073,7 @@ msgstr ""
 #: inc/compatibility/lifterlms/class-astra-lifterlms.php:651
 #: inc/metabox/class-astra-meta-boxes.php:278
 msgid "Disable Title"
-msgstr ""
+msgstr "Desabilitar Título"
 
 #: inc/compatibility/lifterlms/class-astra-lifterlms.php:660
 #: inc/metabox/class-astra-meta-boxes.php:309
@@ -1098,7 +1098,7 @@ msgstr ""
 #: inc/compatibility/lifterlms/class-astra-lifterlms.php:696
 #: inc/metabox/class-astra-meta-boxes.php:245
 msgid "Content Layout"
-msgstr ""
+msgstr "Layout do Conteúdo"
 
 #: inc/compatibility/lifterlms/customizer/class-astra-liferlms-section-configs.php:39
 #: inc/compatibility/lifterlms/customizer/sections/class-astra-lifter-sidebar-configs.php:57
@@ -1305,7 +1305,7 @@ msgstr ""
 #: inc/core/class-astra-admin-settings.php:464
 #: inc/core/class-astra-admin-settings.php:496
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: inc/core/class-astra-admin-settings.php:621
 msgid "Import Starter Site"
@@ -1374,7 +1374,7 @@ msgstr ""
 
 #: inc/core/class-astra-admin-settings.php:819
 msgid "Upload Logo"
-msgstr ""
+msgstr "Carregar um Logo"
 
 #: inc/core/class-astra-admin-settings.php:824
 msgid "Set Colors"
@@ -1529,7 +1529,7 @@ msgstr ""
 
 #: inc/core/class-theme-strings.php:36
 msgid "Skip to content"
-msgstr ""
+msgstr "Pular para o conteúdo"
 
 #: inc/core/class-theme-strings.php:39
 msgid "It looks like the link pointing here was faulty. Maybe try searching?"
@@ -1537,7 +1537,7 @@ msgstr ""
 
 #: inc/core/class-theme-strings.php:42
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nenhum Resultado"
 
 #: inc/core/class-theme-strings.php:43
 msgid ""
@@ -1564,11 +1564,11 @@ msgstr "Editar"
 
 #: inc/core/class-theme-strings.php:52
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "O seu comentário aguarda moderação."
 
 #: inc/core/class-theme-strings.php:53 inc/core/class-theme-strings.php:68
 msgid "Leave a Comment"
-msgstr ""
+msgstr "Comente ou pergunte"
 
 #: inc/core/class-theme-strings.php:54
 msgid "Cancel Reply"
@@ -1580,7 +1580,7 @@ msgstr "Comentários e dúvidas &raquo;"
 
 #: inc/core/class-theme-strings.php:56
 msgid "Type here.."
-msgstr ""
+msgstr "Digite aqui..."
 
 #: inc/core/class-theme-strings.php:57
 msgid "Name*"
@@ -1703,7 +1703,7 @@ msgstr ""
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:122
 msgid "Primary Header"
-msgstr ""
+msgstr "Cabeçalho Principal"
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:130
 msgid "Primary Header Overview"
@@ -1731,7 +1731,7 @@ msgstr ""
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:212
 msgid "Single Post"
-msgstr ""
+msgstr "Post Simples"
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:227
 msgid "Sidebar Overview"
@@ -1755,7 +1755,7 @@ msgstr "Tipografia de Base"
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:316
 msgid "Headings"
-msgstr ""
+msgstr "Títulos"
 
 #: inc/customizer/class-astra-customizer-register-sections-panels.php:329
 msgid "Buttons"
@@ -1791,14 +1791,14 @@ msgstr ""
 
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:46
 msgid "Colors and Border"
-msgstr ""
+msgstr "Cores e Bordas"
 
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:58
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:168
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:399
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:597
 msgid "Color"
-msgstr ""
+msgstr "Cor"
 
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:72
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:274
@@ -1836,11 +1836,11 @@ msgstr ""
 
 #: inc/customizer/configurations/colors-background/class-astra-advanced-footer-colors-configs.php:88
 msgid "Title Color"
-msgstr ""
+msgstr "Cor do Título"
 
 #: inc/customizer/configurations/colors-background/class-astra-body-colors-configs.php:57
 msgid "Theme Color"
-msgstr ""
+msgstr "Cor do Tema"
 
 #: inc/customizer/configurations/colors-background/class-astra-body-colors-configs.php:83
 msgid "Link Hover Color"
@@ -1851,7 +1851,7 @@ msgstr ""
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:279
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:81
 msgid "Content Width"
-msgstr ""
+msgstr "Largura do Conteúdo"
 
 #: inc/customizer/configurations/layout/class-astra-blog-layout-configs.php:103
 msgid "Post Content"
@@ -1863,7 +1863,7 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-blog-layout-configs.php:110
 msgid "Excerpt"
-msgstr ""
+msgstr "Excerto"
 
 #: inc/customizer/configurations/layout/class-astra-blog-layout-configs.php:124
 msgid "Post Structure"
@@ -1973,7 +1973,7 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:295
 msgid "Disable"
-msgstr ""
+msgstr "Desativar"
 
 #: inc/customizer/configurations/layout/class-astra-footer-layout-configs.php:299
 msgid "Layout 4"
@@ -2064,7 +2064,7 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:298
 msgid "Container Border"
-msgstr ""
+msgstr "Borda do Contentor"
 
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:327
 msgid "Submenu Divider"
@@ -2135,7 +2135,7 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:510
 msgid "Minimal"
-msgstr ""
+msgstr "Mínimo"
 
 #: inc/customizer/configurations/layout/class-astra-header-layout-configs.php:523
 msgid "Toggle Button Color"
@@ -2187,7 +2187,7 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:133
 msgid "Site Icon"
-msgstr ""
+msgstr "Ícone do Site"
 
 #: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:148
 msgid "Display Site Title"
@@ -2333,7 +2333,7 @@ msgstr ""
 
 #: inc/customizer/custom-controls/background/class-astra-control-background.php:144
 msgid "Center Top"
-msgstr ""
+msgstr "Centro Acima"
 
 #: inc/customizer/custom-controls/background/class-astra-control-background.php:145
 msgid "Center Center"
@@ -2506,7 +2506,7 @@ msgstr ""
 #: inc/template-tags.php:35 template-parts/content-page.php:80
 #: template-parts/single/single-layout.php:49
 msgid "Edit %s"
-msgstr ""
+msgstr "Editar %s"
 
 #: inc/widgets.php:88
 msgid "Main Sidebar"
@@ -2545,7 +2545,7 @@ msgstr ""
 #. translators: %s: Name of current post.
 #: template-parts/content.php:65
 msgid "Continue reading %s"
-msgstr ""
+msgstr "Continuar lendo o %s"
 
 #. Theme URI of the plugin/theme
 msgid "https://wpastra.com/"
@@ -2641,9 +2641,9 @@ msgstr[1] ""
 #: inc/core/common-functions.php:1141
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Busca por:"
 
 #: inc/core/common-functions.php:1142
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Procurar..."

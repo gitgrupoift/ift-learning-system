@@ -621,10 +621,10 @@ if (!class_exists('Faulh_Public_List_Table')) {
                         return $unknown_symbol;
                     }
                     $user_data = get_userdata($item['user_id']);
-                    return !empty($user_data->roles) ? implode(',', $user_data->roles) : $unknown_symbol;
+                    return !empty($user_data->roles) ? Faulh_Tool_Helper::getRoleNamesByKeys($user_data->roles) : $unknown_symbol;
 
                 case 'old_role':
-                    return !empty($item[$column_name]) ? esc_html($item[$column_name]) : $unknown_symbol;
+                    return !empty($item[$column_name]) ? Faulh_Tool_Helper::getRoleNamesByKeys($item[$column_name]) : $unknown_symbol;
 
                 case 'browser':
                     if (in_array(strtolower($item[$column_name]), array("", $unknown))) {

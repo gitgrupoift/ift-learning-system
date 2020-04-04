@@ -1,3 +1,6 @@
+v2.3.5
+- Fix: WordPress 5.4 compatibility with Gutenberg Editor.
+
 v2.3.4
 - Fix: Lightning icon not appearing on astra options page.
 - Fix: Breadcrumb separator appearing as HTML entity for new users.

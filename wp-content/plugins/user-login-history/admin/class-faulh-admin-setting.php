@@ -52,7 +52,7 @@ class Faulh_Admin_Setting {
      * Callback function for the action - admin_menu
      */
     function admin_menu() {
-        add_options_page( Faulh_Template_Helper::plugin_name(), Faulh_Template_Helper::plugin_name(), 'manage_options', $this->plugin_name.'-admin-setting', array($this, 'render_setting_page') );
+        add_options_page( Faulh_Template_Helper::plugin_name(), Faulh_Template_Helper::plugin_name(), 'administrator', $this->plugin_name.'-admin-setting', array($this, 'render_setting_page') );
     }
 
     /**

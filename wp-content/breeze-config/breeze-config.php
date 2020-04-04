@@ -5,7 +5,7 @@
   'cache_options' => 
   array (
     'breeze-active' => '1',
-    'breeze-ttl' => 120,
+    'breeze-ttl' => 30,
     'breeze-minify-html' => '0',
     'breeze-minify-css' => '1',
     'breeze-minify-js' => '1',

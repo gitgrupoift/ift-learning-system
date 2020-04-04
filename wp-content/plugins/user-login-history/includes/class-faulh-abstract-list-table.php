@@ -266,10 +266,10 @@ if (!class_exists('Faulh_Abstract_List_Table')) {
                         $user_data = get_userdata($item['user_id']);
                     }
 
-                    return !empty($user_data->roles) ? esc_html(implode(',', $user_data->roles)) : $this->unknown_symbol;
+                    return !empty($user_data->roles) ? Faulh_Tool_Helper::getRoleNamesByKeys($user_data->roles) : $this->unknown_symbol;
 
                 case 'old_role':
-                    return !empty($item[$column_name]) ? esc_html($item[$column_name]) : $this->unknown_symbol;
+                    return !empty($item[$column_name]) ? Faulh_Tool_Helper::getRoleNamesByKeys($item[$column_name]) : $this->unknown_symbol;
 
                 case 'browser':
                     if (in_array(strtolower($item[$column_name]), array("", $this->unknown_string))) {
@@ -560,6 +560,7 @@ if (!class_exists('Faulh_Abstract_List_Table')) {
             }
             return FALSE;
         }
+	
 
     }
 

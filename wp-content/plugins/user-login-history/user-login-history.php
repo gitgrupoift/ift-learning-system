@@ -15,7 +15,7 @@
  * Plugin Name:       User Login History
  * Plugin URI:        www.userloginhistory.com
  * Description:       Helps you to know your website's visitors by tracking their login related information like login/logout time, country, browser and many more.
- * Version:           1.7.3
+ * Version:           1.7.4
  * Author:            Er Faiyaz Alam
  * Author URI:        https://github.com/faiyazalam
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if (!defined('FAULH_PLUGIN_NAME')) {
     define('FAULH_PLUGIN_NAME', 'faulh');
 }
 if (!defined('FAULH_VERSION')) {
-    define('FAULH_VERSION', '1.7.3');
+    define('FAULH_VERSION', '1.7.4');
 }
 
 if (!defined('FAULH_TABLE_NAME')) {
@@ -64,8 +64,8 @@ if (!defined('FAULH_BOOTSTRAP_FILE_PATH')) {
 if (!function_exists('activate_faulh')) {
 
     function activate_faulh($network_wide) {
-        require_once plugin_dir_path(__FILE__) . 'includes/class-faulh-activator.php';
-        Faulh_Activator::activate($network_wide);
+	require_once plugin_dir_path(__FILE__) . 'includes/class-faulh-activator.php';
+	Faulh_Activator::activate($network_wide);
     }
 
 }
@@ -79,8 +79,8 @@ if (is_multisite() && is_network_admin()) {
 if (!function_exists('on_create_blog')) {
 
     function on_create_blog($blog_id, $user_id, $domain, $path, $site_id, $meta) {
-        require_once plugin_dir_path(__FILE__) . 'includes/class-faulh-activator.php';
-        Faulh_Activator::on_create_blog($blog_id, $user_id, $domain, $path, $site_id, $meta);
+	require_once plugin_dir_path(__FILE__) . 'includes/class-faulh-activator.php';
+	Faulh_Activator::on_create_blog($blog_id, $user_id, $domain, $path, $site_id, $meta);
     }
 
 }
@@ -101,8 +101,8 @@ require plugin_dir_path(__FILE__) . 'includes/class-faulh.php';
 if (!function_exists('run_faulh')) {
 
     function run_faulh() {
-        $plugin = new Faulh();
-        $plugin->run();
+	$plugin = new Faulh();
+	$plugin->run();
     }
 
 }

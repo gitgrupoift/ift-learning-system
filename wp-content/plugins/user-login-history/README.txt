@@ -5,7 +5,7 @@ Tags: Login Log,Online User,Login Form Security,Report,Brute Force Detector
 Requires at least: 4.9.0
 Requires PHP: 5.5
 Tested up to: 5.2.2
-Version: 1.7.1
+Version: 1.7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,11 @@ Yes.
 7. Shortcode - User login list table for frontend
 
 == Changelog ==
+= 1.7.4(3rd April, 2020) =
+* Fixed some permission issue on dashboard menu
+* Implemented horizontal scroll bar on the listing table in backend
+* Replaced role key with role name on the listing table
+
 = 1.7.3(25th August, 2019) =
 * Fixed index size limit issue
 

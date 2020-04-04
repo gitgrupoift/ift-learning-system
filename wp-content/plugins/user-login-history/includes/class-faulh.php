@@ -100,6 +100,7 @@ if (!class_exists('Faulh')) {
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-faulh-date-time-helper.php';
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-faulh-session-helper.php';
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-faulh-db-helper.php';
+            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-faulh-tool-helper.php';
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-faulh-template-helper.php';
             /**
              * Include all the common abstract or base classes.

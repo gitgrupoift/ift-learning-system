@@ -20,9 +20,17 @@
     <div class="listingOuter">
         <form method="post">
             <input type="hidden" name="<?php echo $this->plugin_name.(is_network_admin()?'_network_admin_listing_table':'_admin_listing_table')?>" value="">
-            <?php
-            $this->list_table->display();
-            ?>
+           
+            <div class="wrapper1">
+                <div class="content1"></div>
+            </div>
+
+            <div class="wrapper2">
+                <div class="content2">
+                    <?php $this->list_table->display(); ?>
+                </div>
+            </div>  
+
         </form>
         <br class="clear">
     </div>

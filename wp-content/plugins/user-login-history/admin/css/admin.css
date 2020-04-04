@@ -122,7 +122,6 @@ p .faulhbtn {
 }
 
 .listingOuter .faulh_admin_users{
-    margin-top: 20px;
     width: auto;
     min-width: 100%;	
     white-space: nowrap;	
@@ -157,6 +156,15 @@ p .faulhbtn {
 .infoBlockUser + div{float: left;  line-height: 26px;}
 
 
+
+.wrapper1, .wrapper2{width: 100%; overflow-x: scroll; overflow-y:hidden;}
+.wrapper1{height: 20px;      margin-top: 20px;}
+.wrapper2{
+        overflow-y: none;
+    height: auto;
+}
+
+.content1 { height: 20px; }
 
 
 

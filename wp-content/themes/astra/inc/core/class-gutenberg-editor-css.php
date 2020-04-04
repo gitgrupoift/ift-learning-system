@@ -191,18 +191,18 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				),
 
 				// Global selection CSS.
-				'.editor-block-list__layout .editor-block-list__block ::selection,.editor-block-list__layout .editor-block-list__block.is-multi-selected .editor-block-list__block-edit:before' => array(
+				'.block-editor-block-list__layout .block-editor-block-list__block ::selection,.block-editor-block-list__layout .block-editor-block-list__block.is-multi-selected .editor-block-list__block-edit:before' => array(
 					'background-color' => esc_attr( $theme_color ),
 				),
-				'.editor-block-list__layout .editor-block-list__block ::selection,.editor-block-list__layout .editor-block-list__block.is-multi-selected .editor-block-list__block-edit' => array(
+				'.block-editor-block-list__layout .block-editor-block-list__block ::selection,.block-editor-block-list__layout .block-editor-block-list__block.is-multi-selected .editor-block-list__block-edit' => array(
 					'color' => esc_attr( $highlight_theme_color ),
 				),
 
 				'.ast-separate-container .edit-post-visual-editor, .ast-page-builder-template .edit-post-visual-editor, .ast-plain-container .edit-post-visual-editor, .ast-separate-container #wpwrap #editor .edit-post-visual-editor' => astra_get_background_obj( $box_bg_obj ),
-				'.editor-post-title__block,.editor-default-block-appender,.editor-block-list__block' => array(
+				'.editor-post-title__block,.editor-default-block-appender,.block-editor-block-list__block' => array(
 					'max-width' => astra_get_css_value( $site_content_width, 'px' ),
 				),
-				'.editor-block-list__block[data-align=wide]' => array(
+				'.block-editor-block-list__block[data-align=wide]' => array(
 					'max-width' => astra_get_css_value( $site_content_width + 200, 'px' ),
 				),
 				'.editor-post-title__block .editor-post-title__input,  .edit-post-visual-editor h1, .edit-post-visual-editor h2, .edit-post-visual-editor h3, .edit-post-visual-editor h4, .edit-post-visual-editor h5, .edit-post-visual-editor h6' => array(
@@ -213,10 +213,10 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				'.edit-post-visual-editor h1, .edit-post-visual-editor h2, .edit-post-visual-editor h3, .edit-post-visual-editor h4, .edit-post-visual-editor h5, .edit-post-visual-editor h6' => array(
 					'line-height' => esc_attr( $headings_line_height ),
 				),
-				'.edit-post-visual-editor.editor-styles-wrapper p,.editor-block-list__block p, .editor-block-list__layout, .editor-post-title' => array(
+				'.edit-post-visual-editor.editor-styles-wrapper p,.block-editor-block-list__block p, .block-editor-block-list__layout, .editor-post-title' => array(
 					'font-size' => astra_responsive_font( $body_font_size, 'desktop' ),
 				),
-				'.edit-post-visual-editor.editor-styles-wrapper p,.editor-block-list__block p, .wp-block-latest-posts a,.editor-default-block-appender textarea.editor-default-block-appender__content, .editor-block-list__block' => array(
+				'.edit-post-visual-editor.editor-styles-wrapper p,.block-editor-block-list__block p, .wp-block-latest-posts a,.editor-default-block-appender textarea.editor-default-block-appender__content, .block-editor-block-list__block' => array(
 					'font-family'    => astra_get_font_family( $body_font_family ),
 					'font-weight'    => esc_attr( $body_font_weight ),
 					'font-size'      => astra_responsive_font( $body_font_size, 'desktop' ),
@@ -229,7 +229,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 					'font-size'   => astra_responsive_font( $single_post_title_font_size, 'desktop' ),
 					'font-weight' => 'normal',
 				),
-				'.editor-block-list__block'               => array(
+				'.block-editor-block-list__block'         => array(
 					'color' => esc_attr( $text_color ),
 				),
 				/**
@@ -248,7 +248,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				'blockquote'                              => array(
 					'border-color' => astra_hex_to_rgba( $link_color, 0.05 ),
 				),
-				'.editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large), .edit-post-visual-editor .wp-block-pullquote blockquote' => array(
+				'.block-editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large), .edit-post-visual-editor .wp-block-pullquote blockquote' => array(
 					'border-color' => astra_hex_to_rgba( $link_color, 0.15 ),
 				),
 				// Heading H1 - H6 font size.
@@ -466,7 +466,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 
 			if ( 'page-builder' === $container_layout ) {
 				$page_builder_css = array(
-					'.editor-post-title__block, .editor-default-block-appender, .editor-block-list__block' => array(
+					'.editor-post-title__block, .editor-default-block-appender, .block-editor-block-list__block' => array(
 						'width'     => '100%',
 						'max-width' => '100%',
 					),
@@ -474,11 +474,15 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 						'padding-left'  => 0,
 						'padding-right' => 0,
 					),
-					'.editor-block-list__block-edit'   => array(
+					'.editor-block-list__block-edit .editor-block-list__block-edit' => array(
+						'padding-left'  => '0',
+						'padding-right' => '0',
+					),
+					'.edit-post-visual-editor .block-editor-block-list__block' => array(
 						'padding-left'  => '20px',
 						'padding-right' => '20px',
 					),
-					'.editor-block-list__block-edit .editor-block-list__block-edit' => array(
+					'.edit-post-visual-editor .wp-block .block-editor-block-list__block' => array(
 						'padding-left'  => '0',
 						'padding-right' => '0',
 					),
@@ -508,6 +512,11 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 						'margin-left'  => '60px',
 						'margin-right' => '60px',
 					),
+					// WordPress 5.4 compatibility CSS.
+					'.wp-block .block-editor-block-list__layout' => array(
+						'margin-left'  => '0px',
+						'margin-right' => '0px',
+					),
 				);
 
 				$css .= astra_parse_css( $full_width_streched_css );
@@ -515,38 +524,38 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 
 			if ( ( in_array( $pagenow, array( 'post-new.php' ) ) && ! isset( $post ) ) || 'content-boxed-container' === $container_layout || 'boxed-container' === $container_layout ) {
 				$boxed_container = array(
-					'.editor-writing-flow'       => array(
+					'.block-editor-writing-flow'       => array(
 						'max-width'        => astra_get_css_value( $site_content_width - 56, 'px' ),
 						'margin'           => '0 auto',
 						'background-color' => '#fff',
 					),
-					'.gutenberg__editor'         => array(
+					'.gutenberg__editor'               => array(
 						'background-color' => '#f5f5f5',
 					),
-					'.editor-block-list__layout, .editor-post-title' => array(
+					'.block-editor-block-list__layout, .editor-post-title' => array(
 						'padding-top'    => 'calc( 5.34em - 19px)',
 						'padding-bottom' => '5.34em',
 						'padding-left'   => 'calc( 6.67em - 28px )',
 						'padding-right'  => 'calc( 6.67em - 28px )',
 					),
-					'.editor-block-list__layout' => array(
+					'.block-editor-block-list__layout' => array(
 						'padding-top' => '0',
 					),
-					'.editor-post-title'         => array(
+					'.editor-post-title'               => array(
 						'padding-bottom' => '0',
 					),
-					'.editor-block-list__block'  => array(
+					'.block-editor-block-list__block'  => array(
 						'max-width' => 'calc(' . astra_get_css_value( $site_content_width, 'px' ) . ' - 6.67em)',
 					),
-					'.editor-block-list__block[data-align=wide]' => array(
+					'.block-editor-block-list__block[data-align=wide]' => array(
 						'margin-left'  => '-20px',
 						'margin-right' => '-20px',
 					),
-					'.editor-block-list__block[data-align=full]' => array(
+					'.block-editor-block-list__block[data-align=full]' => array(
 						'margin-left'  => '-6.67em',
 						'margin-right' => '-6.67em',
 					),
-					'.editor-block-list__layout .editor-block-list__block[data-align="full"], .editor-block-list__layout .editor-block-list__block[data-align="full"] > .editor-block-list__block-edit' => array(
+					'.block-editor-block-list__layout .block-editor-block-list__block[data-align="full"], .block-editor-block-list__layout .block-editor-block-list__block[data-align="full"] > .editor-block-list__block-edit' => array(
 						'margin-left'  => '0',
 						'margin-right' => '0',
 					),
