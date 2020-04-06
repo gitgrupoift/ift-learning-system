@@ -63,7 +63,7 @@ class Talk {
         curl_setopt($ch, CURLOPT_URL, 'https://carlos:Lipsw0rld@app.grupoift.pt/ocs/v2.php/apps/spreed/api/v1/room');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "roomType=2&roomName=" . $group);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "roomType=2&roomName=" . $group . "&invite=" . $group);
 
         $headers = array();
         $headers[] = 'Ocs-Apirequest: true';
@@ -82,7 +82,7 @@ class Talk {
         $json2 = json_decode($json, true);
         $token = $json2['data'][0]['token'];
         
-        $this->group_public($token);
+        //$this->group_public($token);
         // $this->add_group($token, 'ana.seg');
         update_field( 'sala_sincrona', $token, $post_id);
         

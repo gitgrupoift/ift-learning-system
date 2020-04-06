@@ -14,8 +14,7 @@ class Users {
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
   
         
-        add_action( 'publish_groups', array($this, 'generate_cloud_groups') );
-    
+        add_action( 'publish_groups', array($this, 'generate_cloud_groups') );   
    
         
     }
@@ -74,6 +73,12 @@ class Users {
     }
     
     
+    /*
+     * Cria grupos na nuvem a partir dos grupos criados no IFT Learning e adiciona utilizadores
+     * @since 1.1.0
+     * @updated 1.1.2
+     *
+     */
     function generate_cloud_groups() {
         
         $args = array(
@@ -112,28 +117,13 @@ class Users {
         if (curl_errno($ch)) {
             echo 'Error:' . curl_error($ch);
         }
-        curl_close($ch);        
-            
-        }
-    }
-    
-   /*
-     * Adiciona utilizadores de uma turma ao grupo e à conversa respetivos
-     * @since 1.1.0
-     *
-     */
-    public function user_to_group($user_name, $group_name) {
-
-        $fields = array(
-            'groupid' => $group_name
-        );
-
-        foreach($fields as $key=>$value) { 
-            $fields_string .= $key.'='.$value.'&'; 
-        }
-
-        rtrim($fields_string, '&');
-
+        curl_close($ch);
+        
+        $group_users = learndash_get_groups_users($room->ID);
+        
+        foreach($group_users as $user) {
+                
+            $user_name = $user->user_login;
             $ch = curl_init();
 
             curl_setopt($ch, CURLOPT_URL, 'https://carlos:Lipsw0rld@app.grupoift.pt/ocs/v1.php/cloud/users/' . $user_name . '/groups');
@@ -152,8 +142,10 @@ class Users {
                 echo 'Error:' . curl_error($ch);
             }
             curl_close($ch);
-
-
+                
+        }  
+                    
+        }
     }
 
 }

@@ -13,9 +13,18 @@ wp-content/plugins/header-footer-elementor/
 wp-content/plugins/learndash-bbpress/
 wp-content/plugins/learndash-course-grid/
 wp-content/plugins/loco-translate/
+wp-content/plugins/breeze/
+wp-content/plugins/learndash-propanel/
+wp-content/plugins/widget-areas-learndash/
+wp-content/plugins/woocommerce/
+wp-content/plugins/wp-sweep/
+wp-content/plugins/wpforms-lite/
 wp-content/uploads/
 wp-content/ai1wm-backups/
 wp-content/upgrade/
+wp-content/languages/
+wp-content/breeze-config/
+wp-content/advanced-cache.php
 
 # ignore specific themes
 wp-content/themes/twenty*/
