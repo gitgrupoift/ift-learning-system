@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-03-31T22:24:15+00:00\n"
-"PO-Revision-Date: 2020-04-04 22:18+0000\n"
+"PO-Revision-Date: 2020-04-06 19:51+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -7630,7 +7630,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:254
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:344
 msgid "From Email:"
-msgstr ""
+msgstr "Do E-mail:"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:259
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:349
@@ -7844,7 +7844,7 @@ msgstr "É requerido apenas em raros casos."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:517
 msgid "If you have problems with the front ajax, please activate it."
-msgstr ""
+msgstr "Se tem problemas com o Ajax no frontend, clique aqui."
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:520
 msgid "e.g. Domain with special characters in combination with IE"
@@ -8532,7 +8532,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:727
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:732
 msgid "Hide correct- and incorrect message"
-msgstr ""
+msgstr "Ocultar mensagens de correto e incorreto"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:739
 msgid ""
@@ -9309,7 +9309,7 @@ msgstr "Questionário do Texto Submetido"
 #: includes/quiz/ld-quiz-essays.php:899
 msgctxt "No Quiz"
 msgid "No %s"
-msgstr ""
+msgstr "Sem %s"
 
 #: includes/quiz/ld-quiz-essays.php:930
 msgctxt "Essay Course"
@@ -10488,7 +10488,7 @@ msgstr "Tamanho máximo de ficheiro suportado pelo seu host por defeito."
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:513
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:508
 msgid "Award points for submitting assignments"
-msgstr ""
+msgstr "Pontos concedidos pela submissão dos trabalhos"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:529
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:524
@@ -10515,7 +10515,7 @@ msgstr ""
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:544
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-topic-display-content.php:540
 msgid "Manually grade"
-msgstr ""
+msgstr "Avaliar manualmente"
 
 #. translators: placeholder: lesson.
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:547
@@ -11107,7 +11107,7 @@ msgstr "Submeter Automaticamente Após"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-progress-settings.php:380
 msgid "e.g. 0"
-msgstr ""
+msgstr "p.ex. 0"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-quiz-results-display-content-options.php:27
 msgid "Results Page Display"
@@ -12928,7 +12928,7 @@ msgstr "Clique Aqui para Continuar (Botão)"
 
 #: includes/settings/settings-sections/class-ld-settings-section-custom-labels.php:172
 msgid "Label to replace \"Click Here to Continue\" button."
-msgstr ""
+msgstr "Substitui o rótulo do \"Clique Aqui para Continuar\""
 
 #: includes/settings/settings-sections/class-ld-settings-section-general-admin-user.php:31
 msgid "Admin User Settings"
@@ -14667,14 +14667,14 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-certificate/index.js:123
 #: includes/gutenberg/blocks/ld-course-resume/index.js:122
 msgid "Label"
-msgstr ""
+msgstr "Rótulo"
 
 #: includes/settings/shortcodes-sections/ld_certificate.php:69
 #: includes/settings/shortcodes-sections/ld_course_resume.php:60
 #: includes/gutenberg/blocks/ld-certificate/index.js:124
 #: includes/gutenberg/blocks/ld-course-resume/index.js:123
 msgid "Label for link shown to user"
-msgstr ""
+msgstr "Rótulo para o link exibido ao utilizador"
 
 #: includes/settings/shortcodes-sections/ld_certificate.php:76
 #: includes/settings/shortcodes-sections/ld_course_resume.php:79
@@ -14691,7 +14691,7 @@ msgstr ""
 #: includes/settings/shortcodes-sections/ld_certificate.php:84
 #: includes/gutenberg/blocks/ld-certificate/index.js:135
 msgid "Context"
-msgstr ""
+msgstr "Contexto"
 
 #: includes/settings/shortcodes-sections/ld_certificate.php:85
 #: includes/gutenberg/blocks/ld-certificate/index.js:136
@@ -15392,7 +15392,7 @@ msgstr "Expandir Todas as %s seções"
 #: includes/settings/shortcodes-sections/ld_quiz_complete.php:11
 msgctxt "placeholder: Quiz"
 msgid "%s Complete"
-msgstr ""
+msgstr "%s Concluído"
 
 #. translators: placeholders: quiz.
 #: includes/settings/shortcodes-sections/ld_quiz_complete.php:16
@@ -16208,7 +16208,7 @@ msgstr "Transferir Trabalho"
 #: themes/ld30/templates/assignment/partials/row.php:112
 msgctxt "placeholder: comment count"
 msgid "%d Comments"
-msgstr ""
+msgstr "%d Comentários"
 
 #: themes/ld30/templates/assignment/partials/row.php:139
 #: themes/ld30/templates/shortcodes/profile/assignment-row.php:88
@@ -16297,7 +16297,7 @@ msgstr ""
 
 #: themes/ld30/templates/focus/index.php:115
 msgid "No content found at this address"
-msgstr ""
+msgstr "Nenhum conteúdo encontrado neste endereço"
 
 #: themes/ld30/templates/focus/masthead.php:26
 msgid "Menu"

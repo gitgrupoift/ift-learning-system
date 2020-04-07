@@ -22,6 +22,7 @@ use IFT\Backend;
 use IFT\Customizer;
 use IFT\Ads;
 use IFT\Talk;
+use IFT\Zoom;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -39,7 +40,8 @@ new Optimize();
 new Ads();
 new Backend();
 new Talk();
-
+new Zoom();
+    
 
 add_action('after_setup_theme', 'override_theme', 999);
 

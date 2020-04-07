@@ -18,6 +18,7 @@ class Backend {
         add_action('wp_enqueue_scripts', array($this, 'front_menu_admin'));
         add_action('admin_head', array($this, 'admin_tweak_css'));
         add_action('admin_menu', array($this, 'admin_main'), 999);
+        add_action('wp_head', array($this, 'analytics'), 99);
         
         remove_role('bbp_blocked');
         remove_role('bbp_participant');
@@ -71,6 +72,21 @@ class Backend {
             remove_menu_page( 'wpforms-overview' );
 
         }
+    }
+    
+    
+    public function analytics() {
+        ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162895494-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-162895494-1');
+        </script>
+        <?php
     }
 
     
