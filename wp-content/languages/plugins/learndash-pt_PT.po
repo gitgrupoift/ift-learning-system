@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-03-31T22:24:15+00:00\n"
-"PO-Revision-Date: 2020-04-06 19:51+0000\n"
+"PO-Revision-Date: 2020-04-08 11:03+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: learndash\n"
 "Language: pt_PT\n"
@@ -1002,7 +1002,7 @@ msgstr "Desfazer"
 #: includes/admin/class-learndash-admin-menus-tabs.php:1205
 msgctxt "Matrix answer Criteroion"
 msgid "Criterion"
-msgstr ""
+msgstr "Critério"
 
 #: includes/admin/class-learndash-admin-menus-tabs.php:1206
 msgctxt "Sort matrix answer element"
@@ -1483,7 +1483,7 @@ msgstr "Passos Totais: %s"
 #: includes/admin/classes-builders/class-learndash-admin-quiz-builder-metabox.php:584
 msgctxt "placeholder: will contain post type label"
 msgid "Edit %s Settings (new window)"
-msgstr ""
+msgstr "Editar as Configurações"
 
 #. translators: placeholder: will contain post type label.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:568
@@ -1574,7 +1574,7 @@ msgstr "Mover"
 #: includes/admin/classes-builders/class-learndash-admin-quiz-builder-metabox.php:721
 msgctxt "placeholder: Topic"
 msgid "Edit %s Settings (new window)"
-msgstr ""
+msgstr "Editar as Configurações do Tópico"
 
 #. translators: placeholder: Topic.
 #: includes/admin/classes-builders/class-learndash-admin-course-builder-metabox.php:704
@@ -2364,7 +2364,7 @@ msgstr ""
 #: includes/admin/classes-posts-edits/class-learndash-admin-quiz-edit.php:223
 msgctxt "placeholder: Quiz"
 msgid "LearnDash %s Builder"
-msgstr ""
+msgstr "Consturtor de Questionários"
 
 #. translators: placeholder: Quiz.
 #: includes/admin/classes-posts-edits/class-learndash-admin-quiz-edit.php:237
@@ -2383,7 +2383,7 @@ msgstr ""
 #: includes/admin/classes-posts-edits/class-learndash-admin-quiz-edit.php:341
 msgctxt "placeholder: Quiz"
 msgid "LearnDash %s Result Settings"
-msgstr ""
+msgstr "Definições de Resultados do %s"
 
 #. translators: placeholder: Quiz.
 #: includes/admin/classes-posts-edits/class-learndash-admin-quiz-edit.php:357
@@ -2649,7 +2649,7 @@ msgstr "Historial de Modificações"
 #: includes/admin/ld-admin.php:1661
 #: includes/settings/shortcodes-sections/quizinfo.php:29
 msgid "Count"
-msgstr ""
+msgstr "Contar"
 
 #: includes/admin/ld-admin.php:1941 includes/admin/ld-admin.php:1970
 msgid "Total %s"
@@ -3042,7 +3042,7 @@ msgstr "Descendente"
 
 #: includes/class-ld-cpt-instance.php:112
 msgid "Posts Per Page"
-msgstr ""
+msgstr "Posts por Página"
 
 #: includes/class-ld-cpt-instance.php:114
 msgid "Enter the number of posts to display per page."
@@ -3622,7 +3622,7 @@ msgstr ""
 #: includes/class-ld-gdpr.php:138 includes/class-ld-gdpr.php:164
 #: includes/class-ld-gdpr.php:202 includes/class-ld-gdpr.php:803
 msgid "Order Total"
-msgstr ""
+msgstr "Total da Encomenda"
 
 #: includes/class-ld-gdpr.php:142 includes/class-ld-gdpr.php:176
 #: includes/class-ld-gdpr.php:223 includes/class-ld-gdpr.php:261
@@ -4123,7 +4123,7 @@ msgstr "Adicionar uma Nova Categoria de %s"
 #: includes/class-ld-lms.php:959
 msgctxt "placeholder: Course"
 msgid "New %s Category Name"
-msgstr ""
+msgstr "Nova Categoria de Formação"
 
 #. translators: placeholder: Course.
 #: includes/class-ld-lms.php:978 includes/class-ld-lms.php:988
@@ -4227,7 +4227,7 @@ msgstr "Adicionar uma Nova Categoria de %s"
 #: includes/class-ld-lms.php:1030
 msgctxt "placeholder: Lesson"
 msgid "New %s Category Name"
-msgstr ""
+msgstr "Nova Categoria de Aula"
 
 #. translators: placeholder: Lesson.
 #: includes/class-ld-lms.php:1049 includes/class-ld-lms.php:1059
@@ -4534,7 +4534,7 @@ msgstr "Adicionar uma Nova Categoria de %s"
 #: includes/class-ld-lms.php:1235
 msgctxt "placeholder: Question"
 msgid "New %s Category Name"
-msgstr ""
+msgstr "Nova Categoria de Questão"
 
 #: includes/class-ld-lms.php:1254 includes/class-ld-lms.php:1264
 msgctxt "placeholder: Question"
@@ -5046,7 +5046,7 @@ msgstr "%1$s %2$s"
 #: includes/class-ld-lms.php:1738
 msgctxt "placeholder: Topic"
 msgid "LearnDash %s Settings"
-msgstr ""
+msgstr "Definições do %s"
 
 #: includes/class-ld-lms.php:1743 themes/legacy/templates/topic.php:121
 msgctxt "Topic Materials Label"
@@ -5102,7 +5102,7 @@ msgstr ""
 #: includes/class-ld-lms.php:1904
 msgctxt "placeholder: Quiz"
 msgid "LearnDash %s Settings"
-msgstr ""
+msgstr "Definições do %s"
 
 #: includes/class-ld-lms.php:1909 themes/legacy/templates/quiz.php:76
 msgctxt "Quiz Materials Label"
@@ -5635,7 +5635,7 @@ msgstr "-- Instalar Traduções --"
 
 #: includes/class-ld-translations.php:672
 msgid "Recommended"
-msgstr ""
+msgstr "Recomendado"
 
 #: includes/class-ld-translations.php:690
 msgid "Available"
@@ -5983,7 +5983,7 @@ msgstr "Não Iniciado"
 #: includes/course/ld-course-list-shortcode.php:1615
 msgctxt "Course access will expire on:"
 msgid "%s access will expire on:"
-msgstr ""
+msgstr "O acesso a esta %s termina em:"
 
 #: includes/course/ld-course-list-shortcode.php:1616
 msgctxt "Course access expired on:"
@@ -6120,7 +6120,7 @@ msgstr ""
 
 #: includes/course/ld-course-video.php:133
 msgid "After (default) - Video is shown after completing sub-steps"
-msgstr ""
+msgstr "Após (padrão) - o vídeo é mostrado após concluídos os subpassos"
 
 #: includes/course/ld-course-video.php:134
 msgid "Before - Video is shown before completing sub-steps"
@@ -6952,7 +6952,7 @@ msgstr ""
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:84
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:284
 msgid "No name or e-mail entered."
-msgstr ""
+msgstr "Nenhum nome ou e-mail foi fornecido."
 
 #: includes/lib/wp-pro-quiz/lib/controller/WpProQuiz_Controller_Toplist.php:177
 msgid "You signed up successfully."
@@ -7542,7 +7542,7 @@ msgstr ""
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:143
 msgid "Question Category Deleted"
-msgstr ""
+msgstr "Categoria de Questões Deletada"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:152
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_GobalSettings.php:157
@@ -7998,7 +7998,7 @@ msgstr "Adicionar Mídia"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:353
 msgid "Criterion"
-msgstr ""
+msgstr "Critério"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuestionEdit.php:445
 msgid ""
@@ -8338,7 +8338,7 @@ msgstr "%s"
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:333
 msgctxt "Prerequisites (This quiz has to be finished)"
 msgid "Prerequisites (This %s has to be finished)"
-msgstr ""
+msgstr "Pré-requisitos (este questionário tem de ser encerrado)"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:372
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_QuizEdit.php:377
@@ -9076,7 +9076,7 @@ msgstr "apenas utilizadores registados"
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_Statistics.php:297
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsNew.php:103
 msgid "only anonymous users"
-msgstr ""
+msgstr "apenas utilizadores anónimos"
 
 #: includes/lib/wp-pro-quiz/lib/view/WpProQuiz_View_StatisticsAjax.php:89
 msgctxt "placeholder: user name"
@@ -9559,7 +9559,7 @@ msgstr ""
 #: includes/rest-api/v1/class-ld-rest-questions-controller.php:137
 msgctxt "placeholder: Question label"
 msgid "Could not delete the %s."
-msgstr ""
+msgstr "Não foi possível deletar a %s."
 
 #: includes/rest-api/v1/class-ld-rest-questions-controller.php:185
 msgid "Could not update the %s."
@@ -9611,7 +9611,7 @@ msgstr ""
 #: includes/rest-api/v1/class-ld-rest-users-quiz-attempts-controller.php:89
 #: includes/rest-api/v1/class-ld-rest-users-quiz-attempts-controller.php:116
 msgid "Invalid user ID. #1"
-msgstr ""
+msgstr "Utilizador inválido. #1"
 
 #: includes/rest-api/v1/class-ld-rest-users-courses-controller.php:48
 msgid "User ID to enroll user into."
@@ -9978,6 +9978,8 @@ msgstr ""
 msgctxt "placeholder: course"
 msgid "Add a comma-list of user IDs to grant access to this %s"
 msgstr ""
+"Adicionar uma lista de IDs de utilizadores separados por vírgulas para "
+"inscrevê-los nesta %s"
 
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-course-display-content.php:26
 #: includes/settings/settings-metaboxes/class-ld-settings-metabox-lesson-display-content.php:26
@@ -12184,7 +12186,7 @@ msgstr "%s Construtor [Artigo]"
 #: includes/settings/settings-pages/class-ld-settings-page-overview.php:520
 msgctxt "placeholders: Lessons, Topics"
 msgid "Adding Content Using %1$s & %2$s"
-msgstr ""
+msgstr "Adicionar Conteúdo Usando %1$s & %2$s"
 
 #. translators: placeholders: Course, Lessons, Topics
 #: includes/settings/settings-pages/class-ld-settings-page-overview.php:534
@@ -13437,6 +13439,8 @@ msgctxt "placeholder: questions"
 msgid ""
 "Control which templates can be used to better organize your LearnDash %s."
 msgstr ""
+"Controla os modelos que serão usados para melhor organizar o sistema de "
+"ensino."
 
 #: includes/settings/settings-sections/class-ld-settings-section-questions-management-display.php:61
 #: includes/settings/settings-sections/class-ld-settings-section-quizzes-management-display.php:146
@@ -13833,7 +13837,7 @@ msgstr "Nome da Tabela"
 
 #: includes/settings/settings-sections/class-ld-settings-section-support-database-tables.php:71
 msgid "Present"
-msgstr ""
+msgstr "Atual"
 
 #: includes/settings/settings-sections/class-ld-settings-section-support-database-tables.php:77
 msgid ""
@@ -14163,7 +14167,7 @@ msgstr ""
 
 #: includes/settings/settings-sections/class-ld-settings-section-support-wordpress.php:125
 msgid "Object Cache"
-msgstr ""
+msgstr "Cache de Objetos"
 
 #: includes/settings/settings-sections/class-ld-settings-section-support-wordpress.php:138
 msgid "Recommended at least 100M memory."
@@ -14313,7 +14317,7 @@ msgstr ""
 #: includes/settings/shortcodes-sections/courseinfo.php:60
 msgctxt "placeholder: Course"
 msgid "Enrolled On (date)"
-msgstr ""
+msgstr "Inscrito Em (data)"
 
 #. translators: placeholder: Quizzes
 #: includes/settings/shortcodes-sections/courseinfo.php:63
@@ -14373,7 +14377,7 @@ msgstr ""
 #: includes/settings/shortcodes-sections/courseinfo.php:90
 msgctxt "placeholder: Quizzes"
 msgid "Aggregate %s Time Spent"
-msgstr ""
+msgstr "Ajuntar o Tempo Gasto no %s"
 
 #: includes/settings/shortcodes-sections/courseinfo.php:97
 #: includes/settings/shortcodes-sections/quizinfo.php:45
@@ -14679,7 +14683,7 @@ msgstr "Rótulo para o link exibido ao utilizador"
 #: includes/settings/shortcodes-sections/ld_certificate.php:76
 #: includes/settings/shortcodes-sections/ld_course_resume.php:79
 msgid "HTML Class"
-msgstr ""
+msgstr "Classe HTML"
 
 #: includes/settings/shortcodes-sections/ld_certificate.php:77
 #: includes/settings/shortcodes-sections/ld_course_resume.php:80
@@ -16193,7 +16197,7 @@ msgstr ""
 #: themes/ld30/templates/assignment/partials/row.php:44
 #: themes/legacy/templates/learndash_lesson_assignment_uploads_list.php:52
 msgid "Delete this uploaded Assignment"
-msgstr ""
+msgstr "Deletar este Trabalho"
 
 #: themes/ld30/templates/assignment/partials/row.php:45
 msgid "Delete Assignment"
@@ -16289,11 +16293,11 @@ msgstr "%1$s em %2$s"
 
 #: themes/ld30/templates/focus/comments_list.php:65
 msgid "Reply"
-msgstr ""
+msgstr "Responder"
 
 #: themes/ld30/templates/focus/index.php:67
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: themes/ld30/templates/focus/index.php:115
 msgid "No content found at this address"
@@ -16736,7 +16740,7 @@ msgstr ""
 #: themes/legacy/templates/course_navigation_switcher_admin.php:51
 msgctxt "placeholder: Course"
 msgid "Select a %s"
-msgstr ""
+msgstr "Selecionar uma %s"
 
 #: themes/legacy/templates/course_navigation_switcher_admin.php:55
 msgctxt "placeholder: Quiz"
@@ -16912,7 +16916,7 @@ msgstr ""
 #: themes/legacy/templates/quiz_navigation_switcher_admin.php:68
 msgctxt "placeholder: Quiz"
 msgid "Select a %s"
-msgstr ""
+msgstr "Selecionar um %s"
 
 #. translators: placeholder: Quiz.
 #: themes/legacy/templates/quiz_navigation_switcher_admin.php:78
@@ -17089,7 +17093,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-course-complete/index.js:40
 msgctxt "placeholder: Course"
 msgid "LearnDash %s Complete"
-msgstr ""
+msgstr "Construtor de Formações"
 
 #: includes/gutenberg/blocks/ld-course-complete/index.js:41
 msgctxt "placeholders: course"
@@ -17272,7 +17276,7 @@ msgstr "Mostrar Conteúdo"
 #: includes/gutenberg/blocks/ld-course-list/index.js:280
 msgctxt "placeholder: Courses"
 msgid "Enrolled %s Status"
-msgstr ""
+msgstr "Status de Inscrição na %s"
 
 #: includes/gutenberg/blocks/ld-course-list/index.js:312
 msgctxt "placeholder: Course"
@@ -17448,7 +17452,7 @@ msgstr ""
 #: includes/gutenberg/blocks/ld-courseinfo/index.js:166
 msgctxt "placeholder: Course"
 msgid "Aggregate %s Time Spent"
-msgstr ""
+msgstr "Ajuntar o Tempo Gasto na %s"
 
 #: includes/gutenberg/blocks/ld-courseinfo/index.js:200
 msgid "This can be used to change the date format. Default: \"F j, Y, g:i a."

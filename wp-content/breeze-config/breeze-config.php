@@ -10,7 +10,7 @@
     'breeze-minify-css' => '1',
     'breeze-minify-js' => '1',
     'breeze-gzip-compression' => '1',
-    'breeze-browser-cache' => '1',
+    'breeze-browser-cache' => '0',
     'breeze-desktop-cache' => 1,
     'breeze-mobile-cache' => 1,
     'breeze-disable-admin' => '1',

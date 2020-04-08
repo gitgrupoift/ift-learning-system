@@ -5,18 +5,18 @@ msgstr ""
 "Project-Id-Version: Uncanny LearnDash Toolkit 3.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/uncanny-learndash-"
 "toolkit\n"
-"Last-Translator: Carlos Artur Curvelo Matos <geral@meuppt.pt>\n"
+"Last-Translator: Carlos Artur Curvelo Matos\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-03-19T18:47:22+00:00\n"
-"PO-Revision-Date: 2020-04-01 10:01+0000\n"
+"PO-Revision-Date: 2020-04-08 11:02+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: uncanny-learndash-toolkit\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.2; wp-5.4"
 
 #. Plugin Name of the plugin
 #: src/admin-menu.php:31 src/blocks/blocks.php:134
@@ -479,7 +479,7 @@ msgstr ""
 #: src/classes/frontend-login-plus.php:463
 #: src/classes/frontend-login-plus.php:562
 msgid "Button Label"
-msgstr ""
+msgstr "Rótulo do Botão"
 
 #: src/classes/frontend-login-plus.php:350
 #: src/classes/login-logout-menu.php:143 src/classes/login-logout-menu.php:305
@@ -1119,7 +1119,7 @@ msgstr ""
 
 #: src/templates/admin-modules.php:132
 msgid "All Versions"
-msgstr ""
+msgstr "Todas as Versões"
 
 #: src/templates/admin-modules.php:135
 msgid "Free only"
@@ -1131,7 +1131,7 @@ msgstr ""
 
 #: src/templates/admin-modules.php:149
 msgid "All Categories"
-msgstr ""
+msgstr "Todas as Categorias"
 
 #: src/templates/admin-modules.php:152
 msgid "LearnDash"

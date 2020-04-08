@@ -3,8 +3,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Project-Id-Version: LearnDash LMS - Notifications\n"
 "POT-Creation-Date: 2017-10-18 14:51+0700\n"
-"PO-Revision-Date: 2020-03-27 15:21+0000\n"
-"Last-Translator: carlos <geral@meuppt.pt>\n"
+"PO-Revision-Date: 2020-04-08 11:00+0000\n"
+"Last-Translator: Carlos Artur Curvelo Matos\n"
 "Language-Team: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Report-Msgid-Bugs-To: \n"
 "Language: pt_PT\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.2; wp-5.4"
 
 #: ignore/learndash-notifications/includes/admin/class-settings.php:100
 #: includes/admin/class-settings.php:100
@@ -297,11 +297,13 @@ msgstr "Adiar"
 msgid ""
 "How many days this email is delayed after the trigger occurs (default is 0)."
 msgstr ""
+"Quantos dias este e-mail aguarda até que seja disparado, após o gatilho "
+"(padrão é 0)."
 
 #: ignore/learndash-notifications/includes/meta-box.php:263
 #: ignore/metabox.php:9 ignore/metabox.php:42 includes/meta-box.php:307
 msgid "Click for Help!"
-msgstr ""
+msgstr "Clique para Ajuda!"
 
 #: ignore/learndash-notifications/includes/meta-box.php:396
 #: includes/meta-box.php:443
@@ -361,6 +363,7 @@ msgstr "Mostra o total de pontos em todos os questionários da formação."
 msgid ""
 "Display average correct answers percentage across all quizzes on the course."
 msgstr ""
+"Mostra a percentagem média de acertos em todos os questionários da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:413
 #: includes/meta-box.php:465
@@ -372,6 +375,7 @@ msgstr "Mostra o tempo médio gasto em todas as avaliações do curso."
 msgid ""
 "Display average correct answer counted across all quizzes on the course."
 msgstr ""
+"Mostra a média de respostas corretas em todos os questionários da formação."
 
 #: ignore/learndash-notifications/includes/meta-box.php:415
 #: includes/meta-box.php:467
@@ -430,6 +434,7 @@ msgstr "Mostra a porcentagem atingida no questionário."
 msgid ""
 "Display whether the user passes the quiz or not. Display \"Yes\" or \"No\"."
 msgstr ""
+"Mostra se o utilizador passou ou não num teste. Retorna \"Sim\" ou \"Não\"."
 
 #: ignore/learndash-notifications/includes/meta-box.php:435
 #: includes/meta-box.php:490
@@ -646,7 +651,7 @@ msgstr "Todos os questionários"
 #: includes/post-type.php:234
 #, php-format
 msgid "Select %s"
-msgstr ""
+msgstr "Selecionar %s"
 
 #: ignore/learndash-notifications/includes/post-type.php:235
 #: includes/post-type.php:235
@@ -706,6 +711,8 @@ msgid ""
 "Additional email addresses (separated by comma) that will also get this "
 "notification"
 msgstr ""
+"Endereços de e-mail adicionar (separados por vírgulas) que irá também "
+"receber esta notificação"
 
 #: includes/meta-box.php:451
 msgid "Display group title."
