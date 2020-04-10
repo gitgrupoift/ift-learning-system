@@ -20,6 +20,8 @@ class Backend {
         add_action('admin_menu', array($this, 'admin_main'), 999);
         add_action('wp_head', array($this, 'analytics'), 99);
         
+        add_action( 'do_meta_boxes', array( $this, 'remove_astra_metabox' ) );
+        
         remove_role('bbp_blocked');
         remove_role('bbp_participant');
         remove_role('bbp_moderator');
@@ -88,6 +90,11 @@ class Backend {
         </script>
         <?php
     }
-
     
+    public static function remove_astra_metabox( $post_type ) {
+
+        remove_meta_box( 'astra_settings_meta_box', $post_type, 'side' );	
+
+    }
+
 }

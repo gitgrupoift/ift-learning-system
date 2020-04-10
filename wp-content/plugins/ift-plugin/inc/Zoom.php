@@ -18,9 +18,9 @@ class Zoom {
         $this->meetings_url = $meetings_url;
                 
     }
-    
-    protected function meetings_request( $data ) {
-
+ 
+    public function meetings_request( $data ) {
+        
         $data_string = json_encode($data);
         
         $ch = curl_init();
@@ -42,5 +42,5 @@ class Zoom {
         curl_close($ch);
         
     }   
-    
+
 }

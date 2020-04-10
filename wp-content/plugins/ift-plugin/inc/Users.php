@@ -12,6 +12,8 @@ class Users {
         
         add_action( 'init', array($this, 'remove_admin_bar') );
         add_action( 'admin_init', array($this, 'add_limited_admin_role') );
+        
+        add_filter( 'login_redirect', array($this, 'student_login_redirect'), 10, 3 );
   
         
         add_action( 'publish_groups', array($this, 'generate_cloud_groups') );   
@@ -70,6 +72,16 @@ class Users {
         if (!current_user_can('administrator')) {
                 show_admin_bar(false);
         }
+    }
+    
+    /*
+     * Redireciona os formandos à página de perfil no login.
+     * @since 1.0.0
+     * @updated 1.1.3
+     *
+     */
+    function student_login_redirect( $redirect_to, $request, $user  ) {
+        return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url('/perfil');
     }
     
     

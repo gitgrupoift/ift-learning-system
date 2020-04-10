@@ -23,6 +23,7 @@ use IFT\Customizer;
 use IFT\Ads;
 use IFT\Talk;
 use IFT\Zoom;
+use IFT\Woocommerce\Woocommerce;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -41,21 +42,12 @@ new Ads();
 new Backend();
 new Talk();
 new Zoom();
-    
+new Woocommerce();
+
+
+
 
 add_action('after_setup_theme', 'override_theme', 999);
-
-/**
- * Redirect non-admins to the homepage after logging into the site.
- *
- * @since 	1.0
- */
-function student_login_redirect( $redirect_to, $request, $user  ) {
-	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url('/perfil');
-}
-add_filter( 'login_redirect', 'student_login_redirect', 10, 3 );
-
-
 
 add_filter( 'wp_new_user_notification_email', 'welcome_email_template', 10, 3 );
 
@@ -77,17 +69,6 @@ function welcome_email_template( $wp_new_user_notification_email, $user, $blogna
     return $wp_new_user_notification_email;
 }
 
-function remove_jquery_migrate( $scripts ) {
-   if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
-        $script = $scripts->registered['jquery'];
-   if ( $script->deps ) { 
-// Check whether the script has any dependencies
-
-        $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
- }
- }
- }
-add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
 
 

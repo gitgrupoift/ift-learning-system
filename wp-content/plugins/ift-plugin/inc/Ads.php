@@ -15,7 +15,7 @@ class Ads {
     
     public function __construct() {
         
-        add_action('wp_head', array($this, 'ads_head'));
+        //add_action('wp_head', array($this, 'ads_head'));
     }
 
     public function ads_head() {
