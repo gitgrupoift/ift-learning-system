@@ -1,10 +1,10 @@
-a:2:{s:4:"body";s:84808:"<!DOCTYPE html>
+a:2:{s:4:"body";s:117120:"<!DOCTYPE html>
 <html lang="pt-PT">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
-		<link type="text/css" media="all" href="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/css/breeze_af39d94bf58e4822ab216e18e755f7ad.css" rel="stylesheet" /><title>8.1 &#8211; Notas Introdutórias &#8211; IFT Learning v.1.2.0 Beta &#8211; Grupo IFT</title>
+		<link type="text/css" media="all" href="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/css/breeze_af39d94bf58e4822ab216e18e755f7ad.css" rel="stylesheet" /><title>VIG &#8211; ALM02 &#8211; Operação de meios de videovigilância e centrais de alarme (10 horas) &#8211; IFT Learning v.1.2.0 Beta &#8211; Grupo IFT</title>
 <meta name="pwaforwp" content="wordpress-plugin"/>
                       <meta name="theme-color" content="#D5E0EB">
 <link rel="manifest" href="/pwa-manifest.json">
@@ -301,10 +301,10 @@ flexibility(document.documentElement);
 
 
 
-<link rel="canonical" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/" />
-<link rel='shortlink' href='https://aulas.grupoift.pt/?p=29978' />
-<link rel="alternate" type="application/json+oembed" href="https://aulas.grupoift.pt/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2F8-1-notas-introdutorias%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://aulas.grupoift.pt/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2F8-1-notas-introdutorias%2F&#038;format=xml" />
+<link rel="canonical" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/" />
+<link rel='shortlink' href='https://aulas.grupoift.pt/?p=30952' />
+<link rel="alternate" type="application/json+oembed" href="https://aulas.grupoift.pt/ift-learning/oembed/1.0/embed?url=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2Fvig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://aulas.grupoift.pt/ift-learning/oembed/1.0/embed?url=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2Fvig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas%2F&#038;format=xml" />
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
 	<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://aulas.grupoift.pt/wp-content/uploads/2020/01/cropped-grupo-ift-a-branco-01-2-32x32.png" sizes="32x32" />
 <link rel="icon" href="https://aulas.grupoift.pt/wp-content/uploads/2020/01/cropped-grupo-ift-a-branco-01-2-192x192.png" sizes="192x192" />
@@ -580,7 +580,7 @@ figcaption {
 	text-align: center;
 }		</style>
 			<script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_d9634a2eee4a71f31b7667f8db587134.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_49edccea2e7ba985cadc9ba0531cbed1.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_96bd65000fbbc4af48ff4876c36dda7f.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_861869c6f7aac4c8f71ee83f21ee50c0.js"></script></head>
-	<body class="sfwd-lessons-template-default single single-sfwd-lessons postid-29978 logged-in wp-custom-logo theme-astra ldx-plugin ld-in-focus-mode woocommerce-no-js ehf-footer ehf-template-astra ehf-stylesheet-ift-learning ast-desktop ast-separate-container ast-two-container ast-no-sidebar astra-2.3.5 ast-header-custom-item-inside ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default elementor-kit-25171 learndash-cpt learndash-cpt-sfwd-lessons learndash-embed-responsive">
+	<body class="sfwd-lessons-template-default single single-sfwd-lessons postid-30952 logged-in wp-custom-logo theme-astra ldx-plugin ld-in-focus-mode woocommerce-no-js ehf-footer ehf-template-astra ehf-stylesheet-ift-learning ast-desktop ast-separate-container ast-two-container ast-no-sidebar astra-2.3.5 ast-header-custom-item-inside ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default elementor-kit-25171 learndash-cpt learndash-cpt-sfwd-lessons learndash-embed-responsive">
 
 		<div class="learndash-wrapper">
 			<div class="ld-focus">
@@ -598,7 +598,7 @@ figcaption {
 		<h3>
 			<a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/" id="ld-focus-mode-course-heading">
 				<span class="ld-icon ld-icon-content"></span>
-				VIG &#8211; Formação de Vigilantes			</a>
+				VIG &#8211; Formação de Vigilantes &#8211; Formação Inicial (90 horas)			</a>
 		</h3>
 		<div class="ift-messenger" style="border-top: solid 1px #ddd;"><span>CHAT E DISCUSSÃO</span><button class="ift-talk"><a href="https://app.grupoift.pt/index.php/call/ocb3dbjb" target="_blank">VIG 003</a></button></div>	</div>
 	<div class="ld-focus-sidebar-wrapper">
@@ -609,30 +609,563 @@ figcaption {
 						
 <div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
 	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-2-conflitos/">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/">
 
 			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
 			<div class="ld-lesson-title">
-				5.2 - Conflitos			</div> <!--/.ld-lesson-title-->
+				VIG - VIG01 - Segurança física e controlo de acessos (10 horas)			</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 
 		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27499" data-ld-collapse-text="false">
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-25776" data-ld-collapse-text="false">
 				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
 				<span class="ld-text ld-primary-color">
-					3 Tópicos				</span>
+					8 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
 			</span>
 		
 	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27499">
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-25776">
 			<div class="ld-table-list ld-topic-list">
 				<div class="ld-table-list-items">
 					
 <div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-2-conflitos/topic/5-2-1-conflitos-na-seguranca-privada/">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-1-introducao/">
 
 		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-2-seguranca-fisica-2/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.2 &#8211; Segurança Física		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-2-1-meios-de-seguranca-fisica-2/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.2.1 &#8211; Meios de Segurança Física		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-2-2-perimetros-de-seguranca-fisica-2/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.2.2 &#8211; Perímetros de Segurança Física		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-2-3-riscos-e-graus-de-seguranca/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			1.2.3 &#8211; Riscos e Graus de Segurança		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-2-4-plano-de-seguranca-fisica/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.2.4 &#8211; Plano de Segurança Física		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-3-controlo-de-acessos/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.3 &#8211; Controlo de Acessos		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/topic/1-4-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			1.4 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig01-seguranca-fisica-e-controlo-de-acessos-10-horas/quizzes/avaliacao-vig-modulo-1-seguranca-fisica-e-controlo-de-acessos/">
+
+			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (VIG01) Segurança física e controlo de acessos</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+	</div> <!--/.ld-lesson-item-preview-->
+</div>
+				</div> <!--/.ld-table-list-items-->
+							</div> <!--/.ld-topic-list-->
+		</div> <!--/.ld-lesson-items-expanded-->
+		</div> <!--/.ld-lesson-item-->
+
+<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/">
+
+			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+			<div class="ld-lesson-title">
+				VIG - VIG02 - Técnicas e prática de vigilância humana e eletrónica e intervenção de alarmes (10 horas)			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-26066" data-ld-collapse-text="false">
+				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
+				<span class="ld-text ld-primary-color">
+					7 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
+			</span>
+		
+	</div> <!--/.ld-lesson-item-preview-->
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-26066">
+			<div class="ld-table-list ld-topic-list">
+				<div class="ld-table-list-items">
+					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-1-introducao/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			2.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-1-2-rondas/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			2.1.2 &#8211; Rondas		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-1-3-tecnicas-para-evitar-contactos-surpresa/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			2.1.3 &#8211; Técnicas para evitar contactos surpresa		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-2-vigilancia-eletronica/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			2.2 &#8211; Vigilância Eletrónica		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-2-1-reacao-a-alarmes/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			2.2.1 &#8211; Reação a alarmes		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/2-3-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			2.3 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/topic/atividade-treina-a-tua-memoria-2/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			Atividade &#8211; Treina a tua memória		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig02-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes-10-horas/quizzes/avaliacao-vig-modulo-2-tecnicas-e-pratica-de-vigilancia-humana-e-eletronica-e-intervencao-de-alarmes/">
+
+			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (VIG02) Técnicas e prática de vigilância humana e eletrónica e intervenção de alarmes</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+	</div> <!--/.ld-lesson-item-preview-->
+</div>
+				</div> <!--/.ld-table-list-items-->
+							</div> <!--/.ld-topic-list-->
+		</div> <!--/.ld-lesson-items-expanded-->
+		</div> <!--/.ld-lesson-item-->
+
+<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/">
+
+			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+			<div class="ld-lesson-title">
+				VIG - VIG03 - Procedimentos operacionais (10 horas)			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-26122" data-ld-collapse-text="false">
+				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
+				<span class="ld-text ld-primary-color">
+					11 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
+			</span>
+		
+	</div> <!--/.ld-lesson-item-preview-->
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-26122">
+			<div class="ld-table-list ld-topic-list">
+				<div class="ld-table-list-items">
+					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-1-introducao/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-1-1-conceito-de-emergencia/">
+
+		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-topic-title">
+			3.1.1 &#8211; Conceito de emergência		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-2-furto/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.2 &#8211; Furto		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-3-crimes/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.3 &#8211; Crimes		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-4-ameaca-de-bomba/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.4 &#8211; Ameaça de Bomba		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-4-1-procedimentos-de-evacuacao/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.4.1 &#8211; Procedimentos de evacuação		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-5-incendio-inundacao-e-acidente/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.5 &#8211; Incêndio, Inundação e Acidente		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-6-servico-de-portaria/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.6 &#8211; Serviço de Portaria		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-6-1-servico-telefonico/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.6.1 &#8211; Serviço telefónico		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-6-2-procedimentos-diversos/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.6.2 &#8211; Procedimentos diversos		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/topic/3-7-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			3.7 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig03-procedimentos-operacionais-10-horas/quizzes/avaliacao-vig-modulo-3-procedimentos-operacionais/">
+
+			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (VIG03) Procedimentos operacionais</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+	</div> <!--/.ld-lesson-item-preview-->
+</div>
+				</div> <!--/.ld-table-list-items-->
+							</div> <!--/.ld-topic-list-->
+		</div> <!--/.ld-lesson-items-expanded-->
+		</div> <!--/.ld-lesson-item-->
+
+<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/">
+
+			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+			<div class="ld-lesson-title">
+				VIG - VIG04 - Revistas pessoais de prevenção e segurança (10 horas)			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27198" data-ld-collapse-text="false">
+				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
+				<span class="ld-text ld-primary-color">
+					7 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
+			</span>
+		
+	</div> <!--/.ld-lesson-item-preview-->
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27198">
+			<div class="ld-table-list ld-topic-list">
+				<div class="ld-table-list-items">
+					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-1-introducao/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-2-enquadramento-legal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.2 &#8211; Enquadramento Legal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-3-meios-de-revista-pessoal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.3 &#8211; Meios de Revista Pessoal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-3-1-equipamentos-de-revista-autorizados-em-portugal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.3.1 &#8211; Equipamentos de revista autorizados em Portugal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-3-2-procedimentos-na-revista/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.3.2 &#8211; Procedimentos na revista		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-4-disposicoes-sancionatorias/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.4 &#8211; Disposições Sancionatórias		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/topic/4-5-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			4.5 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig04-revistas-pessoais-de-prevencao-e-seguranca-10-horas/quizzes/avaliacao-vig-modulo-4-revistas-pessoais-de-prevencao-e-seguranca/">
+
+			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (VIG04) Revistas pessoais de prevenção e segurança</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+	</div> <!--/.ld-lesson-item-preview-->
+</div>
+				</div> <!--/.ld-table-list-items-->
+							</div> <!--/.ld-topic-list-->
+		</div> <!--/.ld-lesson-items-expanded-->
+		</div> <!--/.ld-lesson-item-->
+
+<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
+	<div class="ld-lesson-item-preview">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/">
+
+			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+			<div class="ld-lesson-title">
+				VIG - VIG05 - Gestão de conflitos e procedimentos de detenção (10 horas)			</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+
+		
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27497" data-ld-collapse-text="false">
+				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
+				<span class="ld-text ld-primary-color">
+					7 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
+			</span>
+		
+	</div> <!--/.ld-lesson-item-preview-->
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27497">
+			<div class="ld-table-list ld-topic-list">
+				<div class="ld-table-list-items">
+					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-1-introducao/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			5.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-2-conflitos/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			5.2 &#8211; Conflitos		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-2-1-conflitos-na-seguranca-privada/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			5.2.1 &#8211; Conflitos na segurança privada		</div>
 
@@ -640,10 +1173,10 @@ figcaption {
 </div>
 
 
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-2-conflitos/topic/5-2-2-prevencao-do-conflito-na-seguranca-privada/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-2-2-prevencao-do-conflito-na-seguranca-privada/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			5.2.2 &#8211; Prevenção do conflito na segurança privada		</div>
 
@@ -651,63 +1184,45 @@ figcaption {
 </div>
 
 
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-2-conflitos/topic/5-2-3-controlo-de-multidoes/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-2-3-controlo-de-multidoes/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			5.2.3 &#8211; Controlo de multidões		</div>
 
 	</a>
 </div>
 
-				</div> <!--/.ld-table-list-items-->
-							</div> <!--/.ld-topic-list-->
-		</div> <!--/.ld-lesson-items-expanded-->
-		</div> <!--/.ld-lesson-item-->
 
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-3-procedimentos-de-detencao/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-3-procedimentos-de-detencao/">
 
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				5.3 - Procedimentos de Detenção			</div> <!--/.ld-lesson-title-->
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			5.3 &#8211; Procedimentos de Detenção		</div>
 
-		</a> <!--/.ld-lesson-item-preview-heading-->
+	</a>
+</div>
 
-		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
 
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-4-consideracoes-finais/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/topic/5-4-consideracoes-finais/">
 
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				5.4 - Considerações Finais			</div> <!--/.ld-lesson-title-->
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			5.4 &#8211; Considerações Finais		</div>
 
-		</a> <!--/.ld-lesson-item-preview-heading-->
+	</a>
+</div>
 
-		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27507" data-ld-collapse-text="false">
-				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
-				<span class="ld-text ld-primary-color">
-					1 Questionário				</span>
-			</span>
-		
-	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27507">
-			<div class="ld-table-list ld-topic-list">
-				<div class="ld-table-list-items">
-					
+
 <div class="ld-table-list-item learndash-complete">
 	<div class="ld-table-list-item-wrapper">
-		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/5-4-consideracoes-finais/quizzes/avaliacao-modulo-5/">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig05-gestao-de-conflitos-e-procedimentos-de-detencao-10-horas/quizzes/avaliacao-vig-modulo-5-gestao-de-conflitos-e-procedimentos-de-detencao/">
 
 			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
-			<div class="ld-topic-title">Avaliação - Módulo 5</div> <!--/.ld-lesson-title-->
+			<div class="ld-topic-title">Avaliação VIG - (VIG05) Gestão de conflitos e procedimentos de detenção</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 	</div> <!--/.ld-lesson-item-preview-->
@@ -716,50 +1231,55 @@ figcaption {
 							</div> <!--/.ld-topic-list-->
 		</div> <!--/.ld-lesson-items-expanded-->
 		</div> <!--/.ld-lesson-item-->
-<div class="ld-lesson-item-section-heading ld-lesson-item-section-heading-1585049414349">
-		<span class="ld-lesson-section-heading" role="heading" aria-level="3">Módulo 6 - Registos técnicos e relatórios e simulação prática de incidentes</span>
-	</div>
 
 <div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
 	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-1-introducao/">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/">
 
 			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
 			<div class="ld-lesson-title">
-				6.1 - Introdução			</div> <!--/.ld-lesson-title-->
+				VIG - VIG06 - Registos técnicos e relatórios e simulação prática de incidentes (10 horas)			</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 
 		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-2-suporte-documental-na-seguranca-privada/">
-
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				6.2 - Suporte Documental na Segurança Privada			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27941" data-ld-collapse-text="false">
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27884" data-ld-collapse-text="false">
 				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
 				<span class="ld-text ld-primary-color">
-					3 Tópicos				</span>
+					7 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
 			</span>
 		
 	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27941">
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27884">
 			<div class="ld-table-list ld-topic-list">
 				<div class="ld-table-list-items">
 					
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-2-suporte-documental-na-seguranca-privada/topic/6-2-1-modelos/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-1-introducao/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			6.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-2-suporte-documental-na-seguranca-privada/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			6.2 &#8211; Suporte Documental na Segurança Privada		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-2-1-modelos/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			6.2.1 &#8211; Modelos		</div>
 
@@ -767,10 +1287,10 @@ figcaption {
 </div>
 
 
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-2-suporte-documental-na-seguranca-privada/topic/6-2-2-registo-de-documentos/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-2-2-registo-de-documentos/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			6.2.2 &#8211; Registo de documentos		</div>
 
@@ -778,63 +1298,45 @@ figcaption {
 </div>
 
 
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-2-suporte-documental-na-seguranca-privada/topic/6-2-3-redacao-de-documentos/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-2-3-redacao-de-documentos/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			6.2.3 &#8211; Redação de documentos		</div>
 
 	</a>
 </div>
 
-				</div> <!--/.ld-table-list-items-->
-							</div> <!--/.ld-topic-list-->
-		</div> <!--/.ld-lesson-items-expanded-->
-		</div> <!--/.ld-lesson-item-->
 
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-3-simulacao-pratica-de-incidentes/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-3-simulacao-pratica-de-incidentes/">
 
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				6.3 - Simulação Prática de Incidentes			</div> <!--/.ld-lesson-title-->
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			6.3 &#8211; Simulação Prática de Incidentes		</div>
 
-		</a> <!--/.ld-lesson-item-preview-heading-->
+	</a>
+</div>
 
-		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
 
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-4-consideracoes-finais/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/topic/6-4-consideracoes-finais/">
 
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				6.4 - Considerações Finais			</div> <!--/.ld-lesson-title-->
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			6.4 &#8211; Considerações Finais		</div>
 
-		</a> <!--/.ld-lesson-item-preview-heading-->
+	</a>
+</div>
 
-		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27966" data-ld-collapse-text="false">
-				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
-				<span class="ld-text ld-primary-color">
-					1 Questionário				</span>
-			</span>
-		
-	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27966">
-			<div class="ld-table-list ld-topic-list">
-				<div class="ld-table-list-items">
-					
+
 <div class="ld-table-list-item learndash-complete">
 	<div class="ld-table-list-item-wrapper">
-		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/6-4-consideracoes-finais/quizzes/avaliacao-modulo-6/">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig06-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes-10-horas/quizzes/avaliacao-vig-modulo-6-registos-tecnicos-e-relatorios-e-simulacao-pratica-de-incidentes/">
 
 			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
-			<div class="ld-topic-title">Avaliação - Módulo 6</div> <!--/.ld-lesson-title-->
+			<div class="ld-topic-title">Avaliação VIG - (VIG06) Registos técnicos e relatórios e simulação prática de incidentes</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 	</div> <!--/.ld-lesson-item-preview-->
@@ -843,78 +1345,77 @@ figcaption {
 							</div> <!--/.ld-topic-list-->
 		</div> <!--/.ld-lesson-items-expanded-->
 		</div> <!--/.ld-lesson-item-->
-<div class="ld-lesson-item-section-heading ld-lesson-item-section-heading-1585049426966">
-		<span class="ld-lesson-section-heading" role="heading" aria-level="3">Módulo 7 - Defesa pessoal</span>
-	</div>
 
 <div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
 	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-1-introducao/">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/">
 
 			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
 			<div class="ld-lesson-title">
-				7.1 - Introdução			</div> <!--/.ld-lesson-title-->
+				VIG - VIG07 - Defesa pessoal (10 horas)			</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 
 		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-2-fundamentos-da-pratica-de-defesa-pessoal/">
-
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				7.2 - Fundamentos da Prática de Defesa Pessoal			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-3-distancias-de-seguranca-em-defesa-pessoal/">
-
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				7.3 - Distâncias de Segurança em Defesa Pessoal			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-4-tecnica-de-defesa-pessoal/">
-
-			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
-			<div class="ld-lesson-title">
-				7.4 - Técnica de Defesa Pessoal			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27979" data-ld-collapse-text="false">
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27886" data-ld-collapse-text="false">
 				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
 				<span class="ld-text ld-primary-color">
-					2 Tópicos				</span>
+					7 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
 			</span>
 		
 	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27979">
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27886">
 			<div class="ld-table-list ld-topic-list">
 				<div class="ld-table-list-items">
 					
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-4-tecnica-de-defesa-pessoal/topic/7-4-1-pontos-sensiveis-e-vulneraveis-da-anatomia-humana/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-1-introducao/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			7.1 &#8211; Introdução		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-2-fundamentos-da-pratica-de-defesa-pessoal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			7.2 &#8211; Fundamentos da Prática de Defesa Pessoal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-3-distancias-de-seguranca-em-defesa-pessoal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			7.3 &#8211; Distâncias de Segurança em Defesa Pessoal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-4-tecnica-de-defesa-pessoal/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			7.4 &#8211; Técnica de Defesa Pessoal		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-4-1-pontos-sensiveis-e-vulneraveis-da-anatomia-humana/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			7.4.1 &#8211; Pontos sensíveis e vulneráveis da anatomia humana		</div>
 
@@ -922,16 +1423,38 @@ figcaption {
 </div>
 
 
-<div class="ld-table-list-item learndash-complete">
-	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-4-tecnica-de-defesa-pessoal/topic/7-4-2-a-importancia-dos-pontos-vitais-sensiveis-em-defesa-pessoal/">
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-4-2-a-importancia-dos-pontos-vitais-sensiveis-em-defesa-pessoal/">
 
-		<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
+		<div class="ld-status-icon ld-status-incomplete"></div>
 		<div class="ld-topic-title">
 			7.4.2 &#8211; A importância dos pontos vitais/sensíveis em defesa pessoal		</div>
 
 	</a>
 </div>
 
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/topic/7-5-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			7.5 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-complete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-vig07-defesa-pessoal-10-horas/quizzes/avaliacao-vig-modulo-7-defesa-pessoal-10-horas/">
+
+			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (VIG07) Defesa pessoal</div> <!--/.ld-lesson-title-->
+
+		</a> <!--/.ld-lesson-item-preview-heading-->
+	</div> <!--/.ld-lesson-item-preview-->
+</div>
 				</div> <!--/.ld-table-list-items-->
 							</div> <!--/.ld-topic-list-->
 		</div> <!--/.ld-lesson-items-expanded-->
@@ -939,32 +1462,76 @@ figcaption {
 
 <div class="ld-lesson-item ld-is-not-current-lesson learndash-complete is_not_sample">
 	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-5-consideracoes-finais/">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/">
 
 			<div class="ld-status-icon ld-status-complete ld-secondary-background"><span class="ld-icon-checkmark ld-icon"></span></div>
 			<div class="ld-lesson-title">
-				7.5 - Considerações Finais			</div> <!--/.ld-lesson-title-->
+				VIG - ALM01 - Segurança eletrónica e procedimentos operacionais de emergência em alarmes (10 horas)			</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 
 		
-			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-27985" data-ld-collapse-text="false">
+			<span class="ld-expand-button ld-button-alternate " aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-29978" data-ld-collapse-text="false">
 				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
 				<span class="ld-text ld-primary-color">
-					1 Questionário				</span>
+					4 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
 			</span>
 		
 	</div> <!--/.ld-lesson-item-preview-->
-			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-27985">
+			<div class="ld-lesson-item-expanded ld-expandable " id="ld-nav-content-list-29978">
 			<div class="ld-table-list ld-topic-list">
 				<div class="ld-table-list-items">
 					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/topic/8-1-notas-introdutorias/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			8.1 &#8211; Notas Introdutórias		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/topic/8-2-seguranca-eletronica/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			8.2 &#8211; Segurança Eletrónica		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/topic/8-3-procedimentos-operacionais-de-emergencia-em-alarme/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			8.3 &#8211; Procedimentos Operacionais de Emergência em Alarme		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/topic/8-4-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			8.4 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
 <div class="ld-table-list-item learndash-complete">
 	<div class="ld-table-list-item-wrapper">
-		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-5-consideracoes-finais/quizzes/avaliacao-modulo-7/">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/quizzes/avaliacao-vig-modulo-8-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes/">
 
 			<div class="ld-status-icon ld-quiz-complete ld-secondary-color"><span class="ld-icon ld-icon-quiz"></span></div>
-			<div class="ld-topic-title">Avaliação - Módulo 7</div> <!--/.ld-lesson-title-->
+			<div class="ld-topic-title">Avaliação VIG - (ALM01) Segurança eletrónica e procedimentos operacionais de emergência em alarmes</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 	</div> <!--/.ld-lesson-item-preview-->
@@ -973,79 +1540,110 @@ figcaption {
 							</div> <!--/.ld-topic-list-->
 		</div> <!--/.ld-lesson-items-expanded-->
 		</div> <!--/.ld-lesson-item-->
-<div class="ld-lesson-item-section-heading ld-lesson-item-section-heading-1585049643316">
-		<span class="ld-lesson-section-heading" role="heading" aria-level="3">Módulo 8 - Segurança eletrónica e procedimentos operacionais de emergência em alarmes</span>
-	</div>
 
 <div class="ld-lesson-item ld-is-current-lesson learndash-incomplete is_not_sample">
 	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/">
+		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/">
 
 			<div class="ld-status-icon ld-status-incomplete"></div>
 			<div class="ld-lesson-title">
-				8.1 - Notas Introdutórias			</div> <!--/.ld-lesson-title-->
+				VIG - ALM02 - Operação de meios de videovigilância e centrais de alarme (10 horas)			</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
 
 		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-incomplete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-2-seguranca-eletronica/">
-
-			<div class="ld-status-icon ld-status-incomplete"></div>
-			<div class="ld-lesson-title">
-				8.2 - Segurança Eletrónica			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
+			<span class="ld-expand-button ld-button-alternate ld-expanded" aria-label="Expandir Aula" data-ld-expands="ld-nav-content-list-30952" data-ld-collapse-text="false">
+				<span class="ld-icon-arrow-down ld-icon ld-primary-background"></span>
+				<span class="ld-text ld-primary-color">
+					6 Tópicos <span class="ld-sep">|</span> 1 Questionário				</span>
+			</span>
 		
 	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
+			<div class="ld-lesson-item-expanded ld-expandable ld-expanded" id="ld-nav-content-list-30952">
+			<div class="ld-table-list ld-topic-list">
+				<div class="ld-table-list-items">
+					
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-1-notas-introdutorias/">
 
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-incomplete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-3-procedimentos-operacionais-de-emergencia-em-alarme/">
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.1 &#8211; Notas Introdutórias		</div>
 
-			<div class="ld-status-icon ld-status-incomplete"></div>
-			<div class="ld-lesson-title">
-				8.3 - Procedimentos Operacionais de Emergência em Alarme			</div> <!--/.ld-lesson-title-->
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-2-sistemas-de-videovigilancia/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.2 &#8211; Sistemas de Videovigilância		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-3-enquadramento-legal-dos-sistemas-de-videovigilancia/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.3 &#8211; Enquadramento Legal dos Sistemas de Videovigilância		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-4-enquadramento-legal-da-protecao-de-dados-pessoais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.4 &#8211; Enquadramento Legal da Proteção de Dados Pessoais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-5-central-de-rececao-e-monitorizacao-de-alarmes/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.5 &#8211; Central de Receção e Monitorização de Alarmes		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-6-consideracoes-finais/">
+
+		<div class="ld-status-icon ld-status-incomplete"></div>
+		<div class="ld-topic-title">
+			9.6 &#8211; Considerações Finais		</div>
+
+	</a>
+</div>
+
+
+<div class="ld-table-list-item learndash-incomplete">
+	<div class="ld-table-list-item-wrapper">
+		<a class="ld-table-list-item-preview ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/quizzes/avaliacao-vig-modulo-9-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme/">
+
+			<div class="ld-status-icon ld-quiz-incomplete"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-topic-title">Avaliação VIG - (ALM02) Operação de meios de videovigilância e centrais de alarme</div> <!--/.ld-lesson-title-->
 
 		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
 	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-
-<div class="ld-lesson-item ld-is-not-current-lesson learndash-incomplete is_not_sample">
-	<div class="ld-lesson-item-preview">
-		<a class="ld-lesson-item-preview-heading ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-4-consideracoes-finais/">
-
-			<div class="ld-status-icon ld-status-incomplete"></div>
-			<div class="ld-lesson-title">
-				8.4 - Considerações Finais			</div> <!--/.ld-lesson-title-->
-
-		</a> <!--/.ld-lesson-item-preview-heading-->
-
-		
-	</div> <!--/.ld-lesson-item-preview-->
-	</div> <!--/.ld-lesson-item-->
-<div class="ld-pagination ld-pagination-page-course_lessons" data-pager-results="{&quot;paged&quot;:2,&quot;total_items&quot;:36,&quot;total_pages&quot;:2}">
-						<div class="ld-pages">
-		<a class="prev ld-primary-color-hover " 			href="/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/?ld-lesson-page=1"
-		 data-context="course_lessons" data-paged="1" data-course_id="25767"  class=""  title="Página Anterior">
-					<span class="ld-icon-arrow-left ld-icon"></span></a>
-				</span>
-		<span>
-		2 de 2		</span>
-			<a class="next ld-primary-color-hover disabled" 				href="/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/?ld-lesson-page=2"
-			 data-context="course_lessons" data-paged="2" data-course_id="25767"  class="disabled"  disabled=&quot;disabled&quot;  title="Próxima Página">
-							<span class="ld-icon-arrow-right ld-icon"></span></a>
-			
-		</div>
-						</div>					</div> <!--/.ld-lesson-items-->
+</div>
+				</div> <!--/.ld-table-list-items-->
+							</div> <!--/.ld-topic-list-->
+		</div> <!--/.ld-lesson-items-expanded-->
+		</div> <!--/.ld-lesson-item-->
+					</div> <!--/.ld-lesson-items-->
 				</div> <!--/.ld-lesson-navigation-->
 			</div> <!--/.ld-course-navigation-list-->
 		</div> <!--/.ld-course-navigation-->
@@ -1076,14 +1674,14 @@ figcaption {
 					<div class="ld-progress-heading">
 								<div class="ld-progress-stats">
 					<div class="ld-progress-percentage ld-secondary-color">
-					98% Completo					</div>
+					91% Completo					</div>
 					<div class="ld-progress-steps">
-						53/54 Passos					</div>
+						55/60 Passos					</div>
 				</div> <!--/.ld-progress-stats-->
 			</div>
 
 			<div class="ld-progress-bar">
-				<div class="ld-progress-bar-percentage ld-secondary-background" style="width:98%"></div>
+				<div class="ld-progress-bar-percentage ld-secondary-background" style="width:91%"></div>
 			</div>
 							</div> <!--/.ld-progress-wrap-->
 				</div> <!--/.ld-progress-->
@@ -1092,27 +1690,24 @@ figcaption {
 
 		<div class="ld-content-action
 		">
-			<a class="ld-button ld-button-transparent" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-5-consideracoes-finais/">
+			<a class="ld-button ld-button-transparent" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/">
 						<span class="ld-icon ld-icon-arrow-left"></span>
 						<span class="ld-text">Aula Anterior</span>
 		</a>
 		</div>
 
-		<div class="ld-content-action">
-		<form   class="sfwd-mark-complete"  method="post" action=""><input type="hidden" value="29978" name="post" />
-					<input type="hidden" value="25767" name="course_id" />
-					<input type="hidden" value="33469a7442" name="sfwd_mark_complete" />
-					<input type="submit"  value="Encerrar Tópico"  class="learndash_mark_complete_button"  /></form>	</div>
+		<div class="ld-content-action ld-empty">
+			</div>
 		
 </div> <!--/.ld-topic-actions-->
 
 
 			<div class="ld-user-menu">
 						<span class="ld-text ld-user-welcome-text">
-			Olá, spr0011!				</span>
+			Olá, spr0009!				</span>
 
 			<span class="ld-profile-avatar">
-				<img alt='' src='https://secure.gravatar.com/avatar/0920f938fb5716b8803f06ec0b4bb578?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0920f938fb5716b8803f06ec0b4bb578?s=192&#038;d=mm&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' />			</span> <!--/.ld-profile-avatar-->
+				<img alt='' src='https://secure.gravatar.com/avatar/21ef30da891f193aadc560b464f260c8?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/21ef30da891f193aadc560b464f260c8?s=192&#038;d=mm&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' />			</span> <!--/.ld-profile-avatar-->
 
 			
 			<span class="ld-user-menu-items">
@@ -1121,7 +1716,7 @@ figcaption {
 						    href="https://aulas.grupoift.pt/perfil/">Perfil</a>
 												<a 							class="ld-focus-menu-link ld-focus-menu-25041"
 						    href="https://aulas.grupoift.pt/contact/">Contacto</a>
-												<a     href="https://aulas.grupoift.pt/wp-login.php?action=logout&#038;redirect_to=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2F&#038;_wpnonce=214ddad102">Logout</a>
+												<a     href="https://aulas.grupoift.pt/wp-login.php?action=logout&#038;redirect_to=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2F&#038;_wpnonce=83fe79d894">Logout</a>
 									</span> <!--/.ld-user-menu-items-->
 
 			
@@ -1131,10 +1726,10 @@ figcaption {
 		<div class="ld-focus-content">
 
 			
-			<h1>8.1 &#8211; Notas Introdutórias</h1>
+			<h1>VIG &#8211; ALM02 &#8211; Operação de meios de videovigilância e centrais de alarme (10 horas)</h1>
 
 			
-			<div class="learndash learndash_post_sfwd-lessons user_has_access"  id="learndash_post_29978">
+			<div class="learndash learndash_post_sfwd-lessons user_has_access"  id="learndash_post_30952">
 <div class="learndash-wrapper">
 
 	
@@ -1144,8 +1739,8 @@ figcaption {
 
 				
 <div class="ld-breadcrumbs-segments">
-				<span><a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/">VIG &#8211; Formação de Vigilantes</a> </span>
-						<span><a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/">8.1 &#8211; Notas Introdutórias</a> </span>
+				<span><a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/">VIG &#8211; Formação de Vigilantes &#8211; Formação Inicial (90 horas)</a> </span>
+						<span><a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/">VIG &#8211; ALM02 &#8211; Operação de meios de videovigilância e centrais de alarme (10 horas)</a> </span>
 			</div> <!--/.ld-breadcrumbs-segments-->
 
 <div class="ld-status ld-status-progress ld-primary-background">Em Curso</div>
@@ -1158,50 +1753,120 @@ figcaption {
 	
 	<div class="ld-tabs-content">
 		
-			<div class="ld-tab-content ld-visible" id="ld-tab-content-29978">
-								
-<h2 class="has-vivid-cyan-blue-color has-text-color">Objetivo Geral</h2>
-
-
-
-<ul><li>Conhecer os sistemas de segurança eletrónica e procedimentos operacionais em alarme.</li></ul>
-
-
-
-<h2 class="has-vivid-cyan-blue-color has-text-color">Objetivos Específicos</h2>
-
-
-
-<ul><li>Conhecer as funções atribuídas ao operador de alarmes.</li><li>Compreender o que é a segurança eletrónica e quais os seus objetivos.</li><li>Conhecer os sistemas eletrónicos de controlo existentes e suas finalidades.</li><li>Saber o que são sistemas de deteção anti-intrusão e os seus diferentes tipos.</li><li>Identificar os diferentes tipos de sistemas de deteção de alarmes técnicos e suas finalidades.</li><li>Conhecer os procedimentos operacionais de emergência em alarmes.</li></ul>
-			</div>
+			<div class="ld-tab-content ld-visible" id="ld-tab-content-30952">
+											</div>
 
 			
 	</div> <!--/.ld-tabs-content-->
 
 </div> <!--/.ld-tabs-->
 
+			<div class="ld-lesson-topic-list">
+				
+<div class="ld-table-list ld-topic-list ld-no-pagination" id="ld-expand-30952">
+
+	<div class="ld-table-list-header ld-primary-background">
+
+		
+		<div class="ld-table-list-title">
+			<span class="ld-item-icon">
+				<span class="ld-icon ld-icon-content"></span>
+			</span>
+			<span class="ld-text">
+				Aula Conteúdo			</span>
+		</div> <!--/.ld-tablet-list-title-->
+		<div class="ld-table-list-lesson-details">
+			
+												<span class="ld-lesson-list-progress">
+					0% Completo					</span>
+													<span class="ld-lesson-list-steps">
+					0/6 Steps					</span>
+							
+			
+			
+		</div> <!--/.ld-table-list-lesson-details-->
+
+		
+	</div> <!--/.ld-table-list-header-->
+
+	<div class="ld-table-list-items" id="ld-topic-list-30952" data-ld-expand-list>
+
+		<div class="ld-table-list-item" id="ld-table-list-item-30966">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-1-notas-introdutorias/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.1 - Notas Introdutórias</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div class="ld-table-list-item" id="ld-table-list-item-30975">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-2-sistemas-de-videovigilancia/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.2 - Sistemas de Videovigilância</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div class="ld-table-list-item" id="ld-table-list-item-31007">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-3-enquadramento-legal-dos-sistemas-de-videovigilancia/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.3 - Enquadramento Legal dos Sistemas de Videovigilância</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div class="ld-table-list-item" id="ld-table-list-item-31011">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-4-enquadramento-legal-da-protecao-de-dados-pessoais/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.4 - Enquadramento Legal da Proteção de Dados Pessoais</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div class="ld-table-list-item" id="ld-table-list-item-31014">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-5-central-de-rececao-e-monitorizacao-de-alarmes/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.5 - Central de Receção e Monitorização de Alarmes</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div class="ld-table-list-item" id="ld-table-list-item-31017">
+	<a class="ld-table-list-item-preview ld-primary-color-hover ld-topic-row learndash-incomplete " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/topic/9-6-consideracoes-finais/">
+		
+		<div class="ld-status-icon ld-status-incomplete"></div>
+				<span class="ld-topic-title">9.6 - Considerações Finais</span>
+			</a>
+</div> <!--/.ld-table-list-item-->
+<div id="ld-table-list-item-31019" class="ld-table-list-item is_not_sample learndash-incomplete" >
+	<div class="ld-table-list-item-quiz">
+		<a class="ld-table-list-item-preview ld-topic-row ld-primary-color-hover" href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/quizzes/avaliacao-vig-modulo-9-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme/">
+			<div class="ld-status-icon ld-quiz-incomplete"><span class="ld-icon ld-icon-quiz"></span></div>
+			<div class="ld-item-title">Avaliação VIG - (ALM02) Operação de meios de videovigilância e centrais de alarme</div>
+
+					</a>
+	</div> <!--/.list-item-preview-->
+</div>
+
+	</div> <!--/.ld-table-list-items-->
+
+	<div class="ld-table-list-footer">
+			</div> <!--/.ld-table-list-footer-->
+
+</div> <!--/.ld-table-list-->
+
+			</div>
+
+			
 <div class="ld-content-actions">
 
 		<div class="ld-content-action
 		">
-			<a class="ld-button " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/7-5-consideracoes-finais/">
+			<a class="ld-button " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm01-seguranca-eletronica-e-procedimentos-operacionais-de-emergencia-em-alarmes-10-horas/">
 						<span class="ld-icon ld-icon-arrow-left"></span>
 						<span class="ld-text">Aula Anterior</span>
 		</a>
 		</div>
 
 				<div class="ld-content-action">
-			<form   class="sfwd-mark-complete"  method="post" action=""><input type="hidden" value="29978" name="post" />
-					<input type="hidden" value="25767" name="course_id" />
-					<input type="hidden" value="33469a7442" name="sfwd_mark_complete" />
-					<input type="submit"  value="Encerrar Tópico"  class="learndash_mark_complete_button"  /></form>
 						<a href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/" class="ld-primary-color ld-course-step-back">Voltar para Formação			</a>
 			</div>
-			<div class="ld-content-action">
-							<a class="ld-button " href="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-2-seguranca-eletronica/">
-					<span class="ld-text">Próximo Aula</span>
-											<span class="ld-icon ld-icon-arrow-right"></span>
-									</a>
+			<div class="ld-content-action ld-empty">
 						</div>
 					
 </div> <!--/.ld-topic-actions-->
@@ -1219,7 +1884,7 @@ figcaption {
 	</div>
 		<div class="ld-focus-comments__form-container" id="ld-comments-form">
 			<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Deixe um Comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/#respond" style="display:none;">Cancelar resposta</a></small></h3><form action="https://aulas.grupoift.pt/wp-comments-post.php" method="post" id="commentform" class="comment-form"><input type="hidden" name="step_id" value="29978" /><input type="hidden" name="course_id" value="25767" /><input type="hidden" name="redirect_to" value="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/8-1-notas-introdutorias/" /><p class="logged-in-as"><a href="https://aulas.grupoift.pt/wp-admin/profile.php" aria-label="Sessão iniciada como Ricardo Miguel Pereira de Araújo. Edite o seu perfil.">Sessão iniciada como Ricardo Miguel Pereira de Araújo</a>. <a href="https://aulas.grupoift.pt/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2F8-1-notas-introdutorias%2F&amp;_wpnonce=214ddad102">Terminar sessão?</a></p><p class="comment-form-comment"><label for="comment">Comentário</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentário" /> <input type='hidden' name='comment_post_ID' value='29978' id='comment_post_ID' />
+		<h3 id="reply-title" class="comment-reply-title">Deixe um Comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/#respond" style="display:none;">Cancelar resposta</a></small></h3><form action="https://aulas.grupoift.pt/wp-comments-post.php" method="post" id="commentform" class="comment-form"><input type="hidden" name="step_id" value="30952" /><input type="hidden" name="course_id" value="25767" /><input type="hidden" name="redirect_to" value="https://aulas.grupoift.pt/courses/vig-formacao-de-vigilantes/lessons/vig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas/" /><p class="logged-in-as"><a href="https://aulas.grupoift.pt/wp-admin/profile.php" aria-label="Sessão iniciada como Gustavo Diogo Viana de Sá de Alves Pereira. Edite o seu perfil.">Sessão iniciada como Gustavo Diogo Viana de Sá de Alves Pereira</a>. <a href="https://aulas.grupoift.pt/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Faulas.grupoift.pt%2Fcourses%2Fvig-formacao-de-vigilantes%2Flessons%2Fvig-alm02-operacao-de-meios-de-videovigilancia-e-centrais-de-alarme-10-horas%2F&amp;_wpnonce=83fe79d894">Terminar sessão?</a></p><p class="comment-form-comment"><label for="comment">Comentário</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentário" /> <input type='hidden' name='comment_post_ID' value='30952' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
 </p></form>	</div><!-- #respond -->
 		</div>
@@ -1268,7 +1933,7 @@ var sfwd_data = {"json":"{\"ajaxurl\":\"https:\\\/\\\/aulas.grupoift.pt\\\/wp-ad
 
 <script>
 var ajaxurl = "https:\/\/aulas.grupoift.pt\/wp-admin\/admin-ajax.php";
-var ldVars = {"postID":"29978","videoReqMsg":"\u00c9 preciso assistir ao v\u00eddeo antes de aceder a este conte\u00fado"};
+var ldVars = {"postID":"30952","videoReqMsg":"\u00c9 preciso assistir ao v\u00eddeo antes de aceder a este conte\u00fado"};
 </script>
 
 
@@ -1291,7 +1956,7 @@ var pwaforwp_js_obj = {"ajax_url":"https:\/\/aulas.grupoift.pt\/wp-admin\/admin-
 
 
 <script>
-var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/aulas.grupoift.pt\/wp-admin\/admin-ajax.php","post_id":"29978","plugin_dir":"https:\/\/aulas.grupoift.pt\/wp-content\/plugins\/gdpr-cookie-compliance","is_page":"","strict_init":"2","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"1","current_user":"22","load_lity":"true","cookie_expiration":"365"};
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/aulas.grupoift.pt\/wp-admin\/admin-ajax.php","post_id":"30952","plugin_dir":"https:\/\/aulas.grupoift.pt\/wp-content\/plugins\/gdpr-cookie-compliance","is_page":"","strict_init":"2","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"1","current_user":"20","load_lity":"true","cookie_expiration":"365"};
 </script>
 
 
@@ -1432,5 +2097,5 @@ var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/aulas.grupoift.pt\/wp-ad
 	<script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_875d5bcba1831a3668b1dee46057ca7d.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_247232834085e04ebed709f864859f4b.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_eeda252630febfde2a8aa847df500854.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_8db960639b26e2991be1b0606564dc64.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_769b4ba34fec72bd412029107f41a2dc.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_c5b9b7e4c584dc067e3608e344bc4987.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_34f8e914865775a3039a18c52742778a.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_8ac469bf2db22487e4e2144788ee4aa3.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_2ea1334e0cc2d7c6eb5819beb86b242c.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_fa985dbedfad9655585f2474b516d4ca.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_b372bd7046128d130053e1b078574281.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_805cd32393bd50af71227d35b021da9b.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_3be744578467c27cbba6ae4d50bbac9e.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_fa30d7de6feaf42db7a05d164a37fe9f.js"></script><script type="text/javascript" src="https://aulas.grupoift.pt/wp-content/cache/breeze-minification/js/breeze_0752b9047dc7408c0f790d18177fbc75.js"></script></body>
 </html>
 
-<!-- Cache served by breeze CACHE - Last modified: Fri, 10 Apr 2020 11:42:10 GMT -->
+<!-- Cache served by breeze CACHE - Last modified: Sun, 12 Apr 2020 12:43:37 GMT -->
 ";s:7:"headers";a:3:{i:0;a:2:{s:4:"name";s:7:"Expires";s:5:"value";s:29:"Wed, 17 Aug 2005 00:00:00 GMT";}i:1;a:2:{s:4:"name";s:13:"Cache-Control";s:5:"value";s:62:"no-store, no-cache, must-revalidate, post-check=0, pre-check=0";}i:2;a:2:{s:4:"name";s:6:"Pragma";s:5:"value";s:8:"no-cache";}}}
