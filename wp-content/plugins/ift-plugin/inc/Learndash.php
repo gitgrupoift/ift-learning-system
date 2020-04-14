@@ -18,6 +18,7 @@ class Learndash {
     public function __construct() {
             
         add_action( 'get_header', array( $this, 'enable_comments' ) );
+        add_filter('learndash_content_tabs', array($this, 'add_tabs'));
         
         add_shortcode( 'ld-hours-completed', array($this, 'learndash_course_completed_hours'));
         add_shortcode( 'ld-courses-and-hours', array($this, 'learndash_user_course_enrollment_and_hours'));
@@ -25,7 +26,7 @@ class Learndash {
     }
     
     /**
-     * Habilita comentários que, por defeito, não estão presente no modo foco do Learndash.
+     * Habilita comentários que, por defeito, não estão presentes no modo foco do Learndash.
      *
      * @param   void
      */
@@ -47,6 +48,11 @@ class Learndash {
         
 	}
     
+    /**
+     * Exibe as horas concluídas equivalentes no cursos, pelo utilizador atual.
+     *
+     * @param   void
+     */
     public function learndash_course_completed_hours() {
         
         if( is_singular('ld-notification')) {
@@ -60,6 +66,11 @@ class Learndash {
         return $completed_hours;
     }
     
+    /**
+     * Exibe todos os cursos com as horas equivalentes concluídas, por utilizador.
+     *
+     * @param   void
+     */
     public function learndash_user_course_enrollment_and_hours() {
         
         $user_id = get_current_user_id();
@@ -137,6 +148,59 @@ class Learndash {
         $item_li .= '</ul>';
         
         return $item_li;
+        
+    }
+    
+    /**
+     * Tabs adicionais às páginas das formações.
+     *
+     * @since 1.3.0
+     * @param   $tabs   string  Novas tabs a serem adicionadas
+     */
+    public function add_tabs($tabs) {
+        
+        $tabs['description'] = array(
+			'icon'    => 'ld-icon-assignment',
+			'label'   => __( 'Descrição', 'ift-plugin' ),
+			'content' => self::description_tab(),
+		);
+        
+        return $tabs;
+        
+    }
+    
+    /**
+     * Cria e organiza a nova tab Descrição para os cursos.
+     *
+     * @since 1.3.0
+     * @param   void
+     */
+    public static function description_tab() {
+        
+        $content = '<header class="description-tab-header">Carga Horária da Formação | ' . get_field('carga_horaria') . ' horas</header>';
+        $content .= '<hr>';
+        // Objetivos
+        $content .= '<h3 class="tab-intertitle">Objetivos da Formação</h3>';
+        $content .= get_field('objetivo_geral') . get_field('objetivos_especificos');
+        $content .= '<hr>';
+        // Destinatários, Modalidade e Organização
+        $content .= '<h3 class="tab-intertitle">Características</h3><ul class="description-list">';
+        $content .= '<li><span>DESTINATÁRIOS</span>' . get_field('destinatarios') . '</li>';
+        $content .= '<li><span>MODALIDADE DA FORMAÇÃO</span>' . get_field('modalidade_da_formacao') . '</li>';
+        $content .= '<li><span>ORGANIZAÇÃO DA FORMAÇÃO</span>' . get_field('organizacao_da_formacao') . '</li></ul>';
+        // Restante dos textos
+        $content .= '<hr>';
+        $content .= '<h3 class="tab-intertitle">Metodologia de Avaliação</h3>';
+        $content .= get_field('metodologia_de_avaliacao');
+        $content .= '<hr>';
+        $content .= '<h3 class="tab-intertitle">Programa do Curso</h3>';
+        $content .= get_field('programa_do_curso');
+        $content .= '<hr>';
+        $content .= '<h3 class="tab-intertitle">Recursos Pedagógicos</h3>';
+        $content .= get_field('recursos_pedagogicos');
+        
+        
+        return $content;
         
     }
 

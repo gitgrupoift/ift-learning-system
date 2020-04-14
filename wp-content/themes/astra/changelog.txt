@@ -1,3 +1,12 @@
+v2.4.0
+- New: Filter to change default breakpoint of tablet & mobile devices. ( https://wpastra.com/docs/set-responsive-tab-breakpoints-in-astra/ )
+- Improvement: Background color/image responsive param. ( https://wpastra.com/docs/how-to-set-background-image-for-the-site/ )
+- Improvement: Updated admin Starter Templates plugin's informative strings.
+- Improvement: Addon minimum version notice is now dismissible.
+- Fix: Global button Color and Background Color options not working with Gutenberg button.
+- Fix: W3C markup validation.
+- Fix: GiveWP two 'Add-ons' submenu display issue for version 2.6.0 and greater.
+
 v2.3.5
 - Fix: WordPress 5.4 compatibility with Gutenberg Editor.
 
@@ -16,7 +25,6 @@ v2.3.3
 - Fix: Conflict with Fast Velocity Minify plugin.
 - Fix: Unable to copy paste or type RGBA color code in color picker.
 - Fix: Updated Iris library for Color Picker param.
-- Fix: Google Font not loading when FS_METHOD set to ftpext in some cases.
 - Fix: Lifter LMS certificate CSS issue with Boxed and Content Boxed layout.
 
 v2.3.2

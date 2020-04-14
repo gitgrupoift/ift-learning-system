@@ -23,7 +23,6 @@ use IFT\Customizer;
 use IFT\Ads;
 use IFT\Talk;
 use IFT\Zoom;
-use IFT\MestreClique;
 use IFT\Settings;
 use IFT\Woocommerce\Woocommerce;
 
@@ -47,7 +46,6 @@ new Zoom();
 new Woocommerce();
 new Settings();
 
-//$mc = new MestreClique('http://148.69.165.136/pw.asmx/lerdados?ID=3&local=%25&datainicio=20/01/2016&datafim=&param1=&param2=');
 
 
 

@@ -279,26 +279,38 @@ if ( ! class_exists( 'Astra_Admin_Settings' ) ) {
 				return;
 			}
 
-			$astra_theme_name = astra_get_theme_name();
-			$astra_addon_name = astra_get_addon_name();
+			if ( version_compare( ASTRA_EXT_VER, ASTRA_EXT_MIN_VER ) < 0 ) {
 
-			$notice_args = array(
-				'id'             => 'ast-minimum-addon-version-notice',
-				'type'           => '',
-				'message'        => sprintf(
+				$message = sprintf(
 					/* translators: %1$1s: Theme Name, %2$2s: Minimum Required version of the addon */
-					__( 'Glad to see you have updated the %1$1s! Please update the %2$2s to version %3$3s or higher.', 'astra' ),
-					$astra_theme_name,
-					$astra_addon_name,
+					__( 'Please update the %1$1s to version %2$2s or higher. Ignore if already updated.', 'astra' ),
+					astra_get_addon_name(),
 					ASTRA_EXT_MIN_VER
-				),
-				'priority'       => 1,
-				'type'           => 'warning',
-				'show_if'        => version_compare( ASTRA_EXT_VER, ASTRA_EXT_MIN_VER ) < 0,
-				'is_dismissible' => false,
-			);
+				);
 
-			Astra_Notices::add_notice( $notice_args );
+				$min_version = get_user_meta( get_current_user_id(), 'ast-minimum-addon-version-notice-min-ver', true );
+
+				if ( ! $min_version ) {
+					update_user_meta( get_current_user_id(), 'ast-minimum-addon-version-notice-min-ver', ASTRA_EXT_MIN_VER );
+				}
+
+				if ( version_compare( $min_version, ASTRA_EXT_MIN_VER, '!=' ) ) {
+					delete_user_meta( get_current_user_id(), 'ast-minimum-addon-version-notice' );
+					update_user_meta( get_current_user_id(), 'ast-minimum-addon-version-notice-min-ver', ASTRA_EXT_MIN_VER );
+				}
+
+				$notice_args = array(
+					'id'                         => 'ast-minimum-addon-version-notice',
+					'type'                       => 'warning',
+					'message'                    => $message,
+					'show_if'                    => true,
+					'repeat-notice-after'        => false,
+					'priority'                   => 18,
+					'display-with-other-notices' => true,
+				);
+
+				Astra_Notices::add_notice( $notice_args );
+			}
 		}
 
 		/**
@@ -654,7 +666,7 @@ if ( ! class_exists( 'Astra_Admin_Settings' ) ) {
 					</p>
 					<p>
 						<?php
-							esc_html_e( 'Import your favorite site one click and start your project in style!', 'astra' );
+							esc_html_e( 'Import your favorite site in one click and start your project with style!', 'astra' );
 						?>
 					</p>
 						<?php

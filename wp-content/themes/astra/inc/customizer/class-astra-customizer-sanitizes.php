@@ -595,6 +595,57 @@ if ( ! class_exists( 'Astra_Customizer_Sanitizes' ) ) {
 
 			return $val;
 		}
+
+		/**
+		 * Sanitize Responsive Background Image
+		 *
+		 * @param  array $bg_obj Background object.
+		 * @return array         Background object.
+		 */
+		public static function sanitize_responsive_background( $bg_obj ) {
+
+			// Default Responsive Background Image.
+			$defaults = array(
+				'desktop' => array(
+					'background-color'      => '',
+					'background-image'      => '',
+					'background-repeat'     => 'repeat',
+					'background-position'   => 'center center',
+					'background-size'       => 'auto',
+					'background-attachment' => 'scroll',
+				),
+				'tablet'  => array(
+					'background-color'      => '',
+					'background-image'      => '',
+					'background-repeat'     => 'repeat',
+					'background-position'   => 'center center',
+					'background-size'       => 'auto',
+					'background-attachment' => 'scroll',
+				),
+				'mobile'  => array(
+					'background-color'      => '',
+					'background-image'      => '',
+					'background-repeat'     => 'repeat',
+					'background-position'   => 'center center',
+					'background-size'       => 'auto',
+					'background-attachment' => 'scroll',
+				),
+			);
+
+			// Merge responsive background object and default object into $out_bg_obj array.
+			$out_bg_obj = wp_parse_args( $bg_obj, $defaults );
+
+			foreach ( $out_bg_obj as $device => $bg ) {
+				foreach ( $bg as $key => $value ) {
+					if ( 'background-image' === $key ) {
+						$out_bg_obj[ $device ] [ $key ] = esc_url_raw( $value );
+					} else {
+						$out_bg_obj[ $device ] [ $key ] = esc_attr( $value );
+					}
+				}
+			}
+			return $out_bg_obj;
+		}
 	}
 }
 

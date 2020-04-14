@@ -1650,8 +1650,6 @@ if ( ! function_exists( 'astra_replace_header_attr' ) ) :
 			$file_extension = $file_type['ext'];
 
 			if ( 'svg' == $file_extension ) {
-				$attr['width']    = '100%';
-				$attr['height']   = '100%';
 				$existing_classes = isset( $attr['class'] ) ? $attr['class'] : '';
 				$attr['class']    = $existing_classes . ' astra-logo-svg';
 			}
@@ -1881,18 +1879,10 @@ add_filter( 'socialsnap_upgrade_link', 'astra_filter_socialsnap_upgrade_link' );
  * This allows affiliates to change the link according to their needs.
  */
 function astra_givewp_upgrade_link() {
-	$menu_slug = 'edit.php?post_type=give_forms';
-
-	// Remove existing page.
-	remove_submenu_page( $menu_slug, 'give-addons' );
-
-	// Add affiliate link to GiveWP.com.
-	global $submenu;
-
-	$submenu[ $menu_slug ][] = array( 'Add-ons', 'install_plugins', 'https://givewp.com/ref/412' ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+	return 'https://givewp.com/ref/412';
 }
 
-add_action( 'admin_menu', 'astra_givewp_upgrade_link', 9999999 );
+add_action( 'give_addon_menu_item_url', 'astra_givewp_upgrade_link' );
 
 /**
  * Get instance of WP_Filesystem.
@@ -1904,3 +1894,33 @@ add_action( 'admin_menu', 'astra_givewp_upgrade_link', 9999999 );
 function astra_filesystem() {
 	return Astra_Filesystem::instance();
 }
+
+/**
+ * Remove Base Color > Background Color option from the customize array.
+ *
+ * @since 2.4.0
+ * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
+ * @return $wp_customize
+ */
+function remove_controls( $wp_customize ) {
+
+	if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '2.4.0', '<=' ) ) {
+		$layout = array(
+			array(
+				'name'      => ASTRA_THEME_SETTINGS . '[site-layout-outside-bg-obj]',
+				'type'      => 'control',
+				'transport' => 'postMessage',
+				'control'   => 'ast-hidden',
+				'section'   => 'section-colors-body',
+				'priority'  => 25,
+			),
+		);
+
+		$wp_customize = array_merge( $wp_customize, $layout );
+
+	}
+
+	return $wp_customize;
+}
+
+add_filter( 'astra_customizer_configurations', 'remove_controls', 99 );

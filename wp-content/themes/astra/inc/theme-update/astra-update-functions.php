@@ -14,7 +14,6 @@ defined( 'ABSPATH' ) || exit;
  * Open Submenu just below menu for existing users.
  *
  * @since 2.1.3
- *
  * @return void
  */
 function astra_submenu_below_header() {
@@ -148,4 +147,57 @@ function astra_breadcrumb_separator_fix() {
 		$theme_options['breadcrumb-separator'] = '\00bb';
 		update_option( 'astra-settings', $theme_options );
 	}
+}
+
+/**
+ * Check if we need to change the default value for tablet breakpoint.
+ *
+ * @since 2.4.0
+ * @return void
+ */
+function astra_update_theme_tablet_breakpoint() {
+
+	$theme_options = get_option( 'astra-settings' );
+
+	if ( ! isset( $theme_options['can-update-theme-tablet-breakpoint'] ) ) {
+		// Set a flag to check if we need to change the theme tablet breakpoint value.
+		$theme_options['can-update-theme-tablet-breakpoint'] = false;
+	}
+
+	update_option( 'astra-settings', $theme_options );
+}
+
+/**
+ * Migrate option data from site layout background option to its desktop counterpart.
+ *
+ * @since 2.4.0
+ *
+ * @return void
+ */
+function astra_responsive_base_background_option() {
+
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( false === get_option( 'site-layout-outside-bg-obj-responsive', false ) && isset( $theme_options['site-layout-outside-bg-obj'] ) ) {
+
+		$theme_options['site-layout-outside-bg-obj-responsive']['desktop'] = $theme_options['site-layout-outside-bg-obj'];
+		$theme_options['site-layout-outside-bg-obj-responsive']['tablet']  = array(
+			'background-color'      => '',
+			'background-image'      => '',
+			'background-repeat'     => 'repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'auto',
+			'background-attachment' => 'scroll',
+		);
+		$theme_options['site-layout-outside-bg-obj-responsive']['mobile']  = array(
+			'background-color'      => '',
+			'background-image'      => '',
+			'background-repeat'     => 'repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'auto',
+			'background-attachment' => 'scroll',
+		);
+	}
+
+	update_option( 'astra-settings', $theme_options );
 }

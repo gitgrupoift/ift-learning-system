@@ -488,6 +488,102 @@ function astra_generate_font_weight_css( font_control, control, css_property, se
 	});
 }
 
+/**
+ * Apply CSS for the element
+ */
+function astra_apply_responsive_background_css( control, selector, device, singleColorSelector, addon ) {
+	wp.customize( control, function( value ) {
+		value.bind( function( bg_obj ) {
+
+			addon = addon || '';
+			singleColorSelector = singleColorSelector || '';
+
+			addon = ( addon ) ? addon : 'header';
+
+			control = control.replace( '[', '-' );
+			control = control.replace( ']', '' );
+
+			if( '' === bg_obj[device] || undefined === bg_obj[device] ){
+				return;
+			}
+		
+			var gen_bg_css 	= '';
+			var bg_img		= bg_obj[device]['background-image'];
+			var bg_tab_img	= bg_obj['tablet']['background-image'];
+			var bg_desk_img	= bg_obj['desktop']['background-image'];
+			var bg_color	= bg_obj[device]['background-color'];
+			var tablet_css  = ( bg_obj['tablet']['background-image'] ) ? true : false;
+			var desktop_css = ( bg_obj['desktop']['background-image'] ) ? true : false;
+
+			if ( '' !== bg_img && '' !== bg_color && undefined !== bg_color ) {
+				gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_color + ', ' + bg_color + '), url(' + bg_img + ');';
+			} else if ( '' !== bg_img ) {
+				gen_bg_css = 'background-image: url(' + bg_img + ');';
+			} else if ( '' !== bg_color ) {
+				if( 'mobile' === device ) {
+					if( true == desktop_css && true == tablet_css ) {
+						gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_color + ', ' + bg_color + '), url(' + bg_tab_img + ');';
+					} else if( true == desktop_css ) {
+						gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_color + ', ' + bg_color + '), url(' + bg_desk_img + ');';
+					} else if( true == tablet_css ) {
+						gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_color + ', ' + bg_color + '), url(' + bg_tab_img + ');';
+					} else {
+						gen_bg_css = 'background-color: ' + bg_color + ';';
+						gen_bg_css += 'background-image: none;';
+					}
+				} else if( 'tablet' === device ) {
+					if( true == desktop_css ) {
+						gen_bg_css = 'background-image: linear-gradient(to right, ' + bg_color + ', ' + bg_color + '), url(' + bg_desk_img + ');';
+					} else {
+						gen_bg_css = 'background-color: ' + bg_color + ';';
+						gen_bg_css += 'background-image: none;';
+					}
+				} else {
+					gen_bg_css = 'background-color: ' + bg_color + ';';
+					gen_bg_css += 'background-image: none;';
+				}
+
+				if( ! selector.includes( singleColorSelector ) ) {
+					selector += ', ' + singleColorSelector;
+				}
+			}
+
+
+			if ( '' != bg_img ) {
+				gen_bg_css += 'background-repeat: ' + bg_obj[device]['background-repeat'] + ';';
+				gen_bg_css += 'background-position: ' + bg_obj[device]['background-position'] + ';';
+				gen_bg_css += 'background-size: ' + bg_obj[device]['background-size'] + ';';
+				gen_bg_css += 'background-attachment: ' + bg_obj[device]['background-attachment'] + ';';
+			}
+
+			// Remove old.
+			jQuery( 'style#' + control + '-' + device + '-' + addon ).remove();
+
+			
+			if ( 'desktop' == device ) {	
+				var dynamicStyle = '<style id="' + control + '-' + device + '-' + addon + '">'
+					+ selector + '	{ ' + gen_bg_css + ' }'
+				+ '</style>'
+			}
+			if ( 'tablet' == device ) {
+				var dynamicStyle = '<style id="' + control + '-' + device + '-' + addon + '">'
+					+ '@media (max-width: 768px) {' + selector + '	{ ' + gen_bg_css + ' } }'
+				+ '</style>'
+			}
+			if ( 'mobile' == device ) {
+				var dynamicStyle = '<style id="' + control + '-' + device + '-' + addon + '">'
+					+ '@media (max-width: 544px) {' + selector + '	{ ' + gen_bg_css + ' } }'
+				+ '</style>'
+			}
+
+			// Concat and append new <style>.
+			jQuery( 'head' ).append(
+				dynamicStyle
+			);
+		});
+	});    
+}
+
 function getChangedKey( value, other ) {
 
 	value = isJsonString(value) ? JSON.parse(value) : value;
@@ -608,14 +704,9 @@ function isJsonString( str ) {
 	/*
 	 * Layout Body Background
 	 */
-	wp.customize( 'astra-settings[site-layout-outside-bg-obj]', function( value ) {
-		value.bind( function( bg_obj ) {
-
-			var dynamicStyle = 'body,.ast-separate-container { {{css}} }';
-			
-			astra_background_obj_css( wp.customize, bg_obj, 'site-layout-outside-bg-obj', dynamicStyle );
-		} );
-	} );
+	astra_apply_responsive_background_css( 'astra-settings[site-layout-outside-bg-obj-responsive]', 'body, .ast-separate-container', 'desktop' );
+	astra_apply_responsive_background_css( 'astra-settings[site-layout-outside-bg-obj-responsive]', 'body, .ast-separate-container', 'tablet' );
+	astra_apply_responsive_background_css( 'astra-settings[site-layout-outside-bg-obj-responsive]', 'body, .ast-separate-container', 'mobile' );
 
 	/*
 	 * Blog Custom Width
