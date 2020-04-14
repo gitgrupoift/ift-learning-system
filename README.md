@@ -4,3 +4,5 @@ Sistema de e-learning do Grupo IFT e empresas associadas e afiliadas. Sistema pr
 - [Wordpress](https://pt.wordpress.org/)
 - [Composer](https://getcomposer.org/)
 - [Learndash 3.0](https://www.learndash.com/)
+- [Nextcloud Talk API](https://nextcloud-talk.readthedocs.io/en/latest/)
+
