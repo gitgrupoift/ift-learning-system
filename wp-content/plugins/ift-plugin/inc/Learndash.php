@@ -2,6 +2,14 @@
 
 namespace IFT;
 
+use IFT\Learndash\GroupDates;
+/*
+Timer nos tópicos - funções e hooks a utilizar:
+- learndash_get_topic_list()
+- learndash_forced_lesson_time()
+
+*/
+
 class Learndash {
 
     private static $instance;
@@ -22,6 +30,9 @@ class Learndash {
         
         add_shortcode( 'ld-hours-completed', array($this, 'learndash_course_completed_hours'));
         add_shortcode( 'ld-courses-and-hours', array($this, 'learndash_user_course_enrollment_and_hours'));
+        
+        
+        //add_action( 'learndash-focus-sidebar-heading-before', array( $this, 'get_topic_lesson_timer' ) );
         
     }
     
@@ -202,6 +213,20 @@ class Learndash {
         
         return $content;
         
+    }
+    
+    public function get_topic_lesson_timer() {
+        
+        $time = learndash_forced_lesson_time();
+        $hours = floor($time / 3600);
+        $minutes = floor(($time / 60) % 60);
+        echo $hours . ':' . $minutes;
+        /*if(is_singular('swfd-topic')) {
+            $lesson_id = learndash_get_lesson_id();
+            $timer = learndash_forced_lesson_time($lesson_id);
+            
+            print_r($timer);
+        }*/
     }
 
 }

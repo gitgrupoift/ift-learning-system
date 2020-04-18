@@ -36,18 +36,9 @@ class Learndash_WooCommerce_Cron {
 	 * Register cron hook
 	 */
 	public function register_cron() {
-		$options = get_option( 'learndash_woocommerce_settings', array() );
-
-		if ( isset( $options['version'] ) && version_compare( $options['version'], LEARNDASH_WOOCOMMERCE_VERSION, '>=' ) ) {
-			return;
-		}
-
 		if ( ! wp_next_scheduled( 'learndash_woocommerce_cron' ) ) {
 			wp_schedule_event( time(), 'per_minute', 'learndash_woocommerce_cron' );
 		}
-
-		$options['version'] = LEARNDASH_WOOCOMMERCE_VERSION;
-		update_option( 'learndash_woocommerce_settings', $options );
 	}
 
 	public function deregister_hook() {

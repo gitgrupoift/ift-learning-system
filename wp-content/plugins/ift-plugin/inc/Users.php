@@ -159,5 +159,11 @@ class Users {
                     
         }
     }
+    
+    protected function user_ift_fields() {
+        
+        
+        
+    }
 
 }

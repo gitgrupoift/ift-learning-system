@@ -63,7 +63,7 @@ class Learndash_WooCommerce_Tools {
 		}
 
 		$step               = intval( $_POST['step'] );
-		$per_batch          = 10;
+		$per_batch          = apply_filters( 'learndash_woocommerce_retroactive_tool_per_batch', 10 );
 		$offset             = ( $step - 1 ) * $per_batch;
 		$order_total        = (array) wp_count_posts( 'shop_order' );
 		$order_total        = array_sum( $order_total );
@@ -86,7 +86,7 @@ class Learndash_WooCommerce_Tools {
 			// skip order that is part of subscription
 			if ( function_exists( 'wcs_order_contains_subscription' ) ) {
 				// Workaround for WC_Order_Refund because wcs_order_contains_subscription() only accepts WC_Order object or ID
-				if ( 'refunded' == $status || ! is_a( $order, 'WC_Order' ) ) {
+				if ( ( 'refunded' == $status && is_a( $order, 'WC_Order' ) ) || is_a( $order, 'WC_Order_Refund' ) ) {
 					Learndash_WooCommerce::remove_course_access( $id );
 					continue;
 				}
@@ -178,7 +178,7 @@ class Learndash_WooCommerce_Tools {
 				'step' => 'complete',
 			);
 		}
-		
+
 		echo json_encode( $return );
 
 		wp_die();

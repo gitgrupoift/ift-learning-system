@@ -5,6 +5,11 @@ CLI Wrapper
 
 curl --header "Content-Type: application/json" --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6InVFUW82OHJRUlgtMUFFbXZFTDBzU3ciLCJleHAiOjE2NjgxOTgwNjAsImlhdCI6MTU4NjE5NTUzN30.nThpTURN-WwVDEdJZYwveyiVyBsaj6OW_ACdMwQgDy4" --request POST --data '{"topic":"VIG 003","type":2,"start_time":"2020-04-06T19:22:00Z","settings":{"watermark": true}}'  https://api.zoom.us/v2/users/me/meetings
 
+Authorizing URL ---- IMPORTANTE!!!
+https://zoom.us/oauth/authorize?response_type=code&client_id=cdXqEIyKRg2I9Nua8ZMpZA&redirect_uri=https%3A%2F%2Faulas.grupoift.pt%2Fift-learning%2Flrs%2Fv1%2Fzoom
+
+Retorna POST no endpoint correto do LRS
+
 */
 
 namespace IFT;
@@ -18,7 +23,7 @@ class Zoom {
         $this->meetings_url = $meetings_url;
                 
     }
- 
+    
     public function meetings_request( $data ) {
         
         $data_string = json_encode($data);

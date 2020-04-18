@@ -5583,6 +5583,20 @@
         }
     },
     {
+        "Manrope": {
+            "variants": [
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Mansalva": {
             "variants": [
                 "regular"

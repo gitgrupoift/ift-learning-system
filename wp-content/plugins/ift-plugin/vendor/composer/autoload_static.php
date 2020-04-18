@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
 {
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
+        'R' => 
+        array (
+            'ReallySimpleJWT\\' => 16,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -27,6 +35,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
             'Cache\\Adapter\\Filesystem\\' => 25,
             'Cache\\Adapter\\Common\\' => 21,
         ),
+        'B' => 
+        array (
+            'Benchmarks\\' => 11,
+        ),
         'A' => 
         array (
             'Automattic\\WooCommerce\\' => 23,
@@ -34,6 +46,14 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
     );
 
     public static $prefixDirsPsr4 = array (
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests',
+        ),
+        'ReallySimpleJWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -66,6 +86,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         array (
             0 => __DIR__ . '/..' . '/cache/adapter-common',
         ),
+        'Benchmarks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/benchmarks',
+        ),
         'Automattic\\WooCommerce\\' => 
         array (
             0 => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce',
@@ -81,6 +105,7 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'Automattic\\WooCommerce\\HttpClient\\Options' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Options.php',
         'Automattic\\WooCommerce\\HttpClient\\Request' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Request.php',
         'Automattic\\WooCommerce\\HttpClient\\Response' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Response.php',
+        'Benchmarks\\ReallySimpleJWTBench' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/benchmarks/ReallySimpleJWTBench.php',
         'Cache\\Adapter\\Common\\AbstractCachePool' => __DIR__ . '/..' . '/cache/adapter-common/AbstractCachePool.php',
         'Cache\\Adapter\\Common\\CacheItem' => __DIR__ . '/..' . '/cache/adapter-common/CacheItem.php',
         'Cache\\Adapter\\Common\\Exception\\CacheException' => __DIR__ . '/..' . '/cache/adapter-common/Exception/CacheException.php',
@@ -100,7 +125,7 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'IFT\\Config' => __DIR__ . '/../..' . '/inc/Config.php',
         'IFT\\Customizer' => __DIR__ . '/../..' . '/inc/Customizer.php',
         'IFT\\Learndash' => __DIR__ . '/../..' . '/inc/Learndash.php',
-        'IFT\\MestreClique' => __DIR__ . '/../..' . '/inc/MestreClique.php',
+        'IFT\\Learndash\\GroupDates' => __DIR__ . '/../..' . '/inc/Learndash/GroupDates.php',
         'IFT\\Optimize' => __DIR__ . '/../..' . '/inc/Optimize.php',
         'IFT\\Rest' => __DIR__ . '/../..' . '/inc/Rest.php',
         'IFT\\Routes\\Groups' => __DIR__ . '/../..' . '/inc/Routes/Groups.php',
@@ -110,6 +135,8 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'IFT\\Settings' => __DIR__ . '/../..' . '/inc/Settings.php',
         'IFT\\Synology' => __DIR__ . '/../..' . '/inc/Synology.php',
         'IFT\\Talk' => __DIR__ . '/../..' . '/inc/Talk.php',
+        'IFT\\Tools\\Cloner' => __DIR__ . '/../..' . '/inc/Tools/Cloner.php',
+        'IFT\\Tools\\Tools' => __DIR__ . '/../..' . '/inc/Tools/Tools.php',
         'IFT\\Users' => __DIR__ . '/../..' . '/inc/Users.php',
         'IFT\\Woocommerce\\Nif' => __DIR__ . '/../..' . '/inc/Woocommerce/Nif.php',
         'IFT\\Woocommerce\\Woocommerce' => __DIR__ . '/../..' . '/inc/Woocommerce/Woocommerce.php',
@@ -179,6 +206,28 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'Psr\\SimpleCache\\CacheException' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheException.php',
         'Psr\\SimpleCache\\CacheInterface' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheInterface.php',
         'Psr\\SimpleCache\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/simple-cache/src/InvalidArgumentException.php',
+        'ReallySimpleJWT\\Build' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Build.php',
+        'ReallySimpleJWT\\Encode' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Encode.php',
+        'ReallySimpleJWT\\Exception\\ValidateException' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Exception/ValidateException.php',
+        'ReallySimpleJWT\\Helper\\JsonEncoder' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Helper/JsonEncoder.php',
+        'ReallySimpleJWT\\Interfaces\\Encoder' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Interfaces/Encoder.php',
+        'ReallySimpleJWT\\Interfaces\\Secret' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Interfaces/Secret.php',
+        'ReallySimpleJWT\\Jwt' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Jwt.php',
+        'ReallySimpleJWT\\Parse' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Parse.php',
+        'ReallySimpleJWT\\Parsed' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Parsed.php',
+        'ReallySimpleJWT\\Secret' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Secret.php',
+        'ReallySimpleJWT\\Token' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Token.php',
+        'ReallySimpleJWT\\Validate' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src/Validate.php',
+        'Tests\\BuildTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/BuildTest.php',
+        'Tests\\EncodeTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/EncodeTest.php',
+        'Tests\\EndToEndTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/EndToEndTest.php',
+        'Tests\\JsonEncoderTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/JsonEncoderTest.php',
+        'Tests\\JwtTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/JwtTest.php',
+        'Tests\\ParseTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/ParseTest.php',
+        'Tests\\ParsedTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/ParsedTest.php',
+        'Tests\\SecretTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/SecretTest.php',
+        'Tests\\TokenTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/TokenTest.php',
+        'Tests\\ValidateTest' => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/tests/ValidateTest.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

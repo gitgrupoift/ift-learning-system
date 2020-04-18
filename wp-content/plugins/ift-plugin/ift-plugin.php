@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       IFT Learning Tools
  * Plugin URI:        https://ti.ift.pt/
- * Description:       Plugin de definições e melhorias do sistema do IFT Learning. Conteúdo proprietário.
- * Version:           1.0.0
+ * Description:       Plugin de definições e melhorias do sistema do IFT Learning. Conteúdo proprietário. Ferramentas, integrações com APIs e aplicações externas e melhorias de funcionalidades.
+ * Version:           1.3.0
  * Author:            Grupo IFT
  * Author URI:        https://grupoift.pt/
  * License:           GPL-2.0+
@@ -14,6 +14,7 @@
 
 use IFT\Learndash;
 use IFT\Users;
+use IFT\Config;
 use IFT\Rest;
 use IFT\Optimize;
 use IFT\Security;
@@ -25,6 +26,7 @@ use IFT\Talk;
 use IFT\Zoom;
 use IFT\Settings;
 use IFT\Woocommerce\Woocommerce;
+use IFT\Tools\Tools;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -37,6 +39,7 @@ new Learndash();
 new Users();
 new Security();
 new Rest();
+new Config();
 new Bbpress();
 new Optimize();
 new Ads();
@@ -45,6 +48,7 @@ new Talk();
 new Zoom();
 new Woocommerce();
 new Settings();
+new Tools();
 
 
 

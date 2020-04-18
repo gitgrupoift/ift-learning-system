@@ -1,4 +1,4 @@
-const CACHE_VERSION = '1.7.9.3.1';
+const CACHE_VERSION = '1.7.9.3.2';
 
 const BASE_CACHE_FILES = [
     'https://aulas.grupoift.pt/wp-content/uploads/2020/01/logo-sem-fundo.png',

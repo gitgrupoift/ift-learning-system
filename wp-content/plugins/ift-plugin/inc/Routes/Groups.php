@@ -17,6 +17,20 @@ class Groups {
             '/get_groups',
             array(
                 'methods' => 'GET',
+                'args' => array(
+                    'keyword' => array(
+                        'description' => __( '(opcional) Termo ou termos de busca nos grupos.' ),
+                        'type'        => 'string',
+                    ),
+                    'course' => array(
+                        'description' => __( '(opcional) Busca por formação associada ao grupo.' ),
+                        'type'        => 'string',
+                    ),
+                    'actor' => array(
+                        'description' => __( '(opcional) Procura os grupos a partir do formando, formador ou líder presente nestes grupos.' ),
+                        'type'        => 'string',
+                    ),
+                ),
                 'callback' => array($this, 'get_groups')
             )
         );
@@ -44,6 +58,12 @@ class Groups {
             '/edit_group/(?P<id>\d+)',
             array(
                 'methods' => 'PUT',
+                'args' => array(
+                    'id' => array(
+                        'description' => __( 'ID do grupo a atualizar.', 'ift-plugin' ),
+                        'type'        => 'integer',
+                    ),
+                ),
                 'callback' => array($this, 'edit_group')
             )
         );
@@ -53,31 +73,37 @@ class Groups {
             '/delete_group/(?P<id>\d+)',
             array(
                 'methods' => 'DELETE',
+                'args' => array(
+                    'id' => array(
+                        'description' => __( 'ID do grupo a apagar.', 'ift-plugin' ),
+                        'type'        => 'integer',
+                    ),
+                ),
                 'callback' => array($this, 'delete_group')
             )
         );
         
-        register_rest_route(
-            'lrs/v1',
-            '/zoom/(?P<code>\d+)',
-            array(
-                'methods' => 'POST',
-                'callback' => array($this, 'zoom')
-            )
-        );
+
         
     }
     
-    protected function get_groups() {}
+    protected function get_groups($request) {
+        
+        $posts_list = get_posts( array( 
+                'post_type'     => 'groups', 
+                'numberposts'   => -1,
+                's'             => $_GET['keyword']
+            ));
+        
+    }
     
-    protected function post_groups() {}
+    protected function post_groups($request) {}
     
-    protected function add_group() {}
+    protected function add_group($request) {}
     
-    protected function edit_group() {}
+    protected function edit_group($request) {}
     
-    protected function delete_group() {}
-    
-    protected function zoom() {}
+    protected function delete_group($request) {}
+
     
 }

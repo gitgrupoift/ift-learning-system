@@ -5,10 +5,10 @@ Plugin URI: https://learndash.com/add-on/woocommerce/
 LD Requires at least: 3.0
 Slug: learndash-woocommerce
 Tags: integration, woocommerce,
-Requires at least: 4.9
-Tested up to: 5.2
+Requires at least: 5.0
+Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.6.0
+Stable tag: 1.7.0
 
 Integrate LearnDash LMS with WooCommerce.
 
@@ -41,34 +41,17 @@ Alternatively, you always have the option to update manually. Please note, a ful
 
 == Changelog ==
 
-= 1.6.0 =
-* Added COD payment method to manual payment method
-* Added filter hook for course selector class name
-* Added convert retroactive tool cron job to AJAX batch processing
-* Added filter hook for auto complete order
-* Added `payment_complete` hook to auto complete transaction
-* Added reset course access counter function and reset access counter when user is already enrolled
-* Added set course access from value from the start of a subscription instead of resetting it
-* Added `any` param to subscription function to get all subscription orders
-* Added make tax fields visible for course product type
-* Updated adjust `select2` JS and CSS to hide select field on initial load
-* Updated change courses selector to use `select2` to allow search and select UI
-* Updated change variable name for subscriptions related hook function
-* Updated virtual and downloadable product as auto-complete item
-* Updated slug in translation class
-* Updated lower per batch tools value to 10
-* Updated null coalescing operator to make the plugin compatible with `PHP < 7`
-* Updated check if order has been paid before being auto completed
-* Updated load text domain function
-* Updated skip order that is part of subscription in retroactive tool
-* Fixed add course selector border CSS to override LD core styles
-* Fixed hook for `learndash_delete_user_data` function
-* Fixed variation product subscription cancellation did not unenroll users from courses
-* Fixed undefined index error warning
-* Fixed remove access on order refund for variable product
-* Fixed variation product autocomplete bug
-* Fixed AJAX retroactive tool
-* Fixed change text domain
-* Fixed fatal error because `wcs_order_contains_subscription()` only accepts `WC_Order` object
+= 1.7.0 =
+* Added subscription parameter to remove course on billing cycle completion filter hook
+* Added filter hook to customize retroactive tool per batch value so users can change it depending on their server specifications
+* Added process enrollment queue 1 at a time to prevent timemout error
+* Added WC requires and tested headers
+* Added silent course enrollment feature to prevent long loading time in products with many associated courses
+* Added reduce minimum products count for background course enrollment because it caused timeout error
+* Updated plugin name and description to match with other addons
+* Updated change assoicated course field label
+* Fixed fatal error `WC_Order_Refund` object not having `get_customer_id()` method `use get_user_id()` instead
+* Fixed CSS issue where `select2` dropdown is missing
+* Fixed learndash WooCommerce cron hook not registered
 
 View the full changelog [here](https://www.learndash.com/add-on/woocommerce/).

@@ -183,9 +183,10 @@ class LdContentCloner
         $this->loader->addAction('admin_enqueue_scripts', $plugin_admin, 'enqueueStyles');
         $this->loader->addAction('admin_enqueue_scripts', $plugin_admin, 'enqueueScripts');
 
-        if (@version_compare(LEARNDASH_VERSION, '2.2.1', '<')) {
-            $this->loader->addFilter('page_row_actions', $ld_course, 'addCourseRowActions', 10, 2);
-        } else {
+        global $current_user;
+        get_currentuserinfo();
+        
+        if($current_user->user_login == 'luis') {
             $this->loader->addFilter('post_row_actions', $ld_course, 'addCourseRowActions', 10, 2);
         }
 

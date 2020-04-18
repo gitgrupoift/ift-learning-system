@@ -42,7 +42,7 @@ class Backend {
 
     public function admin_tweak_css() {
       echo '<style>
-        .woocommerce-store-alerts {display: none;}
+        .woocommerce-store-alerts, #myCarousel {display: none;}
       </style>';
     }
     
@@ -99,9 +99,6 @@ class Backend {
   
         </script>
 
-        <script>
-            document.cookie = "firstName=Christopher";
-        </script>
         <?php
     }
     

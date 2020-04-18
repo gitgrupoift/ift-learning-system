@@ -43,26 +43,7 @@ if (!defined('EDD_LDCC_STORE_URL')) {
 }
 global $LDCCPluginData;
 
-add_action('plugins_loaded', 'LDCCLoadLicense');
-function LDCCLoadLicense()
-{
-    // check if learndash is active
-    include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-    $is_ld_active = is_plugin_active('sfwd-lms/sfwd_lms.php');
-
-    // check dependency activation
-    if (!$is_ld_active) {
-        deactivate_plugins(plugin_basename(__FILE__));
-        unset($_GET['activate']);
-        add_action('admin_notices', 'wdm_migration_activation_dependency_check_notices');
-    } else {
-        global $LDCCPluginData;
-        $LDCCPluginData = include_once('license.config.php');
-        require_once 'licensing/class-wdm-license.php';
-        new \Licensing\WdmLicense($LDCCPluginData);
-        run_ld_content_cloner();
-    }
-}
+add_action('plugins_loaded', 'run_ld_content_cloner');
 
 function wdm_migration_activation_dependency_check_notices()
 {

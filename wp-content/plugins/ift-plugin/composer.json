@@ -6,6 +6,7 @@
     },
     "require": {
         "cache/filesystem-adapter": "^1.0",
-        "automattic/woocommerce": "^3.0"
+        "automattic/woocommerce": "^3.0",
+        "rbdwllr/reallysimplejwt": "^3.0"
     }
 }

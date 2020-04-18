@@ -471,5 +471,63 @@
             "psr-16",
             "simple-cache"
         ]
+    },
+    {
+        "name": "rbdwllr/reallysimplejwt",
+        "version": "3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/RobDWaller/ReallySimpleJWT.git",
+            "reference": "a85514e5873e9dd63c40227bfdfbe174a7dbb845"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/RobDWaller/ReallySimpleJWT/zipball/a85514e5873e9dd63c40227bfdfbe174a7dbb845",
+            "reference": "a85514e5873e9dd63c40227bfdfbe174a7dbb845",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.2.0"
+        },
+        "require-dev": {
+            "infection/infection": "^0.14",
+            "phpbench/phpbench": "^0.16",
+            "phploc/phploc": "^5.0",
+            "phpmd/phpmd": "^2.7",
+            "phpstan/phpstan": "^0.11",
+            "phpunit/phpunit": "^8.0",
+            "sebastian/phpcpd": "^4.1",
+            "squizlabs/php_codesniffer": "^3.0"
+        },
+        "time": "2020-04-01T15:12:32+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ReallySimpleJWT\\": "src",
+                "Tests\\": "tests",
+                "Benchmarks\\": "benchmarks"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rob Waller",
+                "email": "rdwaller1984@gmail.com"
+            }
+        ],
+        "description": "A really simple library to generate user authentication JSON Web Tokens.",
+        "keywords": [
+            "Authentication",
+            "json",
+            "json web tokens",
+            "jwt",
+            "php",
+            "tokens"
+        ]
     }
 ]

@@ -8,8 +8,8 @@ class LdBulkRename
     {
         add_submenu_page(
             "learndash-lms",
-            __("Course Bulk Rename", "ld-content-cloner"),
-            __("Course Bulk Rename", "ld-content-cloner"),
+            __("Títulos em Bloco", "ld-content-cloner"),
+            __("Títulos em Bloco", "ld-content-cloner"),
             "edit_courses",
             "learndash-course-bulk-rename",
             array( $this, "ldbrPageCallback" )
@@ -45,7 +45,7 @@ class LdBulkRename
 
         ?>
         <div>
-            <h2>Course Bulk Rename</h2>
+            <h2>Modificação de Títulos em Bloco</h2>
             <?php
                 $this->addCourseList($courses, $selected_course);
         ?>
@@ -96,7 +96,7 @@ class LdBulkRename
                         // $quiz_ids = array_unique($quiz_ids);
 
                         echo "<table class='ldbr-table'>";
-                        echo "<tr class='ldbr-head-row'><th>Post Type</th><th>Post Title</th><th>New Title</th></tr>";
+                        echo "<tr class='ldbr-head-row'><th>Tipo de Conteúdo</th><th>Título</th><th>Novo Título</th></tr>";
                         $this->ldbrDisplayRenaming($selected_course, get_the_title($selected_course));
 
                         foreach ($lesson_ids as $id => $title) {
@@ -114,7 +114,7 @@ class LdBulkRename
                         echo '<tr class="ldbr-foot-row">
                                     <td colspan="3">
                                         <input type="hidden" name="ldbr_security" id="ldbr_security" value="'.wp_create_nonce('bulk_renaming').'" />
-                                        <input type="button" class="button button-primary" name="save_post_titles" id="save_post_titles" data-lock="0" value="Save New Titles" />
+                                        <input type="button" class="button button-primary" name="save_post_titles" id="save_post_titles" data-lock="0" value="Guardar" />
                                     </td>
                                 </tr>';
                         echo "</table></form>";
@@ -140,7 +140,7 @@ class LdBulkRename
         ?>
             <form action="" method="get" id="ldbr-select-form" name="ldbr-select-form">
                 <select id="ldbr-select-course" name="ldbr-select-course">
-                    <option value="0"> ( ID ) Select Course </option>
+                    <option value="0"> ( ID ) Escolha a Formação </option>
                     <?php
                     $selected = "";
                     foreach ($courses as $sin_course) {
@@ -158,7 +158,7 @@ class LdBulkRename
         ?>
                 </select>
                 <input type="hidden" name="page" value="learndash-course-bulk-rename" />
-                <input type="submit" class="button button-primary" id="ldbr-select-button" name="ldbr-select-button" value="Select Course" />
+                <input type="submit" class="button button-primary" id="ldbr-select-button" name="ldbr-select-button" value="Abrir Lista" />
             </form>
         <?php
     }
@@ -188,13 +188,13 @@ class LdBulkRename
             if (get_post_type($post_id) == "sfwd-topic") {
                 $lesson_id = get_post_meta($post_id, "lesson_id", true);
                 if ($lesson_id != "") {
-                    $lesson_name = "<a href='".get_edit_post_link($lesson_id)."' title = 'Edit This Lesson'>".get_the_title($lesson_id) ."</a> -> ";
+                    $lesson_name = "<a href='".get_edit_post_link($lesson_id)."' title = 'Editar esta Aula'>".get_the_title($lesson_id) ."</a> -> ";
                 }
             }
         }
         echo "<tr class='ldbr-row'>
                 <td class='ldbr-post-type'> ". $obj->labels->singular_name ."</td>
-                <td class='ldbr-post-title'>".$lesson_name."<a title = 'Edit This ".$obj->labels->singular_name."' href='".get_edit_post_link($post_id)."'>".$title ." </a></td>
+                <td class='ldbr-post-title'>".$lesson_name."<a title = 'Editar ".$obj->labels->singular_name."' href='".get_edit_post_link($post_id)."'>".$title ." </a></td>
                 <td> <input class='ldbr-post-new-title' type='text' data-post-id='" . $post_id . "' value='". $title."'> </td>
             </tr>";
     }
@@ -213,7 +213,7 @@ class LdBulkRename
                     $this->updateThePost($post_id, $new_title);
                 }
             }
-            echo json_encode(array( "success" => "All Post Titles Updated." ));
+            echo json_encode(array( "success" => "Todos os Títulos Foram Atualizados." ));
         } else {
             echo json_encode(array( "error" => "Security check failed." ));
         }

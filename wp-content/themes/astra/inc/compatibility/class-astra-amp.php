@@ -280,7 +280,7 @@ if ( ! class_exists( 'Astra_AMP' ) ) :
 					'padding-left' => '30px',
 				),
 				'.ast-amp .main-navigation ul.children li a:before, .ast-amp .main-navigation ul.sub-menu li a:before' => array(
-					'content'         => '""',
+					'content'         => '"\01f78e"',
 					'font-family'     => '"Astra"',
 					'font-size'       => '0.65em',
 					'text-decoration' => 'inherit',
@@ -450,7 +450,7 @@ if ( ! class_exists( 'Astra_AMP' ) ) :
 				),
 				'.ast-amp .main-header-bar .main-header-bar-navigation .page_item_has_children > .ast-menu-toggle::before, .ast-amp .main-header-bar .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before' => array(
 					'font-weight'     => 'bold',
-					'content'         => '""',
+					'content'         => '"\01f78e"',
 					'font-family'     => '"Astra"',
 					'text-decoration' => 'inherit',
 					'display'         => 'inline-block',
