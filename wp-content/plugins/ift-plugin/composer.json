@@ -1,12 +1,23 @@
 {
     "autoload": {
         "psr-4": {
-            "IFT\\" : "inc/"
+            "IFT\\" : "inc/",
+            "IFT\\Helpers\\" : "helpers/",
+            "Swagger\\Client\\" : "lib/"
         }
     },
     "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2",
+        "firebase/php-jwt": "^5.0",
         "cache/filesystem-adapter": "^1.0",
         "automattic/woocommerce": "^3.0",
-        "rbdwllr/reallysimplejwt": "^3.0"
+        "rbdwllr/reallysimplejwt": "^3.0",
+        "composer/installers": "^1.9",
+        "dompdf/dompdf": "dev-develop",
+        "intervention/image": "^2.5"
     }
 }

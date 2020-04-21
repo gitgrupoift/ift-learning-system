@@ -18,20 +18,38 @@ use IFT\Config;
 use IFT\Rest;
 use IFT\Optimize;
 use IFT\Security;
-use IFT\Bbpress;
 use IFT\Backend;
-use IFT\Customizer;
-use IFT\Ads;
 use IFT\Talk;
 use IFT\Zoom;
-use IFT\Settings;
 use IFT\Woocommerce\Woocommerce;
 use IFT\Tools\Tools;
+
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
 }
+
+define( 'IFT_PATH', plugin_dir_path( __FILE__ ) );
+define( 'IFT_TEMPLATES', IFT_PATH . 'templates/' );
+define( 'IFT_ASSETS', IFT_PATH . 'assets/' );
+
+define('DISABLE_PDF_CACHE', true);
+define('FETCH_COOKIES_ENABLED', true);
+
+$upload_dir = wp_upload_dir();
+
+if (!defined('PDF_CACHE_DIRECTORY')) {
+    define('PDF_CACHE_DIRECTORY', $upload_dir['basedir'] . '/pdf-cache/');
+}
+if (!defined('DOMPDF_ENABLE_REMOTE'))
+  define('DOMPDF_ENABLE_REMOTE', true);
+if (!defined('DOMPDF_ENABLE_HTML5'))
+  define('DOMPDF_ENABLE_HTML5', true);
+if (!defined('DOMPDF_FONT_DIR'))
+  define('DOMPDF_FONT_DIR', $upload_dir['basedir'] . '/dompdf-fonts/');
+if (!defined('DOMPDF_FONT_CACHE'))
+  define('DOMPDF_FONT_CACHE', $upload_dir['basedir'] . '/dompdf-fonts/');
 
 require __DIR__ .'/vendor/autoload.php';
 
@@ -40,16 +58,12 @@ new Users();
 new Security();
 new Rest();
 new Config();
-new Bbpress();
 new Optimize();
-new Ads();
 new Backend();
 new Talk();
 new Zoom();
 new Woocommerce();
-new Settings();
 new Tools();
-
 
 
 

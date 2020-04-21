@@ -3,7 +3,7 @@
 /*
 CLI Wrapper
 
-curl --header "Content-Type: application/json" --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6InVFUW82OHJRUlgtMUFFbXZFTDBzU3ciLCJleHAiOjE2NjgxOTgwNjAsImlhdCI6MTU4NjE5NTUzN30.nThpTURN-WwVDEdJZYwveyiVyBsaj6OW_ACdMwQgDy4" --request POST --data '{"topic":"VIG 003","type":2,"start_time":"2020-04-06T19:22:00Z","settings":{"watermark": true}}'  https://api.zoom.us/v2/users/me/meetings
+curl --header "Content-Type: application/json" --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjdnVXloM1BnVHB5ZFZfSHpSdnVTdGciLCJleHAiOjE2NTA0ODEyMDAsImlhdCI6MTU4NzM5MDc2M30.6P6TSGljCx7kLpxUcvFBM52kqAHMaR76zK4CouRE1DE" --request POST --data '{"topic":"VIG 003","type":2,"start_time":"2020-04-06T19:22:00Z","settings":{"watermark": true}}'  https://api.zoom.us/v2/users/me/meetings
 
 Authorizing URL ---- IMPORTANTE!!!
 https://zoom.us/oauth/authorize?response_type=code&client_id=cdXqEIyKRg2I9Nua8ZMpZA&redirect_uri=https%3A%2F%2Faulas.grupoift.pt%2Fift-learning%2Flrs%2Fv1%2Fzoom
@@ -14,38 +14,42 @@ Retorna POST no endpoint correto do LRS
 
 namespace IFT;
 
+
 class Zoom {
 
-    public $meetings_url = 'https://api.zoom.us/v2/users/me/meetings';
+    protected $api_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjdnVXloM1BnVHB5ZFZfSHpSdnVTdGciLCJleHAiOjE2NTA0ODEyMDAsImlhdCI6MTU4NzM5MDc2M30.6P6TSGljCx7kLpxUcvFBM52kqAHMaR76zK4CouRE1DE';
+    
+    protected $user = 'luisferreira@grupoift.pt';
     
     public function __construct() {
-
-        $this->meetings_url = $meetings_url;
+        
+        $this->api_token = $api_token;
+        $this->user = $user;
                 
     }
     
-    public function meetings_request( $data ) {
+    public function set_meeting( $topic, $type = 3, $start = '', $end = '', $duration = 60, $recording = true, $frequency = 1) {
         
-        $data_string = json_encode($data);
+        $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', $this->api_token);
+
+        $apiInstance = new Swagger\Client\Api\MeetingsApi(
+
+        new GuzzleHttp\Client(),
+            $config
+        );
+        $user_id = $this->user;
         
-        $ch = curl_init();
+        $body = new \stdClass; 
+        $body->topic = $topic;
+        $body->type = $type;
 
-        curl_setopt($ch, CURLOPT_URL, $this->meetings_url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"topic\":\"xyz\",\"type\":1}");
-
-        $headers = array();
-        $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6InVFUW82OHJRUlgtMUFFbXZFTDBzU3ciLCJleHAiOjE2NjgxOTgwNjAsImlhdCI6MTU4NjE5NTUzN30.nThpTURN-WwVDEdJZYwveyiVyBsaj6OW_ACdMwQgDy4';
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-        $result = curl_exec($ch);
-        if (curl_errno($ch)) {
-            echo 'Error:' . curl_error($ch);
+        try {
+            $result = $apiInstance->meetingCreate($user_id, $body);
+            print_r($result);
+        } catch (Exception $e) {
+            echo 'Exception when calling MeetingsApi->meetingCreate: ', $e->getMessage(), PHP_EOL;
         }
-        curl_close($ch);
         
-    }   
+    } 
 
 }

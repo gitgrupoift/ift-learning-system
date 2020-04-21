@@ -2,6 +2,8 @@
 
 namespace IFT;
 
+use IFT\Helpers\CustomType;
+
 class Backend {
     
     private static $instance;
@@ -28,6 +30,19 @@ class Backend {
         remove_role('bbp_spectator');
         remove_role('bbp_keymaster');
         
+        $this->create_cpts();
+        
+    }
+    
+    public function create_cpts() {
+        
+        $cpt = new CustomType( array(
+            'post_type_name' => 'zoom',
+            'singular' => 'Zoom Meeting',
+            'plural' => 'Zoom Meeting',
+            'slug' => 'zoom',
+            'show_in_rest' => true        
+        ));
     }
     
     public function front_menu_admin() {
@@ -74,6 +89,9 @@ class Backend {
             remove_menu_page( 'wpforms-overview' );
 
         }
+        
+        add_submenu_page( 'learndash-lms', 'Zoom Meetings', 'Zoom Meetings', 'manage_options','edit.php?post_type=zoom');
+ 
     }
     
     public function analytics() {

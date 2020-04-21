@@ -13,7 +13,6 @@
  */
 define( 'CHILD_THEME_IFT_LEARNING_VERSION', '1.0.0' );
 
-
 /**
  * Enqueue styles
  */

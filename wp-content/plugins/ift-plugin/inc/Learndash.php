@@ -31,11 +31,15 @@ class Learndash {
         add_shortcode( 'ld-hours-completed', array($this, 'learndash_course_completed_hours'));
         add_shortcode( 'ld-courses-and-hours', array($this, 'learndash_user_course_enrollment_and_hours'));
         
-        
-        //add_action( 'learndash-focus-sidebar-heading-before', array( $this, 'get_topic_lesson_timer' ) );
+        $this->require();
         
     }
     
+    public function require() {
+        
+        //new GroupDates();
+        
+    }
     /**
      * Habilita comentários que, por defeito, não estão presentes no modo foco do Learndash.
      *
