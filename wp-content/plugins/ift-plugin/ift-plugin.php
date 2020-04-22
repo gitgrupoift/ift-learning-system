@@ -21,6 +21,7 @@ use IFT\Security;
 use IFT\Backend;
 use IFT\Talk;
 use IFT\Zoom;
+use IFT\Timer;
 use IFT\Woocommerce\Woocommerce;
 use IFT\Tools\Tools;
 
@@ -30,28 +31,18 @@ if (!defined('WPINC')) {
     die;
 }
 
+
+define( 'IFT_PLUGIN_VERSION', '1.3.0' );
 define( 'IFT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'IFT_TEMPLATES', IFT_PATH . 'templates/' );
+define( 'IFT_SETTINGS', IFT_PATH . 'settings/' );
+define( 'IFT_ADMIN', IFT_PATH . 'admin/' );
+define( 'IFT_PUBLIC', IFT_PATH . 'public/' );
 define( 'IFT_ASSETS', IFT_PATH . 'assets/' );
-
-define('DISABLE_PDF_CACHE', true);
-define('FETCH_COOKIES_ENABLED', true);
-
-$upload_dir = wp_upload_dir();
-
-if (!defined('PDF_CACHE_DIRECTORY')) {
-    define('PDF_CACHE_DIRECTORY', $upload_dir['basedir'] . '/pdf-cache/');
-}
-if (!defined('DOMPDF_ENABLE_REMOTE'))
-  define('DOMPDF_ENABLE_REMOTE', true);
-if (!defined('DOMPDF_ENABLE_HTML5'))
-  define('DOMPDF_ENABLE_HTML5', true);
-if (!defined('DOMPDF_FONT_DIR'))
-  define('DOMPDF_FONT_DIR', $upload_dir['basedir'] . '/dompdf-fonts/');
-if (!defined('DOMPDF_FONT_CACHE'))
-  define('DOMPDF_FONT_CACHE', $upload_dir['basedir'] . '/dompdf-fonts/');
+define( 'IFT_REPORTS', content_url() . '/reports/' );
 
 require __DIR__ .'/vendor/autoload.php';
+require IFT_SETTINGS . 'settings.php';
 
 new Learndash();
 new Users();
@@ -64,6 +55,7 @@ new Talk();
 new Zoom();
 new Woocommerce();
 new Tools();
+new Timer();
 
 
 
