@@ -14,41 +14,38 @@ Retorna POST no endpoint correto do LRS
 
 namespace IFT;
 
-
 class Zoom {
 
-    protected $api_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IjdnVXloM1BnVHB5ZFZfSHpSdnVTdGciLCJleHAiOjE2NTA0ODEyMDAsImlhdCI6MTU4NzM5MDc2M30.6P6TSGljCx7kLpxUcvFBM52kqAHMaR76zK4CouRE1DE';
+    protected $api_token;
     
     protected $user = 'luisferreira@grupoift.pt';
     
     public function __construct() {
         
-        $this->api_token = $api_token;
+        $this->api_token = get_option( 'ift-plugin' );
         $this->user = $user;
                 
     }
     
-    public function set_meeting( $topic, $type = 3, $start = '', $end = '', $duration = 60, $recording = true, $frequency = 1) {
+    public static function add_meeting($topic) {
         
-        $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('access_token', $this->api_token);
+        $ch = curl_init();
 
-        $apiInstance = new Swagger\Client\Api\MeetingsApi(
+        curl_setopt($ch, CURLOPT_URL, 'https://api.zoom.us/v2/users/luisferreira@grupoift.pt/meetings');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"topic\":\"" . $topic . "\",\"type\":3,\"start_time\":\"2020-04-06T19:22:00Z\",\"settings\":{\"watermark\": true}}");
 
-        new GuzzleHttp\Client(),
-            $config
-        );
-        $user_id = $this->user;
-        
-        $body = new \stdClass; 
-        $body->topic = $topic;
-        $body->type = $type;
+        $headers = array();
+        $headers[] = 'Content-Type: application/json';
+        $headers[] = 'Authorization: Bearer ' . $this->api_token['zoom_token'] . '';
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-        try {
-            $result = $apiInstance->meetingCreate($user_id, $body);
-            print_r($result);
-        } catch (Exception $e) {
-            echo 'Exception when calling MeetingsApi->meetingCreate: ', $e->getMessage(), PHP_EOL;
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
         }
+        curl_close($ch);
         
     } 
 

@@ -14,16 +14,27 @@ class ClientChecker {
 	 */
 	public function maybeCreateClient( $client_name, $order_object ) {
 
-		$needs_update = false;
+		$needs_update  = false;
 		$create_client = false;
-		$vat = false;
+		$vat           = false;
+		$customer      = false;
 		//Order already has client ID and client code?
 		if ( ( $client_id = $order_object->get_meta( 'hd_wc_ie_plus_client_id' ) ) && ( $client_code = $order_object->get_meta( 'hd_wc_ie_plus_client_code' ) ) ) {
 			$needs_update = true; //We always update if we already know the client. This ways we only do one API call (update) instead of potentialy two (get and update)
 		} else {
 			if ( $vat = $order_object->get_meta( '_billing_VAT_code' ) ) {
+
+				//Allow the Pro plugin to get it by ID and VAT
+				$client_info = apply_filters( 'invoicexpress_woocommerce_get_client_info', false, $order_object );
+
 				//We don't have the client and the order has vat so let's try to find it
-				if ( $client_info = $this->getClientByNameAndVat( $client_name, $vat ) ) {
+				if ( ! $client_info ) {
+					//Try to get it by name then - Old way
+					$client_info = $this->getClientByNameAndVat( $client_name, $vat );
+				}
+
+				//Do we have it?
+				if ( $client_info ) {
 					//Got the client
 					$client_id = $client_info->id;
 					if ( $client_info->code == '' ) {
@@ -60,6 +71,7 @@ class ClientChecker {
 				} else {
 					$create_client = true;
 				}
+
 			} else {
 				$create_client = true;
 			}
@@ -76,6 +88,17 @@ class ClientChecker {
 		} elseif ( $needs_update ) {
 			//Update the client
 			$this->updateTheClient( $client_id, $client_code, $client_name, $order_object );
+		}
+
+		// Set the client_id and client_code on the user for later usage
+		if ( $user_id = $order_object->get_customer_id() ) {
+			if ( $customer = new \WC_Customer( $user_id ) ) {
+				if ( $customer->get_id() ) {
+					if ( ! empty( $client_id ) ) $customer->update_meta_data( 'hd_wc_ie_plus_client_id', $client_id );
+					if ( ! empty( $client_code ) ) $customer->update_meta_data( 'hd_wc_ie_plus_client_code', $client_code );
+					$customer->save();
+				}
+			}
 		}
 
 		// We should be dealing with errors
@@ -176,7 +199,7 @@ class ClientChecker {
 		if ( $return['success'] ) {
 			return $return['object']->client->id;
 		} else {
-			// We should be dealing with errors
+			// We should be dealing with errors - Check if client exists already for example, with getByCode...
 			return 0;
 		}
 	}

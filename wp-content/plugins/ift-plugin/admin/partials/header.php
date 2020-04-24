@@ -33,10 +33,13 @@
 		    <a class="nav-link active text-success" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-lg fa-video fa-fw" style="margin-right: 10px;"></i><?php printf(__('Zoom API'), $this->plugin_name); ?></a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link text-success" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-lg fa-hdd fa-fw" style="margin-right: 10px;"></i><?php printf(__('Synology Apps'), $this->plugin_name); ?></a>
+		    <a class="nav-link text-success" id="profile-tab" data-toggle="tab" href="#synology" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-lg fa-hdd fa-fw" style="margin-right: 10px;"></i><?php printf(__('Synology Apps'), $this->plugin_name); ?></a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link text-success" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fab fa-lg fa-google fa-fw" style="margin-right: 10px;"></i><?php printf(__('Serviços do Google'), $this->plugin_name); ?></a>
+		    <a class="nav-link text-success" id="contact-tab" data-toggle="tab" href="#google" role="tab" aria-controls="contact" aria-selected="false"><i class="fab fa-lg fa-google fa-fw" style="margin-right: 10px;"></i><?php printf(__('Serviços do Google'), $this->plugin_name); ?></a>
+		  </li>
+          <li class="nav-item">
+		    <a class="nav-link text-success" id="contact-tab" data-toggle="tab" href="#reports" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-lg fa-copy fa-fw" style="margin-right: 10px;"></i><?php printf(__('Relatórios e Controlo'), $this->plugin_name); ?></a>
 		  </li>
 		</ul>
 

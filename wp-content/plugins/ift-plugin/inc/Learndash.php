@@ -175,6 +175,7 @@ class Learndash {
     public function add_tabs($tabs) {
         
         $tabs['description'] = array(
+            'id'      => 'description',
 			'icon'    => 'ld-icon-assignment',
 			'label'   => __( 'Descrição', 'ift-plugin' ),
 			'content' => self::description_tab(),

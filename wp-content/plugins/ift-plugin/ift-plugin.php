@@ -21,9 +21,9 @@ use IFT\Security;
 use IFT\Backend;
 use IFT\Talk;
 use IFT\Zoom;
-use IFT\Timer;
 use IFT\Woocommerce\Woocommerce;
 use IFT\Tools\Tools;
+use IFT\Reports\SQLite;
 
 
 // If this file is called directly, abort.
@@ -38,8 +38,10 @@ define( 'IFT_TEMPLATES', IFT_PATH . 'templates/' );
 define( 'IFT_SETTINGS', IFT_PATH . 'settings/' );
 define( 'IFT_ADMIN', IFT_PATH . 'admin/' );
 define( 'IFT_PUBLIC', IFT_PATH . 'public/' );
-define( 'IFT_ASSETS', IFT_PATH . 'assets/' );
-define( 'IFT_REPORTS', content_url() . '/reports/' );
+define( 'IFT_ASSETS', plugins_url() . '/ift-plugin/assets/' );
+define( 'IFT_REPORTS', ABSPATH . '/wp-content/reports/' );
+
+
 
 require __DIR__ .'/vendor/autoload.php';
 require IFT_SETTINGS . 'settings.php';
@@ -52,11 +54,25 @@ new Config();
 new Optimize();
 new Backend();
 new Talk();
-new Zoom();
 new Woocommerce();
 new Tools();
-new Timer();
+//Zoom::add_meeting('Este');
+    
+add_action( 'plugins_loaded', 'add_user_db' );
+    /**
+     * Cria SQLite para o utilizador, se não existente
+     * @since 1.5.0 
+     */
+    function add_user_db(){
+    
+        $current_user = wp_get_current_user(); 
+        if ( !($current_user instanceof WP_User) ) 
+            return; 
+        $name = $current_user->ID;
 
+        new SQLite($name);
+
+    }
 
 
 add_action('after_setup_theme', 'override_theme', 999);

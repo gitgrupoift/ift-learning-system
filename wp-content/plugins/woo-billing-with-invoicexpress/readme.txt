@@ -6,7 +6,7 @@ Plugin URI: https://invoicewoo.com
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.5
-Stable tag: 2.6.0.1
+Stable tag: 2.6.1
 
 WooCommerce legal invoicing made easy with InvoiceXpress integration.
 
@@ -80,6 +80,11 @@ No. This is just an integration between WooCommerce and the InvoiceXpress API. Y
 Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/woo-billing-with-invoicexpress) and help us out.
 
 == Changelog ==
+
+= 2.6.1 =
+* Partial Receipts on Invoice-receipts (Pro version)
+* Better customer search on InvoiceXpress to avoid duplicates (Pro version)
+* Tested with WooCommerce 4.1.0-rc.1 and Wordpress 5.5-alpha-47609
 
 = 2.6.0.1 =
 * Bugfix when products included as order items are deleted before a document is issued
