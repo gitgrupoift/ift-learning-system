@@ -21,7 +21,6 @@ class Backend {
         add_action('admin_head', array($this, 'admin_tweak_css'));
         add_action('admin_menu', array($this, 'admin_main'), 999);
         add_action('wp_head', array($this, 'analytics'), 99);
-        
         add_action( 'do_meta_boxes', array( $this, 'remove_astra_metabox' ) );
         
         remove_role('bbp_blocked');
@@ -94,7 +93,12 @@ class Backend {
  
     }
     
+    
     public function analytics() {
+        
+        $current_user = wp_get_current_user();
+        $current_user_id = $current_user->user_firstname . '_' . $current_user->user_lastname;
+        $string = str_replace(' ', '_', $current_user_id);
         
         ?>
 
@@ -113,7 +117,10 @@ class Backend {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
      
-          gtag('config', 'UA-162895494-1');
+          gtag('config', 'UA-162895494-1', {
+                'cookie_update': true,
+                'client_id': '<?php echo $string; ?>'
+          });
   
         </script>
 

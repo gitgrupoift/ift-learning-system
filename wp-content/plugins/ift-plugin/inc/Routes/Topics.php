@@ -4,14 +4,7 @@ namespace IFT\Routes;
 
 class Topics {
     
-    public $extension = 'topics';
-    public $version = '/v1';
-    
     public function __construct() {
-        
-        $this->extension = $extension;
-        $this->version = $version;
-        
             
     }
     

@@ -25,6 +25,21 @@ class Invoices extends \Webdados\InvoiceXpressWooCommerce\Settings\Tabs {
 		$settings = array(
 			'title'    => __( 'Invoices', 'woo-billing-with-invoicexpress' ),
 			'sections' => array(
+				'ix_invoices_invoices_receipt'    => array(
+					'title'       => __( 'Invoice-receipts', 'woo-billing-with-invoicexpress' ),
+					'description' => '',
+					'fields'      => array(
+						'hd_wc_ie_plus_invoice_receipt' => array(
+							'title'       => sprintf(
+								/* translators: %s: document type */
+								__( 'Issue %s', 'woo-billing-with-invoicexpress' ),
+								__( 'Invoice-receipt', 'woo-billing-with-invoicexpress' )
+							),
+							'description' => __( 'Recommended if you’re getting paid before issuing the document, which is the most common scenario in online shops.', 'woo-billing-with-invoicexpress' ),
+							'type'        => 'pro_link',
+						),
+					),
+				),
 				'ix_invoices_invoices'            => array(
 					'title'       => __( 'Invoices', 'woo-billing-with-invoicexpress' ),
 					'description' => '',
@@ -236,6 +251,32 @@ Thank you.', 'woo-billing-with-invoicexpress' ),
 							'parent_field'           => 'hd_wc_ie_plus_send_simplified_invoice',
 							'parent_value'           => '1',
 							'wpml'                   => true,
+						),
+					),
+				),
+				'ix_invoices_credit_notes'        => array(
+					'title'       => __( 'Credit notes', 'woo-billing-with-invoicexpress' ),
+					'description' => '',
+					'fields'      => array(
+						'hd_wc_ie_plus_create_credit_note' => array(
+							'title'  => sprintf(
+								/* translators: %s: document type */
+								__( 'Issue %s', 'woo-billing-with-invoicexpress' ),
+								__( 'Credit note', 'woo-billing-with-invoicexpress' )
+							),
+							'description' => __( 'A Credit note will be automatically issued when an order, that already has an Invoice-receipt or Receipt, is (partially or totally) refunded.', 'woo-billing-with-invoicexpress' ),
+							'type'   => 'pro_link',
+						),
+					),
+				),
+				'ix_invoices_automatic'           => array(
+					'title'       => __( 'Automatic invoicing', 'woo-billing-with-invoicexpress' ),
+					'description' => '',
+					'fields'      => array(
+						'hd_wc_ie_plus_automatic_invoice' => array(
+							'title'  => __( 'Automatic issuing', 'woo-billing-with-invoicexpress' ),
+							'suffix' => __( 'Issue invoicing documents automatically', 'woo-billing-with-invoicexpress' ),
+							'type'   => 'pro_link',
 						),
 					),
 				),

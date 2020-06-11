@@ -20,11 +20,11 @@ use IFT\Optimize;
 use IFT\Security;
 use IFT\Backend;
 use IFT\Talk;
+use IFT\Asgaros;
 use IFT\Zoom;
 use IFT\Woocommerce\Woocommerce;
 use IFT\Tools\Tools;
-use IFT\Reports\SQLite;
-
+use IFT\Forum;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -56,26 +56,13 @@ new Backend();
 new Talk();
 new Woocommerce();
 new Tools();
-//Zoom::add_meeting('Este');
-    
-add_action( 'plugins_loaded', 'add_user_db' );
-    /**
-     * Cria SQLite para o utilizador, se não existente
-     * @since 1.5.0 
-     */
-    function add_user_db(){
-    
-        $current_user = wp_get_current_user(); 
-        if ( !($current_user instanceof WP_User) ) 
-            return; 
-        $name = $current_user->ID;
-
-        new SQLite($name);
-
-    }
+new Asgaros();
+new Forum();
 
 
-add_action('after_setup_theme', 'override_theme', 999);
+
+
+//add_action('after_setup_theme', 'override_theme', 999);
 
 add_filter( 'wp_new_user_notification_email', 'welcome_email_template', 10, 3 );
 
@@ -96,6 +83,9 @@ function welcome_email_template( $wp_new_user_notification_email, $user, $blogna
 
     return $wp_new_user_notification_email;
 }
+
+
+
 
 
 

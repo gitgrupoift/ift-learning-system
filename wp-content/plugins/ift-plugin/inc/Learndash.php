@@ -3,6 +3,7 @@
 namespace IFT;
 
 use IFT\Learndash\GroupDates;
+use IFT\Learndash\GroupReports;
 /*
 Timer nos tópicos - funções e hooks a utilizar:
 - learndash_get_topic_list()
@@ -37,7 +38,7 @@ class Learndash {
     
     public function require() {
         
-        //new GroupDates();
+        new GroupReports();
         
     }
     /**

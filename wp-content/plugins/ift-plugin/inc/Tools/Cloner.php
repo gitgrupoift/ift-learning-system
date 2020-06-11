@@ -20,8 +20,6 @@ class Cloner {
     
     public function __construct() {
         
-        $this->types_forbidden = $types_forbidden;
-        
         add_action('admin_action_clone_as_draft', array($this, 'clone_as_draft'));
         add_filter('post_row_actions', array($this, 'clone_action_link'), 10, 2);
 

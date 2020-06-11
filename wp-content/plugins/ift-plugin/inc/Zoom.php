@@ -17,13 +17,13 @@ namespace IFT;
 class Zoom {
 
     protected $api_token;
-    
-    protected $user = 'luisferreira@grupoift.pt';
+    public $slug = 'ift-plugin';
+    protected $user;
     
     public function __construct() {
         
         $this->api_token = get_option( 'ift-plugin' );
-        $this->user = $user;
+        $this->user = get_option($slug);
                 
     }
     

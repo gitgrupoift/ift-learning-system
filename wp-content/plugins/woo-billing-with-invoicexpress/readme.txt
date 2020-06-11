@@ -6,7 +6,7 @@ Plugin URI: https://invoicewoo.com
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.5
-Stable tag: 2.6.1
+Stable tag: 2.7.0
 
 WooCommerce legal invoicing made easy with InvoiceXpress integration.
 
@@ -80,6 +80,24 @@ No. This is just an integration between WooCommerce and the InvoiceXpress API. Y
 Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/woo-billing-with-invoicexpress) and help us out.
 
 == Changelog ==
+
+= 2.7.0 =
+* Several changes on the "Invoices and Credit notes" settings to better clarify that Invoice-receipts are recommended in most scenarios
+* New exemption motive for COVID-19 related sales to the Portuguese State, other public organisms and non-profits
+* Allow issuing of partial Credit notes for order shipping and fees (Pro version)
+* Fix Credit notes shipping and fees references (Pro version)
+* Show exemption reason field on orders with partial exemptions (Pro version)
+* Add `$order_object` to the `get_due_date` function and `invoicexpress_woocommerce_{$type}_validity` filter
+* Tested with WooCommerce 4.2.0-beta.1 and Wordpress 5.5-alpha-47861
+
+= 2.6.2.2 =
+* Fix static `VatController` `get_exemption_reasons()` method
+
+= 2.6.2 =
+* Exemption reasons code refactor
+* New `invoicexpress_woocommerce_after_update_order_meta_frontend` action after updating order meta in the checkout (Pro version)
+* EU B2B tax exemption motive setting (Pro version)
+* Tested with WooCommerce 4.1.0 and Wordpress 5.5-alpha-47783
 
 = 2.6.1 =
 * Partial Receipts on Invoice-receipts (Pro version)

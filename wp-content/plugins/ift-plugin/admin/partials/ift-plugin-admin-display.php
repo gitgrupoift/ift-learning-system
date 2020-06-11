@@ -11,6 +11,10 @@ $zoom_token = ( isset( $options['zoom_token'] ) && ! empty( $options['zoom_token
 $zoom_mail = ( isset( $options['zoom_mail'] ) && ! empty( $options['zoom_mail'] ) ) ? esc_attr( $options['zoom_mail'] ) : false;
 $zoom_key = ( isset( $options['zoom_key'] ) && ! empty( $options['zoom_key'] ) ) ? esc_attr( $options['zoom_key'] ) : false;
 $zoom_secret = ( isset( $options['zoom_secret'] ) && ! empty( $options['zoom_secret'] ) ) ? esc_attr( $options['zoom_secret'] ) : false;
+    
+$syn_url = ( isset( $options['syn_url'] ) && ! empty( $options['syn_url'] ) ) ? esc_attr( $options['syn_url'] ) : false;
+$syn_user = ( isset( $options['syn_user'] ) && ! empty( $options['syn_user'] ) ) ? esc_attr( $options['syn_user'] ) : false;
+$syn_pass = ( isset( $options['syn_pass'] ) && ! empty( $options['syn_pass'] ) ) ? esc_attr( $options['syn_pass'] ) : false;
 
 settings_fields($this->plugin_name);
 do_settings_sections($this->plugin_name);
@@ -22,7 +26,12 @@ do_settings_sections($this->plugin_name);
 	include_once('header.php');
 ?>
 
-<hr>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<?php 
+	include_once('synology.php');
+?>
+    </div>
+
     
 <nav class="navbar fixed-bottom navbar-light bg-light">
 	<ul class="navbar-nav ml-auto">
