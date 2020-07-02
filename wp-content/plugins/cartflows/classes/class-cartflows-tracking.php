@@ -99,6 +99,11 @@ class Cartflows_Tracking {
 	 */
 	public static function send_ga_data_if_enabled( $order_id, $offer_data = array() ) {
 
+		// Stop Execution if WooCommerce is not installed & don't set the cookie.
+		if ( ! Cartflows_Loader::get_instance()->is_woo_active ) {
+			return;
+		}
+
 		if ( self::is_wcf_ga_tracking_on() && self::wcf_track_ga_purchase() ) {
 
 			setcookie( 'wcf_ga_trans_data', wp_json_encode( self::get_ga_purchase_transactions_data( $order_id, $offer_data ) ), strtotime( '+1 year' ), '/' );
@@ -116,6 +121,11 @@ class Cartflows_Tracking {
 	public static function get_ga_purchase_transactions_data( $order_id, $offer_data ) {
 
 		$response = array();
+
+		// Stop Execution if WooCommerce is not installed & don't set the cookie.
+		if ( ! Cartflows_Loader::get_instance()->is_woo_active ) {
+			return;
+		}
 
 		$order             = wc_get_order( $order_id );
 		$cart_total        = WC()->cart->get_cart_contents_total();

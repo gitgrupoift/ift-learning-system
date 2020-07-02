@@ -6,7 +6,7 @@ Plugin URI: https://invoicewoo.com
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.5
-Stable tag: 2.7.0
+Stable tag: 2.7.1.1
 
 WooCommerce legal invoicing made easy with InvoiceXpress integration.
 
@@ -80,6 +80,12 @@ No. This is just an integration between WooCommerce and the InvoiceXpress API. Y
 Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/woo-billing-with-invoicexpress) and help us out.
 
 == Changelog ==
+
+= 2.7.1.1 =
+* Better PDF naming - Fix file extension
+
+= 2.7.1 =
+* Better PDF naming
 
 = 2.7.0 =
 * Several changes on the "Invoices and Credit notes" settings to better clarify that Invoice-receipts are recommended in most scenarios

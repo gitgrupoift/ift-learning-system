@@ -3,7 +3,7 @@
  * Plugin Name: Invoicing with InvoiceXpress for WooCommerce - Free
  * Plugin URI: https://invoicewoo.com
  * Description: WooCommerce legal invoicing made easy with InvoiceXpress integration.
- * Version: 2.7.0
+ * Version: 2.7.1.1
  * Author: Webdados
  * Author URI: https://www.webdados.pt
  * Text Domain: woo-billing-with-invoicexpress
@@ -48,7 +48,7 @@ if ( ! defined( 'INVOICEXPRESS_WOOCOMMERCE_BASENAME' ) ) {
 }
 
 if ( ! defined( 'INVOICEXPRESS_WOOCOMMERCE_VERSION' ) ) {
-	define( 'INVOICEXPRESS_WOOCOMMERCE_VERSION', '2.7.0' );
+	define( 'INVOICEXPRESS_WOOCOMMERCE_VERSION', '2.7.1.1' );
 }
 
 /**

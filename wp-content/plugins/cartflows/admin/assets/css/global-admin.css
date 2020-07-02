@@ -684,6 +684,11 @@ input[type="text"].error:focus{
     display: block;
 }
 
+.wc-wp-version-gte-53 .wcf-checkout-table .select2-container--default .select2-selection--single .select2-selection__arrow{
+    width:20px;
+    height: 100%;
+}
+
 .wcf-table-container .wcf-column-right .wcf-field-row input[type="text"],
 .wcf-table-container .wcf-column-right .wcf-field-row input[type="number"],
 .wcf-table-container .wcf-column-right .wcf-field-row select,

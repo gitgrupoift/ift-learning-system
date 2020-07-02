@@ -535,10 +535,10 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			if ( is_object( $order_id ) ) {
 				$order_id = $order_id->get_id();
 			}
-			$order = new WC_Order_MB_Ifthen( $order_id );
-			if ( $this->id === $order->mb_get_payment_method() ) {
-				if ( $order->mb_has_status( 'on-hold' ) || $order->mb_has_status( 'pending' ) ) {
-					if ( $order->mb_get_meta( '_'.WC_IfthenPay_Webdados()->payshop_id.'_exp' ) != '' && date_i18n( 'Y-m-d' ) > $order->mb_get_meta( '_'.WC_IfthenPay_Webdados()->payshop_id.'_exp' ) ) {
+			$order = wc_get_order( $order_id );
+			if ( $this->id === $order->get_payment_method() ) {
+				if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
+					if ( $order->get_meta( '_'.WC_IfthenPay_Webdados()->payshop_id.'_exp' ) != '' && date_i18n( 'Y-m-d' ) > $order->get_meta( '_'.WC_IfthenPay_Webdados()->payshop_id.'_exp' ) ) {
 						//Expired
 						$expired = true;
 						echo $this->thankyou_instructions_table_html_expired( $order_id, round( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ), 2 ) );
@@ -549,7 +549,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 					}
 				} else {
 					//Processing
-					if ( $order->mb_has_status( 'processing' ) && !is_wc_endpoint_url( 'view-order') ) {
+					if ( $order->has_status( 'processing' ) && !is_wc_endpoint_url( 'view-order') ) {
 						echo $this->email_instructions_payment_received( $order_id );
 					}
 				}
@@ -648,7 +648,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 		}
 		function thankyou_instructions_table_html_expired( $order_id, $order_total ) {
 			$alt = ( WC_IfthenPay_Webdados()->wpml_active ? icl_t( $this->id, $this->id.'_title', $this->title ) : $this->title );
-			$order = new WC_Order_MB_Ifthen( $order_id );
+			$order = wc_get_order( $order_id );
 			ob_start();
 			echo $this->thankyou_instructions_table_html_css();
 			?>
@@ -700,10 +700,8 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			//$this->debug_log( 'Email instructions send: '.( $send ? 'true' : 'false' ) );
 			//Send
 			if ( $send ) {
-				$order_id = $order->get_id();
-				$order = new WC_Order_MB_Ifthen( $order_id );
 				//Go
-				if ( $this->id === $order->mb_get_payment_method() ) {
+				if ( $this->id === $order->get_payment_method() ) {
 					$show = false;
 					if ( !$sent_to_admin ) {
 						$show = true;
@@ -717,26 +715,26 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 						if ( WC_IfthenPay_Webdados()->wpml_active ) {
 							global $sitepress;
 							if ( $sitepress ) {
-								$lang = $order->mb_get_meta( 'wpml_language' );
+								$lang = $order->get_meta( 'wpml_language' );
 								if( !empty( $lang ) ){
 									WC_IfthenPay_Webdados()->change_email_language( $lang );
 								}
 							}
 						}
 						//On Hold or pending
-						if ( $order->mb_has_status( 'on-hold' ) || $order->mb_has_status( 'pending' ) ) {
-							if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->mb_get_status() == 'partially-paid' ) {
+						if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
+							if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->get_status() == 'partially-paid' ) {
 								//WooCommerce deposits - No instructions
 							} else {
-								if ( apply_filters( 'payshop_ifthen_email_instructions_pending_send', true, $order_id ) ) {
-									echo $this->email_instructions_table_html( $order_id, round( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ), 2 ) );
+								if ( apply_filters( 'payshop_ifthen_email_instructions_pending_send', true, $order->get_id() ) ) {
+									echo $this->email_instructions_table_html( $order->get_id(), round( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ), 2 ) );
 								}
 							}
 						} else {
 							//Processing
-							if ( $order->mb_has_status( 'processing' ) ) {
-								if ( apply_filters( 'payshop_ifthen_email_instructions_payment_received_send', true, $order_id ) ) {
-									echo $this->email_instructions_payment_received( $order_id );
+							if ( $order->has_status( 'processing' ) ) {
+								if ( apply_filters( 'payshop_ifthen_email_instructions_payment_received_send', true, $order->get_id() ) ) {
+									echo $this->email_instructions_payment_received( $order->get_id() );
 								}
 							}
 						}
@@ -792,7 +790,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			ob_start();
 			?>
 			<p style="text-align: center; margin: auto; margin-top: 2em; margin-bottom: 2em;">
-				<img src="<?php echo esc_url( WC_IfthenPay_Webdados()->payshop_banner_email ); ?>" alt="<?php echo esc_attr( $alt ); ?>" title="<?php echo esc_attr( $alt ); ?>" style="margin-top: 10px; max-height: 48px;"/>
+				<img src="<?php echo esc_url( WC_IfthenPay_Webdados()->payshop_banner_email ); ?>" alt="<?php echo esc_attr( $alt ); ?>" title="<?php echo esc_attr( $alt ); ?>" style="margin: auto; margin-top: 10px; max-height: 48px;"/>
 				<br/>
 				<strong><?php _e( 'Payshop payment received.', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></strong>
 				<br/>
@@ -816,7 +814,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 				$date_exp->add( $add );
 			}
 
-			$order = new WC_Order_MB_Ifthen( $order_id );
+			$order = wc_get_order( $order_id );
 			$payshopkey = apply_filters( 'multibanco_ifthen_base_payshopkey', $this->payshopkey, $order );
 			$args = array(
 				'method'   => 'POST',
@@ -835,7 +833,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 
 			$response = wp_remote_post( $this->webservice_url, $args );
 			if ( is_wp_error( $response ) ) {
-				$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->mb_get_id().' - '.$response->get_error_message();
+				$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->get_id().' - '.$response->get_error_message();
 				$debug_msg_email = $debug_msg.' - Args: '.serialize( $args ).' - Response: '.serialize( $response );
 				$this->debug_log( $debug_msg, 'error', true, $debug_msg_email );
 				return false;
@@ -855,23 +853,23 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 								$details['exp'] = $date_exp->format( 'Y-m-d' );
 							}
 							WC_IfthenPay_Webdados()->multibanco_set_order_payshop_details( $order_id, $details );
-							$this->debug_log( '- Payshop payment request created on IfthenPay servers - Order '.$order->mb_get_id() );
+							$this->debug_log( '- Payshop payment request created on IfthenPay servers - Order '.$order->get_id() );
 							do_action( 'payshop_ifthen_created_reference', trim( $response_data->Reference ), $order_id );
 							return true;
 						} else {
-							$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->mb_get_id().' - Missing "Reference" or "RequestId"';
+							$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->get_id().' - Missing "Reference" or "RequestId"';
 							$debug_msg_email = $debug_msg.' - Args: '.serialize( $args ).' - Response: '.serialize( $response );
 							$this->debug_log( $debug_msg, 'error', true, $debug_msg_email );
 							return false;
 						}
 					} else {
-						$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->mb_get_id().' - "json_decode" failed';
+						$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->get_id().' - "json_decode" failed';
 						$this->debug_log( $debug_msg, 'error', true, $debug_msg );
 						return false;
 					}
 
 				} else {
-					$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->mb_get_id().' - Incorrect response code: '.$response['response']['code'];
+					$debug_msg = '- Error contacting the IfthenPay servers - Order '.$order->get_id().' - Incorrect response code: '.$response['response']['code'];
 					$debug_msg_email = $debug_msg.' - Args: '.serialize( $args ).' - Response: '.serialize( $response );
 					$this->debug_log( $debug_msg, 'error', true, $debug_msg_email );
 					return false;
@@ -902,17 +900,17 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 		 */
 		function process_payment( $order_id ) {
 			//Webservice
-			$order = new WC_Order_MB_Ifthen( $order_id );
+			$order = wc_get_order( $order_id );
 			if ( $this->webservice_set_pedido( $order_id ) ) {
 				//WooCommerce Deposits - When generating second payment reference the order goes from partially paid to on hold, and that has an email (??!)
-				if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->mb_get_status() == 'partially-paid' ) {
+				if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->get_status() == 'partially-paid' ) {
 					add_filter( 'woocommerce_email_enabled_customer_processing_order', '__return_false' );
 					add_filter( 'woocommerce_email_enabled_full_payment', '__return_false' );
 				}
 				// Mark as on-hold
 				if ( apply_filters( 'payshop_ifthen_set_on_hold', true, $order_id ) ) $order->update_status( 'on-hold', __( 'Awaiting Payshop payment.', 'multibanco-ifthen-software-gateway-for-woocommerce' ) );
 				// Reduce stock levels
-				if ( $this->stock_when == 'order' && version_compare( WC_VERSION, '3.4.0', '<' ) ) $order->mb_reduce_order_stock();
+				if ( $this->stock_when == 'order' && version_compare( WC_VERSION, '3.4.0', '<' ) ) wc_reduce_stock_levels( $order->get_id() );
 				// Remove cart
 				WC()->cart->empty_cart();
 				// Empty awaiting payment session
@@ -971,8 +969,8 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 		}
 		/* Reduce stock on 'wc_maybe_reduce_stock_levels'? */
 		function woocommerce_payment_complete_reduce_order_stock( $bool, $order_id ) {
-			$order = new WC_Order_MB_Ifthen( $order_id );
-			if ( $order->mb_get_payment_method() == $this->id ) {
+			$order = wc_get_order( $order_id );
+			if ( $order->get_payment_method() == $this->id ) {
 				return ( WC_IfthenPay_Webdados()->woocommerce_payment_complete_reduce_order_stock( $bool, $order_id, $this->id, $this->stock_when ) );
 			} else {
 				return $bool;
@@ -1050,7 +1048,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 							$orders_exist = true;
 							$orders_count = count($orders);
 							foreach ( $orders as $order ) {
-								$order = new WC_Order_MB_Ifthen( $order->get_id() );
+								$order = wc_get_order( $order->get_id() );
 							}
 						}
 
@@ -1060,10 +1058,10 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 									floatval( $val ) == floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) )
 									// TEMPORARY - https://github.com/woocommerce/woocommerce/issues/26582
 									||
-									version_compare( WC_VERSION, '4.2.0', '=' )
+									WC_IfthenPay_Webdados()->should_fix_woocommerce_420()
 								) {
-									if ( version_compare( WC_VERSION, '4.2.0', '=' ) && floatval( $val ) != floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ) ) {
-										$this->debug_log( '-- Payshop payment received but value does not match - Order '.$order->mb_get_id().' - Callbak value '.floatval( $val ).' - Order value '.floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ), 'warning' );
+									if ( WC_IfthenPay_Webdados()->should_fix_woocommerce_420() && ( floatval( $val ) != floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ) ) ) {
+										$this->debug_log( '-- Payshop payment received but value does not match - Order '.$order->get_id().' - Callbak value '.floatval( $val ).' - Order value '.floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ), 'warning' );
 									}
 									$note=__( 'Payshop payment received.', 'multibanco-ifthen-software-gateway-for-woocommerce' );
 									if ( isset( $_GET['datahorapag'] ) && trim( $_GET['datahorapag'] )!='' ) {
@@ -1071,10 +1069,10 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 									}
 									//WooCommerce Deposits second payment?
 									if ( WC_IfthenPay_Webdados()->wc_deposits_active ) {
-										if ( $order->mb_get_meta( '_wc_deposits_order_has_deposit' ) == 'yes' ) { //Has deposit
-											if ( $order->mb_get_meta( '_wc_deposits_deposit_paid' ) == 'yes' ) { //First payment - OK!
-												if ( $order->mb_get_meta( '_wc_deposits_second_payment_paid' ) != 'yes' ) { //Second payment - not ok
-													if ( floatval( $order->mb_get_meta( '_wc_deposits_second_payment' ) ) == floatval( $val ) ) { //This really seems like the second payment
+										if ( $order->get_meta( '_wc_deposits_order_has_deposit' ) == 'yes' ) { //Has deposit
+											if ( $order->get_meta( '_wc_deposits_deposit_paid' ) == 'yes' ) { //First payment - OK!
+												if ( $order->get_meta( '_wc_deposits_second_payment_paid' ) != 'yes' ) { //Second payment - not ok
+													if ( floatval( $order->get_meta( '_wc_deposits_second_payment' ) ) == floatval( $val ) ) { //This really seems like the second payment
 														//Set the current order status temporarly back to partially-paid, but first stop the emails
 														add_filter( 'woocommerce_email_enabled_customer_partially_paid', '__return_false' );
 														add_filter( 'woocommerce_email_enabled_partial_payment', '__return_false' );
@@ -1085,17 +1083,17 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 										}
 									}
 									$this->payment_complete( $order, '', $note );
-									do_action( 'payshop_ifthen_callback_payment_complete', $order->mb_get_id() );
+									do_action( 'payshop_ifthen_callback_payment_complete', $order->get_id() );
 									
 									header( 'HTTP/1.1 200 OK' );
-									$this->debug_log( '-- Payshop payment received - Order '.$order->mb_get_id(), 'notice', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - Payshop payment received' );
+									$this->debug_log( '-- Payshop payment received - Order '.$order->get_id(), 'notice', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - Payshop payment received' );
 									echo 'OK - Payshop payment received';
 								} else {	
 									header( 'HTTP/1.1 200 OK' );
 									$err = 'Error: The value does not match';
-									$this->debug_log( '-- '.$err.' - Order '.$order->mb_get_id(), 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - The value does not match' );
+									$this->debug_log( '-- '.$err.' - Order '.$order->get_id(), 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - The value does not match' );
 									echo $err;
-									do_action( 'payshop_ifthen_callback_payment_failed', $order->mb_get_id(), $err );
+									do_action( 'payshop_ifthen_callback_payment_failed', $order->get_id(), $err );
 								}
 							} else {
 								header( 'HTTP/1.1 200 OK' );

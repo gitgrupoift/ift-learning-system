@@ -38,6 +38,8 @@ class Cartflows_Meta_Fields {
 
 		add_action( 'wp_ajax_wcf_json_search_coupons', array( $this, 'json_search_coupons' ) );
 
+		add_action( 'wp_ajax_wcf_json_search_products_and_variations', array( $this, 'json_search_products' ) );
+
 		add_action( 'wp_ajax_wcf_json_search_pages', array( $this, 'json_search_pages' ) );
 
 		add_filter( 'cartflows_admin_js_localize', array( $this, 'localize_vars' ) );
@@ -95,6 +97,74 @@ class Cartflows_Meta_Fields {
 
 			do_action( 'cartflows_admin_meta_scripts' );
 		}
+	}
+
+		/**
+		 * Function to search products
+		 */
+	public function json_search_products() {
+
+		check_admin_referer( 'wcf-json-search-products-and-variations', 'security' );
+
+		global $wpdb;
+
+		$allowed_products_type = array( 'simple', 'variation', 'variable', 'subscription', 'variable-subscription', 'grouped' );
+
+		// get search term.
+		$term = (string) urldecode( sanitize_text_field( wp_unslash( $_GET['term'] ) ) ); // phpcs:ignore
+
+		if ( empty( $term ) ) {
+			die();
+		}
+
+		// get excluded product types.
+		if ( isset( $_GET['excluded'] ) || ! empty( $_GET['excluded'] ) ) {
+
+			$excluded_types = sanitize_text_field( ( wp_unslash( $_GET['excluded'] ) ) );
+
+			if ( ! is_array( $excluded_types ) ) {
+				$excluded_types = explode( ',', $excluded_types );
+			}
+
+			// Sanitize the excluded types against valid product types.
+			foreach ( $excluded_types as $index => $value ) {
+				$excluded_types[ $index ] = strtolower( trim( $value ) );
+			}
+
+			$allowed_products_type = array_diff( $allowed_products_type, $excluded_types );
+		}
+
+		$posts = wp_cache_get( 'wcf_search_products', 'wcf_funnel_Cart' );
+
+		if ( false === $posts ) {
+			$posts = $wpdb->get_results( // phpcs:ignore
+				$wpdb->prepare(
+					"SELECT *
+								FROM {$wpdb->prefix}posts
+								WHERE post_type = %s
+								AND post_title LIKE %s
+								AND post_status = %s",
+					'product',
+					$wpdb->esc_like( $term ) . '%',
+					'publish'
+				)
+			);
+			wp_cache_set( 'wcf_search_products', $posts, 'wcf_funnel_Cart' );
+		}
+
+		$product_found = array();
+
+		if ( $posts ) {
+			foreach ( $posts as $post ) {
+				$product = wc_get_product( $post->ID );
+				$type    = $product->get_type();
+				if ( in_array( $type, $allowed_products_type, true ) ) {
+					$product_found[ $post->ID ] = get_the_title( $post->ID ) . ' (#' . $post->ID . ')';
+				}
+			}
+		}
+
+		wp_send_json( $product_found );
 	}
 
 	/**
@@ -622,7 +692,12 @@ class Cartflows_Meta_Fields {
 	 */
 	public function get_product_selection_field( $field_data ) {
 
-		$value = $field_data['value'];
+		$value    = $field_data['value'];
+		$excluded = '';
+
+		if ( isset( $field_data['excluded_product_types'] ) && is_array( $field_data['excluded_product_types'] ) ) {
+			$excluded = html_entity_decode( implode( ',', $field_data['excluded_product_types'] ), ENT_COMPAT, 'UTF-8' );
+		}
 
 		$multiple = '';
 
@@ -640,7 +715,8 @@ class Cartflows_Meta_Fields {
 					name="' . $field_data['name'] . '[]"
 					class="wcf-product-search" ' . $multiple . $allow_clear . '
 					data-placeholder="' . __( 'Search for a product&hellip;', 'cartflows' ) . '"
-					data-action="woocommerce_json_search_products_and_variations">';
+					data-action="woocommerce_json_search_products_and_variations"
+					data-excluded_product_types =" ' . $excluded . '">';
 
 		if ( is_array( $value ) && ! empty( $value ) ) {
 
@@ -876,6 +952,7 @@ class Cartflows_Meta_Fields {
 		$ajax_actions = array(
 			'wcf_json_search_pages',
 			'wcf_json_search_coupons',
+			'wcf_json_search_products_and_variations',
 		);
 
 		foreach ( $ajax_actions as $action ) {

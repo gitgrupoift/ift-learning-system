@@ -3,7 +3,7 @@
  * Plugin Name: LearnDash LMS - WooCommerce Integration
  * Plugin URI: http://www.learndash.com/work/woocommerce/
  * Description: LearnDash LMS addon plugin to integrate LearnDash LMS with WooCommerce.
- * Version: 1.7.0
+ * Version: 1.8.0
  * Author: LearnDash
  * Author URI: http://www.learndash.com
  * Domain Path: /languages/
@@ -65,7 +65,7 @@ class Learndash_WooCommerce {
 
 	public static function setup_constants() {
 		if ( ! defined( 'LEARNDASH_WOOCOMMERCE_VERSION' ) ) {
-			define( 'LEARNDASH_WOOCOMMERCE_VERSION', '1.7.0' );
+			define( 'LEARNDASH_WOOCOMMERCE_VERSION', '1.8.0' );
 		}
 
 		// Plugin file
@@ -172,6 +172,7 @@ class Learndash_WooCommerce {
 		<?php
 
 		$courses_options = self::list_courses();
+		$groups_options  = wp_list_pluck( learndash_get_groups(), 'post_title', 'ID' );
 
 		/**
 		 * Filter for course selector class names
@@ -186,9 +187,14 @@ class Learndash_WooCommerce {
 
 		wp_nonce_field( 'save_post', 'ld_wc_nonce' );
 
-		$values = get_post_meta( $post->ID, '_related_course', true );
+		$values = (array) get_post_meta( $post->ID, '_related_course', true );
 		if ( ! $values ) {
 			$values = array();
+		}
+
+		$groups_values = (array) get_post_meta( $post->ID, '_related_group', true );
+		if ( ! $groups_values ) {
+			$groups_values = array();
 		}
 
 		self::woocommerce_wp_select_multiple( array(
@@ -199,6 +205,16 @@ class Learndash_WooCommerce {
 			'desc_tip'    => true,
 			'description' => __( 'You can select multiple courses to sell together holding the SHIFT key when clicking.', 'learndash-woocommerce' ),
 			'value' => $values,
+		) );
+
+		self::woocommerce_wp_select_multiple( array(
+			'id'          => '_related_group[]',
+			'class'		  => 'select2 regular-width select short ld_related_groups',
+			'label'       => __( 'LearnDash Groups', 'learndash-woocommerce' ),
+			'options'     => $groups_options,
+			'desc_tip'    => true,
+			'description' => __( 'You can select multiple groups to sell together holding the SHIFT key when clicking.', 'learndash-woocommerce' ),
+			'value' => $groups_values,
 		) );
 
 		echo '</div>';
@@ -223,19 +239,32 @@ class Learndash_WooCommerce {
 		} else {
 			update_post_meta( $id, '_related_course', array() );
 		}
+
+		if ( isset( $_POST['_related_group'] ) && ! empty( $_POST['_related_group'] ) ) {
+			$related_groups = array_map( 'intval', $_POST['_related_group'] );
+			update_post_meta( $id, '_related_group', $related_groups );
+		} else {
+			update_post_meta( $id, '_related_group', array() );
+		}
 	}
 
 	public static function render_variation_course_selector( $loop, $data, $variation )
 	{
 		$courses_options = self::list_courses();
+		$groups_options  = wp_list_pluck( learndash_get_groups(), 'post_title', 'ID' );
 		
 		echo '<div class="form-field form-row form-row-full">';
 
 		wp_nonce_field( 'save_post', 'ld_wc_nonce' );
 
-		$values = get_post_meta( $variation->ID, '_related_course', true );
+		$values = (array) get_post_meta( $variation->ID, '_related_course', true );
 		if ( ! $values ) {
 			$values = array();
+		}
+
+		$groups_values = (array) get_post_meta( $variation->ID, '_related_group', true );
+		if ( ! $groups_values ) {
+			$groups_values = array();
 		}
 
 		self::woocommerce_wp_select_multiple( array(
@@ -246,6 +275,16 @@ class Learndash_WooCommerce {
 			'desc_tip'    => true,
 			'description' => __( 'You can select multiple courses to sell together holding the SHIFT key when clicking.', 'learndash-woocommerce' ),
 			'value' => $values,
+		) );
+
+		self::woocommerce_wp_select_multiple( array(
+			'id'          => '_related_group['. $loop . '][]',
+			'class'		  => 'select2 full-width select short ld_related_groups_variation',
+			'label'       => __( 'LearnDash Groups', 'learndash-woocommerce' ),
+			'options'     => $groups_options,
+			'desc_tip'    => true,
+			'description' => __( 'You can select multiple groups to sell together holding the SHIFT key when clicking.', 'learndash-woocommerce' ),
+			'value' => $groups_values,
 		) );
 
 		echo '</div>';
@@ -279,6 +318,21 @@ class Learndash_WooCommerce {
 		} else {
 			update_post_meta( $variation_id, '_related_course', array() );
 		}
+
+		if ( isset( $_POST['_related_group'] ) && ! empty( $_POST['_related_group'] ) ) {
+			$related_groups = array();
+			foreach ( $_POST['_related_group'] as $key => $value ) {
+				if ( isset( $value ) && ! empty( $value ) ) {
+					$related_groups[ $key ] = array_map( 'intval', $value );
+				} else {
+					$related_groups[ $key ] = array();
+				}
+
+				update_post_meta( $variation_id, '_related_group', $related_groups[ $loop ] );
+			}
+		} else {
+			update_post_meta( $variation_id, '_related_group', array() );
+		}
 	}
 
 	/**
@@ -293,14 +347,22 @@ class Learndash_WooCommerce {
 			$products = $order->get_items();
 			foreach ( $products as $product ) {
 				if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-					$courses_id = get_post_meta( $product['variation_id'], '_related_course', true );	
+					$courses_id = (array) get_post_meta( $product['variation_id'], '_related_course', true );
+					$groups_id  = (array) get_post_meta( $product['variation_id'], '_related_group', true );
 				} else {
-					$courses_id = get_post_meta( $product['product_id'], '_related_course', true );
+					$courses_id = (array) get_post_meta( $product['product_id'], '_related_course', true );
+					$groups_id = (array) get_post_meta( $product['product_id'], '_related_group', true );
 				}
 
 				if ( $courses_id && is_array( $courses_id ) ) {
 					foreach ( $courses_id as $cid ) {
 						self::update_remove_course_access( $cid, $order->get_user_id(), $order_id );
+					}
+				}
+
+				if ( $groups_id && is_array( $groups_id ) ) {
+					foreach ( $groups_id as $group_id ) {
+						self::update_remove_group_access( $group_id, $order->get_user_id(), $order_id );
 					}
 				}
 			}
@@ -313,24 +375,30 @@ class Learndash_WooCommerce {
 			$products = $order->get_items();
 
 			$courses_count = 0;
-			array_walk( $products, function( $product ) use ( &$courses_count ) {
+			$groups_count  = 0;
+			array_walk( $products, function( $product ) use ( &$courses_count, &$groups_count ) {
 				if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-					$courses = get_post_meta( $product['variation_id'], '_related_course', true );	
+					$courses = (array) get_post_meta( $product['variation_id'], '_related_course', true );
+					$groups  = (array) get_post_meta( $product['variation_id'], '_related_group', true );
 				} else {
-					$courses = get_post_meta( $product['product_id'], '_related_course', true );
+					$courses = (array) get_post_meta( $product['product_id'], '_related_course', true );
+					$groups  = (array) get_post_meta( $product['product_id'], '_related_group', true );
 				}
 
 				$courses_count += count( $courses );
+				$groups_count  += count( $groups );
 			} );
 
-			if ( $courses_count >= self::get_products_count_for_silent_course_enrollment() && current_filter() !== 'learndash_woocommerce_cron' ) {
+			if ( ( $courses_count + $groups_count ) >= self::get_products_count_for_silent_course_enrollment() && current_filter() !== 'learndash_woocommerce_cron' ) {
 				self::enqueue_silent_course_enrollment( array( 'order_id' => $order_id ) );
 			} else {
 				foreach ( $products as $product ) {
 					if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-						$courses_id = get_post_meta( $product['variation_id'], '_related_course', true );	
+						$courses_id = (array) get_post_meta( $product['variation_id'], '_related_course', true );
+						$groups_id  = (array) get_post_meta( $product['variation_id'], '_related_group', true );
 					} else {
-						$courses_id = get_post_meta( $product['product_id'], '_related_course', true );
+						$courses_id = (array) get_post_meta( $product['product_id'], '_related_course', true );
+						$groups_id  = (array) get_post_meta( $product['product_id'], '_related_group', true );
 					}
 
 					if ( $courses_id && is_array( $courses_id ) ) {
@@ -351,6 +419,12 @@ class Learndash_WooCommerce {
 							// 		}
 							// 	}
 							// }
+						}
+					}
+
+					if ( $groups_id && is_array( $groups_id ) ) {
+						foreach ( $groups_id as $group_id ) {
+							self::update_add_group_access( $group_id, $order->get_user_id(), $order_id );
 						}
 					}
 				}
@@ -408,17 +482,29 @@ class Learndash_WooCommerce {
 
 		foreach ( $products as $product ) {
 			if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-				$courses_id = get_post_meta( $product['variation_id'], '_related_course', true );	
+				$courses_id = (array) get_post_meta( $product['variation_id'], '_related_course', true );
+				$groups_id  = (array) get_post_meta( $product['variation_id'], '_related_group', true );
 			} else {
-				$courses_id = get_post_meta( $product['product_id'], '_related_course', true );
+				$courses_id = (array) get_post_meta( $product['product_id'], '_related_course', true );
+				$groups_id  = (array) get_post_meta( $product['product_id'], '_related_group', true );
 			}
 
 			if ( $courses_id && is_array( $courses_id ) ) {
 				foreach ( $courses_id as $course_id ) {
 				self::update_remove_course_access( $course_id, $subscription->get_user_id(), $subscription->get_id() );
 
-				foreach ( $subscription->get_related_orders() as $o_id ) {
-						self::update_remove_course_access( $course_id, $subscription->get_user_id(), $o_id );
+				foreach ( $subscription->get_related_orders() as $order_id ) {
+						self::update_remove_course_access( $course_id, $subscription->get_user_id(), $order_id );
+					}
+				}
+			}
+
+			if ( $groups_id && is_array( $groups_id ) ) {
+				foreach ( $groups_id as $group_id ) {
+				self::update_remove_group_access( $group_id, $subscription->get_user_id(), $subscription->get_id() );
+
+				foreach ( $subscription->get_related_orders() as $order_id ) {
+						self::update_remove_group_access( $group_id, $subscription->get_user_id(), $order_id );
 					}
 				}
 			}
@@ -432,6 +518,10 @@ class Learndash_WooCommerce {
 	 */
 	public static function add_subscription_course_access( $subscription )
 	{
+		if ( false === $subscription || ! is_a( $subscription, 'WC_Subscription' ) ) {
+			return;
+		}
+
 		if ( ! apply_filters( 'ld_woocommerce_add_subscription_course_access', true, $subscription, current_filter() ) ) {
 			return;
 		}
@@ -441,24 +531,30 @@ class Learndash_WooCommerce {
 		$customer_id = $subscription->get_user_id();
 
 		$courses_count = 0;
-		array_walk( $products, function( $product ) use ( &$courses_count ) {
+		$groups_count  = 0;
+		array_walk( $products, function( $product ) use ( &$courses_count, &$groups_count ) {
 			if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-				$courses = get_post_meta( $product['variation_id'], '_related_course', true );	
+				$courses = (array) get_post_meta( $product['variation_id'], '_related_course', true );	
+				$groups  = (array) get_post_meta( $product['variation_id'], '_related_group', true );	
 			} else {
-				$courses = get_post_meta( $product['product_id'], '_related_course', true );
+				$courses = (array) get_post_meta( $product['product_id'], '_related_course', true );
+				$groups = (array) get_post_meta( $product['product_id'], '_related_group', true );
 			}
 
 			$courses_count += count( $courses );
+			$groups_count  += count( $groups );
 		} );
 
-		if ( $courses_count >= self::get_products_count_for_silent_course_enrollment() && current_filter() !== 'learndash_woocommerce_cron' ) {
+		if ( ( $courses_count + $groups_count ) >= self::get_products_count_for_silent_course_enrollment() && current_filter() !== 'learndash_woocommerce_cron' ) {
 			self::enqueue_silent_course_enrollment( array( 'subscription_id' => $subscription->get_id() ) );
 		} else {
 			foreach ( $products as $product ) {
 				if ( isset( $product['variation_id'] ) && ! empty( $product['variation_id'] ) ) {
-					$courses_id = get_post_meta( $product['variation_id'], '_related_course', true );	
+					$courses_id = (array) get_post_meta( $product['variation_id'], '_related_course', true );
+					$groups_id  = (array) get_post_meta( $product['variation_id'], '_related_group', true );
 				} else {
-					$courses_id = get_post_meta( $product['product_id'], '_related_course', true );
+					$courses_id = (array) get_post_meta( $product['product_id'], '_related_course', true );
+					$groups_id  = (array) get_post_meta( $product['product_id'], '_related_group', true );
 				}
 
 				// Update access to the courses
@@ -471,7 +567,15 @@ class Learndash_WooCommerce {
 
 						self::update_add_course_access( $course_id, $customer_id, $subscription->get_id() );
 						// Replace start date to keep the drip feeding working
-						update_user_meta( $customer_id, 'course_' . $course_id . '_access_from', strtotime( $start_date ) );
+						if ( apply_filters( 'learndash_woocommerce_reset_subscription_course_access_from', true, $course_id, $subscription ) ) {
+							update_user_meta( $customer_id, 'course_' . $course_id . '_access_from', strtotime( $start_date ) );
+						}
+					}
+				}
+
+				if ( $groups_id && is_array( $groups_id ) ) {
+					foreach ( $groups_id as $group_id ) {
+						self::update_add_group_access( $group_id, $customer_id, $subscription->get_id() );
 					}
 				}
 			}
@@ -526,7 +630,9 @@ class Learndash_WooCommerce {
 	public static function process_silent_course_enrollment() {
 		$queue = get_option( 'learndash_woocommerce_silent_course_enrollment_queue', array() );
 
-		$processed_queue = array_slice( $queue, 0, 1, true );
+		$queue_count = apply_filters( 'learndash_woocommerce_process_silent_course_enrollment_queue_count', 1 );
+
+		$processed_queue = array_slice( $queue, 0, $queue_count, true );
 
 		foreach ( $processed_queue as $id => $args ) {
 			if ( ! empty( $args['order_id'] ) ) {
@@ -536,9 +642,9 @@ class Learndash_WooCommerce {
 			}
 
 			unset( $queue[ $id ] );
-
-			update_option( 'learndash_woocommerce_silent_course_enrollment_queue', $queue );
 		}
+
+		update_option( 'learndash_woocommerce_silent_course_enrollment_queue', $queue );
 	}
 
 	/**
@@ -551,7 +657,7 @@ class Learndash_WooCommerce {
 		$cart_items = WC()->cart->cart_contents;
 		if ( is_array( $cart_items ) ) {
 			foreach ( $cart_items as $key => $item ) {
-				$courses = get_post_meta( $item['data']->get_id(), '_related_course', true );
+				$courses = (array) get_post_meta( $item['data']->get_id(), '_related_course', true );
 				$courses = maybe_unserialize( $courses );
 				
 				if ( isset( $courses ) && is_array( $courses ) ) {
@@ -607,12 +713,12 @@ class Learndash_WooCommerce {
 			// If variation product
 			if ( $item->get_variation_id() > 0 ) {
 				$item_id = $item->get_variation_id();
-				$courses = get_post_meta( $item->get_variation_id(), '_related_course', true );
+				$courses = (array) get_post_meta( $item->get_variation_id(), '_related_course', true );
 			} 
 			// Else if normal product
 			elseif ( $item->get_product_id() > 0 ) {
 				$item_id = $item->get_product_id();
-				$courses = get_post_meta( $item->get_product_id(), '_related_course', true );
+				$courses = (array) get_post_meta( $item->get_product_id(), '_related_course', true );
 			}
 
 			if ( ( is_array( $courses ) && ! empty( $courses ) && ! in_array( 0, $courses ) ) ||
@@ -665,7 +771,7 @@ class Learndash_WooCommerce {
 	}
 
 	/**
-	 * Add course access
+	 * Remove course access
 	 * 
 	 * @param int $course_id ID of a course
 	 * @param int $user_id   ID of a user
@@ -677,6 +783,40 @@ class Learndash_WooCommerce {
 
 		if ( ! isset( $courses[ $course_id ] ) || empty( $courses[ $course_id ] ) ) {
 			ld_update_course_access( $user_id, $course_id, $remove = true );
+		}
+	}
+
+	/**
+	 * Add group access
+	 * 
+	 * @param  int    $group_id LearnDash group ID
+	 * @param  int    $user_id  WP_User ID
+	 * @param  int    $order_id WC order ID
+	 * @return void
+	 */
+	private static function update_add_group_access( $group_id, $user_id, $order_id )
+	{
+		self::increment_course_access_counter( $group_id, $user_id, $order_id );
+
+		if ( ! learndash_is_user_in_group( $user_id, $group_id ) ) {
+			ld_update_group_access( $user_id, $group_id );
+		}
+	}
+
+	/**
+	 * Remove group acess
+	 *
+	 * @param  int    $group_id LearnDash group ID
+	 * @param  int    $user_id  WP_User ID
+	 * @param  int    $order_id WC order ID
+	 * @return void
+	 */
+	private static function update_remove_group_access( $group_id, $user_id, $order_id )
+	{
+		$access = self::decrement_course_access_counter( $group_id, $user_id, $order_id );
+
+		if ( ! isset( $access[ $group_id ] ) || empty( $access[ $group_id ] ) ) {
+			ld_update_group_access( $user_id, $group_id, $remove = true );
 		}
 	}
 

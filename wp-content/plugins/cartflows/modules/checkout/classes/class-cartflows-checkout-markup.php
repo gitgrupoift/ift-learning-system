@@ -76,6 +76,8 @@ class Cartflows_Checkout_Markup {
 
 		add_filter( 'woocommerce_paypal_args', array( $this, 'modify_paypal_args' ), 10, 2 );
 
+		add_filter( 'woocommerce_paypal_express_checkout_payment_button_data', array( $this, 'change_return_cancel_url' ), 10, 2 );
+
 		add_filter( 'woocommerce_cart_item_name', array( $this, 'wcf_add_remove_label' ), 10, 3 );
 
 		add_action( 'woocommerce_before_calculate_totals', array( $this, 'custom_price_to_cart_item' ), 9999 );
@@ -100,6 +102,32 @@ class Cartflows_Checkout_Markup {
 		$args['cancel_return'] = esc_url_raw( $order->get_cancel_order_url_raw( get_permalink( $checkout_id ) ) );
 
 		return $args;
+	}
+
+	/**
+	 * Change PayPal Express cancel URL.
+	 *
+	 * @param array  $data button data.
+	 * @param string $page current page.
+	 * @return array $data modified button data with new cancel url.
+	 */
+	public function change_return_cancel_url( $data, $page ) {
+
+		global $post;
+
+		if ( _is_wcf_checkout_type() ) {
+
+			$checkout_id = $post->ID;
+
+			if ( $checkout_id ) {
+
+				// Change the default Cart URL with the CartFlows Checkout page.
+				$data['cancel_url'] = esc_url_raw( get_permalink( $checkout_id ) );
+			}
+		}
+
+		// Returing the modified data.
+		return $data;
 	}
 
 	/**

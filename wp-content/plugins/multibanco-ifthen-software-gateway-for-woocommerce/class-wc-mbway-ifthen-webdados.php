@@ -518,7 +518,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			}
 			$order = new WC_Order_MB_Ifthen( $order_id );
 			if ( $this->id === $order->mb_get_payment_method() ) {
-				if ( $order->mb_has_status( 'on-hold' ) || $order->mb_has_status( 'pending' ) ) {
+				if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
 					if ( date_i18n( 'Y-m-d H:i:s', strtotime( '-'.intval( WC_IfthenPay_Webdados()->mbway_minutes * WC_IfthenPay_Webdados()->mbway_multiplier_new_payment * 60 ).' SECONDS', current_time( 'timestamp' ) ) ) > $order->mb_get_meta( '_'.WC_IfthenPay_Webdados()->mbway_id.'_time' ) ) {
 						//Expired
 						$expired = true;
@@ -552,7 +552,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 					}
 				} else {
 					//Processing
-					if ( $order->mb_has_status( 'processing' ) && !is_wc_endpoint_url( 'view-order') ) {
+					if ( $order->has_status( 'processing' ) && !is_wc_endpoint_url( 'view-order') ) {
 						echo $this->email_instructions_payment_received( $order_id );
 					}
 				}
@@ -742,7 +742,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 							}
 						}
 						//On Hold or pending
-						if ( $order->mb_has_status( 'on-hold' ) || $order->mb_has_status( 'pending' ) ) {
+						if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
 							if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->mb_get_status() == 'partially-paid' ) {
 								//WooCommerce deposits - No instructions
 							} else {
@@ -752,7 +752,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 							}
 						} else {
 							//Processing
-							if ( $order->mb_has_status( 'processing' ) ) {
+							if ( $order->has_status( 'processing' ) ) {
 								if ( apply_filters( 'mbway_ifthen_email_instructions_payment_received_send', true, $order_id ) ) {
 									echo $this->email_instructions_payment_received( $order_id );
 								}
@@ -813,7 +813,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			ob_start();
 			?>
 			<p style="text-align: center; margin: auto; margin-top: 2em; margin-bottom: 2em;">
-				<img src="<?php echo esc_url( WC_IfthenPay_Webdados()->mbway_banner_email ); ?>" alt="<?php echo esc_attr( $alt ); ?>" title="<?php echo esc_attr( $alt ); ?>" style="margin-top: 10px; max-height: 48px;"/>
+				<img src="<?php echo esc_url( WC_IfthenPay_Webdados()->mbway_banner_email ); ?>" alt="<?php echo esc_attr( $alt ); ?>" title="<?php echo esc_attr( $alt ); ?>" style="margin: auto; margin-top: 10px; max-height: 48px;"/>
 				<br/>
 				<strong><?php _e( 'MB WAY payment received.', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></strong>
 				<br/>
@@ -931,6 +931,8 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 					$order->update_status( 'on-hold', __( 'Awaiting MB WAY payment.', 'multibanco-ifthen-software-gateway-for-woocommerce' ) );
 					// Reduce stock levels
 					if ( $this->stock_when == 'order' && version_compare( WC_VERSION, '3.4.0', '<' ) ) $order->mb_reduce_order_stock();
+				} else {
+					$order->update_status( 'pending', __( 'Awaiting MB WAY payment.', 'multibanco-ifthen-software-gateway-for-woocommerce' ) );
 				}
 				// Remove cart
 				WC()->cart->empty_cart();
@@ -1163,9 +1165,9 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 									floatval( $val ) == floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) )
 									// TEMPORARY - https://github.com/woocommerce/woocommerce/issues/26582
 									||
-									version_compare( WC_VERSION, '4.2.0', '=' )
+									WC_IfthenPay_Webdados()->should_fix_woocommerce_420()
 								) {
-									if ( version_compare( WC_VERSION, '4.2.0', '=' ) && floatval( $val ) != floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ) ) {
+									if ( WC_IfthenPay_Webdados()->should_fix_woocommerce_420() && ( floatval( $val ) != floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ) ) ) {
 										$this->debug_log( '-- MB WAY payment received but value does not match - Order '.$order->mb_get_id().' - Callbak value '.floatval( $val ).' - Order value '.floatval( WC_IfthenPay_Webdados()->get_order_total_to_pay( $order ) ), 'warning' );
 									}
 									$note = __( 'MB WAY payment received.', 'multibanco-ifthen-software-gateway-for-woocommerce' );

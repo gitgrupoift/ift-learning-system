@@ -154,13 +154,10 @@
 				url     : CartFlowsAPI._api_url + args.slug,
 				args    : args,
 				callback : callback,
-
+				headers : CartFlowsImportVars.headers,
 				author  : 'brainstormforce',
 			};
-
-			// Set headers.
-			data.headers = CartFlowsImportVars.headers;
-
+			
 			$.ajax( data )
 			.done(function( items, status, XHR ) {
 

@@ -1,7 +1,18 @@
+Version 1.5.12 - Wednesday, 1st July 2020
+- Fix: PHP error if WooCommerce was not installed and the Google Analytics Purchase event is enabled.
+- Fix: Flows & Steps ready-made templates were unable to import due to the X-CSRF-TOKEN JS error.
+
+Version 1.5.11 - Tuesday, 16th June 2020
+- New: Users can now share [non-personal usage data] to help us test and develop better products. ( https://store.brainstormforce.com/usage-tracking/?utm_source=wp_repo&utm_medium=changelog&utm_campaign=usage_tracking )
+- Fix: CartFlows setup wizard.
+- Fix: Showing notice 'Remove selected product from checkout' even there is no product selected in Global checkout.
+- Fix: Redirected to the cart when the order canceled by a user for PayPal checkout gateway.
+
 Version 1.5.10 - Wednesday, 3rd June 2020
 - New: Gutenberg templates added.
 - New: Import/Export content support added.
 - Fix: Step slug was not editable in some permalink cases.
+- Improvement: Trashed flows will not be consider for flow restriction.
 
 Version 1.5.9 - Thursday, 14th May 2020
 - New: Added quantity and discount options for the product.

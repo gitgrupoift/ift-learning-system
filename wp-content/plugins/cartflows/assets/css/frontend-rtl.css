@@ -185,7 +185,9 @@ body.cartflows-default {
 
 /* Order Details - ThankYou page */
 .woocommerce-order ul.order_details::before,
-.woocommerce-order ul.order_details::after {
+.woocommerce-order ul.order_details::after,
+.woocommerce-order-details.mollie-instructions::before,
+.woocommerce-order-details.mollie-instructions::after {
     content: ' ';
     display: table;
 }
@@ -225,13 +227,16 @@ body.cartflows-default {
 .woocommerce-order .woocommerce-customer-details,
 .woocommerce-order .woocommerce-order-details,
 .woocommerce-order .woocommerce-order-downloads,
-.woocommerce-order .woocommerce-bacs-bank-details {
+.woocommerce-order .woocommerce-bacs-bank-details,
+.woocommerce-order-details.mollie-instructions {
     margin: 0 0 2em;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    border: none;
     width: 100%;
     display: block;
 }
+
 .woocommerce-order .woocommerce-bacs-bank-details ul.bacs_details{
     padding: 0px;
 }
@@ -363,6 +368,12 @@ body.cartflows-default {
 .woocommerce-order .woocommerce-customer-details address p{
     margin: 0;
 }
+
+.woocommerce-order-details.mollie-instructions p{
+    margin: 0.5em 0em;
+}
+
+
 
 @media only screen and (max-width: 768px){
 

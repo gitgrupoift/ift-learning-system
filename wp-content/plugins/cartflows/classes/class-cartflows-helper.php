@@ -581,16 +581,22 @@ class Cartflows_Helper {
 
 		$step_type = get_post_meta( $step_id, 'wcf-step-type', true );
 
+		$has_product_assigned = false;
+
 		if ( 'checkout' == $step_type ) {
 			$product = get_post_meta( $step_id, 'wcf-checkout-products', true );
+
+			if ( ! empty( $product ) && isset( $product[0]['product'] ) ) {
+				$has_product_assigned = true;
+			}
 		} else {
 			$product = get_post_meta( $step_id, 'wcf-offer-product', true );
+			if ( ! empty( $product ) ) {
+				$has_product_assigned = true;
+			}
 		}
 
-		if ( ! empty( $product ) ) {
-			return true;
-		}
-		return false;
+		return $has_product_assigned;
 
 	}
 

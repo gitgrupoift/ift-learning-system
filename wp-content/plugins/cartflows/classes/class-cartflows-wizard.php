@@ -60,10 +60,6 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 		 */
 		public function disable_woo_setup_redirect() {
 
-			if ( empty( $_GET['page'] ) || 'cartflow-setup' !== $_GET['page'] ) { //phpcs:ignore
-				return;
-			}
-
 			delete_transient( '_wc_activation_redirect' );
 		}
 
@@ -75,11 +71,23 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 		 */
 		public function show_setup_wizard() {
 
+			$screen          = get_current_screen();
+			$screen_id       = $screen ? $screen->id : '';
+			$allowed_screens = array(
+				'cartflows_page_cartflows_settings',
+				'edit-cartflows_flow',
+				'dashboard',
+				'plugins',
+			);
+
+			if ( ! in_array( $screen_id, $allowed_screens, true ) ) {
+				return;
+			}
+
 			$status     = get_option( 'wcf_setup_complete', false );
 			$skip_setup = get_option( 'wcf_setup_skipped', false );
-
 			if ( false === $status && ! $skip_setup ) { ?>
-				<div class="notice notice-info">
+				<div class="notice notice-info wcf-notice">
 					<p><b><?php esc_html_e( 'Thanks for installing and using CartFlows!', 'cartflows' ); ?></b></p>
 					<p><?php esc_html_e( 'It is easy to use the CartFlows. Please use the setup wizard to quick start setup.', 'cartflows' ); ?></p>
 					<p>

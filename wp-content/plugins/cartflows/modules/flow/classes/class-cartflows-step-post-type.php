@@ -311,12 +311,16 @@ class Cartflows_Step_Post_Type {
 	 */
 	public function add_page_templates( $page_templates, $wp_theme, $post ) {
 
-		$page_templates = array(
+		$cartflows_templates = array(
 			'cartflows-default' => _x( 'CartFlows — Boxed', 'cartflows' ),
 			'cartflows-canvas'  => _x( 'Template for Page Builders', 'cartflows' ),
 		);
 
-		return $page_templates;
+		if ( apply_filters( 'cartflows_show_all_page_templates', false ) ) {
+			$cartflows_templates = array_merge( $cartflows_templates, $page_templates );
+		}
+
+		return $cartflows_templates;
 	}
 
 	/**

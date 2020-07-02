@@ -94,10 +94,6 @@
 			console.log( plugin_slug );
 
 			if ( 'woocommerce' === plugin_slug ) {
-				return;
-			}
-			
-			if( 'woo-cart-abandonment-recovery' === plugin_slug ) {
 				CartFlowsWizard._activateWc();
 				return;
 			}

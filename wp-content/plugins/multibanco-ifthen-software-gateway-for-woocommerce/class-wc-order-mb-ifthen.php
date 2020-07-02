@@ -52,18 +52,6 @@ class WC_Order_MB_Ifthen extends WC_Order {
 	}
 
 	/**
-	 * Checks the order status against a passed in status
-	 * @return bool
-	 */
-	public function mb_has_status( $status ) {
-		return version_compare( WC_VERSION, '2.2', '>=' )
-				?
-					( $this->has_status( $status ) )
-				:
-					apply_filters( 'woocommerce_order_has_status', ( is_array( $status ) && in_array( $this->get_status(), $status ) ) || $this->get_status() === $status ? true : false, $this, $status );
-	}
-
-	/**
 	 * Returns the order WPML Language
 	 * @return string
 	 */
@@ -127,5 +115,17 @@ class WC_Order_MB_Ifthen extends WC_Order {
 			return $this->order_date;
 		}
 	}
+
+	/**
+	 * Returns date paid
+	 */
+	public function mb_get_date_paid() {
+		if ( version_compare( WC_VERSION, '3.0', '>=' ) ) {
+			return $this->get_date_paid();
+		} else {
+			return get_post_meta( $this->mb_get_id(), '_paid_date', true );
+		}
+	}
+
 
 }

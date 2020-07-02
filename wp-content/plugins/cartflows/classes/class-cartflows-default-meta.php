@@ -375,7 +375,11 @@ class Cartflows_Default_Meta {
 						$q = 0;
 
 						foreach ( $_POST[ $key ] as $p_index => $p_data ) { // phpcs:ignore
+							if ( ! array_key_exists( 'product', $p_data ) ) {
+									continue;
+							}
 							foreach ( $p_data as $i_key => $i_value ) {
+
 								if ( is_array( $i_value ) ) {
 									foreach ( $i_value as $q_key => $q_value ) {
 										$meta_value[ $i ][ $i_key ][ $q ] = array_map( 'sanitize_text_field', $q_value );

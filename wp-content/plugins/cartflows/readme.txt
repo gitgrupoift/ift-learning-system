@@ -3,8 +3,8 @@ Contributors: brainstormforce, wpcrafter
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: woocommerce, funnel builder, sales funnels, elementor, beaver builder
 Requires at least: 4.4
-Tested up to: 5.4.1
-Stable tag: 1.5.10
+Tested up to: 5.4.2
+Stable tag: 1.5.12
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -126,6 +126,16 @@ Glad you asked! Most normal users have less than 3 funnels on a single website, 
 5. Easily edit anything with your page builder.
 
 == Changelog ==
+
+= Version 1.5.12 - Wednesday, 1st July 2020 =
+* Fix: PHP error if WooCommerce was not installed and the Google Analytics Purchase event is enabled.
+* Fix: Flows & Steps ready-made templates were unable to import due to the X-CSRF-TOKEN JS error.
+
+= Version 1.5.11 - Tuesday, 16th June 2020 =
+* New: Users can now share [non-personal usage data](https://my.cartflows.com/usage-tracking/?utm_source=wp_repo&utm_medium=changelog&utm_campaign=usage_tracking) to help us test and develop better products.
+* Fix: CartFlows setup wizard.
+* Fix: Showing notice 'Remove selected product from checkout' even there is no product selected in Global checkout.
+* Fix: Redirected to the cart when the order canceled by a user for PayPal checkout gateway.
 
 = Version 1.5.10 - Wednesday, 3rd June 2020 =
 * New: Gutenberg templates added.

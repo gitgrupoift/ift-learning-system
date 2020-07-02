@@ -233,12 +233,13 @@ class Cartflows_Optin_Meta extends Cartflows_Meta {
 
 			echo wcf()->meta->get_product_selection_field(
 				array(
-					'name'        => 'wcf-optin-product',
-					'value'       => $options['wcf-optin-product'],
-					'label'       => __( 'Select Free Product', 'cartflows' ),
-					'help'        => __( 'Select Free and Virtual product only.', 'cartflows' ),
-					'multiple'    => false,
-					'allow_clear' => true,
+					'name'                   => 'wcf-optin-product',
+					'value'                  => $options['wcf-optin-product'],
+					'label'                  => __( 'Select Free Product', 'cartflows' ),
+					'help'                   => __( 'Select Free and Virtual product only.', 'cartflows' ),
+					'multiple'               => false,
+					'allow_clear'            => true,
+					'excluded_product_types' => array( 'variation', 'variable', 'subscription', 'variable-subscription', 'grouped' ),
 				)
 			);
 

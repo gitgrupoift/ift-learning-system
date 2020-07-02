@@ -989,6 +989,9 @@ if ( ! class_exists( 'CartFlows_Importer' ) ) :
 				'is_wc_installed'          => $is_wc_installed,
 				'is_wc_activated'          => $is_wc_activated,
 
+				// Set API headers for the CartFlows API Calls only.
+				'headers'                  => array(),
+
 				// Flow and its rest fields.
 				'flow'                     => CARTFLOWS_FLOW_POST_TYPE,
 				'flow_fields'              => array(

@@ -390,6 +390,13 @@ if (!defined('ABSPATH')) exit;
                                 </table>
                             </td>
                         </tr>
+                        <tr>
+                            <th>
+                                <label for="title_separator"><?php _e('Title Separator', 'asgaros-forum'); ?></label>
+                                <span class="description"><?php _e('Allows you to define a custom title-separator for the forum. This setting is useful when different title-separators are shown in parts of the title - which is a common problem when using other SEO plugins.', 'asgaros-forum'); ?></span>
+                            </th>
+                            <td><input class="small-text" type="text" name="title_separator" id="title_separator" value="<?php echo esc_html(stripslashes($this->asgarosforum->options['title_separator'])); ?>"></td>
+                        </tr>
                     </table>
                 </div>
 
@@ -579,7 +586,7 @@ if (!defined('ABSPATH')) exit;
                             <td>
                                 <table>
                                     <tr>
-                                        <th><label for="memberslist_filter_normal"><?php _e('Normal', 'asgaros-forum'); ?>:</label></th>
+                                        <th><label for="memberslist_filter_normal"><?php _e('Users', 'asgaros-forum'); ?>:</label></th>
                                         <td><input type="checkbox" name="memberslist_filter_normal" id="memberslist_filter_normal" <?php checked(!empty($this->asgarosforum->options['memberslist_filter_normal'])); ?>></td>
                                     </tr>
                                     <tr>

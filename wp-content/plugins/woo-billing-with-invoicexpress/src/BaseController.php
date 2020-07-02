@@ -413,7 +413,11 @@ class BaseController {
 			touch( $wp_upload_path['basedir'] . '/invoicexpress/documents/index.php' );
 		}
 
-		$file_name = apply_filters( 'invoicexpress_woocommerce_document_filename', $type .'_'. $invoicexpress_id . '.pdf', $order_object, $document_url, $type, $invoicexpress_id, $another_doc );
+		$type_name = isset( $this->plugin->type_names[$type] ) ? $this->plugin->type_names[$type] : $type;
+
+		$file_name = sanitize_title( $type_name.'-'.$order_object->get_meta( 'hd_wc_ie_plus_'.$type.'_sequence_number' ) ).'.pdf';
+
+		$file_name = apply_filters( 'invoicexpress_woocommerce_document_filename', $file_name, $order_object, $document_url, $type, $invoicexpress_id, $another_doc );
 
 		$response = wp_remote_get( $document_url );
 		if ( is_wp_error( $response ) ) {
@@ -423,8 +427,6 @@ class BaseController {
 		}
 
 		$url_local = $wp_upload_path['baseurl'] . '/invoicexpress/documents/' . $file_name;
-
-		$type_name = isset( $this->plugin->type_names[$type] ) ? $this->plugin->type_names[$type] : $type;
 
 		// If it as a valid URL
 		if ( ! empty( $document_url ) ) {
@@ -528,7 +530,11 @@ class BaseController {
 			mkdir( $wp_upload_path['basedir'] . '/invoicexpress/documents/', 0777, true );
 		}
 
-		$file_name = apply_filters( 'invoicexpress_woocommerce_document_filename', $type .'_'. $invoicexpress_id . '.pdf', $order_array[0], $document_url, $type, $invoicexpress_id, $another_doc );
+		$type_name = isset( $this->plugin->type_names[$type] ) ? $this->plugin->type_names[$type] : $type;
+
+		$file_name = sanitize_title( $type_name.'-'.$order_array[0]->get_meta( 'hd_wc_ie_plus_'.$type.'_sequence_number' ) ).'.pdf';
+
+		$file_name = apply_filters( 'invoicexpress_woocommerce_document_filename', $file_name, $order_array[0], $document_url, $type, $invoicexpress_id, $another_doc );
 
 		$response = wp_remote_get( $document_url );
 		if ( is_wp_error( $response ) ) {
@@ -538,8 +544,6 @@ class BaseController {
 		}
 
 		$url_local = $wp_upload_path['baseurl'] . '/invoicexpress/documents/' . $file_name;
-
-		$type_name = isset( $this->plugin->type_names[$type] ) ? $this->plugin->type_names[$type] : $type;
 
 		// If it as a valid URL
 		if ( ! empty( $document_url ) ) {

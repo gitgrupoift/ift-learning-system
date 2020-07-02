@@ -8,7 +8,7 @@ Tags: integration, woocommerce,
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 
 Integrate LearnDash LMS with WooCommerce.
 
@@ -41,17 +41,12 @@ Alternatively, you always have the option to update manually. Please note, a ful
 
 == Changelog ==
 
-= 1.7.0 =
-* Added subscription parameter to remove course on billing cycle completion filter hook
-* Added filter hook to customize retroactive tool per batch value so users can change it depending on their server specifications
-* Added process enrollment queue 1 at a time to prevent timemout error
-* Added WC requires and tested headers
-* Added silent course enrollment feature to prevent long loading time in products with many associated courses
-* Added reduce minimum products count for background course enrollment because it caused timeout error
-* Updated plugin name and description to match with other addons
-* Updated change assoicated course field label
-* Fixed fatal error `WC_Order_Refund` object not having `get_customer_id()` method `use get_user_id()` instead
-* Fixed CSS issue where `select2` dropdown is missing
-* Fixed learndash WooCommerce cron hook not registered
+= 1.8.0 =
+* Added group access update functions
+* Added group selector field in WooCommerce edit product page
+* Added filter hook to reset subscription course access from
+* Added filter hook to configure silent course enrollment queue processing count
+* Fixed add array typed variable to prevent PHP warning error
+* Fixed param check logic to prevent fatal error
 
 View the full changelog [here](https://www.learndash.com/add-on/woocommerce/).

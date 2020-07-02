@@ -521,5 +521,5 @@ $error_log = filter_input( INPUT_GET, 'cartflows-error-log', FILTER_VALIDATE_BOO
 	/**
 	 *  Loads Zapier settings admin view.
 	 */
-	do_action( 'cartflows_after_general_settings' );
+	do_action( 'cartflows_after_settings' );
 ?>
