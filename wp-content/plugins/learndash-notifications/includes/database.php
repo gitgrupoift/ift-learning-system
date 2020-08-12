@@ -4,7 +4,7 @@
  */
 function learndash_notifications_create_db_table() {
 	global $wpdb;
-	$current_version = '1.1';
+	$current_version = '1.2';
 	$db_version      = get_option( 'ld_notifications_db_version' );
 
 	if ( $db_version === false || version_compare( $current_version, $db_version, '!=' ) === true ) {
@@ -12,14 +12,20 @@ function learndash_notifications_create_db_table() {
 		$table_name      = "{$wpdb->prefix}ld_notifications_delayed_emails";
 		$charset_collate = $wpdb->get_charset_collate();
 
+		if ( strpos( $wpdb->charset, 'utf8' ) === false ) {
+			$charset = 'utf8mb4';
+			$collate = 'utf8mb4_unicode_ci';
+			$charset_collate = "DEFAULT CHARACTER SET {$charset} COLLATE {$collate}";
+		}
+
 		$sql = "CREATE TABLE $table_name (
 			id int UNSIGNED NOT NULL AUTO_INCREMENT,
-			title varchar(80) NOT NULL,
+			title varchar(500) NOT NULL,
 			message text NOT NULL,
-			recipient varchar(255) NOT NULL,
-			shortcode_data varchar(255),
-			sent_on varchar(15) NOT NULL,
-			bcc varchar(255),
+			recipient varchar(2000) NOT NULL,
+			shortcode_data varchar(1000),
+			sent_on varchar(20) NOT NULL,
+			bcc varchar(2000),
 			PRIMARY KEY  (id)
 		) $charset_collate;";
 
@@ -27,7 +33,6 @@ function learndash_notifications_create_db_table() {
 		dbDelta( $sql );
 		update_option( 'ld_notifications_db_version', $current_version );
 	}
-
 }
 
 add_action( 'admin_init', 'learndash_notifications_create_db_table' );
@@ -74,19 +79,9 @@ function learndash_notifications_delete_delayed_emails_by( $key, $value )
 {
 	global $wpdb;
 
-	$emails = learndash_notifications_get_all_delayed_emails();
+	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP '" . esc_sql( $key ) . "\".{0,6}\"?" . esc_sql( $value ) . "'";
 
-	foreach ( $emails as $email ) {
-		$data = maybe_unserialize( $email['shortcode_data'] );
-
-		if ( $data[ $key ] == $value ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array( 'id' => $email['id'] ),
-				array( '%d' )
-			);
-		}
-	}
+	return $wpdb->query( $sql );
 }
 
 /**
@@ -98,19 +93,9 @@ function learndash_notifications_delete_delayed_emails_by_email( $email_address 
 {
 	global $wpdb;
 
-	$emails = learndash_notifications_get_all_delayed_emails();
+	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE recipient LIKE '%%%s%%'", $wpdb->esc_like( $email_address ) );
 
-	foreach ( $emails as $email ) {
-		$recipients = maybe_unserialize( $email['recipient'] );
-
-		if ( in_array( $email_address, $recipients ) ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array( 'id' => $email['id'] ),
-				array( '%d' )
-			);
-		}
-	}
+	return $wpdb->query( $sql );
 }
 
 /**
@@ -122,19 +107,9 @@ function learndash_notifications_delete_delayed_email_by_user_id( $user_id )
 {
 	global $wpdb;
 
-	$emails = learndash_notifications_get_all_delayed_emails();
+	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d'", $user_id );
 
-	foreach ( $emails as $email ) {
-		$data = maybe_unserialize( $email['shortcode_data'] );
-
-		if ( $data['user_id'] == $user_id ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array( 'id' => $email['id'] ),
-				array( '%d' )
-			);
-		}
-	}
+	return $wpdb->query( $sql );
 }
 
 /**
@@ -147,38 +122,18 @@ function learndash_notifications_delete_delayed_email_by_user_id_course_id( $use
 {
 	global $wpdb;
 
-	$emails = learndash_notifications_get_all_delayed_emails();
+	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d' AND shortcode_data REGEXP 'course_id\".{0,6}\"?%d'", $user_id, $course_id );
 
-	foreach ( $emails as $email ) {
-		$data = maybe_unserialize( $email['shortcode_data'] );
-
-		if ( $data['user_id'] == $user_id && $data['course_id'] == $course_id ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array( 'id' => $email['id'] ),
-				array( '%d' )
-			);
-		}
-	}
+	return $wpdb->query( $sql );
 }
 
 function learndash_notifications_delete_delayed_emails_by_user_id_lesson_id( $user_id, $lesson_id )
 {
 	global $wpdb;
 
-	$emails = learndash_notifications_get_all_delayed_emails();
+	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d' AND shortcode_data REGEXP 'lesson_id\".{0,6}\"?%d'", $user_id, $lesson_id );
 
-	foreach ( $emails as $email ) {
-		$data = maybe_unserialize( $email['shortcode_data'] );
-
-		if ( $data['user_id'] == $user_id && $data['lesson_id'] == $lesson_id ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array( 'id' => $email['id'] ),
-				array( '%d' )
-			);
-		}
-	}
+	return $wpdb->query( $sql );
 }
 
 function learndash_notifications_delete_delayed_email_by_id( $id )
@@ -195,12 +150,41 @@ function learndash_notifications_delete_delayed_email_by_id( $id )
 /**
  * Get all delayed emails stored in database
  * 
+ * @param array $where SELECT condition taken from shortcode_data column
  * @return array All delayed emails existing in database
  */
-function learndash_notifications_get_all_delayed_emails() {
+function learndash_notifications_get_all_delayed_emails( $where = array() ) {
 	global $wpdb;
 
 	$sql = "SELECT * FROM {$wpdb->prefix}ld_notifications_delayed_emails";
+
+	if ( ! empty( $where ) ) {
+		$sql .= " WHERE ";
+
+		$total = count( $where );
+		$count = 0;
+		foreach ( $where as $key => $value ) {
+			$count++;
+
+			$key   = sanitize_text_field( $key );
+			$value = sanitize_text_field( $value );
+
+			$pattern = "$key\".{0,6}\"?$value(;|\"|\')";
+			$sql .= "shortcode_data REGEXP '$pattern'";
+
+			if ( $count < $total ) {
+				$sql .= " AND ";
+			}
+		}
+	}
+
+	return $wpdb->get_results( $sql, ARRAY_A );
+}
+
+function learndash_notifications_get_all_delayed_emails_by_recipient( $recipient ) {
+	global $wpdb;
+
+	$sql = $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE recipient LIKE '%%%s%%'", $wpdb->esc_like( $recipient ) );
 
 	return $wpdb->get_results( $sql, ARRAY_A );
 }
@@ -215,10 +199,10 @@ function learndash_notifications_get_all_delayed_emails() {
  * @param  array  $bcc  			List of email addresses as bcc
  * @return bool               		True if success|false otherwise
  */
-function learndash_notifications_save_delayed_email( $notification, $emails, $sent_on, $shortcode_data, $bcc = array() ) {
+function learndash_notifications_save_delayed_email( $notification, $emails, $sent_on, $shortcode_data, $bcc = array(), $update_where = array() ) {
 	$n = $notification;
 
-	return learndash_notifications_insert_delayed_email( $n->post_title, $n->post_content, $emails, $shortcode_data, $sent_on, $bcc );
+	return learndash_notifications_insert_delayed_email( $n->post_title, $n->post_content, $emails, $shortcode_data, $sent_on, $bcc, $update_where );
 }
 
 /**
@@ -230,32 +214,188 @@ function learndash_notifications_save_delayed_email( $notification, $emails, $se
  * @param  array  $shortcode_data  	List of array
  * @param  int    $sent_on  		UNIX timestamp when the email will be sent
  * @param  array  $bcc  			List of email addresses as bcc
+ * @param  array  $update_where     Where clauses for update operation
  * @return bool               		True if success|false otherwise
  */
-function learndash_notifications_insert_delayed_email( $title, $message, $recipient, $shortcode_data, $sent_on, $bcc = array() )
+function learndash_notifications_insert_delayed_email( $title, $message, $recipient, $shortcode_data, $sent_on, $bcc = array(), $update_where = array() )
 {
 	global $wpdb;
 
-	$insert = $wpdb->insert(
-		"{$wpdb->prefix}ld_notifications_delayed_emails",
-		array(
-			'title'          => $title,
-			'message'        => $message,
-			'recipient'      => maybe_serialize( $recipient ),
-			'shortcode_data' => maybe_serialize( $shortcode_data ),
-			'sent_on'        => $sent_on,
-			'bcc'        	 => maybe_serialize( $bcc ),
-		),
-		array(
-			'%s', '%s', '%s', '%s', '%d', '%s'
-		)
+	if ( empty( $recipient ) ) {
+		return false;
+	}
+
+	$existing_record = learndash_notifications_db_select_count( $update_where );
+
+	$data = array(
+		'title'          => $title,
+		'message'        => $message,
+		'recipient'      => maybe_serialize( $recipient ),
+		'shortcode_data' => maybe_serialize( $shortcode_data ),
+		'sent_on'        => $sent_on,
+		'bcc'        	 => maybe_serialize( $bcc ),
 	);
 
-	if ( $insert !== false ) {
-		return true;
+	$update = learndash_notifications_update_delayed_email( $data, $update_where );
+
+	if ( 0 === $update && 0 == $existing_record ) {
+		$insert = $wpdb->insert(
+			"{$wpdb->prefix}ld_notifications_delayed_emails",
+			$data,
+			array(
+				'%s', '%s', '%s', '%s', '%s', '%s'
+			)
+		);
+
+		if ( $insert !== false ) {
+			do_action( 'learndash_notifications_insert_delayed_email', $data );
+
+			return true;
+		} else {
+			return false;
+		}	
+	}
+}
+
+/**
+ * Update existing delayed emails
+ */
+function learndash_notifications_update_delayed_email( $data = array(), $where = array() ) {
+	// Bail if data or where array empty
+	if ( empty( $data ) || empty( $where ) ) {
+		return 0;
+	}
+
+	global $wpdb;
+
+	$sql = "UPDATE {$wpdb->prefix}ld_notifications_delayed_emails SET ";
+
+	$data_count = 0;
+	$data_total = count( $data );
+	foreach ( $data as $key => $value ) {
+		$data_count++;
+
+		$key   = esc_sql( $key );
+		$value = esc_sql( $value );
+
+		$sql .= "{$key} = '{$value}'";
+
+		if ( $data_count < $data_total ) {
+			$sql .= ", ";
+		}
+	}
+
+	$sql .= " WHERE ";
+
+	$total = count( $where );
+	$count = 0;
+	foreach ( $where as $key => $value ) {
+		$count++;
+
+		$key   = esc_sql( $key );
+		$value = esc_sql( $value );
+
+		$pattern = "$key\".{0,6}\"?$value(;|\"|\')";
+		$sql .= "shortcode_data REGEXP '$pattern'";
+
+		if ( $count < $total ) {
+			$sql .= " AND ";
+		}
+	}
+
+	$count =  $wpdb->query( $sql );
+
+	if ( false !== $count ) {
+		if ( 0 !== $count ) {
+			do_action( 'learndash_notifications_update_delayed_email', $data, $where, $count );
+		}
+
+		return $count;
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Count existing record in DB
+ * 
+ * @param  array  $where Array of where clause
+ * @return int           Number of records in DB
+ */
+function learndash_notifications_db_select_count( $where = array() ) {
+	if ( empty( $where ) ) {
+		return 0;
+	}
+
+	global $wpdb;
+
+	$sql = "SELECT COUNT(*) 
+		FROM {$wpdb->prefix}ld_notifications_delayed_emails 
+		WHERE ";
+
+	$total = count( $where );
+	$count = 0;
+	foreach ( $where as $key => $value ) {
+		$count++;
+
+		$key   = sanitize_text_field( $key );
+		$value = sanitize_text_field( $value );
+
+		$pattern = "$key\".{0,6}\"?$value(;|\"|\')";
+		$sql .= "shortcode_data REGEXP '$pattern'";
+
+		if ( $count < $total ) {
+			$sql .= " AND ";
+		}
+	}
+
+	return $wpdb->get_var( $sql );
+}
+
+function learndash_notifications_delete_delayed_emails_by_shortcode_data_key( $key = '', $value = '' ) {
+	global $wpdb;
+
+	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE `shortcode_data` LIKE '%s'";
+
+	$wpdb->query(
+		$wpdb->prepare(
+			$sql,
+			"%$key\"_%_%_%_%$value%"
+		)
+	);
+}
+
+function learndash_notifications_delete_delayed_emails_by_multiple_shortcode_data_key( $pair = array() ) {
+	global $wpdb;
+
+	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE ";
+
+	$total = count( $pair );
+	$count = 0;
+	foreach ( $pair as $key => $value ) {
+		$count++;
+
+		$key   = sanitize_text_field( $key );
+		$value = sanitize_text_field( $value );
+
+		$pattern = "$key\".{0,6}\"?$value(;|\"|\')";
+		$sql .= "shortcode_data REGEXP '$pattern'";
+
+		if ( $count < $total ) {
+			$sql .= " AND ";
+		}
+	}
+
+	$wpdb->query( $sql );
+}
+
+function learndash_notifications_empty_db_table() {
+	global $wpdb;
+	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails";
+
+	$count = $wpdb->query( $sql );
+
+	do_action( 'learndash_notifications_empty_delayed_emails_table', $count );
 }
 
 /**
@@ -263,27 +403,14 @@ function learndash_notifications_insert_delayed_email( $title, $message, $recipi
  *
  * Fired in cron.php
  */
-function learndash_notifications_delete_delayed_emails()
-{
+function learndash_notifications_delete_delayed_emails() {
 	global $wpdb;
-	
-	$date   = date( 'Y-m-d H', time() );
-	$emails = learndash_notifications_get_all_delayed_emails();
 
-	foreach ( $emails as $e ) {
+	$timestamp = strtotime( '-2 hours' );
 
-		$sent_on = date( 'Y-m-d H', $e['sent_on'] );
-		
-		if ( $sent_on < $date ) {
-			$wpdb->delete(
-				"{$wpdb->prefix}ld_notifications_delayed_emails",
-				array(
-					'id' => $e['id'],
-				),
-				array(
-					'%d',
-				)
-			);
-		}
-	}
+	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE `sent_on` <= {$timestamp}";
+
+	$count = $wpdb->query( $sql );
+
+	do_action( 'learndash_notifications_delete_delayed_emails', $count );
 }

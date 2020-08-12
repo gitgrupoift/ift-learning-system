@@ -113,18 +113,16 @@ function learndash_notifications_post_type_custom_columns( $column, $post_id ) {
 			$course_id = get_post_meta( $post_id, '_ld_notifications_course_id', true );
 			$trigger = get_post_meta( $post_id, '_ld_notifications_trigger', true );
 
-			// if ( ! in_array( $trigger, array( 'enroll_course', 'complete_course', 'course_expires', 'course_enrollment' ) ) ) {
-			// 	echo '-';
-			// 	break;
-			// }
+			if ( in_array( $trigger, array( 'enroll_group', 'essay_graded' ) ) ) {
+				echo '-';
+				break;
+			}
 
-			if ( $course_id == 'all' ) {
+			if ( $course_id == 'all' || empty( $course_id ) || ! is_numeric( $course_id ) ) {
 				_e( 'All Courses', 'learndash-notifications' );
-			} elseif ( is_numeric( $course_id ) ) {
+			} elseif ( is_numeric( $course_id ) && $course_id > 0 ) {
 				$course = get_post( $course_id );
 				echo $course->post_title;
-			} elseif ( empty( $course_id ) ) {
-				echo '-';
 			}
 			break;
 
@@ -132,18 +130,16 @@ function learndash_notifications_post_type_custom_columns( $column, $post_id ) {
 			$lesson_id = get_post_meta( $post_id, '_ld_notifications_lesson_id', true );
 			$trigger = get_post_meta( $post_id, '_ld_notifications_trigger', true );
 
-			// if ( ! in_array( $trigger, array( 'complete_lesson' ) ) ) {
-			// 	echo '-';
-			// 	break;
-			// }
+			if ( in_array( $trigger, array( 'enroll_group', 'enroll_course', 'essay_graded', 'not_logged_in', 'course_expires' ) ) ) {
+				echo '-';
+				break;
+			}
 
-			if ( $lesson_id == 'all' ) {
+			if ( $lesson_id == 'all' || empty( $lesson_id ) || ! is_numeric( $lesson_id ) ) {
 				_e( 'All lessons', 'learndash-notifications' );
-			} elseif ( is_numeric( $lesson_id ) ) {
+			} elseif ( is_numeric( $lesson_id ) && $lesson_id > 0 ) {
 				$lesson = get_post( $lesson_id );
 				echo $lesson->post_title;
-			} elseif ( empty( $lesson_id ) ) {
-				echo '-';
 			}
 			break;
 
@@ -151,17 +147,17 @@ function learndash_notifications_post_type_custom_columns( $column, $post_id ) {
 			$topic_id = get_post_meta( $post_id, '_ld_notifications_topic_id', true );
 			$trigger = get_post_meta( $post_id, '_ld_notifications_trigger', true );
 
-			// if ( ! in_array( $trigger, array( 'complete_topic' ) ) ) {
-			// 	echo '-';
-			// 	break;
-			// }
+			if ( in_array( $trigger, array( 'enroll_group', 'enroll_course', 'essay_graded', 'not_logged_in', 'complete_lesson', 'lesson_available', 'course_expires' ) ) ) {
+				echo '-';
+				break;
+			}
 
 			if ( $topic_id == 'all' ) {
 				_e( 'All topics', 'learndash-notifications' );
-			} elseif ( is_numeric( $topic_id ) ) {
+			} elseif ( is_numeric( $topic_id ) && $topic_id > 0 ) {
 				$topic = get_post( $topic_id );
 				echo $topic->post_title;
-			} elseif ( empty( $topic_id ) ) {
+			} else {
 				echo '-';
 			}
 			break;
@@ -170,18 +166,16 @@ function learndash_notifications_post_type_custom_columns( $column, $post_id ) {
 			$quiz_id = get_post_meta( $post_id, '_ld_notifications_quiz_id', true );
 			$trigger = get_post_meta( $post_id, '_ld_notifications_trigger', true );
 
-			// if ( ! in_array( $trigger, array( 'pass_quiz', 'fail_quiz', 'complete_quiz' ) ) ) {
-			// 	echo '-';
-			// 	break;
-			// }
+			if ( in_array( $trigger, array( 'enroll_group', 'enroll_course', 'upload_assignment', 'approve_assignment', 'essay_graded', 'not_logged_in', 'complete_lesson', 'complete_topic', 'lesson_available', 'course_expires' ) ) ) {
+				echo '-';
+				break;
+			}
 
-			if ( $quiz_id == 'all' ) {
+			if ( $quiz_id == 'all' || empty( $quiz_id ) || ! is_numeric( $quiz_id ) ) {
 				_e( 'All quizzes', 'learndash-notifications' );
-			} elseif ( is_numeric( $quiz_id ) ) {
+			} elseif ( is_numeric( $quiz_id ) && $quiz_id > 0 ) {
 				$quiz = get_post( $quiz_id );
 				echo $quiz->post_title;
-			} elseif ( empty( $quiz_id ) ) {
-				echo '-';
 			}
 			break;
 

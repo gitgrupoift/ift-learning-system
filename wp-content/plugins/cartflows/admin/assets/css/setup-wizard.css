@@ -521,7 +521,7 @@
 		font-size: 14px;
 	}
 
-	.cartflows-setup .cartflows-setup-message input{
+	.cartflows-setup .cartflows-setup-message input:not([type='checkbox']){
 		width: 100%;
 		height: 45px;
 	}
@@ -1234,3 +1234,18 @@
 	input.wcf-error{
 		border: 1px solid #ff0000;
 	}
+
+/* Usage tracking option css */
+.cartflows-usage-tracking .usage-tracking-wrap h4{
+	margin: 0 0 12px 0;
+	font-weight: 600;
+}
+
+.cartflows-usage-tracking .usage-tracking-wrap p{
+	margin: 0 0 12px 0;
+}
+
+.cartflows-usage-tracking .usage-tracking-wrap p,
+.cartflows-usage-tracking .usage-tracking-wrap label{
+	font-size: 14px;
+}		

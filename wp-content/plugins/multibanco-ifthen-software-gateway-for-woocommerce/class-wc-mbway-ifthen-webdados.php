@@ -42,7 +42,7 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 
 			$this->method_title = __( 'Pagamento MB WAY no telemóvel (IfthenPay)', 'multibanco-ifthen-software-gateway-for-woocommerce' );
 			$this->method_description = __( 'Easy and simple payment using “MB WAY” on your mobile phone. (Only available for customers of Portuguese banks with MB WAY app installed. Payment service provided by IfthenPay.)', 'multibanco-ifthen-software-gateway-for-woocommerce' );
-			if ( $this->get_option( 'support_woocommerce_subscriptions' ) == 'yes' ) {
+			if ( WC_IfthenPay_Webdados()->wc_subscriptions_active && $this->get_option( 'support_woocommerce_subscriptions' ) == 'yes' ) {
 				$this->supports = array(
 					'products',
 					'subscription_suspension',
@@ -107,8 +107,8 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 				// NO SMS Integrations for MB WAY
 		 		
 				// Customer Emails
-				//add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 ); - "Hyyan WooCommerce Polylang Integration" removes this action
-				add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions_1' ), 10, 3 ); //Avoid "Hyyan WooCommerce Polylang Integration" remove_action
+				//add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 4 ); - "Hyyan WooCommerce Polylang Integration" removes this action
+				add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions_1' ), 10, 4 ); //Avoid "Hyyan WooCommerce Polylang Integration" remove_action
 		
 				// Payment listener/API hook
 				add_action( 'woocommerce_api_wc_mbway_ifthen_webdados', array( $this, 'callback' ) );
@@ -282,14 +282,18 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 									),
 					) );
 				}
+				if ( WC_IfthenPay_Webdados()->wc_subscriptions_active ) {
+					$this->form_fields = array_merge( $this->form_fields, array(
+						'support_woocommerce_subscriptions' => array(
+										'title' => __( 'WooCommerce Subscriptions', 'multibanco-ifthen-software-gateway-for-woocommerce' ), 
+										'type' => 'checkbox', 
+										'label' => __( 'Enable WooCommerce Subscriptions (experimental) support.', 'multibanco-ifthen-software-gateway-for-woocommerce' ),
+										'description' => __( 'Shows “MB WAY” (using IfthenPay) as a supported payment gateway, and automatically sets subscription renewal orders to be paid with MB WAY if the original subscription used this payment method. If this option is not activated, MB WAY will only be available as a payment method for subscriptions if the “Manual Renewal Payments” option is enabled on WooCommerce Subscriptions settings.', 'multibanco-ifthen-software-gateway-for-woocommerce' ),
+										'default' => 'no'
+									),
+						) );
+				}
 				$this->form_fields = array_merge( $this->form_fields, array(
-					'support_woocommerce_subscriptions' => array(
-									'title' => __( 'WooCommerce Subscriptions', 'multibanco-ifthen-software-gateway-for-woocommerce' ), 
-									'type' => 'checkbox', 
-									'label' => __( 'Enable WooCommerce Subscriptions (experimental) support.', 'multibanco-ifthen-software-gateway-for-woocommerce' ),
-									'description' => __( 'Shows “MB WAY” (using IfthenPay) as a supported payment gateway, and automatically sets subscription renewal orders to be paid with MB WAY if the original subscription used this payment method. If this option is not activated, MB WAY will only be available as a payment method for subscriptions if the “Manual Renewal Payments” option is enabled on WooCommerce Subscriptions settings.', 'multibanco-ifthen-software-gateway-for-woocommerce' ),
-									'default' => 'no'
-								),
 					'send_to_admin' => array(
 									'title' => __( 'Send instructions to admin?', 'multibanco-ifthen-software-gateway-for-woocommerce' ), 
 									'type' => 'checkbox', 
@@ -389,7 +393,7 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 						?>
 						<p id="wc_ifthen_callback_open_p"><a href="#" id="wc_ifthen_callback_open" class="button button-small"><?php _e( 'Click here to ask IfthenPay to activate the “Callback”', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></a></p>
 						<div id="wc_ifthen_callback_div">
-							<p><?php _e( 'This will submit a request to IfthenPay, asking them to activate the “Callback” on your account. If you have already asked for the “Callback” activation, wait for their feedback before submiting a new request. The following details will be sent via email to IfthenPay (with CC to your email address):', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></p>
+							<p><?php _e( 'This will submit a request to IfthenPay, asking them to activate the “Callback” on your account. The following details will be sent to IfthenPay:', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></p>
 							<table class="form-table">
 								<tr valign="top">
 									<th scope="row" class="titledesc"><?php _e( 'Email', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></th>
@@ -421,7 +425,10 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 							</p>
 							<p style="text-align: center; margin-bottom: 0px;">
 								<input type="hidden" id="wc_ifthen_callback_send" name="wc_ifthen_callback_send" value="0"/>
-								<button id="wc_ifthen_callback_submit" class="button-primary" type="button" value="<?php _e( 'Ask for Callback activation', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?>"><?php _e( 'Ask for Callback activation', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?></button>
+								<input type="hidden" id="wc_ifthen_callback_bo_key" name="wc_ifthen_callback_bo_key" value=""/>
+								<button id="wc_ifthen_callback_submit_webservice" class="button-primary" type="button"><?php _e( 'Ask for Callback activation', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?> - <?php _e( 'Via webservice (recommended)', '' ); ?></button>
+								<br/><br/>
+								<button id="wc_ifthen_callback_submit" class="button" type="button"><?php _e( 'Ask for Callback activation', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?> - <?php _e( 'Via email (old method)', '' ); ?></button>
 								<input id="wc_ifthen_callback_cancel" class="button" type="button" value="<?php _e( 'Cancel', 'multibanco-ifthen-software-gateway-for-woocommerce' ); ?>"/>
 								<input type="hidden" name="save" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"/> <!-- Force action woocommerce_update_options_payment_gateways_ to run, from WooCommerce 3.5.5 -->
 							</p>
@@ -471,8 +478,22 @@ if ( ! class_exists( 'WC_MBWAY_IfThen_Webdados' ) ) {
 		}
 
 		public function send_callback_email() {
-			if ( isset( $_POST['wc_ifthen_callback_send'] ) && intval( $_POST['wc_ifthen_callback_send'] ) == 1) {
-				$to = WC_IfthenPay_Webdados()->mbway_callback_email;
+			if ( isset( $_POST['wc_ifthen_callback_send'] ) && intval( $_POST['wc_ifthen_callback_send'] ) == 2 && trim( $_POST['wc_ifthen_callback_bo_key'] ) != '' ) {
+				//Webservice
+				$result = WC_IfthenPay_Webdados()->callback_webservice( trim( $_POST['wc_ifthen_callback_bo_key'] ), 'MBWAY', $this->mbwaykey, $this->secret_key, WC_IfthenPay_Webdados()->mbway_notify_url );
+				if ( $result['success'] ) {
+					update_option( $this->id . '_callback_email_sent', 'yes' );
+					WC_Admin_Settings::add_message( __( 'The “Callback” activation request has been submited to IfthenPay via webservice and is now active.', 'multibanco-ifthen-software-gateway-for-woocommerce' ) );
+				} else {
+					WC_Admin_Settings::add_error(
+						__( 'The “Callback” activation request via webservice has failed.', 'multibanco-ifthen-software-gateway-for-woocommerce' )
+						.' - '.
+						$result['message']
+					);
+				}
+			} elseif ( isset( $_POST['wc_ifthen_callback_send'] ) && intval( $_POST['wc_ifthen_callback_send'] ) == 1) {
+				//Email
+				$to = WC_IfthenPay_Webdados()->callback_email;
 				$cc = get_option( 'admin_email' );
 				$subject = 'Activação de Callback MB WAY (Key: '.$this->mbwaykey.')';
 				$message = 'Por favor activar Callback MB WAY com os seguintes dados:
@@ -518,7 +539,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 			}
 			$order = new WC_Order_MB_Ifthen( $order_id );
 			if ( $this->id === $order->mb_get_payment_method() ) {
-				if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
+				if ( WC_IfthenPay_Webdados()->order_needs_payment( $order ) ) {
 					if ( date_i18n( 'Y-m-d H:i:s', strtotime( '-'.intval( WC_IfthenPay_Webdados()->mbway_minutes * WC_IfthenPay_Webdados()->mbway_multiplier_new_payment * 60 ).' SECONDS', current_time( 'timestamp' ) ) ) > $order->mb_get_meta( '_'.WC_IfthenPay_Webdados()->mbway_id.'_time' ) ) {
 						//Expired
 						$expired = true;
@@ -552,7 +573,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 					}
 				} else {
 					//Processing
-					if ( $order->has_status( 'processing' ) && !is_wc_endpoint_url( 'view-order') ) {
+					if ( ( $order->has_status( 'processing' ) || $order->has_status( 'completed' ) ) && ! is_wc_endpoint_url( 'view-order') ) {
 						echo $this->email_instructions_payment_received( $order_id );
 					}
 				}
@@ -698,10 +719,10 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 		/**
 		 * Email instructions
 		 */
-		function email_instructions_1( $order, $sent_to_admin, $plain_text ) { //"Hyyan WooCommerce Polylang" Integration removes "email_instructions" so we use "email_instructions_1"
-			$this->email_instructions( $order, $sent_to_admin, $plain_text );
+		function email_instructions_1( $order, $sent_to_admin, $plain_text, $email = null ) { //"Hyyan WooCommerce Polylang" Integration removes "email_instructions" so we use "email_instructions_1"
+			$this->email_instructions( $order, $sent_to_admin, $plain_text, $email );
 		}
-		function email_instructions( $order, $sent_to_admin, $plain_text ) {
+		function email_instructions( $order, $sent_to_admin, $plain_text, $email = null ) {
 			//Avoid duplicate email instructions on some edge cases
 			$send = false;
 			if ( ( $sent_to_admin ) ) {
@@ -742,7 +763,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 							}
 						}
 						//On Hold or pending
-						if ( $order->has_status( 'on-hold' ) || $order->has_status( 'pending' ) ) {
+						if ( WC_IfthenPay_Webdados()->order_needs_payment( $order ) ) {
 							if ( WC_IfthenPay_Webdados()->wc_deposits_active && $order->mb_get_status() == 'partially-paid' ) {
 								//WooCommerce deposits - No instructions
 							} else {
@@ -1078,43 +1099,19 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 					if ( trim( $estado ) == 'PAGO' ) {
 						$orders_exist = false;
 						if ( version_compare( WC_VERSION, '3.0', '<' ) ) {
-							if ( version_compare( WC_VERSION, '2.2', '<' ) ) {
-								//The old way before WooCommerce 2.2
-								$args = array(
-									'post_type'	=> 'shop_order',
-									'post_status' => 'publish',
-									'posts_per_page' => -1,
-									'tax_query' => array(
-										//We should also look for pending because of the filter added on 2017-12-15, but people should not be using WC < 2.2 by now...
-										array(
-											'taxonomy' => 'shop_order_status',
-											'field' => 'slug',
-											'terms' => array( 'on-hold', 'pending' ),
-										)
-									),
-									'meta_query' => array(
-										array(
-											'key' => '_'.$this->id.'_id_pedido',
-											'value' => $id_pedido,
-											'compare' => 'LIKE'
-										)
+							//The old way
+							$args = array(
+								'post_type' => 'shop_order',
+								'post_status' => array( 'wc-on-hold', 'wc-pending' ),
+								'posts_per_page' => -1,
+								'meta_query' => array(
+									array(
+										'key' => '_'.$this->id.'_id_pedido',
+										'value' => $id_pedido,
+										'compare' => 'LIKE'
 									)
-								);
-							} else {
-								//The old way From WooCommerce 2.2
-								$args = array(
-									'post_type' => 'shop_order',
-									'post_status' => array( 'wc-on-hold', 'wc-pending' ),
-									'posts_per_page' => -1,
-									'meta_query' => array(
-										array(
-											'key' => '_'.$this->id.'_id_pedido',
-											'value' => $id_pedido,
-											'compare' => 'LIKE'
-										)
-									)
-								);
-							}
+								)
+							);
 							$the_query = new WP_Query( $args );
 							if ( $the_query->have_posts() ) {
 								$orders_exist = true;
@@ -1124,7 +1121,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 								endwhile;
 							}
 						} else {
-							$pending_status = apply_filters( 'mbway_ifthen_valid_callback_pending_status', array( 'on-hold', 'pending', 'partially-paid' ) );
+							$pending_status = apply_filters( 'mbway_ifthen_valid_callback_pending_status', WC_IfthenPay_Webdados()->unpaid_statuses ); //Double filter - Should we deprectate this one?
 							$args = array(
 								'type'                     => array( 'shop_order' ),
 								'status'                   => $pending_status,
@@ -1145,7 +1142,7 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 								try {
 									$order = new WC_Order_MB_Ifthen( intval( $referencia ) );
 									//Maybe we should check for failed?
-									if ( in_array( $order->get_status(), apply_filters( 'mbway_ifthen_valid_callback_pending_status', array( 'on-hold', 'pending', 'partially-paid' ) ) ) ) {
+									if ( WC_IfthenPay_Webdados()->order_needs_payment( $order ) ) {
 										$orders_exist = true;
 										$orders_count = 1;
 									}
@@ -1200,42 +1197,42 @@ Email enviado automaticamente do plugin WordPress “Multibanco, MBWAY and Paysh
 									$err = 'Error: The value does not match';
 									$this->debug_log( '-- '.$err.' - Order '.$order->mb_get_id(), 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - The value does not match' );
 									echo $err;
-									do_action( 'mbway_ifthen_callback_payment_failed', $order->mb_get_id(), $err );
+									do_action( 'mbway_ifthen_callback_payment_failed', $order->mb_get_id(), $err, $_GET );
 								}
 							} else {
 								header( 'HTTP/1.1 200 OK' );
 								$err = 'Error: More than 1 order found awaiting payment with these details';
 								$this->debug_log( '-- '.$err, 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - More than 1 order found awaiting payment with these details' );
 								echo $err;
-								do_action( 'mbway_ifthen_callback_payment_failed', 0, $err );
+								do_action( 'mbway_ifthen_callback_payment_failed', 0, $err, $_GET );
 							}
 						} else {
 							header( 'HTTP/1.1 200 OK' );
 							$err = 'Error: No orders found awaiting payment with these details';
 							$this->debug_log( '-- '.$err, 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - No orders found awaiting payment with these details' );
 							echo $err;
-							do_action( 'mbway_ifthen_callback_payment_failed', 0, $err );
+							do_action( 'mbway_ifthen_callback_payment_failed', 0, $err, $_GET );
 						}
 					} else {
 						header( 'HTTP/1.1 200 OK' );
 						$err = 'Error: Cannot process '.trim( $estado ).' status';
 						$this->debug_log( '-- '.$err, 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') from '.$_SERVER['REMOTE_ADDR'].' - Cannot process '.trim( $estado ).' status' );
 						echo $err;
-						do_action( 'mbway_ifthen_callback_payment_failed', 0, $err );
+						do_action( 'mbway_ifthen_callback_payment_failed', 0, $err, $_GET );
 					}
 
 				} else {
 					//header("Status: 400");
 					$err = 'Argument errors';
 					$this->debug_log( '-- '.$err, 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') with argument errors from '.$_SERVER['REMOTE_ADDR'].$arguments_error );
-					do_action( 'mbway_ifthen_callback_payment_failed', 0, $err );
+					do_action( 'mbway_ifthen_callback_payment_failed', 0, $err, $_GET );
 					wp_die( $err, 'WC_MBWAY_IfThen_Webdados', array( 'response' => 500 ) ); //Sends 500
 				}
 			} else {
 				//header("Status: 400");
 				$err = 'Callback ('.$_SERVER['REQUEST_URI'].') with missing arguments from '.$_SERVER['REMOTE_ADDR'];
 				$this->debug_log( '- '.$err, 'warning', true, 'Callback ('.$_SERVER['HTTP_HOST'].' '.$_SERVER['REQUEST_URI'].') with missing arguments from '.$_SERVER['REMOTE_ADDR'] );
-				do_action( 'mbway_ifthen_callback_payment_failed', 0, $err );
+				do_action( 'mbway_ifthen_callback_payment_failed', 0, $err, $_GET );
 				wp_die( 'Error: Something is missing...', 'WC_MBWAY_IfThen_Webdados', array( 'response' => 500 ) ); //Sends 500
 			}
 		}

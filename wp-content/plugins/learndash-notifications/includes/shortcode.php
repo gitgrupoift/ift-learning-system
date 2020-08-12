@@ -21,10 +21,13 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 	global $ld_notifications_shortcode_data;
 	$data = $ld_notifications_shortcode_data;
 
+	$result = '';
+
 	$shortcode = 'ld_notifications';
 	$atts = shortcode_atts( array(
 		'field' => '',
 		'show'  => '',
+		'format' => '',
 	), $atts, $shortcode );
 
 	if ( empty( $data ) || empty( $atts['field'] ) || empty( $atts['show'] ) ) {
@@ -36,34 +39,35 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 	if ( $atts['field'] == 'user' ) {
 		$u = get_user_by( 'id', $data['user_id'] );
 
-		switch ( $show ) {
-			case 'username':
-				$result = $u->user_login;
-				break;
+		if ( false !== $u ) {			
+			switch ( $show ) {
+				case 'username':
+					$result = $u->user_login;
+					break;
 
-			case 'email':
-				$result = $u->user_email;
-				break;
+				case 'email':
+					$result = $u->user_email;
+					break;
 
-			case 'display_name':
-				$result = $u->display_name;
-				break;
+				case 'display_name':
+					$result = $u->display_name;
+					break;
 
-			case 'first_name':
-				$result = $u->first_name;
-				break;
+				case 'first_name':
+					$result = $u->first_name;
+					break;
 
-			case 'last_name':
-				$result = $u->last_name;
-				break;
+				case 'last_name':
+					$result = $u->last_name;
+					break;
 
-			default:
-				$result = get_user_meta( $data['user_id'], $show, true );
-				break;
+				default:
+					$result = get_user_meta( $data['user_id'], $show, true );
+					break;
+			}
 		}
-	}
 
-	if ( $atts['field'] == 'group' ) {
+	} else if ( $atts['field'] == 'group' ) {
 		$group = get_post( $data['group_id'] );
 
 		switch ( $show ) {
@@ -71,9 +75,7 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				$result = $group->post_title;
 				break;
 		}
-	}
-
-	if ( $atts['field'] == 'course' ) {
+	} else if ( $atts['field'] == 'course' ) {
 		$course  = get_post( $data['course_id'] );
 
 		switch ( $show ) {
@@ -87,8 +89,10 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 
 			case 'completed_on':
 				$atts = shortcode_atts( array(
-					'format' => 'F j, Y, g:i a',
+					'format' => $format = 'F j, Y, g:i a',
 				), $atts, $shortcode );
+
+				$atts['format'] = ! empty( $atts['format'] ) ? $atts['format'] : $format;
 
 				$completed_on = get_user_meta( $data['user_id'], 'course_completed_' . $data['course_id'], true );
 
@@ -96,7 +100,9 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 					return '-';
 				}
 
-				date_default_timezone_set( get_option( 'timezone_string' ) );
+				if ( ! empty( $timezone_string = get_option( 'timezone_string' ) ) ) {
+					date_default_timezone_set( $timezone_string );
+				}
 				$result = date_i18n( $atts['format'], $completed_on );
 				break;
 
@@ -110,7 +116,14 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				$quizdata = get_user_meta( $data['user_id'], '_sfwd-quizzes', true );	
 				global $wpdb;
 
-				$quizzes = $wpdb->get_col( $wpdb->prepare( 'SELECT post_id FROM ' . $wpdb->postmeta . " WHERE meta_key = 'course_id' AND meta_value = '%d'", $data['course_id'] ) );
+				$quizzes = $wpdb->get_col( $wpdb->prepare( 
+					"SELECT post_id FROM `{$wpdb->postmeta}` WHERE ( meta_key = 'course_id' AND meta_value = %d ) OR ( meta_key = %s AND meta_value = %d )", 
+					$data['course_id'], 
+					'ld_course_' . $data['course_id'], 
+					$data['course_id'] 
+				) );
+
+				$quizzes = array_unique( $quizzes );
 				
 				if ( empty( $quizzes ) ) {
 					$result = 0;
@@ -140,12 +153,14 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 					$sum += $score;
 				}
 
-				$return = number_format( $sum / count( $scores ), 2 );
+				$result = $sum / count( $scores );
 
 				if ( $field == 'timespent' ) {
-					$result = learndash_seconds_to_time( $return );
+					// The $result must be integer before passed to
+					// learnash_seconds_to_time()
+					$result = learndash_seconds_to_time( intval( $result ) );
 				} else {
-					$result = $return;
+					$result = number_format( $result, 2 );
 				}
 				break;
 
@@ -159,7 +174,14 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				$quizdata = get_user_meta( $data['user_id'], '_sfwd-quizzes', true );
 				global $wpdb;
 
-				$quizzes = $wpdb->get_col( $wpdb->prepare( 'SELECT post_id FROM ' . $wpdb->postmeta . " WHERE meta_key = 'course_id' AND meta_value = '%d'", $data['course_id'] ) );
+				$quizzes = $wpdb->get_col( $wpdb->prepare( 
+					"SELECT post_id FROM `{$wpdb->postmeta}` WHERE ( meta_key = 'course_id' AND meta_value = %d ) OR ( meta_key = %s AND meta_value = %d )", 
+					$data['course_id'], 
+					'ld_course_' . $data['course_id'], 
+					$data['course_id'] 
+				) );
+
+				$quizzes = array_unique( $quizzes );
 				
 				if ( empty( $quizzes ) ) {
 					$result = 0;
@@ -189,20 +211,20 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 					$sum += $score;
 				}
 
-				$return = number_format( $sum, 2 );
+				$result = $sum;
 
 				if ( $field == 'timespent' ) {
-					$result = learndash_seconds_to_time( $return );
+					// The $result must be integer before passed to
+					// learnash_seconds_to_time()
+					$result = learndash_seconds_to_time( intval( $result ) );
 				} else {
-					$result = $return;
+					$result = number_format( $result, 2 );
 				}
 
 				break;
 
 		} // End switch( $show )
-	} // End if $atts['field'] == course
-
-	if ( $atts['field'] == 'lesson' ) {
+	} else if ( $atts['field'] == 'lesson' ) { // End if $atts['field'] == course
 		$lesson = get_post( $data['lesson_id'] );
 
 		switch ( $atts['show'] ) {
@@ -211,13 +233,11 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				break;
 
 			case 'url':
-				$result = get_permalink( $data['lesson_id'] );
+				$result = learndash_get_step_permalink( $step_id = $data['lesson_id'], $step_course_id = $data['course_id'] );
 				break;
 		}
 		
-	} // End if $atts['field'] == lesson
-
-	if ( $atts['field'] == 'topic' ) {
+	} else if ( $atts['field'] == 'topic' ) { // End if $atts['field'] == lesson
 		$topic = get_post( $data['topic_id'] );
 
 		switch ( $atts['show'] ) {
@@ -227,11 +247,10 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 
 			case 'url':
 				$result = get_permalink( $data['topic_id'] );
+				$result = learndash_get_step_permalink( $data['topic_id'], $data['course_id']);
 				break;
 		}
-	} // End if $atts['field'] == topic
-
-	if ( $atts['field'] == 'quiz' ) {
+	} else if ( $atts['field'] == 'quiz' ) { // End if $atts['field'] == topic
 		if ( empty( $data['user_id'] ) ) {
 			$data['user_id'] = get_current_user_id();
 		}
@@ -266,8 +285,11 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 					'format' => 'Y-m-d H:i:s',
 				), $atts, $shortcode );
 
-				date_default_timezone_set( get_option( 'timezone_string' ) );
-				$selected_quizinfo['timestamp'] = date_i18n( $atts['format'], $selected_quizinfo['time'] );
+				/**
+				 * Updated to LearnDash Core code change
+				 * @link https://learndash.atlassian.net/browse/LEARNDASH-4188
+				 */
+				$selected_quizinfo['timestamp'] = learndash_adjust_date_time_display( $selected_quizinfo['time'], $atts['format'] );
 				break;
 
 			case 'percentage':		
@@ -304,6 +326,26 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				$selected_quizinfo['timespent'] = isset( $selected_quizinfo['timespent'] ) ? learndash_seconds_to_time( $selected_quizinfo['timespent'] ) : '';
 				break;
 
+			// Categories field output mimics setCategoryOverview private method from wpProQuiz_Controller_Quiz_Completed class
+			case 'categories':
+				$quiz_mapper     = new WpProQuiz_Model_QuizMapper();
+				$category_mapper = new WpProQuiz_Model_CategoryMapper();
+
+				$quiz = $quiz_mapper->fetch( $data['quiz_result']['pro_quizid'] );
+				$categories = $category_mapper->fetchByQuiz( $quiz );
+
+				$cats_result = $data['quiz_result']['cats'];
+
+				// Empty data passed because the class requires a parameter
+				$quiz_completed  = new WpProQuiz_Controller_QuizCompleted( array() );
+				// Need callback because the method is private
+				$set_cat_overview = function() {
+					return $this->setCategoryOverview( ...func_get_args() );
+				};
+
+				$selected_quizinfo['categories'] = $set_cat_overview->call( $quiz_completed, $cats_result, $categories );
+				break;
+
 		}
 
 		if ( isset( $selected_quizinfo[ $show ] ) ) {
@@ -312,9 +354,7 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 			$result = '';
 		}
 		
-	} // End if $atts['field'] == quiz
-
-	if ( $atts['field'] == 'essay' ) {
+	} else if ( $atts['field'] == 'essay' ) { // End if $atts['field'] == quiz
 		if ( ! isset( $data['user_id'] ) || ! isset( $data['question_id'] ) ) {
 			return;
 		}
@@ -342,9 +382,7 @@ function learndash_notifications_shortcode_init( $atts, $content = '' ) {
 				$result = $question->getPoints();
 				break;
 		}
-	} // End essay field
-
-	if ( $atts['field'] == 'assignment' ) {
+	} else if ( $atts['field'] == 'assignment' ) { // End essay field
 		$assignment = get_post( $data['assignment_id'] );
 
 		switch ( $atts['show'] ) {

@@ -19,9 +19,7 @@ use IFT\Rest;
 use IFT\Optimize;
 use IFT\Security;
 use IFT\Backend;
-use IFT\Talk;
 use IFT\Asgaros;
-use IFT\Zoom;
 use IFT\Woocommerce\Woocommerce;
 use IFT\Tools\Tools;
 use IFT\Forum;
@@ -44,16 +42,15 @@ define( 'IFT_REPORTS', ABSPATH . '/wp-content/reports/' );
 
 
 require __DIR__ .'/vendor/autoload.php';
-require IFT_SETTINGS . 'settings.php';
+//require IFT_SETTINGS . 'settings.php';
 
-new Learndash();
+Learndash::get_instance();
 new Users();
 new Security();
 new Rest();
 new Config();
 new Optimize();
 new Backend();
-new Talk();
 new Woocommerce();
 new Tools();
 new Asgaros();

@@ -56,6 +56,9 @@ if ( 'no' == $show_billing_details ) {
 		.woocommerce-order .woocommerce-customer-details .woocommerce-column--billing-address{
 			display: none;
 		}
+		.woocommerce-order .woocommerce-customer-details .woocommerce-column--shipping-address{
+			float:left;
+		}
 		';
 }
 

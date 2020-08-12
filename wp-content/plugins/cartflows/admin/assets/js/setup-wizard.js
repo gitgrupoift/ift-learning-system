@@ -11,11 +11,47 @@
 		 */
 		_bind: function() {
 			$( document ).on('click', '.wcf-install-plugins', 	CartFlowsWizard._installNow );
+			$( document ).on('click', '.button-next-wrap', 		CartFlowsWizard._usage_tracking );
 			$( document ).on('click', '.wcf-install-wc',        CartFlowsWizard._installWc );
 			$( document ).on('wp-plugin-installing'      , 		CartFlowsWizard._pluginInstalling);
 			$( document ).on('wp-plugin-install-error'   , 		CartFlowsWizard._installError);
 			$( document ).on('wp-plugin-install-success' , 		CartFlowsWizard._installSuccess);
 			$( document ).on('click', '.mautic-form-submit',    CartFlowsWizard._onMauticSubmit );
+		},
+
+
+		_usage_tracking: function( event ){
+
+			var allow_usage_tracking = document.getElementById("cartflows-usage-tracking-option");
+
+			if( allow_usage_tracking && allow_usage_tracking.checked ){
+				allow_usage_tracking = true;
+			}
+			else{
+				allow_usage_tracking = false;
+			}
+
+			$.ajax({
+				url    : ajaxurl,
+				method : 'POST',
+				data   : {
+					action       : 'usage_tracking_option',
+					allow_usage_tracking : allow_usage_tracking,
+					security     : cartflows_setup_vars.wcf_usage_tracking_option_nonce
+				},
+			})
+			.done(function( response ) {
+				if( response.success ) {
+					console.log("Option Updated.");
+				}
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
+
 		},
 
 		_onMauticSubmit: function( event ) {
@@ -104,7 +140,7 @@
 		_activatePlugin: function( plugin_init, plugin_slug ) {
 			var redirect_link   = $( '.wcf-redirect-link' ).data('redirect-link') || '';
 			var save_builder_option = ( '1' == $( "#save-pb-option" ).val() ) || false;
-
+			
 			$.ajax({
 				url    : ajaxurl,
 				method : 'POST',

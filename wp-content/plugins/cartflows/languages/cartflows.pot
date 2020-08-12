@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the CartFlows package.
 msgid ""
 msgstr ""
-"Project-Id-Version: CartFlows 1.5.12\n"
+"Project-Id-Version: CartFlows 1.5.13\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartflows\n"
-"POT-Creation-Date: 2020-07-01 06:22:56+00:00\n"
+"POT-Creation-Date: 2020-07-21 06:58:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,47 +24,43 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:183
+#: admin/bsf-analytics/class-bsf-analytics.php:229
 #. translators: %s product name
 msgid ""
 "Want to help make <strong>%1s</strong> even more awesome? Allow us to "
 "collect non-sensitive diagnostic data and usage information. "
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:186
+#: admin/bsf-analytics/class-bsf-analytics.php:232
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:210
+#: admin/bsf-analytics/class-bsf-analytics.php:256
 #. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:217
+#: admin/bsf-analytics/class-bsf-analytics.php:264
 msgid "Yes! Allow it"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:225
+#: admin/bsf-analytics/class-bsf-analytics.php:273
 msgid "No Thanks"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:294
+#: admin/bsf-analytics/class-bsf-analytics.php:353
 msgid "Every two days"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:348
+#: admin/bsf-analytics/class-bsf-analytics.php:412
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:380
-msgid "Allow Brainstorm Force products to track non-sensitive usage tracking data."
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:383
+#: admin/bsf-analytics/class-bsf-analytics.php:459
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:388
+#: admin/bsf-analytics/class-bsf-analytics.php:464
 msgid "Learn More."
 msgstr ""
 
@@ -159,7 +155,7 @@ msgid "Clone"
 msgstr ""
 
 #: classes/class-cartflows-default-meta.php:745
-#: modules/optin/classes/class-cartflows-optin-meta.php:488
+#: modules/optin/classes/class-cartflows-optin-meta.php:490
 msgid "Submit"
 msgstr ""
 
@@ -376,18 +372,18 @@ msgid ""
 "%1$sCartFlows Pro%2$s plugin to version %1$s%3$s%2$s or higher."
 msgstr ""
 
-#: classes/class-cartflows-loader.php:471
+#: classes/class-cartflows-loader.php:485
 #. translators: %s: html tags
 msgid ""
 "This %1$sCartFlows%2$s page requires %1$sWooCommerce%2$s plugin installed & "
 "activated."
 msgstr ""
 
-#: classes/class-cartflows-loader.php:481
+#: classes/class-cartflows-loader.php:495
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: classes/class-cartflows-loader.php:489
+#: classes/class-cartflows-loader.php:503
 msgid "Install WooCommerce"
 msgstr ""
 
@@ -431,12 +427,17 @@ msgstr ""
 msgid "Ultra-Bold 900"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:717
+#: classes/class-cartflows-meta-fields.php:175
+#. Translators: %d stock amount
+msgid "Stock: %d"
+msgstr ""
+
+#: classes/class-cartflows-meta-fields.php:758
 #: includes/meta-fields/generate-product-repeater.php:30
 msgid "Search for a product&hellip;"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:766
+#: classes/class-cartflows-meta-fields.php:809
 msgid "Search for a coupon&hellip;"
 msgstr ""
 
@@ -468,195 +469,214 @@ msgstr ""
 msgid "Flow Details"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:91
+#: classes/class-cartflows-wizard.php:94
 msgid "Thanks for installing and using CartFlows!"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:92
+#: classes/class-cartflows-wizard.php:95
 msgid ""
 "It is easy to use the CartFlows. Please use the setup wizard to quick start "
 "setup."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:94
+#: classes/class-cartflows-wizard.php:97
 msgid "Start Wizard"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:95
+#: classes/class-cartflows-wizard.php:98
 msgid "Skip Setup"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:125
+#: classes/class-cartflows-wizard.php:128
 #: includes/admin/cartflows-general-bck.php:24
 msgid "Welcome"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:130
+#: classes/class-cartflows-wizard.php:133
 msgid "Page Builder"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:134
+#: classes/class-cartflows-wizard.php:137
 msgid "Checkout"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:138
+#: classes/class-cartflows-wizard.php:141
 msgid "Training"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:142
+#: classes/class-cartflows-wizard.php:145
 msgid "Ready!"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:217
+#: classes/class-cartflows-wizard.php:220
 msgid "CartFlows Setup"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:243
+#: classes/class-cartflows-wizard.php:246
 msgid "Exit Setup Wizard"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:296
+#: classes/class-cartflows-wizard.php:299
 msgid "Welcome to CartFlows!"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:297
+#: classes/class-cartflows-wizard.php:300
 msgid ""
 "Thank you for choosing CartFlows to get more leads, increase conversions, & "
 "maximize profits. This short setup wizard will guide you though configuring "
 "CartFlows and creating your first funnel."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:303
+#: classes/class-cartflows-wizard.php:304
+msgid "Let&#x27;s Build it better!"
+msgstr ""
+
+#: classes/class-cartflows-wizard.php:305
+msgid ""
+"Get improved features and faster fixes by sharing non-sensitive data via "
+"usage tracking that shows us how CartFlows is used. No personal data is "
+"tracked or stored."
+msgstr ""
+
+#: classes/class-cartflows-wizard.php:306
+msgid "Learn More"
+msgstr ""
+
+#: classes/class-cartflows-wizard.php:309
+msgid "Yes, I am in."
+msgstr ""
+
+#: classes/class-cartflows-wizard.php:316
 msgid "Lets Go »"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:330
+#: classes/class-cartflows-wizard.php:344
 msgid "Page Builder Setup"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:331
+#: classes/class-cartflows-wizard.php:345
 msgid "Please select a page builder you would like to use with CartFlows."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:336
+#: classes/class-cartflows-wizard.php:350
 msgid "Select Page Builder"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:343
+#: classes/class-cartflows-wizard.php:357
 #: includes/admin/cartflows-general.php:94
 msgid "Elementor"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:353
+#: classes/class-cartflows-wizard.php:367
 msgid "Beaver Builder Plugin (Lite Version)"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:363
+#: classes/class-cartflows-wizard.php:377
 #: includes/admin/cartflows-general.php:96
 msgid "Divi"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:373
+#: classes/class-cartflows-wizard.php:387
 #: includes/admin/cartflows-general.php:97
 msgid "Gutenberg"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:383
+#: classes/class-cartflows-wizard.php:397
 #: includes/admin/cartflows-general.php:98
 msgid "Other"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:405
+#: classes/class-cartflows-wizard.php:419
 msgid ""
 "While CartFlows Should work with most page builders, we offer templates for "
 "the above page builders."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:408
-#: classes/class-cartflows-wizard.php:453
-#: classes/class-cartflows-wizard.php:640
+#: classes/class-cartflows-wizard.php:423
+#: classes/class-cartflows-wizard.php:468
+#: classes/class-cartflows-wizard.php:678
 msgid "« Previous"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:411
+#: classes/class-cartflows-wizard.php:426
 msgid "Skip this step"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:412
+#: classes/class-cartflows-wizard.php:427
 msgid "Next »"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:431
+#: classes/class-cartflows-wizard.php:446
 msgid "Choose a checkout"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:434
+#: classes/class-cartflows-wizard.php:449
 msgid ""
 "While CartFlows is designed to use WooCommerce sell digital and physical "
 "products, not all funnels need a checkout system."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:436
+#: classes/class-cartflows-wizard.php:451
 msgid ""
 "Would you like to install WooCommerce to sell digital and physical products "
 "in your funnels?"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:443
+#: classes/class-cartflows-wizard.php:458
 msgid "The following plugin will be installed and activated for you:"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:444
+#: classes/class-cartflows-wizard.php:459
 msgid "WooCommerce"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:445
+#: classes/class-cartflows-wizard.php:460
 msgid "WooCommerce Cart Abandonment Recovery"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:456
-#: classes/class-cartflows-wizard.php:643
+#: classes/class-cartflows-wizard.php:471
+#: classes/class-cartflows-wizard.php:681
 msgid "No thanks"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:457
+#: classes/class-cartflows-wizard.php:472
 msgid "Yes"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:576
+#: classes/class-cartflows-wizard.php:614
 msgid "Congratulations, You Did It!"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:583
+#: classes/class-cartflows-wizard.php:621
 msgid ""
 "CartFlows is ready to use on your website. You've successfully completed "
 "the setup process and all that is left for you to do is create your first "
 "flow."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:597
+#: classes/class-cartflows-wizard.php:635
 msgid "Create a flow"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:614
+#: classes/class-cartflows-wizard.php:652
 msgid "Exclusive CartFlows Training Course Offer"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:625
+#: classes/class-cartflows-wizard.php:663
 msgid ""
 "We want you to get off to a great start using CartFlows, so we would like "
 "to give access to our exclusive training course."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:626
+#: classes/class-cartflows-wizard.php:664
 msgid "Get access to this couse, for free, by entering your email below."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:628
+#: classes/class-cartflows-wizard.php:666
 msgid "Enter Email address"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:644
+#: classes/class-cartflows-wizard.php:682
 msgid "Allow"
 msgstr ""
 
@@ -761,7 +781,7 @@ msgstr ""
 
 #: includes/admin/cartflows-general.php:134
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:647
-#: modules/optin/classes/class-cartflows-optin-meta.php:381
+#: modules/optin/classes/class-cartflows-optin-meta.php:383
 msgid "Default"
 msgstr ""
 
@@ -1152,7 +1172,7 @@ msgid "Upgrade to %1$sCartFlows Pro%2$s for Order Bump feature."
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:469
-#: modules/optin/classes/class-cartflows-optin-meta.php:268
+#: modules/optin/classes/class-cartflows-optin-meta.php:270
 #. translators: %s: link
 msgid "Upgrade to %1$sCartFlows Pro%2$s for Custom Fields feature."
 msgstr ""
@@ -1203,7 +1223,7 @@ msgid "Two Step"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:568
-#: modules/optin/classes/class-cartflows-optin-meta.php:344
+#: modules/optin/classes/class-cartflows-optin-meta.php:346
 msgid "Primary Color"
 msgstr ""
 
@@ -1211,9 +1231,9 @@ msgstr ""
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:612
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:658
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:750
-#: modules/optin/classes/class-cartflows-optin-meta.php:353
-#: modules/optin/classes/class-cartflows-optin-meta.php:392
-#: modules/optin/classes/class-cartflows-optin-meta.php:504
+#: modules/optin/classes/class-cartflows-optin-meta.php:355
+#: modules/optin/classes/class-cartflows-optin-meta.php:394
+#: modules/optin/classes/class-cartflows-optin-meta.php:506
 #: modules/thankyou/classes/class-cartflows-thankyou-meta.php:209
 #: modules/thankyou/classes/class-cartflows-thankyou-meta.php:240
 msgid "Font Family"
@@ -1235,116 +1255,116 @@ msgstr ""
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:621
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:667
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:759
-#: modules/optin/classes/class-cartflows-optin-meta.php:401
-#: modules/optin/classes/class-cartflows-optin-meta.php:513
+#: modules/optin/classes/class-cartflows-optin-meta.php:403
+#: modules/optin/classes/class-cartflows-optin-meta.php:515
 #: modules/thankyou/classes/class-cartflows-thankyou-meta.php:249
 msgid "Font Weight"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:629
-#: modules/optin/classes/class-cartflows-optin-meta.php:364
+#: modules/optin/classes/class-cartflows-optin-meta.php:366
 msgid "Input Fields"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:637
-#: modules/optin/classes/class-cartflows-optin-meta.php:371
+#: modules/optin/classes/class-cartflows-optin-meta.php:373
 msgid "Floating Labels (Available in CartFlows Pro)"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:643
-#: modules/optin/classes/class-cartflows-optin-meta.php:377
+#: modules/optin/classes/class-cartflows-optin-meta.php:379
 msgid "Style"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:648
-#: modules/optin/classes/class-cartflows-optin-meta.php:382
+#: modules/optin/classes/class-cartflows-optin-meta.php:384
 msgid "Floating Labels"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:675
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:767
-#: modules/optin/classes/class-cartflows-optin-meta.php:409
-#: modules/optin/classes/class-cartflows-optin-meta.php:521
+#: modules/optin/classes/class-cartflows-optin-meta.php:411
+#: modules/optin/classes/class-cartflows-optin-meta.php:523
 msgid "Size"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:679
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:771
-#: modules/optin/classes/class-cartflows-optin-meta.php:413
-#: modules/optin/classes/class-cartflows-optin-meta.php:525
+#: modules/optin/classes/class-cartflows-optin-meta.php:415
+#: modules/optin/classes/class-cartflows-optin-meta.php:527
 msgid "Extra Small"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:680
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:772
-#: modules/optin/classes/class-cartflows-optin-meta.php:414
-#: modules/optin/classes/class-cartflows-optin-meta.php:526
+#: modules/optin/classes/class-cartflows-optin-meta.php:416
+#: modules/optin/classes/class-cartflows-optin-meta.php:528
 msgid "Small"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:681
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:773
-#: modules/optin/classes/class-cartflows-optin-meta.php:415
-#: modules/optin/classes/class-cartflows-optin-meta.php:527
+#: modules/optin/classes/class-cartflows-optin-meta.php:417
+#: modules/optin/classes/class-cartflows-optin-meta.php:529
 msgid "Medium"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:682
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:774
-#: modules/optin/classes/class-cartflows-optin-meta.php:416
-#: modules/optin/classes/class-cartflows-optin-meta.php:528
+#: modules/optin/classes/class-cartflows-optin-meta.php:418
+#: modules/optin/classes/class-cartflows-optin-meta.php:530
 msgid "Large"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:683
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:775
-#: modules/optin/classes/class-cartflows-optin-meta.php:417
-#: modules/optin/classes/class-cartflows-optin-meta.php:529
+#: modules/optin/classes/class-cartflows-optin-meta.php:419
+#: modules/optin/classes/class-cartflows-optin-meta.php:531
 msgid "Extra Large"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:684
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:776
-#: modules/optin/classes/class-cartflows-optin-meta.php:418
-#: modules/optin/classes/class-cartflows-optin-meta.php:530
+#: modules/optin/classes/class-cartflows-optin-meta.php:420
+#: modules/optin/classes/class-cartflows-optin-meta.php:532
 msgid "Custom"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:691
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:783
-#: modules/optin/classes/class-cartflows-optin-meta.php:425
-#: modules/optin/classes/class-cartflows-optin-meta.php:537
+#: modules/optin/classes/class-cartflows-optin-meta.php:427
+#: modules/optin/classes/class-cartflows-optin-meta.php:539
 msgid "Top Bottom Spacing"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:699
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:791
-#: modules/optin/classes/class-cartflows-optin-meta.php:433
-#: modules/optin/classes/class-cartflows-optin-meta.php:545
+#: modules/optin/classes/class-cartflows-optin-meta.php:435
+#: modules/optin/classes/class-cartflows-optin-meta.php:547
 msgid "Left Right Spacing"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:707
-#: modules/optin/classes/class-cartflows-optin-meta.php:449
+#: modules/optin/classes/class-cartflows-optin-meta.php:451
 msgid "Text / Placeholder Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:715
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:815
-#: modules/optin/classes/class-cartflows-optin-meta.php:457
-#: modules/optin/classes/class-cartflows-optin-meta.php:582
+#: modules/optin/classes/class-cartflows-optin-meta.php:459
+#: modules/optin/classes/class-cartflows-optin-meta.php:584
 msgid "Background Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:723
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:831
-#: modules/optin/classes/class-cartflows-optin-meta.php:465
-#: modules/optin/classes/class-cartflows-optin-meta.php:598
+#: modules/optin/classes/class-cartflows-optin-meta.php:467
+#: modules/optin/classes/class-cartflows-optin-meta.php:600
 msgid "Border Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:730
-#: modules/optin/classes/class-cartflows-optin-meta.php:441
+#: modules/optin/classes/class-cartflows-optin-meta.php:443
 msgid "Label Color"
 msgstr ""
 
@@ -1353,22 +1373,22 @@ msgid "Buttons"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:799
-#: modules/optin/classes/class-cartflows-optin-meta.php:566
+#: modules/optin/classes/class-cartflows-optin-meta.php:568
 msgid "Text Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:807
-#: modules/optin/classes/class-cartflows-optin-meta.php:574
+#: modules/optin/classes/class-cartflows-optin-meta.php:576
 msgid "Text Hover Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:823
-#: modules/optin/classes/class-cartflows-optin-meta.php:590
+#: modules/optin/classes/class-cartflows-optin-meta.php:592
 msgid "Background Hover Color"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:839
-#: modules/optin/classes/class-cartflows-optin-meta.php:606
+#: modules/optin/classes/class-cartflows-optin-meta.php:608
 msgid "Border Hover Color"
 msgstr ""
 
@@ -1694,66 +1714,66 @@ msgstr ""
 msgid "Select Free and Virtual product only."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:291
+#: modules/optin/classes/class-cartflows-optin-meta.php:293
 msgid "Pass Fields as URL Parameters"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:294
+#: modules/optin/classes/class-cartflows-optin-meta.php:296
 msgid "Enable"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:295
+#: modules/optin/classes/class-cartflows-optin-meta.php:297
 msgid ""
 "You can pass specific fields from the form to next step as URL query "
 "parameters."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:306
+#: modules/optin/classes/class-cartflows-optin-meta.php:308
 msgid "Enter form field"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:309
-#: modules/optin/classes/class-cartflows-optin-meta.php:319
+#: modules/optin/classes/class-cartflows-optin-meta.php:311
+#: modules/optin/classes/class-cartflows-optin-meta.php:321
 msgid "Enter comma seprated field name. E.g. first_name, last_name"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:311
+#: modules/optin/classes/class-cartflows-optin-meta.php:313
 msgid "Fields to pass, separated by commas"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:321
+#: modules/optin/classes/class-cartflows-optin-meta.php:323
 #. translators: %s: link
 msgid ""
 "You can pass field value as a URL parameter to the next step. %1$sClick "
 "here%2$s for more information."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:478
+#: modules/optin/classes/class-cartflows-optin-meta.php:480
 msgid "Submit Button"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:484
+#: modules/optin/classes/class-cartflows-optin-meta.php:486
 msgid "Button Text"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:495
+#: modules/optin/classes/class-cartflows-optin-meta.php:497
 #: modules/thankyou/classes/class-cartflows-thankyou-meta.php:217
 msgid "Font Size"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:553
+#: modules/optin/classes/class-cartflows-optin-meta.php:555
 msgid "Position"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:557
+#: modules/optin/classes/class-cartflows-optin-meta.php:559
 msgid "Left"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:558
+#: modules/optin/classes/class-cartflows-optin-meta.php:560
 msgid "Center"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-meta.php:559
+#: modules/optin/classes/class-cartflows-optin-meta.php:561
 msgid "Right"
 msgstr ""
 

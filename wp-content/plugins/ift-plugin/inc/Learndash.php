@@ -4,6 +4,8 @@ namespace IFT;
 
 use IFT\Learndash\GroupDates;
 use IFT\Learndash\GroupReports;
+use IFT\Learndash\ContentCategories;
+use IFT\Learndash\Gradebook;
 /*
 Timer nos tópicos - funções e hooks a utilizar:
 - learndash_get_topic_list()
@@ -32,6 +34,8 @@ class Learndash {
         add_shortcode( 'ld-hours-completed', array($this, 'learndash_course_completed_hours'));
         add_shortcode( 'ld-courses-and-hours', array($this, 'learndash_user_course_enrollment_and_hours'));
         
+        add_action('learndash-focus-sidebar-heading-after', array($this, 'forum_buttons'));
+        
         $this->require();
         
     }
@@ -39,6 +43,14 @@ class Learndash {
     public function require() {
         
         new GroupReports();
+        new ContentCategories();
+        new Gradebook();
+        
+    }
+    
+    public function forum_buttons() {
+
+            echo '<a class="ld-button" style="width: 50%; margin-top: 10px;" href="https://aulas.grupoift.pt/forum"><span class="ld-text" style="text-transform: uppercase; font-size: 13px; font-weight: bold !important;">Acesso ao Fórum</span><span class="ld-icon ld-icon-arrow-right"></span></a>';
         
     }
     /**
@@ -167,6 +179,12 @@ class Learndash {
         
     }
     
+    public function current_user_has_role($role) {
+        $user = wp_get_current_user();
+        return $user->exists() && in_array( $role, $user->roles );
+    }
+    
+    
     /**
      * Tabs adicionais às páginas das formações.
      *
@@ -181,8 +199,58 @@ class Learndash {
 			'label'   => __( 'Descrição', 'ift-plugin' ),
 			'content' => self::description_tab(),
 		);
+        if ($this->current_user_has_role('lecturer')) {
+            if(get_field('apresentacao_ficheiro')) {
+            $tabs['instructor'] = array(
+                'id'      => 'instructor',
+                'icon'    => 'ld-icon-download',
+                'label'   => __( 'Formador', 'ift-plugin' ),
+                'content' => self::instructor_tab(),
+            );
+            }
+        }
+        if ($this->current_user_has_role('student')) {
+            if(get_field('manual_ficheiro')) {
+            $tabs['alumni'] = array(
+                'id'      => 'alumni',
+                'icon'    => 'ld-icon-download',
+                'label'   => __( 'Formando', 'ift-plugin' ),
+                'content' => self::alumni_tab(),
+            );
+            }
+        }
         
         return $tabs;
+        
+    }
+    
+    public static function instructor_tab() {
+        
+        if(get_field('apresentacao_ficheiro')) {
+            
+            $file = get_field('apresentacao_ficheiro');
+            $content = '<header class="description-tab-header">Apresentação para o Formador</header>';
+            $content .= '<hr><article class="download-instructor">'; 
+            $content .= '<p>Apresentação correspondente ao tópico atual. Clique no botão para transferir ou consultar. Este material é apenas visível para formadores e administradores.</p><a class="button" href="' . $file['url'] . '" target="_blank">Tranferir</a></article>';
+            
+        }
+        
+        return $content;
+        
+    }
+    
+    public static function alumni_tab() {
+        
+        if(get_field('manual_ficheiro')) {
+            
+            $file = get_field('manual_ficheiro');
+            $content = '<header class="description-tab-header">Manual do Formando</header>';
+            $content .= '<hr><article class="download-alumni">'; 
+            $content .= '<p>Manual correspondente à aula atual. Clique no botão para transferir ou consultar. Este material é apenas visível para formandos.</p><a class="button" href="' . $file['url'] . '" target="_blank">Tranferir</a></article>';
+            
+        }
+        
+        return $content;
         
     }
     

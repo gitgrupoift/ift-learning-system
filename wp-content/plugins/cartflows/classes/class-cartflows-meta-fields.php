@@ -100,15 +100,13 @@ class Cartflows_Meta_Fields {
 	}
 
 		/**
-		 * Function to search products
+		 * Function to search products.
 		 */
 	public function json_search_products() {
 
 		check_admin_referer( 'wcf-json-search-products-and-variations', 'security' );
 
 		global $wpdb;
-
-		$allowed_products_type = array( 'simple', 'variation', 'variable', 'subscription', 'variable-subscription', 'grouped' );
 
 		// get search term.
 		$term = (string) urldecode( sanitize_text_field( wp_unslash( $_GET['term'] ) ) ); // phpcs:ignore
@@ -117,54 +115,89 @@ class Cartflows_Meta_Fields {
 			die();
 		}
 
-		// get excluded product types.
-		if ( isset( $_GET['excluded'] ) || ! empty( $_GET['excluded'] ) ) {
+		// CartFlows supported product types.
+		$supported_product_types = array( 'simple', 'variable', 'variation', 'subscription', 'variable-subscription', 'subscription_variation', 'course' );
 
-			$excluded_types = sanitize_text_field( ( wp_unslash( $_GET['excluded'] ) ) );
+		// Allowed product types.
+		if ( isset( $_GET['allowed'] ) && ! empty( $_GET['allowed'] ) ) {
 
-			if ( ! is_array( $excluded_types ) ) {
-				$excluded_types = explode( ',', $excluded_types );
+			$allowed_product_types = sanitize_text_field( ( wp_unslash( $_GET['allowed'] ) ) );
+
+			$allowed_product_types = $this->sanitize_data_attributes( $allowed_product_types );
+
+			$supported_product_types = $allowed_product_types;
+		}
+
+		// Include product types.
+		if ( isset( $_GET['included'] ) && ! empty( $_GET['included'] ) ) {
+
+			$include_product_types = sanitize_text_field( ( wp_unslash( $_GET['included'] ) ) );
+
+			$include_product_types = $this->sanitize_data_attributes( $include_product_types );
+
+			$supported_product_types = array_merge( $supported_product_types, $include_product_types );
+		}
+
+		// Exclude product types.
+		if ( isset( $_GET['excluded'] ) && ! empty( $_GET['excluded'] ) ) {
+
+			$excluded_product_types = sanitize_text_field( ( wp_unslash( $_GET['excluded'] ) ) );
+
+			$excluded_product_types = $this->sanitize_data_attributes( $excluded_product_types );
+
+			$supported_product_types = array_diff( $supported_product_types, $excluded_product_types );
+		}
+
+		// Get all products data.
+		$data = WC_Data_Store::load( 'product' );
+		$ids  = $data->search_products( $term, '', true, false, 11 );
+
+		// Get all product objects.
+		$product_objects = array_filter( array_map( 'wc_get_product', $ids ), 'wc_products_array_filter_readable' );
+
+		// Remove the product objects whose product type are not in supported array.
+		$product_objects = array_filter(
+			$product_objects,
+			function ( $arr ) use ( $supported_product_types ) {
+				return $arr && is_a( $arr, 'WC_Product' ) && in_array( $arr->get_type(), $supported_product_types, true );
 			}
+		);
+
+		$products_found = array();
+
+		foreach ( $product_objects as $product_object ) {
+			$formatted_name = $product_object->get_formatted_name();
+			$managing_stock = $product_object->managing_stock();
+
+			if ( $managing_stock && ! empty( $_GET['display_stock'] ) ) {
+				$stock_amount = $product_object->get_stock_quantity();
+				/* Translators: %d stock amount */
+				$formatted_name .= ' &ndash; ' . sprintf( __( 'Stock: %d', 'cartflows' ), wc_format_stock_quantity_for_display( $stock_amount, $product_object ) );
+			}
+
+				$products_found[ $product_object->get_id() ] = rawurldecode( $formatted_name );
+
+		}
+
+		wp_send_json( $products_found );
+	}
+
+	/**
+	 * Function to sanitize the product type data attribute.
+	 *
+	 * @param array $product_types product types.
+	 */
+	public function sanitize_data_attributes( $product_types = array() ) {
+
+		if ( ! is_array( $product_types ) ) {
+				$product_types = explode( ',', $product_types );
+		}
 
 			// Sanitize the excluded types against valid product types.
-			foreach ( $excluded_types as $index => $value ) {
-				$excluded_types[ $index ] = strtolower( trim( $value ) );
-			}
-
-			$allowed_products_type = array_diff( $allowed_products_type, $excluded_types );
+		foreach ( $product_types as $index => $value ) {
+			$product_types[ $index ] = strtolower( trim( $value ) );
 		}
-
-		$posts = wp_cache_get( 'wcf_search_products', 'wcf_funnel_Cart' );
-
-		if ( false === $posts ) {
-			$posts = $wpdb->get_results( // phpcs:ignore
-				$wpdb->prepare(
-					"SELECT *
-								FROM {$wpdb->prefix}posts
-								WHERE post_type = %s
-								AND post_title LIKE %s
-								AND post_status = %s",
-					'product',
-					$wpdb->esc_like( $term ) . '%',
-					'publish'
-				)
-			);
-			wp_cache_set( 'wcf_search_products', $posts, 'wcf_funnel_Cart' );
-		}
-
-		$product_found = array();
-
-		if ( $posts ) {
-			foreach ( $posts as $post ) {
-				$product = wc_get_product( $post->ID );
-				$type    = $product->get_type();
-				if ( in_array( $type, $allowed_products_type, true ) ) {
-					$product_found[ $post->ID ] = get_the_title( $post->ID ) . ' (#' . $post->ID . ')';
-				}
-			}
-		}
-
-		wp_send_json( $product_found );
+			return $product_types;
 	}
 
 	/**
@@ -694,9 +727,17 @@ class Cartflows_Meta_Fields {
 
 		$value    = $field_data['value'];
 		$excluded = '';
+		$allowed  = '';
+		$included = '';
 
-		if ( isset( $field_data['excluded_product_types'] ) && is_array( $field_data['excluded_product_types'] ) ) {
+		if ( isset( $field_data['excluded_product_types'] ) && is_array( $field_data['excluded_product_types'] ) && ! empty( $field_data['excluded_product_types'] ) ) {
 			$excluded = html_entity_decode( implode( ',', $field_data['excluded_product_types'] ), ENT_COMPAT, 'UTF-8' );
+		}
+		if ( isset( $field_data['allowed_product_types'] ) && is_array( $field_data['allowed_product_types'] ) && ! empty( $field_data['allowed_product_types'] ) ) {
+			$allowed = html_entity_decode( implode( ',', $field_data['allowed_product_types'] ), ENT_COMPAT, 'UTF-8' );
+		}
+		if ( isset( $field_data['include_product_types'] ) && is_array( $field_data['include_product_types'] ) && ! empty( $field_data['allowed_product_types'] ) ) {
+			$included = html_entity_decode( implode( ',', $field_data['include_product_types'] ), ENT_COMPAT, 'UTF-8' );
 		}
 
 		$multiple = '';
@@ -715,8 +756,10 @@ class Cartflows_Meta_Fields {
 					name="' . $field_data['name'] . '[]"
 					class="wcf-product-search" ' . $multiple . $allow_clear . '
 					data-placeholder="' . __( 'Search for a product&hellip;', 'cartflows' ) . '"
-					data-action="woocommerce_json_search_products_and_variations"
-					data-excluded_product_types =" ' . $excluded . '">';
+					data-action="wcf_json_search_products_and_variations"
+					data-excluded_product_types ="' . $excluded . '"
+					data-allowed_product_types ="' . $allowed . '"
+					data-include_product_types ="' . $included . '">';
 
 		if ( is_array( $value ) && ! empty( $value ) ) {
 

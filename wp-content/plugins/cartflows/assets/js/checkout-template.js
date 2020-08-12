@@ -188,7 +188,7 @@
 
 	var wcf_persistent_data = function(){
 		
-		if( 'yes' != cartflows.allow_persistance ){
+		if( 'yes' != cartflows.allow_persistence ){
 			return;
 		}
 

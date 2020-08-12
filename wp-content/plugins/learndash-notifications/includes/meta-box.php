@@ -16,6 +16,17 @@ function learndash_notifications_add_meta_boxes() {
 function learndash_notifications_meta_box( $args ) {
 	$settings = learndash_notifications_get_meta_box_settings();
 
+	?>
+
+	<style type="text/css">
+		#minor-publishing-actions,
+		#misc-publishing-actions {
+			display: none;
+		}
+	</style>
+
+	<?php
+
 	echo '<div class="sfwd sfwd_options ld_notifications_metabox_settings">';
 	wp_nonce_field( 'learndash_notifications_meta_box', 'learndash_notifications_nonce' );
 
@@ -118,22 +129,7 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 0,
 			'value' => array(
 				0 => __( '-- Select an Email Trigger --', 'learndash-notifications' ),
-				'enroll_group' => __( 'User enrolls into a group', 'learndash-notifications' ),
-				'enroll_course' => __( 'User enrolls into a course', 'learndash-notifications' ),
-				'complete_course' => __( 'User completes a course', 'learndash-notifications' ),
-				'complete_lesson' => __( 'User completes a lesson', 'learndash-notifications' ),
-				'lesson_available' => __( 'A scheduled lesson is available to user', 'learndash-notifications' ),
-				'complete_topic' => __( 'User completes a topic', 'learndash-notifications' ),
-				'pass_quiz' => __( 'User passes a quiz', 'learndash-notifications' ),
-				'fail_quiz' => __( 'User fails a quiz', 'learndash-notifications' ),
-				'complete_quiz' => __( 'User completes a quiz', 'learndash-notifications' ),
-				'upload_assignment' => __( 'An Assignment is uploaded', 'learndash-notifications' ),
-				'approve_assignment' => __( 'An Assignment is approved', 'learndash-notifications' ),
-				'not_logged_in' => __( 'User hasn\'t logged in for "X" days', 'learndash-notifications' ),
-				'course_expires' => __( '"X" days before course expires', 'learndash-notifications' ),
-				'essay_graded' => __( 'Essay question has been put into graded status', 'learndash-notifications' ),
-				// 'course_enrollment' => __( '"X" days after course enrollment', 'learndash-notifications' ),
-			)
+			) + learndash_notifications_get_triggers(),
 		),
 		'group_id' => array(
 			'type' => 'dropdown',
@@ -144,7 +140,7 @@ function learndash_notifications_get_meta_box_settings() {
 			'parent' => array( 'enroll_group' ),
 			'value' => array(
 				'' => __( '-- Select Group --', 'learndash-notifications' ),
-				'all' => __( 'All Groups', 'learndash-notifications' )
+				'all' => __( 'Any Group', 'learndash-notifications' )
 			) + $groups_array
 		),
 		'course_id' => array(
@@ -154,10 +150,10 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 1,
 			'disabled' => 1,
 			'class' => 'parent_field',
-			'parent' => array( 'enroll_course', 'complete_course', 'course_expires', 'not_logged_in', 'complete_lesson', 'lesson_available', 'complete_topic', 'complete_quiz', 'pass_quiz', 'fail_quiz' ),
+			'parent' => array( 'enroll_course', 'complete_course', 'course_expires', 'course_expires_after', 'not_logged_in', 'complete_lesson', 'lesson_available', 'complete_topic', 'submit_quiz', 'complete_quiz', 'pass_quiz', 'fail_quiz', 'upload_assignment', 'approve_assignment' ),
 			'value' => array(
 				'' => __( '-- Select Course --', 'learndash-notifications' ),
-				'all' => __( 'All Courses', 'learndash-notifications' )
+				'all' => __( 'Any Course', 'learndash-notifications' )
 			) + $courses_array
 		),
 		'lesson_id' => array(
@@ -167,10 +163,10 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 1,
 			'disabled' => 1,
 			'class' => 'parent_field child_field',
-			'parent' => array( 'complete_lesson', 'lesson_available', 'complete_topic', 'complete_quiz', 'pass_quiz', 'fail_quiz' ),
+			'parent' => array( 'complete_lesson', 'lesson_available', 'complete_topic', 'submit_quiz', 'complete_quiz', 'pass_quiz', 'fail_quiz', 'upload_assignment', 'approve_assignment' ),
 			'value' => array(
 				'' => __( '-- Select Lesson --', 'learndash-notifications' ),
-				'all' => __( 'All Lessons', 'learndash-notifications' )
+				'all' => __( 'Any Lesson', 'learndash-notifications' )
 			) + $lessons_array,
 		),
 		'topic_id' => array(
@@ -180,10 +176,10 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 1,
 			'disabled' => 1,
 			'class' => 'parent_field child_field',
-			'parent' => array( 'complete_topic', 'complete_quiz', 'pass_quiz', 'fail_quiz' ),
+			'parent' => array( 'complete_topic', 'submit_quiz', 'complete_quiz', 'pass_quiz', 'fail_quiz', 'upload_assignment', 'approve_assignment' ),
 			'value' => array(
 				'' => __( '-- Select Topic --', 'learndash-notifications' ),
-				'all' => __( 'All Topics', 'learndash-notifications' )
+				'all' => __( 'Any Topic', 'learndash-notifications' )
 			) + $topics_array,
 		),
 		'quiz_id' => array(
@@ -193,10 +189,10 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 1,
 			'disabled' => 1,
 			'class' => 'child_field',
-			'parent' => array( 'pass_quiz', 'fail_quiz', 'complete_quiz' ),
+			'parent' => array( 'pass_quiz', 'fail_quiz', 'submit_quiz', 'complete_quiz' ),
 			'value' => array(
 				'' => __( '-- Select Quiz --', 'learndash-notifications' ),
-				'all' => __( 'All Quizzes', 'learndash-notifications' )
+				'all' => __( 'Any Quiz', 'learndash-notifications' )
 			) + $quizzes_array,
 		),
 		'not_logged_in_days' => array(
@@ -219,7 +215,7 @@ function learndash_notifications_get_meta_box_settings() {
 			'size' => 2,
 			'parent' => 'course_expires',
 		),
-		/*'course_enrollment_days' => array(
+		'course_expires_after_days' => array(
 			'type' => 'text',
 			'title' => __( 'After how many days?', 'learndash-notifications' ),
 			'help_text' => __( 'Setting associated with the email trigger setting above.', 'learndash-notifications' ),
@@ -227,19 +223,15 @@ function learndash_notifications_get_meta_box_settings() {
 			'hide' => 1,
 			'hide_delay' => 1,
 			'size' => 2,
-			'parent' => 'course_enrollment',
-		),*/
+			'parent' => 'course_expires_after',
+		),
 		'recipient' => array(
 			'type' => 'checkbox',
 			'title' => __( 'Recipient', 'learndash-notifications' ),
 			'help_text' => __( 'Recipient of this email.', 'learndash-notifications' ),
 			'hide' => 0,
 			'hide_on' => array(),
-			'value' => array(
-				'user' => __( 'User', 'learndash-notifications' ),
-				'group_leader' => __( 'Group Leader', 'learndash-notifications' ),
-				'admin' => __( 'Admin', 'learndash-notifications' ),
-			)
+			'value' => learndash_notifications_get_default_recipients(),
 		),
 		'bcc' => array(
 			'type' => 'text',
@@ -255,12 +247,13 @@ function learndash_notifications_get_meta_box_settings() {
 			'help_text' => __( 'How many days this email is delayed after the trigger occurs (default is 0).', 'learndash-notifications' ),
 			'label' => __( 'day(s)', 'learndash-notifications' ),
 			'hide' => 0,
+			'hide_on' => array( 'not_logged_in', 'course_expires', 'course_expires_after' ),
 			'default' => 0,
 			'size' => 2,
 		),
 	);
 
-	return $settings;
+	return apply_filters( 'learndash_notification_settings',  $settings );
 }
 
 /**
@@ -522,7 +515,7 @@ function learndash_notifications_save_meta_box( $notification_id ) {
 		update_post_meta( $notification_id, $key, $value );
 	}
 
-	if ( in_array( $_POST['_ld_notifications_trigger'], array( 'enroll_course', 'complete_course', 'course_expires' ) ) ) {
+	if ( in_array( $_POST['_ld_notifications_trigger'], array( 'enroll_course', 'complete_course', 'course_expires', 'course_expires_after' ) ) ) {
 		update_post_meta( $notification_id, '_ld_notifications_lesson_id', '' );
 		update_post_meta( $notification_id, '_ld_notifications_topic_id', '' );
 		update_post_meta( $notification_id, '_ld_notifications_quiz_id', '' );
@@ -540,7 +533,7 @@ function learndash_notifications_save_meta_box( $notification_id ) {
 		update_post_meta( $notification_id, '_ld_notifications_lesson_id', $lesson_id );
 		update_post_meta( $notification_id, '_ld_notifications_quiz_id', '' );
 
-	} elseif ( in_array( $_POST['_ld_notifications_trigger'], array( 'pass_quiz', 'fail_quiz', 'complete_quiz' ) ) ) {
+	} elseif ( in_array( $_POST['_ld_notifications_trigger'], array( 'pass_quiz', 'fail_quiz', 'submit_quiz', 'complete_quiz' ) ) ) {
 		$course_id =  (int) $_POST['_ld_notifications_course_id'];
 		$lesson_id =  (int) $_POST['_ld_notifications_lesson_id'];
 		$topic_id  =  (int) $_POST['_ld_notifications_topic_id'];
@@ -605,6 +598,7 @@ function learndash_notifications_get_shortcodes_instructions(){
 		'[ld_notifications field="quiz" show="quiz_title"]' => __( 'Display quiz title.', 'learndash-notifications' ),
 		'[ld_notifications field="quiz" show="course_title"]' => __( 'Display course title that quiz belongs to.', 'learndash-notifications' ),
 		'[ld_notifications field="quiz" show="timespent"]' => __( 'Display how long is taken to complete the quiz.', 'learndash-notifications' ),
+		'[ld_notifications field="quiz" show="categories"]' => __( 'Display quiz result based on categories.', 'learndash-notifications' ),
 	);
 
 	$essay_shortcode = array(
@@ -627,16 +621,18 @@ function learndash_notifications_get_shortcodes_instructions(){
 		'complete_lesson' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode ),
 		'lesson_available' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode ),
 		'complete_topic' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode, $topic_shortcode ),
-		'pass_quiz' => array_merge( $user_shortcode, $quiz_shortcode ),
-		'fail_quiz' => array_merge( $user_shortcode, $quiz_shortcode ),
-		'complete_quiz' => array_merge( $user_shortcode, $quiz_shortcode ),
+		'pass_quiz' => array_merge( $user_shortcode, $course_basic_shortcode, $course_advanced_shortcode, $lesson_shortcode, $topic_shortcode, $quiz_shortcode ),
+		'fail_quiz' => array_merge( $user_shortcode, $course_basic_shortcode, $course_advanced_shortcode, $lesson_shortcode, $topic_shortcode, $quiz_shortcode ),
+		'submit_quiz' => array_merge( $user_shortcode, $course_basic_shortcode, $course_advanced_shortcode, $lesson_shortcode, $topic_shortcode, $quiz_shortcode ),
+		'complete_quiz' => array_merge( $user_shortcode, $course_basic_shortcode, $course_advanced_shortcode, $lesson_shortcode, $topic_shortcode, $quiz_shortcode ),
+		'submit_essay' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode, $essay_shortcode ),
+		'essay_graded' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode, $essay_shortcode ),
 		'upload_assignment' => array_merge( $user_shortcode, $assignment_shortcode ),
 		'approve_assignment' => array_merge( $user_shortcode, $assignment_shortcode ),
 		'not_logged_in' => array_merge( $user_shortcode, $course_basic_shortcode ),
 		'course_expires' => array_merge( $user_shortcode, $course_basic_shortcode ),
-		'course_enrollment' => array_merge( $user_shortcode, $course_basic_shortcode ),
-		'essay_graded' => array_merge( $user_shortcode, $course_basic_shortcode, $lesson_shortcode, $essay_shortcode ),
+		'course_expires_after' => array_merge( $user_shortcode, $course_basic_shortcode ),
 	);
 
-	return $instructions;
+	return apply_filters( 'learndash_notifications_shortcodes_instructions', $instructions );
 }

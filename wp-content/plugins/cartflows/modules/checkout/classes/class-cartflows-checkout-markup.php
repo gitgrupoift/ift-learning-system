@@ -1064,7 +1064,7 @@ class Cartflows_Checkout_Markup {
 
 		$vars['wcf_validate_remove_cart_product_nonce'] = wp_create_nonce( 'wcf-remove-cart-product' );
 
-		$vars['allow_persistance'] = apply_filters( 'cartflows_allow_persistace', 'yes' );
+		$vars['allow_persistence'] = wcf_apply_filters_deprecated( 'cartflows_allow_persistace', array( 'yes' ), '1.6.0', 'cartflows_allow_persistence' );
 
 		return $vars;
 	}

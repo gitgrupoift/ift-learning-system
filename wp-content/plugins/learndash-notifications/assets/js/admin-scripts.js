@@ -17,13 +17,8 @@ var LD_Notifications = {
 
 				$( '.sfwd_input.' + option_class ).show();
 				$( '.sfwd_input.child-input' ).not( '.' + option_class ).hide();
+				$( '.sfwd_input.hide_on' ).show();
 				$( '.sfwd_input.hide_on_' + option_class ).hide();
-
-				if ( $.inArray( option_class, [ 'not_logged_in', 'course_expires', 'course_enrollment' ] ) != -1 ) {
-					$( '.sfwd_input#delay' ).hide();
-				} else {
-					$( '.sfwd_input#delay' ).show();
-				}
 			});
 
 			$( window ).load( function( e ) {
@@ -34,12 +29,8 @@ var LD_Notifications = {
 				$( '.sfwd_input.' + option_class ).show();
 				$( '.sfwd_input.child-input' ).not( '.' + option_class ).hide();
 				$( '.sfwd_input.hide-empty-select' ).hide();
-
-				if ( $.inArray( option_class, [ 'not_logged_in', 'course_expires', 'course_enrollment' ] ) != -1 ) {
-					$( '.sfwd_input#delay' ).hide();
-				} else {
-					$( '.sfwd_input#delay' ).show();
-				}
+				$( '.sfwd_input.hide_on' ).show();
+				$( '.sfwd_input.hide_on_' + option_class ).hide();
 			});
 		}
 	},
@@ -110,19 +101,18 @@ var LD_Notifications = {
 			.done( function( data, textStatus, jqXHR ) {
 				var response = data;
 				response = JSON.parse( response );
-				console.log( response );
 
 				if ( el.attr( 'name' ).indexOf( 'course' ) != '-1' ) {
 					$( 'select[name="_ld_notifications_topic_id"]' ).html(
-						'<option>' + LD_Notifications_String.select_lesson_first + '</option>'
+						'<option value="">' + LD_Notifications_String.select_lesson_first + '</option>'
 					);
 
 					$( 'select[name="_ld_notifications_quiz_id"]' ).html(
-						'<option>' + LD_Notifications_String.select_topic_first + '</option>'
+						'<option value="">' + LD_Notifications_String.select_topic_first + '</option>'
 					);
 
 					$( 'select[name="_ld_notifications_lesson_id"]' ).html( 
-						'<option>' + LD_Notifications_String.select_lesson + '</option>' +
+						'<option value="">' + LD_Notifications_String.select_lesson + '</option>' +
 						'<option value="all">' + LD_Notifications_String.all_lessons + '</option>'
 					);
 
@@ -133,11 +123,11 @@ var LD_Notifications = {
 
 				if ( el.attr( 'name' ).indexOf( 'lesson' ) != '-1' ) {
 					$( 'select[name="_ld_notifications_quiz_id"]' ).html(
-						'<option>' + LD_Notifications_String.select_topic_first + '</option>'
+						'<option value="">' + LD_Notifications_String.select_topic_first + '</option>'
 					);
 
 					$( 'select[name="_ld_notifications_topic_id"]' ).html( 
-						'<option>' + LD_Notifications_String.select_topic + '</option>' +
+						'<option value="">' + LD_Notifications_String.select_topic + '</option>' +
 						'<option value="all">' + LD_Notifications_String.all_topics + '</option>'
 					);
 
@@ -148,7 +138,7 @@ var LD_Notifications = {
 
 				if ( el.attr( 'name' ).indexOf( 'topic' ) != '-1' ) {
 					$( 'select[name="_ld_notifications_quiz_id"]' ).html( 
-						'<option>' + LD_Notifications_String.select_quiz + '</option>' +
+						'<option value="">' + LD_Notifications_String.select_quiz + '</option>' +
 						'<option value="all">' + LD_Notifications_String.all_quizzes + '</option>' 
 					);
 
@@ -163,15 +153,15 @@ var LD_Notifications = {
 
 	update_select_values: function() {
 		$( 'select[name="_ld_notifications_lesson_id"]' ).html( 
-			'<option>' + LD_Notifications_String.select_course_first + '</option>'
+			'<option value="">' + LD_Notifications_String.select_course_first + '</option>'
 		);
 		
 		$( 'select[name="_ld_notifications_topic_id"]' ).html(
-			'<option>' + LD_Notifications_String.select_lesson_first + '</option>'
+			'<option value="">' + LD_Notifications_String.select_lesson_first + '</option>'
 		);
 
 		$( 'select[name="_ld_notifications_quiz_id"]' ).html(
-			'<option>' + LD_Notifications_String.select_topic_first + '</option>'
+			'<option value="">' + LD_Notifications_String.select_topic_first + '</option>'
 		);
 	},
 
@@ -182,19 +172,19 @@ var LD_Notifications = {
 
 		if ( $( 'select[name="_ld_notifications_lesson_id"]' ).val() === '' ) {
 			$( 'select[name="_ld_notifications_lesson_id"]' ).html( 
-				'<option>' + LD_Notifications_String.select_course_first + '</option>'
+				'<option value="">' + LD_Notifications_String.select_course_first + '</option>'
 			);
 		}
 		
 		if ( $( 'select[name="_ld_notifications_topic_id"]' ).val() === '' ) {
 			$( 'select[name="_ld_notifications_topic_id"]' ).html(
-				'<option>' + LD_Notifications_String.select_lesson_first + '</option>'
+				'<option value="">' + LD_Notifications_String.select_lesson_first + '</option>'
 			);
 		}
 
 		if ( $( 'select[name="_ld_notifications_quiz_id"]' ).val() === '' ) {
 			$( 'select[name="_ld_notifications_quiz_id"]' ).html(
-				'<option>' + LD_Notifications_String.select_topic_first + '</option>'
+				'<option value="">' + LD_Notifications_String.select_topic_first + '</option>'
 			);
 		}
 	}

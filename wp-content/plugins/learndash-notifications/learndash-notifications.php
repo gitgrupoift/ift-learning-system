@@ -3,7 +3,7 @@
  * Plugin Name: LearnDash LMS - Notifications
  * Plugin URI: 
  * Description:	Create and send notification emails to the users. 
- * Version: 1.2.0
+ * Version: 1.4.0
  * Author: LearnDash
  * Author URI: http://www.learndash.com/
  * Text Domain: learndash-notifications
@@ -52,6 +52,7 @@ final class LearnDash_Notifications {
 			add_action( 'plugins_loaded', array( self::$instance, 'load_textdomain' ) );
 
 			self::$instance->includes();
+			add_action( 'plugins_loaded', array( self::$instance, 'includes_after_plugins_loaded' ), 99 );
 		}
 
 		return self::$instance;
@@ -68,7 +69,7 @@ final class LearnDash_Notifications {
 
 		// Plugin version
 		if ( ! defined( 'LEARNDASH_NOTIFICATIONS_VERSION' ) ) {
-			define( 'LEARNDASH_NOTIFICATIONS_VERSION', '1.2.0' );
+			define( 'LEARNDASH_NOTIFICATIONS_VERSION', '1.4.0' );
 		}
 
 		// Plugin file
@@ -103,6 +104,10 @@ final class LearnDash_Notifications {
 
 		// Load plugin translation file
 		load_plugin_textdomain( 'learndash-notifications', false, $lang_dir );
+		
+		// Include support for new LearnDash Translation logic in v2.5.5
+		// This needs to load after LearnDash core because it depends on the LearnDash_Settings_Section and LearnDash_Translations classes
+		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/admin/class-ld-translations-notifications.php';
 	}
 
 	/**
@@ -112,11 +117,9 @@ final class LearnDash_Notifications {
 	 *
 	 * @since  0.1
 	 */
-	public function includes() {		
-		if ( is_admin() ) {
-			include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/admin/class-settings.php';
-		}
-
+	public function includes() {
+		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/functions.php';
+		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/logger.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/activation.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/cron.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/deactivation.php';
@@ -125,8 +128,18 @@ final class LearnDash_Notifications {
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/notification.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/post-type.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/shortcode.php';
+		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/tools.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/update.php';
 		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/user.php';
+		include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/subscription-manager.php';
+	}
+
+	public function includes_after_plugins_loaded()
+	{
+		if ( is_admin() ) {
+			include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/admin/class-settings.php';
+			include LEARNDASH_NOTIFICATIONS_PLUGIN_PATH . '/includes/admin/class-status-page.php';
+		}
 	}
 }
 

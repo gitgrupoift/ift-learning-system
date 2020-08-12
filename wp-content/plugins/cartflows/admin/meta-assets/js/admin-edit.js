@@ -228,10 +228,47 @@
 		var $product_search = $('.wcf-product-search:not(.wc-product-search)');
 
 		if( $product_search.length > 0 ) {
-			
-			$product_search.addClass('wc-product-search');
+		
+			// wcf_cartflows_woo_product_search_init();
+			$( 'select.wcf-product-search' ).filter( ':not(.enhanced)' ).each( function() {
+				var select2_args = {
+					allowClear:  $( this ).data( 'allow_clear' ) ? true : false,
+					placeholder: $( this ).data( 'placeholder' ),
+					minimumInputLength: $( this ).data( 'minimum_input_length' ) ? $( this ).data( 'minimum_input_length' ) : '3',
+					escapeMarkup: function( m ) {
+						return m;
+					},
+					ajax: {
+						url:         wc_enhanced_select_params.ajax_url,
+						dataType:    'json',
+						quietMillis: 250,
+						data: function( params, page ) {
+							return {
+								term:     params.term,
+								action:   $( this ).data( 'action' ) || 'wcf_json_search_products_and_variations',
+								excluded : $( this ).data( 'excluded_product_types' ) || '',
+								included : $( this ).data( 'include_product_types' ) || '',
+								allowed : $( this ).data( 'allowed_product_types' ) || '',
+								security: cartflows_admin.wcf_json_search_products_and_variations_nonce
+							};
+						},
+						processResults: function( data, page ) {
+							var terms = [];
+							if ( data ) {
+								$.each( data, function( id, text ) {
+									terms.push( { id: id, text: text } );
+								});
+							}
+							return { results: terms };
+						},
+						cache: true
+					}
+				};
 
-			$(document.body).trigger('wc-enhanced-select-init');
+				select2_args = $.extend( select2_args, getEnhancedSelectFormatString() );
+
+				$( this ).select2( select2_args ).addClass( 'enhanced' );
+			});
 		}
 	};
 
@@ -254,47 +291,6 @@
 							term:     params.term,
 							action:   $( this ).data( 'action' ) || 'wcf_json_search_coupons',
 							security: cartflows_admin.wcf_json_search_coupons_nonce
-						};
-					},
-					processResults: function( data, page ) {
-						var terms = [];
-						if ( data ) {
-							$.each( data, function( id, text ) {
-								terms.push( { id: id, text: text } );
-							});
-						}
-						return { results: terms };
-					},
-					cache: true
-				}
-			};
-
-			select2_args = $.extend( select2_args, getEnhancedSelectFormatString() );
-
-			$( this ).select2( select2_args ).addClass( 'enhanced' );
-		});
-	};
-
-	var wcf_cartflows_woo_product_search_init = function() {
-
-		$( 'select.wcf-product-search' ).filter( ':not(.enhanced)' ).each( function() {
-			var select2_args = {
-				allowClear:  $( this ).data( 'allow_clear' ) ? true : false,
-				placeholder: $( this ).data( 'placeholder' ),
-				minimumInputLength: $( this ).data( 'minimum_input_length' ) ? $( this ).data( 'minimum_input_length' ) : '3',
-				escapeMarkup: function( m ) {
-					return m;
-				},
-				ajax: {
-					url:         wc_enhanced_select_params.ajax_url,
-					dataType:    'json',
-					quietMillis: 250,
-					data: function( params, page ) {
-						return {
-							term:     params.term,
-							action:   $( this ).data( 'action' ) || 'wcf_json_search_products_and_variations',
-							excluded : $( this ).data( 'excluded_product_types' ) || '',
-							security: cartflows_admin.wcf_json_search_products_and_variations_nonce
 						};
 					},
 					processResults: function( data, page ) {

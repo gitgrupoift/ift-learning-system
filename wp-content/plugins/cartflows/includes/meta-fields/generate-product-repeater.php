@@ -27,7 +27,7 @@ if ( empty( $selected_data ) ) {
 		<!-- Product Name -->
 		<div class="wcf-repeatable-fields wcf-sel-product">
 			<span class="wcf-repeatable-row-setting-field">
-				<select name="wcf-checkout-products[<?php echo $id; ?>][product]" class="wcf-product-search" data-allow_clear="allow_clear" data-excluded_product_types = "grouped" data-placeholder="<?php echo __( 'Search for a product&hellip;', 'cartflows' ); ?>" data-action="woocommerce_json_search_products_and_variations"><?php echo $options; ?></select>
+				<select name="wcf-checkout-products[<?php echo $id; ?>][product]" class="wcf-product-search" data-allow_clear="allow_clear" data-excluded_product_types = "grouped" data-placeholder="<?php echo __( 'Search for a product&hellip;', 'cartflows' ); ?>" data-action="wcf_json_search_products_and_variations"><?php echo $options; ?></select>
 			</span>
 
 			<span class="wcf-repeatable-row-actions">

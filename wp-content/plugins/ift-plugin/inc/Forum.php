@@ -2,6 +2,9 @@
 
 namespace IFT;
 
+use AsgarosForum;
+use AsgarosForumUserGroups;
+
 class Forum {
     
     private $prefix;
@@ -75,6 +78,23 @@ class Forum {
         
     }
     
+    // Início de função para inserir utilizadores nos grupos do fórum, com base no ingresso em grupos do LEarndash
+    public function add_users_to_forum_group($group_id, $asgaros_group_id) {
+        
+        $group_users = learndash_get_groups_user_ids($group_id);
+        
+        foreach($group_users as $user_id) {
+            $this->add_user_to_forum_group($user_id, $asgaros_group_id);
+        }
+            
+    }
+    
+    // Adicionará um utilizador específico a um grupo específico do fórum
+    public function add_user_to_forum_group($user_id, $asgaros_group_id) {
+        
+    }
+    
+    // Função designada a criar novos fóruns
     public function add_forum($forum_id, $category_id, $name, $description, $parent_forum, $icon, $order, $status = 'normal') {}
     
 }

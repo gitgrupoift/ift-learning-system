@@ -125,7 +125,7 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 			define( 'CARTFLOWS_BASE', plugin_basename( CARTFLOWS_FILE ) );
 			define( 'CARTFLOWS_DIR', plugin_dir_path( CARTFLOWS_FILE ) );
 			define( 'CARTFLOWS_URL', plugins_url( '/', CARTFLOWS_FILE ) );
-			define( 'CARTFLOWS_VER', '1.5.12' );
+			define( 'CARTFLOWS_VER', '1.5.14' );
 			define( 'CARTFLOWS_SLUG', 'cartflows' );
 			define( 'CARTFLOWS_SETTINGS', 'cartflows_settings' );
 
@@ -253,8 +253,22 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 				require_once CARTFLOWS_DIR . 'classes/lib/notices/class-astra-notices.php';
 			}
 
-			/* Load BSF Analytics */
-			require_once CARTFLOWS_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
+			if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
+				require_once CARTFLOWS_DIR . '/admin/bsf-analytics/class-bsf-analytics-loader.php';
+			}
+
+			$bsf_analytics = BSF_Analytics_Loader::get_instance();
+
+			$bsf_analytics->set_entity(
+				array(
+					'cf' => array(
+						'product_name'   => 'CartFlows',
+						'usage_doc_link' => 'https://my.cartflows.com/usage-tracking/',
+						'path'           => CARTFLOWS_DIR . 'admin/bsf-analytics',
+						'author'         => 'CartFlows Inc',
+					),
+				)
+			);
 
 			$this->utils   = Cartflows_Utils::get_instance();
 			$this->options = Cartflows_Default_Meta::get_instance();

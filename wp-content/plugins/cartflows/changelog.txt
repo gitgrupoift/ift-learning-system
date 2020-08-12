@@ -1,3 +1,10 @@
+Version 1.5.14 - Thursday, 30th July 2020
+- Fix: Not able to search & select the course type of product.
+
+Version 1.5.13 - Tuesday, 21st July 2020
+- Improvement: Improved the product search query of meta options.
+- Improvement: Added compatibility for a future release of CartFlows Pro.
+
 Version 1.5.12 - Wednesday, 1st July 2020
 - Fix: PHP error if WooCommerce was not installed and the Google Analytics Purchase event is enabled.
 - Fix: Flows & Steps ready-made templates were unable to import due to the X-CSRF-TOKEN JS error.

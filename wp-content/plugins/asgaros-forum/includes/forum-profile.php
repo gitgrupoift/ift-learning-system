@@ -257,7 +257,7 @@ class AsgarosForumProfile {
                     }
 
                     // Show last seen.
-                    if ($this->asgarosforum->online->functionality_enabled) {
+                    if ($this->asgarosforum->online->functionality_enabled && $this->asgarosforum->options['show_last_seen']) {
                         $cellTitle = __('Last seen:', 'asgaros-forum');
                         $cellValue = $this->asgarosforum->online->last_seen($userData->ID);
 
@@ -389,6 +389,9 @@ class AsgarosForumProfile {
     public function myProfileLink() {
         // First check if the user is logged in.
         if ($this->functionalityEnabled()) {
+
+            $profileLink = '';
+
             // Only continue if the current user is logged in.
             if (is_user_logged_in()) {
                 // Get current user.
@@ -397,7 +400,13 @@ class AsgarosForumProfile {
                 // Get and build profile link.
                 $profileLink = $this->getProfileLink($currentUserObject);
 
-                echo '<a class="profile-link" href="'.$profileLink.'">'.__('Profile', 'asgaros-forum').'</a>';
+                return array(
+                    'menu_class'        => 'profile-link',
+                    'menu_link_text'    => esc_html__('Profile', 'asgaros-forum'),
+                    'menu_url'          => $profileLink,
+                    'menu_login_status' => 1,
+                    'menu_new_tab'      => false
+                );
             }
         }
     }

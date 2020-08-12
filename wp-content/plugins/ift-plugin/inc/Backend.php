@@ -35,13 +35,7 @@ class Backend {
     
     public function create_cpts() {
         
-        $cpt = new CustomType( array(
-            'post_type_name' => 'zoom',
-            'singular' => 'Zoom Meeting',
-            'plural' => 'Zoom Meeting',
-            'slug' => 'zoom',
-            'show_in_rest' => true        
-        ));
+
     }
     
     public function front_menu_admin() {
@@ -56,7 +50,7 @@ class Backend {
 
     public function admin_tweak_css() {
       echo '<style>
-        .woocommerce-store-alerts, #myCarousel {display: none;}
+        .woocommerce-store-alerts, .notice.elementor-message, #myCarousel {display: none;}
       </style>';
     }
     
@@ -88,8 +82,6 @@ class Backend {
             remove_menu_page( 'wpforms-overview' );
 
         }
-        
-        add_submenu_page( 'learndash-lms', 'Zoom Meetings', 'Zoom Meetings', 'manage_options','edit.php?post_type=zoom');
  
     }
     

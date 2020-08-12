@@ -27,6 +27,9 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 				add_action( 'admin_notices', array( $this, 'show_setup_wizard' ) );
 				add_action( 'wp_ajax_page_builder_step_save', array( $this, 'page_builder_step_save' ) );
 				add_action( 'wp_ajax_page_builder_save_option', array( $this, 'save_page_builder_option' ) );
+
+				add_action( 'wp_ajax_usage_tracking_option', array( $this, 'save_usage_tracking_option' ) );
+
 				add_action( 'admin_head', array( $this, 'add_mautic_form_script' ) );
 				add_action( 'woocommerce_installed', array( $this, 'disable_woo_setup_redirect' ) );
 
@@ -295,7 +298,17 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 			?>
 			<h1><?php esc_html_e( 'Welcome to CartFlows!', 'cartflows' ); ?></h1>
 			<p><?php esc_html_e( 'Thank you for choosing CartFlows to get more leads, increase conversions, & maximize profits. This short setup wizard will guide you though configuring CartFlows and creating your first funnel.', 'cartflows' ); ?></p>
-			<form method="post">				
+			<form method="post">
+				<div class="cartflows-usage-tracking cartflows-setup-message">
+					<div class="usage-tracking-wrap">
+						<h4><?php esc_html_e( 'Let&#x27;s Build it better!', 'cartflows' ); ?> </h4>
+						<p><?php esc_html_e( 'Get improved features and faster fixes by sharing non-sensitive data via usage tracking that shows us how CartFlows is used. No personal data is tracked or stored.', 'cartflows' ); ?> 
+						<a href="https://my.cartflows.com/usage-tracking/"> <?php esc_html_e( 'Learn More', 'cartflows' ); ?></a></p>
+						<input type="hidden" name="cartflows-usage-tracking-option" value="no">
+						<input type="checkbox" name="cartflows-usage-tracking-option" id="cartflows-usage-tracking-option" value="Yes" checked>
+						<label><?php esc_html_e( 'Yes, I am in.', 'cartflows' ); ?></label>				
+					</div>
+				</div>					
 				<div class="cartflows-setup-actions step">
 					<div class="button-prev-wrap">
 					</div>
@@ -304,6 +317,7 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 					</div>
 					<?php wp_nonce_field( 'cartflow-setup' ); ?>
 				</div>
+
 			</form>
 			<?php
 		}
@@ -400,9 +414,10 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 								?>
 							</select>
 						</td>
-					</tr>
+					</tr>	
 				</table>
 				<p><?php esc_html_e( 'While CartFlows Should work with most page builders, we offer templates for the above page builders.', 'cartflows' ); ?></p>
+
 				<div class="cartflows-setup-actions step">
 					<div class="button-prev-wrap">
 						<a href="<?php echo esc_url( $this->get_prev_step_link() ); ?>" class="button-primary button button-large button-prev" ><?php esc_html_e( '« Previous', 'cartflows' ); ?></a>
@@ -497,6 +512,29 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 
 			wp_send_json_success();
 		}
+
+		/**
+		 * Save usage tracking Settings.
+		 */
+		public function save_usage_tracking_option() {
+
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return;
+			}
+
+			check_ajax_referer( 'wcf-usage-tracking-option', 'security' );
+
+			$allow_usage_tracking = isset( $_POST['allow_usage_tracking'] ) && 'true' == $_POST['allow_usage_tracking'] ? 'yes' : 'no';
+
+			$usage_tracking = get_site_option( 'cf_analytics_optin' );
+
+			if ( ( false === $usage_tracking ) || $allow_usage_tracking !== $usage_tracking ) {
+				update_site_option( 'cf_analytics_optin', $allow_usage_tracking );
+			}
+
+			wp_send_json_success( get_site_option( 'cf_analytics_optin' ) );
+		}
+
 
 		/**
 		 * Save Locale Settings.
@@ -659,6 +697,7 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 			$ajax_actions = array(
 				'wcf_page_builder_step_save',
 				'wcf_wc_plugins_activate',
+				'wcf_usage_tracking_option',
 			);
 
 			foreach ( $ajax_actions as $action ) {

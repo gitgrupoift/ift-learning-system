@@ -3,14 +3,13 @@
         "psr-4": {
             "IFT\\" : "inc/",
             "IFT\\Helpers\\" : "helpers/"
-        },
-        "classmap": ["inc/Synology/"]
+        }
     },
     "require": {
         "php": ">=5.5",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "phpoffice/phpspreadsheet": "^1.12"
+        "fabpot/goutte": "^4.0"
     }
 }

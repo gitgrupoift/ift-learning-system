@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: woocommerce, funnel builder, sales funnels, elementor, beaver builder
 Requires at least: 4.4
 Tested up to: 5.4.2
-Stable tag: 1.5.12
+Stable tag: 1.5.14
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -126,6 +126,13 @@ Glad you asked! Most normal users have less than 3 funnels on a single website, 
 5. Easily edit anything with your page builder.
 
 == Changelog ==
+
+= Version 1.5.14 - Thursday, 30th July 2020 =
+* Fix: Not able to search & select the course type of product.
+
+= Version 1.5.13 - Tuesday, 21st July 2020 =
+* Improvement: Improved the product search query of meta options.
+* Improvement: Added compatibility for a future release of CartFlows Pro.
 
 = Version 1.5.12 - Wednesday, 1st July 2020 =
 * Fix: PHP error if WooCommerce was not installed and the Google Analytics Purchase event is enabled.

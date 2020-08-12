@@ -239,7 +239,9 @@ class Cartflows_Optin_Meta extends Cartflows_Meta {
 					'help'                   => __( 'Select Free and Virtual product only.', 'cartflows' ),
 					'multiple'               => false,
 					'allow_clear'            => true,
-					'excluded_product_types' => array( 'variation', 'variable', 'subscription', 'variable-subscription', 'grouped' ),
+					'allowed_product_types'  => array( 'simple' ),
+					'excluded_product_types' => array(),
+					'include_product_types'  => array(),
 				)
 			);
 

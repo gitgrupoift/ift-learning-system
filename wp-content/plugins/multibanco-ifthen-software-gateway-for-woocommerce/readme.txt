@@ -6,7 +6,7 @@ Plugin URI: https://www.webdados.pt/wordpress/plugins/multibanco-ifthen-software
 Requires at least: 4.1
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 4.2.3
+Stable tag: 4.4.4
 
 This plugin allows customers with a Portuguese bank account to pay WooCommerce orders using Multibanco (Pag. Serviços), MB WAY and Payshop through IfthenPay’s payment gateway.
 
@@ -48,6 +48,7 @@ If not, get to know our new plugin: [Invoicing with InvoiceXpress for WooCommerc
 * Polylang tested;
 * [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) (experimental) integration (only Multibanco and MB WAY);
 * [WooCommerce Deposits by webtomizer](https://woocommerce-deposits.com/) (experimental) integration;
+* [WooCommerce Blocks](https://wordpress.org/plugins/woo-gutenberg-products-block/) checkout block (experimental) integration (only Multibanco);
 * PHP7 tested and compatible;
 
 = Premium add-ons: =
@@ -176,8 +177,46 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/mult
 
 == Changelog ==
 
-= 4.2.3 =
+= 4.4.4 - 2020-08-05 =
 * You can safely update this plugin if you’re running WooCommece 2.6.0 or newer **but we’ll very soon drop support for WooCommerce previous to 3.0 (which was launched in April 2017)**
+* New WooCommerce Blocks checkout only if the feature plugin is installed and activated
+* Bugfix on the Payshop callback activation request
+* Fix a PHP notice
+* Tested with WordPress 5.5-RC1-48708, WooCommerce 4.4.0-rc.1 and WooCommerce Blocks 3.1.0
+
+
+= 4.4.3 - 2020-07-23 =
+* Revert showing the Multibanco "payment received" message on order completed emails (introduced on 4.4.0)
+* Only show WooCommerce Subscriptions options if the plugin is active
+* Only enable Multibanco support for the WooCommerce Blocks checkout if WooCommerce Blocks version is 3.0.0. or above and the support is enabled via the payment method options
+
+= 4.4.2 =
+* Bugfix when WooCommerce Blocks 3.0.0 or above is active
+* Try to fix a fatal error when themes override the WooCommerce email templates with old (pre WooCommerce 2.6.0) versions
+* Tested with WordPress 5.5-beta3-48556, WooCommerce 4.3.1 and WooCommerce Blocks 3.0.0
+
+= 4.4.1 =
+* Bugfix checking if order is paid when the "WooCommerce Order Status Manager" (by SkyVerge) plugin is active
+
+= 4.4.0 =
+* New `ifthen_unpaid_statuses` filter to allow developers to set additional valid "unpaid" statuses for Multibanco, MBWAY and Payshop orders, besides the default ones ("on-hold", "pending" and "partially-paid"). The statuses are used for callback validation, SMS message template, show order as unpaid on the backoffice, show "Pay" button on My Account orders list, issue new references if order value changes on the backoffice, reduce order stock rules, thank you page and email payment instructions.
+* Enforce requirement of WooCommerce 2.6.0 or above and bumped the `WC requires at least` tag accordingly
+* Enforce requirement of WordPress 4.4 or above and bumped the `Requires at least` tag accordingly
+* New filter `ifthen_debug_log_extra` that will allow developers to further debug the Multibanco reference generation (for now)
+* Try to fix a (very odd) behavior where the customer is redirected to the "pay order" page when completing checkout, which will generate a duplicate Multibanco payment reference (as expected).
+* New filters to hide the "Pay" button on "My Account" (which we do not recommend): `multibanco_ifthen_hide_my_account_pay_button`, `mbway_ifthen_hide_my_account_pay_button`, `payshop_ifthen_hide_my_account_pay_button`
+* (VERY) Experimental Multibanco support for the new [https://woocommerce.wordpress.com/category/blocks/](WooCommerce Blocks) [https://woocommerce.wordpress.com/2020/05/27/available-for-testing-a-block-based-woocommerce-cart-and-checkout/](checkout experience)
+* Tested with WordPress 5.5-beta2-48501 and WooCommerce 4.3.0
+
+= 4.3.0 =
+* New instant callback activation method via webservice instead of email
+* When checking if the customer is from Portugal (to show/hide the payment methods) we now also check the shipping country
+* Only apply our WooCommerce 4.2.0 fix if version is equal or above 4.2.0 and below 4.3.0 (a WooCommerce fix is scheduled to be released on that version)
+* More prominent admin notice regarding old WordPress, WooCommerce or PHP versions in use
+* Remove old Spanish translation from the plugin folder, now that we have a proper one on WordPress.org thanks to [https://profiles.wordpress.org/fernandot](@fernandot)
+* Tested with WordPress 5.5-alpha-48241 and WooCommerce 4.3.0-rc.2
+
+= 4.2.3 =
 * Show paid date and time on the order admin metabox
 * Better handling when the customer decides to change payment method in "My Account"
 * Only apply our WooCommerce 4.2.0 fix if "Prices entered with tax" is set to "Yes"
@@ -221,7 +260,7 @@ Sure. Go to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/mult
 * Remove other plugins publicity from the settings page
 
 = 4.1.1.1 =
-* Admin notice regarding old WordPress, WooCommerce or PHP versions in use (if you like to live in danger, you may disable it by returning `false`to the `ifthen_show_old_techonology_notice` filter)
+* Admin notice regarding old WordPress, WooCommerce or PHP versions in use (if you like to live in danger, you may disable it by returning `false` to the `ifthen_show_old_techonology_notice` filter)
 * Better readme.txt information regarding updates
 * Fix version number
 

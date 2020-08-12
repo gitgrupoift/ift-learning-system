@@ -16,7 +16,7 @@ class Users {
         add_filter( 'login_redirect', array($this, 'student_login_redirect'), 10, 3 );
   
         
-        add_action( 'publish_groups', array($this, 'generate_cloud_groups') );   
+        //add_action( 'publish_groups', array($this, 'generate_cloud_groups') );   
    
         
     }
