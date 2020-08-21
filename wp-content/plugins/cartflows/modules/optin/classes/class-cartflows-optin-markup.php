@@ -62,6 +62,8 @@ class Cartflows_Optin_Markup {
 
 		add_filter( 'woocommerce_checkout_required_field_notice', array( $this, 'change_field_label_in_required_notice' ), 100, 2 );
 
+		add_action( 'init', array( $this, 'remove_login_actions' ) );
+
 		$this->elementor_editor_compatibility();
 	}
 
@@ -80,6 +82,17 @@ class Cartflows_Optin_Markup {
 					add_filter( 'woocommerce_order_button_text', array( $this, 'place_order_button_text' ), 10, 1 );
 				}
 			}
+		}
+	}
+
+	/**
+	 * Remove login and registration actions.
+	 */
+	public function remove_login_actions() {
+
+		if ( _is_wcf_doing_optin_ajax() ) {
+			add_filter( 'woocommerce_checkout_registration_enabled', '__return_false' );
+			add_filter( 'woocommerce_checkout_registration_required', '__return_false' );
 		}
 	}
 
@@ -309,6 +322,10 @@ class Cartflows_Optin_Markup {
 			add_filter( 'woocommerce_order_button_text', array( $this, 'place_order_button_text' ), 10, 1 );
 
 			add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', '__return_false' );
+
+			/* Remove login actions */
+			add_filter( 'woocommerce_checkout_registration_enabled', '__return_false' );
+			add_filter( 'woocommerce_checkout_registration_required', '__return_false' );
 
 			global $post;
 

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: woocommerce, funnel builder, sales funnels, elementor, beaver builder
 Requires at least: 4.4
 Tested up to: 5.4.2
-Stable tag: 1.5.14
+Stable tag: 1.5.15
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ Create beautiful checkout pages & sales flows for WooCommerce.
 
 **Funnels are the most effective way to sell products & services.** We created CartFlows, a <a href="https://cartflows.com" target="_blank">**WordPress Funnel Builder**</a>, to help every website owner get more leads, increase conversions, & maximize profits.
 
-[youtube https://www.youtube.com/watch?v=N2ZEGu9A2e4]
+[youtube https://www.youtube.com/watch?v=5iFv9Pxwgx0]
 
 Turn your WooCommerce website into a selling machine using one-click sales funnels with frictionless checkout, custom thank you pages, global checkout replacement, and more…
 
@@ -126,6 +126,12 @@ Glad you asked! Most normal users have less than 3 funnels on a single website, 
 5. Easily edit anything with your page builder.
 
 == Changelog ==
+
+= Version 1.5.15 - Wednesday, 12th August 2020 =
+* Improvement: Added Split Testing compatibility for a future release of CartFlows Pro.
+* Improvement: Added WordPress 5.5 Compatibility.
+* Fix: Product discount price & percentage options were not working if the full discount is applied.
+* Fix: Account already exists error message on the Optin step.
 
 = Version 1.5.14 - Thursday, 30th July 2020 =
 * Fix: Not able to search & select the course type of product.

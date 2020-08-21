@@ -11,14 +11,32 @@
 		 */
 		_bind: function() {
 			$( document ).on('click', '.wcf-install-plugins', 	CartFlowsWizard._installNow );
-			$( document ).on('click', '.button-next-wrap', 		CartFlowsWizard._usage_tracking );
+			$( document ).on('click', '.wcf-usage-tracking', 	CartFlowsWizard._usage_tracking );
 			$( document ).on('click', '.wcf-install-wc',        CartFlowsWizard._installWc );
 			$( document ).on('wp-plugin-installing'      , 		CartFlowsWizard._pluginInstalling);
 			$( document ).on('wp-plugin-install-error'   , 		CartFlowsWizard._installError);
 			$( document ).on('wp-plugin-install-success' , 		CartFlowsWizard._installSuccess);
 			$( document ).on('click', '.mautic-form-submit',    CartFlowsWizard._onMauticSubmit );
+			$( document ).on('change', '.page-builder-list',     CartFlowsWizard._onChangePagebuilder );
 		},
 
+		_onChangePagebuilder: function ( event ){
+			
+			
+			var page_builder = $(this).val(),
+				plugin_slug = $( '.page-builder-list option:selected' ).data( 'slug' ) || '',
+				new_url = 'https://wordpress.org/plugins/'+plugin_slug;
+
+			$('.cartflows-setup-extra-notice').show();
+			if( 'other' === plugin_slug || 'divi' === plugin_slug ){
+				$('.cartflows-setup-extra-notice').hide();
+				return;
+			}
+	
+			plugin_slug = plugin_slug.replace(/-/gi," ");
+			$('#wcf-page-builder').attr("href", new_url);
+			$('#wcf-page-builder').html( plugin_slug );
+		},	
 
 		_usage_tracking: function( event ){
 

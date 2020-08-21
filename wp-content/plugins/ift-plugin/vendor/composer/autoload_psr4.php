@@ -26,4 +26,5 @@ return array(
     'IFT\\Helpers\\' => array($baseDir . '/helpers'),
     'IFT\\' => array($baseDir . '/inc'),
     'Goutte\\' => array($vendorDir . '/fabpot/goutte/Goutte'),
+    'BigBlueButton\\' => array($vendorDir . '/bigbluebutton/bigbluebutton-api-php/src'),
 );

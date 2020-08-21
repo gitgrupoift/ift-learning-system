@@ -33,9 +33,7 @@ if (!defined('WPINC')) {
 define( 'IFT_PLUGIN_VERSION', '1.3.0' );
 define( 'IFT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'IFT_TEMPLATES', IFT_PATH . 'templates/' );
-define( 'IFT_SETTINGS', IFT_PATH . 'settings/' );
 define( 'IFT_ADMIN', IFT_PATH . 'admin/' );
-define( 'IFT_PUBLIC', IFT_PATH . 'public/' );
 define( 'IFT_ASSETS', plugins_url() . '/ift-plugin/assets/' );
 define( 'IFT_REPORTS', ABSPATH . '/wp-content/reports/' );
 

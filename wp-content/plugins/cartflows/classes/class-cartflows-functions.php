@@ -537,3 +537,19 @@ function _wcf_supported_template( $page_template ) {
 
 	return false;
 }
+
+/**
+ * Get get step object.
+ *
+ * @param int $step_id current step ID.
+ * @since 1.5.9
+ */
+function wcf_get_step( $step_id ) {
+
+	if ( ! isset( wcf()->wcf_step_objs[ $step_id ] ) ) {
+
+		wcf()->wcf_step_objs[ $step_id ] = new Cartflows_Step_Factory( $step_id );
+	}
+
+	return wcf()->wcf_step_objs[ $step_id ];
+}

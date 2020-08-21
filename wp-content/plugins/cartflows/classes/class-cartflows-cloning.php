@@ -37,7 +37,7 @@ class Cartflows_Cloning {
 
 		add_filter( 'post_row_actions', array( $this, 'clone_link' ), 99, 2 );
 		add_action( 'admin_action_cartflows_clone_flow', array( $this, 'clone_flow' ) );
-		add_action( 'admin_action_cartflows_clone_step', array( $this, 'clone_step' ) );
+		add_action( 'wp_ajax_cartflows_clone_flow_step', array( $this, 'clone_step' ) );
 	}
 
 	/**
@@ -266,26 +266,32 @@ class Cartflows_Cloning {
 
 		global $wpdb;
 
-		if ( ! ( isset( $_GET['post'] ) || isset( $_POST['post'] ) || ( isset( $_REQUEST['action'] ) && 'cartflows_clone_step' === $_REQUEST['action'] ) ) ) {
-			wp_die( 'No post to duplicate has been supplied!' );
-		}
-
-		/*
-		 * Nonce verification
-		 */
-		if ( ! isset( $_GET['step_clone_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['step_clone_nonce'] ) ), 'step_clone' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 
-		/**
-		 * Get the original post id
-		 */
-		$post_id = ( isset( $_GET['post'] ) ? absint( $_GET['post'] ) : absint( $_POST['post'] ) );
+		check_ajax_referer( 'wcf-clone-flow-step', 'security' );
+
+		if ( isset( $_POST['post_id'] ) && isset( $_POST['step_id'] ) ) {
+			$flow_id = intval( $_POST['post_id'] );
+			$step_id = intval( $_POST['step_id'] );
+		}
+
+		$result = array(
+			'status' => false,
+			'reload' => true,
+			/* translators: %s flow id */
+			'text'   => sprintf( __( 'Can\'t clone this step - %1$s. Flow - %2$s', 'cartflows' ), $step_id, $flow_id ),
+		);
+
+		if ( ! $flow_id || ! $step_id ) {
+			wp_send_json( $result );
+		}
 
 		/**
 		 * And all the original post data then
 		 */
-		$post = get_post( $post_id );
+		$post = get_post( $step_id );
 
 		/**
 		 * Assign current user to be the new post author
@@ -330,7 +336,7 @@ class Cartflows_Cloning {
 
 			foreach ( $taxonomies as $taxonomy ) {
 
-				$post_terms = wp_get_object_terms( $post_id, $taxonomy, array( 'fields' => 'slugs' ) );
+				$post_terms = wp_get_object_terms( $step_id, $taxonomy, array( 'fields' => 'slugs' ) );
 
 				wp_set_object_terms( $new_step_id, $post_terms, $taxonomy, false );
 			}
@@ -340,7 +346,7 @@ class Cartflows_Cloning {
 			 */
 			// @codingStandardsIgnoreStart
 			$post_meta_infos = $wpdb->get_results(
-				"SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id"
+				"SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$step_id"
 			);
 			// @codingStandardsIgnoreEnd
 
@@ -370,9 +376,8 @@ class Cartflows_Cloning {
     			// @codingStandardsIgnoreEnd
 			}
 
-			$flow_id    = get_post_meta( $post_id, 'wcf-flow-id', true );
 			$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
-			$step_type  = get_post_meta( $post_id, 'wcf-step-type', true );
+			$step_type  = get_post_meta( $step_id, 'wcf-step-type', true );
 
 			if ( ! is_array( $flow_steps ) ) {
 				$flow_steps = array();
@@ -389,16 +394,15 @@ class Cartflows_Cloning {
 			/* Clear Page Builder Cache */
 			$this->clear_cache();
 
-			/**
-			 * Redirect to the new flow edit screen
-			 */
-			$redirect_url = add_query_arg( 'highlight-step-id', $new_step_id, get_edit_post_link( $flow_id, 'default' ) );
-
-			wp_safe_redirect( $redirect_url );
-			exit;
-		} else {
-			wp_die( 'Post creation failed, could not find original post: ' . $post_id );
+			$result = array(
+				'status' => true,
+				'reload' => true,
+				/* translators: %s flow id */
+				'text'   => sprintf( __( 'Step - %1$s cloned. Flow - %2$s', 'cartflows' ), $step_id, $flow_id ),
+			);
 		}
+
+		wp_send_json( $result );
 	}
 
 	/**

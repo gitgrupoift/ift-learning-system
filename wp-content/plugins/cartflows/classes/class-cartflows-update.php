@@ -74,10 +74,6 @@ if ( ! class_exists( 'Cartflows_Update' ) ) :
 				$this->changed_wp_templates();
 			}
 
-			if ( version_compare( $saved_version, '1.5.13', '<' ) ) {
-				$this->update_usage_tracking_option();
-			}
-
 			// Update auto saved version number.
 			update_option( 'cartflows-version', CARTFLOWS_VER );
 
@@ -101,24 +97,6 @@ if ( ! class_exists( 'Cartflows_Update' ) ) :
 			}
 
 			wcf()->create_files();
-		}
-
-		/**
-		 * Update usage tracking option.
-		 *
-		 * @since 1.0.0
-		 * @return void
-		 */
-		public function update_usage_tracking_option() {
-
-			$bsf_usage_tracking = get_site_option( 'bsf_analytics_optin' );
-
-			$cf_usage_tracking = get_site_option( 'cf_analytics_optin' );
-
-			if ( isset( $bsf_usage_tracking ) && 'yes' === $bsf_usage_tracking && false === $cf_usage_tracking ) {
-				update_site_option( 'cf_analytics_optin', 'yes' );
-			}
-
 		}
 
 		/**

@@ -903,6 +903,7 @@ html.wcf-popup-open{
 
 .wcf-popup-close-wrap .close-icon{
     cursor: pointer;
+    margin: 0 12px;
 }
 
 .wcf-popup-close-wrap .wcf-cartflow-icons{

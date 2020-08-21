@@ -58,6 +58,7 @@ class Cartflows_Admin {
 
 		add_action( 'admin_init', __CLASS__ . '::cartflows_after_save_permalinks' );
 
+		add_action( 'in_admin_header', __CLASS__ . '::embed_page_header' );
 	}
 
 	/**
@@ -78,7 +79,7 @@ class Cartflows_Admin {
 	 */
 	public static function settings_admin_scripts() {
 		// Enqueue admin scripts.
-		if ( isset( $_GET['page'] ) && false !== strpos( $_GET['page'], 'cartflows_' ) ) { //phpcs:ignore
+		if ( isset( $_GET['page'] ) && ( 'cartflows' === $_GET['page'] || false !== strpos( $_GET['page'], 'cartflows_' ) ) ) { //phpcs:ignore
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 
 			self::save_settings();
@@ -149,20 +150,22 @@ class Cartflows_Admin {
 	 */
 	public static function submenu() {
 
-		$parent_slug = CARTFLOWS_SLUG;
-		$page_title  = __( 'Settings', 'cartflows' );
-		$menu_title  = __( 'Settings', 'cartflows' );
-		$capability  = 'manage_options';
-		$menu_slug   = 'cartflows_settings';
-		$callback    = __CLASS__ . '::render';
+		global $submenu;
 
+		$parent_slug = CARTFLOWS_SLUG;
+		$capability  = 'manage_options';
+
+		// Home menu.
+		$submenu[ $parent_slug ][0][0] = __( 'Home', 'cartflows' ); //phpcs:ignore
+
+		// Add settings menu.
 		add_submenu_page(
 			$parent_slug,
-			$page_title,
-			$menu_title,
+			__( 'Settings', 'cartflows' ),
+			__( 'Settings', 'cartflows' ),
 			$capability,
-			$menu_slug,
-			$callback
+			'cartflows_settings',
+			__CLASS__ . '::render'
 		);
 	}
 
@@ -202,6 +205,16 @@ class Cartflows_Admin {
 			$action = 'general';
 
 			include_once CARTFLOWS_DIR . 'includes/admin/cartflows-general.php';
+		}
+
+		if ( 'cartflows' === $menu_page_slug ) {
+
+			$action = ( isset( $_GET['action'] ) ) ? sanitize_text_field( wp_unslash( $_GET['action'] ) ) : ''; //phpcs:ignore
+			$action = ( ! empty( $action ) && '' != $action ) ? $action : 'general';
+			$action = str_replace( '_', '-', $action );
+			$action = 'general';
+
+			include_once CARTFLOWS_DIR . 'includes/admin/cartflows-home.php';
 		}
 	}
 
@@ -440,9 +453,17 @@ class Cartflows_Admin {
 			'wc_activating_message' => __( 'Installing and activating..', 'cartflows' ),
 			'wc_install_error'      => __( 'There was an error with the installation of plugin.', 'cartflows' ),
 			'wcf_edit_test_mode'    => $edit_test_mode,
+			'wcf_fetch_stats_nonce' => wp_create_nonce( 'wcf-fetch-stats' ),
 		);
 
-		wp_localize_script( 'jquery', 'cartflows_admin', apply_filters( 'cartflows_admin_js_localize', $localize ) );
+		$localize = apply_filters( 'cartflows_admin_js_localize', $localize );
+
+		$localize_script  = '<!-- script to print the admin localized variables -->';
+		$localize_script .= '<script type="text/javascript">';
+		$localize_script .= 'var cartflows_admin = ' . wp_json_encode( $localize ) . ';';
+		$localize_script .= '</script>';
+
+		echo $localize_script;
 
 		if ( self::is_global_admin() ) {
 
@@ -652,6 +673,41 @@ class Cartflows_Admin {
 		}
 	}
 
+	/**
+	 * Show embed header.
+	 *
+	 * @since 1.0.0
+	 */
+	public static function show_embed_header() {
+
+		$current_screen = get_current_screen();
+
+		if (
+			is_object( $current_screen ) &&
+			isset( $current_screen->post_type ) &&
+			( CARTFLOWS_FLOW_POST_TYPE === $current_screen->post_type ) &&
+			isset( $current_screen->base ) &&
+			( 'post' === $current_screen->base || 'edit' === $current_screen->base )
+		) {
+			return true;
+		}
+
+		return false;
+	}
+	/**
+	 * Set up a div for the header embed to render into.
+	 * The initial contents here are meant as a place loader for when the PHP page initialy loads.
+	 */
+	public static function embed_page_header() {
+
+		if ( ! is_admin() || ! self::show_embed_header() ) {
+			return;
+		}
+
+		wp_enqueue_style( 'cartflows-admin-embed-header', CARTFLOWS_URL . 'admin/assets/css/admin-embed-header.css', array(), CARTFLOWS_VER );
+
+		include_once CARTFLOWS_DIR . 'includes/admin/cartflows-admin-header.php';
+	}
 }
 
 Cartflows_Admin::init();

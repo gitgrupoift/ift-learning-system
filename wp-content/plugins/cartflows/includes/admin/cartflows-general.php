@@ -34,24 +34,6 @@ $error_log = filter_input( INPUT_GET, 'cartflows-error-log', FILTER_VALIDATE_BOO
 		<div id="post-body" class="columns-2">
 			<div id="post-body-content">
 
-				<!-- Getting Started -->
-				<div class="postbox introduction">
-					<h2 class="hndle wcf-normal-cusror ui-sortable-handle">
-						<span><?php esc_html_e( 'Getting Started', 'cartflows' ); ?></span>
-					</h2>
-					<div class="inside">
-						<div class="iframe-wrap">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/SlE0moPKjMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-						<p>
-						<?php
-							esc_attr_e( 'Modernizing WordPress eCommerce!', 'cartflows' );
-						?>
-						</p>
-					</div>
-				</div>
-				<!-- Getting Started -->
-
 				<!-- General Settings -->
 				<div class="general-settings-form postbox">
 					<h2 class="hndle wcf-normal-cusror ui-sortable-handle">

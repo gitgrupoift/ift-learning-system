@@ -303,7 +303,7 @@
 
 	.cartflows-setup-wizard-content p,
 	.cartflows-setup-content p {
-		margin: 0 0 24px
+		margin: 0 0 10px
 	}
 
 	.cartflows-setup-wizard-content p,
@@ -1248,4 +1248,8 @@
 .cartflows-usage-tracking .usage-tracking-wrap p,
 .cartflows-usage-tracking .usage-tracking-wrap label{
 	font-size: 14px;
-}		
+}
+
+#wcf-page-builder{
+	text-transform: capitalize;
+}

@@ -62,6 +62,14 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 		public $flow = null;
 
 		/**
+		 *  Member Variable
+		 *
+		 *  @var wcf_step_objs
+		 */
+
+		public $wcf_step_objs = array();
+
+		/**
 		 * Member Variable
 		 *
 		 * @var assets_vars
@@ -125,7 +133,7 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 			define( 'CARTFLOWS_BASE', plugin_basename( CARTFLOWS_FILE ) );
 			define( 'CARTFLOWS_DIR', plugin_dir_path( CARTFLOWS_FILE ) );
 			define( 'CARTFLOWS_URL', plugins_url( '/', CARTFLOWS_FILE ) );
-			define( 'CARTFLOWS_VER', '1.5.14' );
+			define( 'CARTFLOWS_VER', '1.5.15' );
 			define( 'CARTFLOWS_SLUG', 'cartflows' );
 			define( 'CARTFLOWS_SETTINGS', 'cartflows_settings' );
 
@@ -156,6 +164,8 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 
 				define( 'CARTFLOWS_LOG_DIR', $upload_dir['basedir'] . '/cartflows-logs/' );
 			}
+
+			$GLOBALS['wcf_step'] = null;
 		}
 
 		/**
@@ -201,7 +211,7 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 				return;
 			}
 
-			if ( version_compare( CARTFLOWS_PRO_VER, '1.5.4', '<' ) ) {
+			if ( version_compare( CARTFLOWS_PRO_VER, '1.5.8', '<' ) ) {
 				add_action( 'admin_notices', array( $this, 'required_cartflows_pro_notice' ) );
 			}
 		}
@@ -215,7 +225,7 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 		 */
 		public function required_cartflows_pro_notice() {
 
-			$required_pro_version = '1.5.4';
+			$required_pro_version = '1.5.8';
 
 			$class = 'notice notice-warning';
 			/* translators: %s: html tags */
@@ -243,6 +253,9 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 
 			/* Admin Helper */
 			include_once CARTFLOWS_DIR . 'classes/class-cartflows-helper.php';
+
+			/* Factory objects */
+			include_once CARTFLOWS_DIR . 'classes/class-cartflows-step-factory.php';
 
 			/* Meta Default Values */
 			include_once CARTFLOWS_DIR . 'classes/class-cartflows-default-meta.php';
@@ -311,11 +324,14 @@ if ( ! class_exists( 'Cartflows_Loader' ) ) {
 			include_once CARTFLOWS_DIR . 'classes/class-cartflows-meta-fields.php';
 			include_once CARTFLOWS_DIR . 'classes/class-cartflows-meta.php';
 
-			/* Cloning */
-			include_once CARTFLOWS_DIR . 'classes/class-cartflows-cloning.php';
+			if ( is_admin() ) {
+				/* Cloning */
+				include_once CARTFLOWS_DIR . 'classes/class-cartflows-cloning.php';
 
-			/* Admin Settings */
-			include_once CARTFLOWS_DIR . 'classes/class-cartflows-admin.php';
+				/* Admin Settings */
+				include_once CARTFLOWS_DIR . 'classes/class-cartflows-admin.php';
+				include_once CARTFLOWS_DIR . 'classes/class-cartflows-stats.php';
+			}
 
 			/* Logger */
 			include_once CARTFLOWS_DIR . 'classes/logger/class-cartflows-log-handler-interface.php';

@@ -172,31 +172,10 @@ class Cartflows_Utils {
 	 */
 	public function get_next_step_id( $flow_id, $step_id ) {
 
-		$steps   = $this->get_flow_steps( $flow_id );
-		$step_id = intval( $step_id );
+		$wcf_step_obj = wcf_get_step( $step_id );
+		$next_step_id = $wcf_step_obj->get_direct_next_step_id();
 
-		if ( ! $steps ) {
-			return false;
-		}
-
-		foreach ( $steps as $i => $step ) {
-
-			if ( intval( $step['id'] ) === $step_id ) {
-
-				$next_i = $i + 1;
-
-				if ( isset( $steps[ $next_i ] ) ) {
-
-					$navigation = $steps[ $next_i ];
-
-					return intval( $navigation['id'] );
-				}
-
-				break;
-			}
-		}
-
-		return false;
+		return $next_step_id;
 	}
 
 	/**
@@ -561,6 +540,17 @@ class Cartflows_Utils {
 		$this->checkout_products[ $checkout_id ] = $products;
 
 		return $this->checkout_products[ $checkout_id ];
+	}
+
+	/**
+	 * Clear Installed Page Builder Cache
+	 */
+	public function clear_cache() {
+
+		// Clear 'Elementor' file cache.
+		if ( class_exists( '\Elementor\Plugin' ) ) {
+			Elementor\Plugin::$instance->files_manager->clear_cache();
+		}
 	}
 }
 

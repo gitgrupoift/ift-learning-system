@@ -3,9 +3,9 @@
 Contributors: lukecarbis, ryankienstra, Stino11, rheinardkorf
 Tags: gutenberg, blocks, block editor, fields, template
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl
 
@@ -68,6 +68,13 @@ See [Contributing to Block Lab](https://github.com/getblocklab/block-lab/blob/de
 
 == Changelog ===
 
+= 1.5.6 – 2020-08-10 =
+
+Small bugfixes, improved testing
+
+* Fix: Prevent a console warning for a prop in WP 5.5
+* New: More JS component tests, and an e2e test
+
 = 1.5.5 – 2020-04-23 =
 
 Removed upgrade screen, dependency updates
@@ -110,7 +117,7 @@ This is a bugfix release, focused mostly on compatibility with WordPress 5.3.
 
 = 1.5.0 – 2019-10-30 =
 
-Ready for a big release? We're really happy to be introducing quite a number of highly requested features, including a PHP API for registering blocks with code, a new text field with lists and headings, and some neat workflow efficiencies when building your block. 
+Ready for a big release? We're really happy to be introducing quite a number of highly requested features, including a PHP API for registering blocks with code, a new text field with lists and headings, and some neat workflow efficiencies when building your block.
 
 * New: There's now a PHP API for registering blocks using code (instead of the WP Admin UI). Documentation is [here](https://github.com/getblocklab/block-lab/pull/434) for now, but more on its way soon
 * New: Classic Text control (for Block Lab Pro users)! This field is similar to Rich Text, but has a few extra options for things like lists and headings

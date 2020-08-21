@@ -85,7 +85,7 @@
 			var ga_add_payment_info = cartflows.wcf_ga_active['enable_add_payment_info'];
 			var ga_purchase_event = cartflows.wcf_ga_active['enable_purchase_event'];
 			var ga_add_to_cart = cartflows.wcf_ga_active['enable_add_to_cart'];
-			var cookies = $.cookie('wcf_ga_trans_data');
+			var ga_cookies = $.cookie('wcf_ga_trans_data');
 			var is_checkout_page = cartflows.is_checkout_page;
 			
 			if( 'disable' === ga_for_other_page ){
@@ -117,8 +117,8 @@
 				}	
 			}
 
-			if( typeof cookies !== 'undefined' ){
-				var ga_order_details = jQuery.parseJSON(cookies);
+			if( typeof ga_cookies !== 'undefined' && ga_cookies != null ){
+				var ga_order_details = jQuery.parseJSON(ga_cookies);
 
 				var purchase_data = {
 					send_to: google_a_id,

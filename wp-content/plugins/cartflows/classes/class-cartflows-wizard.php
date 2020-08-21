@@ -312,7 +312,7 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 				<div class="cartflows-setup-actions step">
 					<div class="button-prev-wrap">
 					</div>
-					<div class="button-next-wrap">
+					<div class="wcf-usage-tracking" >
 						<input type="submit" class="uct-activate button-primary button button-large " value="<?php esc_html_e( 'Lets Go »', 'cartflows' ); ?>" name="save_step" />
 					</div>
 					<?php wp_nonce_field( 'cartflow-setup' ); ?>
@@ -417,7 +417,13 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 					</tr>	
 				</table>
 				<p><?php esc_html_e( 'While CartFlows Should work with most page builders, we offer templates for the above page builders.', 'cartflows' ); ?></p>
+				<div class="cartflows-setup-extra-notice">
+					<span>
+						<?php esc_html_e( 'The following plugin will be installed and activated for you:', 'cartflows' ); ?>
+						<a target="_blank" id="wcf-page-builder" href="https://wordpress.org/plugins/elementor/"> <?php esc_html_e( 'Elementor', 'cartflows' ); ?></a>		
+					</span>		
 
+				</div>
 				<div class="cartflows-setup-actions step">
 					<div class="button-prev-wrap">
 						<a href="<?php echo esc_url( $this->get_prev_step_link() ); ?>" class="button-primary button button-large button-prev" ><?php esc_html_e( '« Previous', 'cartflows' ); ?></a>
@@ -456,7 +462,7 @@ if ( ! class_exists( 'CartFlows_Wizard' ) ) :
 
 				<span>
 					<?php esc_html_e( 'The following plugin will be installed and activated for you:', 'cartflows' ); ?>
-					<a target="_blank" href="https://wordpress.org/plugins/woo-cart-abandonment-recovery/"> <?php esc_html_e( 'WooCommerce', 'cartflows' ); ?></a>,
+					<a target="_blank" href="https://wordpress.org/plugins/woocommerce/"> <?php esc_html_e( 'WooCommerce', 'cartflows' ); ?></a>,
 					<a target="_blank" href="https://wordpress.org/plugins/woo-cart-abandonment-recovery/"> <?php esc_html_e( 'WooCommerce Cart Abandonment Recovery', 'cartflows' ); ?></a>
 
 				</span>

@@ -48,11 +48,10 @@ add_action( 'admin_init', 'learndash_notifications_create_db_table' );
  */
 function learndash_notifications_delete_delayed_email_by_unenrolled_course( $user_id, $course_id, $access_list, $remove )
 {
-	if ( $remove !== true ) {
-		return;
+	if ( $remove ) {
+		learndash_notifications_delete_delayed_email_by_user_id_course_id( $user_id, $course_id );
 	}
 
-	learndash_notifications_delete_delayed_email_by_user_id_course_id( $user_id, $course_id );
 }
 
 add_action( 'learndash_update_course_access', 'learndash_notifications_delete_delayed_email_by_unenrolled_course', 10, 4 );
@@ -63,7 +62,7 @@ add_action( 'learndash_update_course_access', 'learndash_notifications_delete_de
  * 
  * @param  int $user_id ID of a user
  */
-function learndash_notifications_delete_delayed_email_by_deleted_user( $user_id ) {
+function learndash_notifications_delete_delayed_email_by_deleted_user( $user_id, $reassign_id ) {
 	learndash_notifications_delete_delayed_email_by_user_id( $user_id );
 }
 
@@ -77,11 +76,9 @@ add_action( 'deleted_user', 'learndash_notifications_delete_delayed_email_by_del
  */
 function learndash_notifications_delete_delayed_emails_by( $key, $value )
 {
-	global $wpdb;
-
-	$sql = "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP '" . esc_sql( $key ) . "\".{0,6}\"?" . esc_sql( $value ) . "'";
-
-	return $wpdb->query( $sql );
+	learndash_notifications_delete_delayed_emails_by_multiple_shortcode_data_key([
+		$key => $value,
+	]);
 }
 
 /**
@@ -105,11 +102,9 @@ function learndash_notifications_delete_delayed_emails_by_email( $email_address 
  */
 function learndash_notifications_delete_delayed_email_by_user_id( $user_id )
 {
-	global $wpdb;
-
-	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d'", $user_id );
-
-	return $wpdb->query( $sql );
+	learndash_notifications_delete_delayed_emails_by_multiple_shortcode_data_key([
+		'user_id' => $user_id
+	]);
 }
 
 /**
@@ -120,20 +115,18 @@ function learndash_notifications_delete_delayed_email_by_user_id( $user_id )
  */
 function learndash_notifications_delete_delayed_email_by_user_id_course_id( $user_id, $course_id )
 {
-	global $wpdb;
-
-	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d' AND shortcode_data REGEXP 'course_id\".{0,6}\"?%d'", $user_id, $course_id );
-
-	return $wpdb->query( $sql );
+	learndash_notifications_delete_delayed_emails_by_multiple_shortcode_data_key([
+		'user_id' => $user_id,
+		'course_id' => $course_id,
+	]);
 }
 
 function learndash_notifications_delete_delayed_emails_by_user_id_lesson_id( $user_id, $lesson_id )
 {
-	global $wpdb;
-
-	$sql = $wpdb->prepare( "DELETE FROM {$wpdb->prefix}ld_notifications_delayed_emails WHERE shortcode_data REGEXP 'user_id\".{0,6}\"?%d' AND shortcode_data REGEXP 'lesson_id\".{0,6}\"?%d'", $user_id, $lesson_id );
-
-	return $wpdb->query( $sql );
+	learndash_notifications_delete_delayed_emails_by_multiple_shortcode_data_key([
+		'user_id' => $user_id,
+		'lesson_id' => $lesson_id,
+	]);
 }
 
 function learndash_notifications_delete_delayed_email_by_id( $id )
@@ -375,8 +368,8 @@ function learndash_notifications_delete_delayed_emails_by_multiple_shortcode_dat
 	foreach ( $pair as $key => $value ) {
 		$count++;
 
-		$key   = sanitize_text_field( $key );
-		$value = sanitize_text_field( $value );
+		$key   = esc_sql( $key );
+		$value = esc_sql( $value );
 
 		$pattern = "$key\".{0,6}\"?$value(;|\"|\')";
 		$sql .= "shortcode_data REGEXP '$pattern'";

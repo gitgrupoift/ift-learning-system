@@ -7,7 +7,7 @@
         jQuery("#wcf_wcf_facebook_pixel_tracking").click(function () {
             jQuery(fb_pixel_fields).toggle(jQuery("#wcf_wcf_facebook_pixel_tracking").is(":checked"));
         });
-    }
+    };
     /* Disable/Enable Facebook Pixel Field section*/
 
     /* Disable/Enable Google Analytics Field section */
@@ -19,8 +19,38 @@
             jQuery("#wcf_enable_google-analytics-id").click(function () {
                 jQuery(google_analytics_fields).toggle(jQuery("#wcf_enable_google-analytics-id").is(":checked"));
             });   
-    }
+    };
     /* Disable/Enable Google Analytics Field section */
+
+    var wcf_fetch_stats_overview = function() {
+        
+        $('.wcf-stats-buttons button').on('click', function(e) {
+			
+			e.preventDefault();
+            
+            var $this 	= $(this),
+                wrap    = $this.closest('.wcf-stats-buttons'),
+				filter = $this.data('filter');
+
+            wrap.find('.button').removeClass('button-primary').addClass('button-secondary');
+            $this.addClass('button-primary').removeClass('button-secondary');
+
+            $.ajax({
+                url: ajaxurl,
+                data: {
+                    action: "cartflows_fetch_stats",
+                    filter: filter,
+                    security: cartflows_admin.wcf_fetch_stats_nonce
+                },
+                dataType: 'json',
+                type: 'POST',
+                success: function ( data ) {
+                    
+                    console.log( data );
+                }
+            });
+		});
+    };
 
     $(document).ready(function () {
         wcf_toggle_fields_facebook_pixel();

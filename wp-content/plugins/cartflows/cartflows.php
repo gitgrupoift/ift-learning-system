@@ -3,7 +3,7 @@
  * Plugin Name: CartFlows
  * Plugin URI: https://cartflows.com/
  * Description: Create beautiful checkout pages & sales flows for WooCommerce.
- * Version: 1.5.14
+ * Version: 1.5.15
  * Author: CartFlows Inc
  * Author URI: https://cartflows.com/
  * Text Domain: cartflows

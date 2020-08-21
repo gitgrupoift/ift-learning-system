@@ -3,7 +3,7 @@
  * Plugin Name: LearnDash LMS - Notifications
  * Plugin URI: 
  * Description:	Create and send notification emails to the users. 
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author: LearnDash
  * Author URI: http://www.learndash.com/
  * Text Domain: learndash-notifications
@@ -69,7 +69,7 @@ final class LearnDash_Notifications {
 
 		// Plugin version
 		if ( ! defined( 'LEARNDASH_NOTIFICATIONS_VERSION' ) ) {
-			define( 'LEARNDASH_NOTIFICATIONS_VERSION', '1.4.0' );
+			define( 'LEARNDASH_NOTIFICATIONS_VERSION', '1.4.1' );
 		}
 
 		// Plugin file

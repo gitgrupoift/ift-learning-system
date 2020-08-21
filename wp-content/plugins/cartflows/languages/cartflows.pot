@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the CartFlows package.
 msgid ""
 msgstr ""
-"Project-Id-Version: CartFlows 1.5.13\n"
+"Project-Id-Version: CartFlows 1.5.15\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartflows\n"
-"POT-Creation-Date: 2020-07-21 06:58:49+00:00\n"
+"POT-Creation-Date: 2020-08-12 08:20:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,43 +24,44 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:229
+#: admin/bsf-analytics/class-bsf-analytics.php:211
 #. translators: %s product name
 msgid ""
 "Want to help make <strong>%1s</strong> even more awesome? Allow us to "
 "collect non-sensitive diagnostic data and usage information. "
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:232
+#: admin/bsf-analytics/class-bsf-analytics.php:214
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:256
+#: admin/bsf-analytics/class-bsf-analytics.php:238
 #. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:264
+#: admin/bsf-analytics/class-bsf-analytics.php:246
 msgid "Yes! Allow it"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:273
+#: admin/bsf-analytics/class-bsf-analytics.php:255
 msgid "No Thanks"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:353
-msgid "Every two days"
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:412
+#: admin/bsf-analytics/class-bsf-analytics.php:359
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:459
+#: admin/bsf-analytics/class-bsf-analytics.php:403
+#. translators: %s Product title
+msgid "Allow %s products to track non-sensitive usage tracking data."
+msgstr ""
+
+#: admin/bsf-analytics/class-bsf-analytics.php:406
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:464
+#: admin/bsf-analytics/class-bsf-analytics.php:411
 msgid "Learn More."
 msgstr ""
 
@@ -91,53 +92,56 @@ msgid ""
 "Please read information about how to set up Global Checkout %1$shere%2$s."
 msgstr ""
 
-#: classes/class-cartflows-admin.php:153 classes/class-cartflows-admin.php:154
-#: includes/admin/cartflows-general-bck.php:34
+#: classes/class-cartflows-admin.php:159 includes/admin/cartflows-home.php:11
+msgid "Home"
+msgstr ""
+
+#: classes/class-cartflows-admin.php:164 classes/class-cartflows-admin.php:165
 #: modules/optin/classes/class-cartflows-optin-meta.php:150
 #: modules/thankyou/classes/class-cartflows-thankyou-meta.php:148
 msgid "Settings"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:440
+#: classes/class-cartflows-admin.php:453
 msgid "Installing and activating.."
 msgstr ""
 
-#: classes/class-cartflows-admin.php:441
+#: classes/class-cartflows-admin.php:454
 msgid "There was an error with the installation of plugin."
 msgstr ""
 
-#: classes/class-cartflows-admin.php:495
+#: classes/class-cartflows-admin.php:516
 msgid "Flows Library"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:502
-#: modules/flow/view/meta-flow-steps.php:156
+#: classes/class-cartflows-admin.php:523
+#: modules/flow/view/view-remote-importer.php:26
 msgid "Ready Templates"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:505
-#: modules/flow/view/meta-flow-steps.php:159
+#: classes/class-cartflows-admin.php:526
+#: modules/flow/view/view-remote-importer.php:29
 msgid "Create Your Own"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:516
-#: modules/flow/view/meta-flow-steps.php:171
+#: classes/class-cartflows-admin.php:537
+#: modules/flow/view/view-remote-importer.php:41
 msgid "Search Sites"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:517
-#: modules/flow/view/meta-flow-steps.php:172
+#: classes/class-cartflows-admin.php:538
+#: modules/flow/view/view-remote-importer.php:42
 msgid "Search Flow..."
 msgstr ""
 
-#: classes/class-cartflows-admin.php:534
+#: classes/class-cartflows-admin.php:555
 msgid "Design Your Flow"
 msgstr ""
 
-#: classes/class-cartflows-admin.php:535
+#: classes/class-cartflows-admin.php:556
 #: classes/class-cartflows-importer.php:665
 #: classes/class-cartflows-importer.php:764
-#: modules/flow/view/meta-flow-steps.php:202
+#: modules/flow/view/view-remote-importer.php:72
 msgid "Learn How"
 msgstr ""
 
@@ -145,12 +149,22 @@ msgstr ""
 msgid "Request successfully processed!"
 msgstr ""
 
-#: classes/class-cartflows-cloning.php:423
+#: classes/class-cartflows-cloning.php:284
+#. translators: %s flow id
+msgid "Can't clone this step - %1$s. Flow - %2$s"
+msgstr ""
+
+#: classes/class-cartflows-cloning.php:401
+#. translators: %s flow id
+msgid "Step - %1$s cloned. Flow - %2$s"
+msgstr ""
+
+#: classes/class-cartflows-cloning.php:427
 msgid "Clone this flow"
 msgstr ""
 
-#: classes/class-cartflows-cloning.php:423
-#: modules/flow/view/meta-flow-steps.php:115
+#: classes/class-cartflows-cloning.php:427
+#: modules/flow/classes/class-cartflows-flow-meta.php:824
 msgid "Clone"
 msgstr ""
 
@@ -252,7 +266,7 @@ msgstr ""
 
 #: classes/class-cartflows-importer.php:701
 #: classes/class-cartflows-importer.php:808
-#: modules/flow/classes/class-cartflows-flow-meta.php:474
+#: modules/flow/classes/class-cartflows-flow-meta.php:503
 msgid "Get Pro"
 msgstr ""
 
@@ -365,25 +379,25 @@ msgstr ""
 msgid "Select CartFlows Template for this Course"
 msgstr ""
 
-#: classes/class-cartflows-loader.php:222
+#: classes/class-cartflows-loader.php:232
 #. translators: %s: html tags
 msgid ""
 "You are using an older version of %1$sCartFlows Pro%2$s. Please update "
 "%1$sCartFlows Pro%2$s plugin to version %1$s%3$s%2$s or higher."
 msgstr ""
 
-#: classes/class-cartflows-loader.php:485
+#: classes/class-cartflows-loader.php:501
 #. translators: %s: html tags
 msgid ""
 "This %1$sCartFlows%2$s page requires %1$sWooCommerce%2$s plugin installed & "
 "activated."
 msgstr ""
 
-#: classes/class-cartflows-loader.php:495
+#: classes/class-cartflows-loader.php:511
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: classes/class-cartflows-loader.php:503
+#: classes/class-cartflows-loader.php:519
 msgid "Install WooCommerce"
 msgstr ""
 
@@ -391,53 +405,53 @@ msgstr ""
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:84
+#: classes/class-cartflows-meta-fields.php:61
 msgid "Thin 100"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:85
+#: classes/class-cartflows-meta-fields.php:62
 msgid "Extra-Light 200"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:86
+#: classes/class-cartflows-meta-fields.php:63
 msgid "Light 300"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:87
+#: classes/class-cartflows-meta-fields.php:64
 msgid "Normal 400"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:88
+#: classes/class-cartflows-meta-fields.php:65
 msgid "Medium 500"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:89
+#: classes/class-cartflows-meta-fields.php:66
 msgid "Semi-Bold 600"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:90
+#: classes/class-cartflows-meta-fields.php:67
 msgid "Bold 700"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:91
+#: classes/class-cartflows-meta-fields.php:68
 msgid "Extra-Bold 800"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:92
+#: classes/class-cartflows-meta-fields.php:69
 msgid "Ultra-Bold 900"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:175
+#: classes/class-cartflows-meta-fields.php:182
 #. Translators: %d stock amount
 msgid "Stock: %d"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:758
+#: classes/class-cartflows-meta-fields.php:765
 #: includes/meta-fields/generate-product-repeater.php:30
 msgid "Search for a product&hellip;"
 msgstr ""
 
-#: classes/class-cartflows-meta-fields.php:809
+#: classes/class-cartflows-meta-fields.php:816
 msgid "Search for a coupon&hellip;"
 msgstr ""
 
@@ -447,7 +461,7 @@ msgstr ""
 
 #: classes/class-cartflows-meta.php:42
 #: modules/flow/classes/class-cartflows-flow-meta.php:95
-#: modules/flow/classes/class-cartflows-flow-meta.php:733
+#: modules/flow/classes/class-cartflows-flow-meta.php:763
 msgid "Back to edit Flow"
 msgstr ""
 
@@ -488,7 +502,6 @@ msgid "Skip Setup"
 msgstr ""
 
 #: classes/class-cartflows-wizard.php:128
-#: includes/admin/cartflows-general-bck.php:24
 msgid "Welcome"
 msgstr ""
 
@@ -563,7 +576,8 @@ msgid "Select Page Builder"
 msgstr ""
 
 #: classes/class-cartflows-wizard.php:357
-#: includes/admin/cartflows-general.php:94
+#: classes/class-cartflows-wizard.php:423
+#: includes/admin/cartflows-general.php:76
 msgid "Elementor"
 msgstr ""
 
@@ -572,17 +586,17 @@ msgid "Beaver Builder Plugin (Lite Version)"
 msgstr ""
 
 #: classes/class-cartflows-wizard.php:377
-#: includes/admin/cartflows-general.php:96
+#: includes/admin/cartflows-general.php:78
 msgid "Divi"
 msgstr ""
 
 #: classes/class-cartflows-wizard.php:387
-#: includes/admin/cartflows-general.php:97
+#: includes/admin/cartflows-general.php:79
 msgid "Gutenberg"
 msgstr ""
 
 #: classes/class-cartflows-wizard.php:397
-#: includes/admin/cartflows-general.php:98
+#: includes/admin/cartflows-general.php:80
 msgid "Other"
 msgstr ""
 
@@ -592,91 +606,92 @@ msgid ""
 "the above page builders."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:423
-#: classes/class-cartflows-wizard.php:468
-#: classes/class-cartflows-wizard.php:678
+#: classes/class-cartflows-wizard.php:422
+#: classes/class-cartflows-wizard.php:464
+msgid "The following plugin will be installed and activated for you:"
+msgstr ""
+
+#: classes/class-cartflows-wizard.php:429
+#: classes/class-cartflows-wizard.php:474
+#: classes/class-cartflows-wizard.php:684
 msgid "« Previous"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:426
+#: classes/class-cartflows-wizard.php:432
 msgid "Skip this step"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:427
+#: classes/class-cartflows-wizard.php:433
 msgid "Next »"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:446
+#: classes/class-cartflows-wizard.php:452
 msgid "Choose a checkout"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:449
+#: classes/class-cartflows-wizard.php:455
 msgid ""
 "While CartFlows is designed to use WooCommerce sell digital and physical "
 "products, not all funnels need a checkout system."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:451
+#: classes/class-cartflows-wizard.php:457
 msgid ""
 "Would you like to install WooCommerce to sell digital and physical products "
 "in your funnels?"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:458
-msgid "The following plugin will be installed and activated for you:"
-msgstr ""
-
-#: classes/class-cartflows-wizard.php:459
+#: classes/class-cartflows-wizard.php:465
 msgid "WooCommerce"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:460
+#: classes/class-cartflows-wizard.php:466
 msgid "WooCommerce Cart Abandonment Recovery"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:471
-#: classes/class-cartflows-wizard.php:681
+#: classes/class-cartflows-wizard.php:477
+#: classes/class-cartflows-wizard.php:687
 msgid "No thanks"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:472
+#: classes/class-cartflows-wizard.php:478
 msgid "Yes"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:614
+#: classes/class-cartflows-wizard.php:620
 msgid "Congratulations, You Did It!"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:621
+#: classes/class-cartflows-wizard.php:627
 msgid ""
 "CartFlows is ready to use on your website. You've successfully completed "
 "the setup process and all that is left for you to do is create your first "
 "flow."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:635
+#: classes/class-cartflows-wizard.php:641
 msgid "Create a flow"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:652
+#: classes/class-cartflows-wizard.php:658
 msgid "Exclusive CartFlows Training Course Offer"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:663
+#: classes/class-cartflows-wizard.php:669
 msgid ""
 "We want you to get off to a great start using CartFlows, so we would like "
 "to give access to our exclusive training course."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:664
+#: classes/class-cartflows-wizard.php:670
 msgid "Get access to this couse, for free, by entering your email below."
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:666
+#: classes/class-cartflows-wizard.php:672
 msgid "Enter Email address"
 msgstr ""
 
-#: classes/class-cartflows-wizard.php:682
+#: classes/class-cartflows-wizard.php:688
 msgid "Allow"
 msgstr ""
 
@@ -699,9 +714,9 @@ msgstr ""
 msgid "%1$s was called with an invalid level \"%2$s\"."
 msgstr ""
 
+#: includes/admin/cartflows-admin-header.php:17
 #: includes/admin/cartflows-admin.php:19
-#: includes/admin/cartflows-general.php:48
-msgid "Modernizing WordPress eCommerce!"
+msgid "Generate More Leads & More Sales"
 msgstr ""
 
 #: includes/admin/cartflows-admin.php:29
@@ -713,8 +728,8 @@ msgid "%1$s at %2$s"
 msgstr ""
 
 #: includes/admin/cartflows-error-log.php:41
+#: modules/flow/classes/class-cartflows-flow-meta.php:804
 #: modules/flow/classes/class-cartflows-flow-post-type.php:225
-#: modules/flow/view/meta-flow-steps.php:104
 msgid "View"
 msgstr ""
 
@@ -726,37 +741,25 @@ msgstr ""
 msgid "There are currently no logs to view."
 msgstr ""
 
-#: includes/admin/cartflows-general-bck.php:10
-msgid "Selec"
-msgstr ""
-
-#: includes/admin/cartflows-general-bck.php:22
-msgid "General"
-msgstr ""
-
 #: includes/admin/cartflows-general.php:31
-#: includes/admin/cartflows-general.php:58
+#: includes/admin/cartflows-general.php:40
 msgid "General Settings"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:40
-msgid "Getting Started"
-msgstr ""
-
-#: includes/admin/cartflows-general.php:71
+#: includes/admin/cartflows-general.php:53
 msgid "Disallow search engines from indexing flows"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:81
-#: modules/flow/view/meta-flow-steps.php:93
+#: includes/admin/cartflows-general.php:63
+#: modules/flow/view/view-flow-inner-step.php:52
 msgid "Global Checkout"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:90
+#: includes/admin/cartflows-general.php:72
 msgid "Show Templates designed with"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:91
+#: includes/admin/cartflows-general.php:73
 msgid ""
 "CartFlows offers flow templates that can be imported in one click. These "
 "templates are available in few different page builders. Please choose your "
@@ -764,190 +767,207 @@ msgid ""
 "are made using that page builder.."
 msgstr ""
 
-#: includes/admin/cartflows-general.php:95
+#: includes/admin/cartflows-general.php:77
 msgid "Beaver Builder"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:107
-#: includes/admin/cartflows-general.php:193
-#: includes/admin/cartflows-general.php:299
-#: includes/admin/cartflows-general.php:416
+#: includes/admin/cartflows-general.php:89
+#: includes/admin/cartflows-general.php:175
+#: includes/admin/cartflows-general.php:281
+#: includes/admin/cartflows-general.php:398
 msgid "Save Changes"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:119
+#: includes/admin/cartflows-general.php:101
 msgid "Permalink Settings"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:134
+#: includes/admin/cartflows-general.php:116
 #: modules/checkout/classes/class-cartflows-checkout-meta.php:647
 #: modules/optin/classes/class-cartflows-optin-meta.php:383
 msgid "Default"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:140
+#: includes/admin/cartflows-general.php:122
 msgid "Flow and Step Slug"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:146
+#: includes/admin/cartflows-general.php:128
 msgid "Flow Slug"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:152
+#: includes/admin/cartflows-general.php:134
 msgid "Step Slug"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:164
+#: includes/admin/cartflows-general.php:146
 msgid "Post Type Permalink Base"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:172
+#: includes/admin/cartflows-general.php:154
 msgid "Step Base"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:182
+#: includes/admin/cartflows-general.php:164
 msgid "Flow Base"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:194
+#: includes/admin/cartflows-general.php:176
 msgid "Set Default"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:208
+#: includes/admin/cartflows-general.php:190
 msgid "Facebook Pixel Settings"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:223
+#: includes/admin/cartflows-general.php:205
 msgid "Enable Facebook Pixel Tracking"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:236
+#: includes/admin/cartflows-general.php:218
 msgid "Enable for the whole site"
+msgstr ""
+
+#: includes/admin/cartflows-general.php:226
+#: includes/admin/cartflows-general.php:325
+msgid "If this option is unchecked, it will only apply to CartFlows steps."
+msgstr ""
+
+#: includes/admin/cartflows-general.php:236
+msgid "Enter Facebook pixel ID"
 msgstr ""
 
 #: includes/admin/cartflows-general.php:244
 #: includes/admin/cartflows-general.php:343
-msgid "If this option is unchecked, it will only apply to CartFlows steps."
-msgstr ""
-
-#: includes/admin/cartflows-general.php:254
-msgid "Enter Facebook pixel ID"
-msgstr ""
-
-#: includes/admin/cartflows-general.php:262
-#: includes/admin/cartflows-general.php:361
 msgid "Enable Events:"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:271
+#: includes/admin/cartflows-general.php:253
 msgid "Initiate Checkout"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:280
-#: includes/admin/cartflows-general.php:387
+#: includes/admin/cartflows-general.php:262
+#: includes/admin/cartflows-general.php:369
 msgid "Add Payment Info"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:289
+#: includes/admin/cartflows-general.php:271
 msgid "Purchase Complete"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:311
+#: includes/admin/cartflows-general.php:293
 msgid "Google Analytics Settings"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:322
+#: includes/admin/cartflows-general.php:304
 msgid "Enable Google Analytics Tracking"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:335
+#: includes/admin/cartflows-general.php:317
 msgid "Enable for the whole website"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:353
+#: includes/admin/cartflows-general.php:335
 msgid "Google Analytics ID"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:355
+#: includes/admin/cartflows-general.php:337
 msgid ""
 "Log into your <a href=\"https://analytics.google.com/\" "
 "target=\"_blank\">google analytics account</a> to find your ID. eg: "
 "UA-XXXXXX-X&period;"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:369
+#: includes/admin/cartflows-general.php:351
 msgid "Begin Checkout"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:378
+#: includes/admin/cartflows-general.php:360
 msgid "Add To Cart"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:396
+#: includes/admin/cartflows-general.php:378
 msgid "Purchase"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:404
+#: includes/admin/cartflows-general.php:386
 msgid ""
 "Google Analytics not working correctly? <a "
 "href=\"https://cartflows.com/docs/troubleshooting-google-analytics-tracking-"
 "issues/\" > Click here </a> to know more. "
 msgstr ""
 
-#: includes/admin/cartflows-general.php:437
+#: includes/admin/cartflows-general.php:419
+#: includes/admin/cartflows-home.php:43
 msgid "Knowledge Base"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:441
+#: includes/admin/cartflows-general.php:423
+#: includes/admin/cartflows-home.php:47
 msgid "Not sure how something works? Take a peek at the knowledge base and learn."
 msgstr ""
 
-#: includes/admin/cartflows-general.php:444
+#: includes/admin/cartflows-general.php:426
+#: includes/admin/cartflows-home.php:50
 msgid "Visit Knowledge Base »"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:452
+#: includes/admin/cartflows-general.php:434
+#: includes/admin/cartflows-home.php:58
 msgid "Community"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:456
+#: includes/admin/cartflows-general.php:438
+#: includes/admin/cartflows-home.php:62
 msgid ""
 "Join the community of super helpful CartFlows users. Say hello, ask "
 "questions, give feedback and help each other!"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:459
+#: includes/admin/cartflows-general.php:441
+#: includes/admin/cartflows-home.php:65
 msgid "Join Our Facebook Group »"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:467
+#: includes/admin/cartflows-general.php:449
+#: includes/admin/cartflows-home.php:73
 msgid "Five Star Support"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:471
+#: includes/admin/cartflows-general.php:453
+#: includes/admin/cartflows-home.php:77
 msgid "Got a question? Get in touch with CartFlows developers. We're happy to help!"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:474
+#: includes/admin/cartflows-general.php:456
+#: includes/admin/cartflows-home.php:80
 msgid "Submit a Ticket »"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:484
+#: includes/admin/cartflows-general.php:466
 msgid "Load Minified CSS"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:489
+#: includes/admin/cartflows-general.php:471
 msgid ""
 "Load the Minified CSS from here. Just Enable it by checking the below given "
 "checkbox."
 msgstr ""
 
-#: includes/admin/cartflows-general.php:496
+#: includes/admin/cartflows-general.php:478
 msgid "Load minified CSS & JS Files"
 msgstr ""
 
-#: includes/admin/cartflows-general.php:501
+#: includes/admin/cartflows-general.php:483
 msgid "Save"
+msgstr ""
+
+#: includes/admin/cartflows-home.php:20
+msgid "Getting Started"
+msgstr ""
+
+#: includes/admin/cartflows-home.php:28
+msgid "Modernizing WordPress eCommerce!"
 msgstr ""
 
 #: includes/exporter.php:12
@@ -1017,7 +1037,7 @@ msgid "Create Product"
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-markup.php:284
-#: modules/optin/classes/class-cartflows-optin-markup.php:146
+#: modules/optin/classes/class-cartflows-optin-markup.php:159
 #: modules/thankyou/classes/class-cartflows-thankyou-markup.php:90
 msgid ""
 "WooCommerce functions do not exist. If you are in an IFrame, please reload "
@@ -1025,7 +1045,7 @@ msgid ""
 msgstr ""
 
 #: modules/checkout/classes/class-cartflows-checkout-markup.php:285
-#: modules/optin/classes/class-cartflows-optin-markup.php:147
+#: modules/optin/classes/class-cartflows-optin-markup.php:160
 #: modules/thankyou/classes/class-cartflows-thankyou-markup.php:91
 msgid "Click Here to Reload"
 msgstr ""
@@ -1047,37 +1067,37 @@ msgid ""
 "settings to continue."
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:521
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:522
 msgid "Variations Not set"
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:529
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:530
 msgid "This product can't be purchased"
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:974
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1017
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:975
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1018
 msgid "Coupon Code"
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:975
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1026
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:976
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1027
 msgid "Apply"
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1182
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1183
 msgid "Sorry there was a problem removing this coupon."
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1185
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1186
 msgid "Coupon has been removed."
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1204
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1205
 msgid "Sorry there was a problem removing "
 msgstr ""
 
-#: modules/checkout/classes/class-cartflows-checkout-markup.php:1207
+#: modules/checkout/classes/class-cartflows-checkout-markup.php:1208
 msgid " has been removed."
 msgstr ""
 
@@ -1416,52 +1436,88 @@ msgstr ""
 msgid "All Rights Reserved"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:263
+#: modules/flow/classes/class-cartflows-flow-meta.php:265
 #. translators: %s flow id
 msgid "Step not deleted for flow - %s"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:294
+#: modules/flow/classes/class-cartflows-flow-meta.php:303
 #. translators: %s flow id
 msgid "Step deleted for flow - %s"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:322
+#: modules/flow/classes/class-cartflows-flow-meta.php:312
+#. translators: %s flow id
+msgid "This step can not be deleted."
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:344
 #. translators: %s flow id
 msgid "Steps not sorted for flow - %s"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:345
+#: modules/flow/classes/class-cartflows-flow-meta.php:380
 #. translators: %s flow id
 msgid "Steps sorted for flow - %s"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:456
+#: modules/flow/classes/class-cartflows-flow-meta.php:485
 msgid "Analytics"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:473
+#: modules/flow/classes/class-cartflows-flow-meta.php:502
 #. translators: %s: link
 msgid "Upgrade to %1$sCartFlows Pro%2$s for Analytics feature"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:491
+#: modules/flow/classes/class-cartflows-flow-meta.php:520
 msgid "Flow Settings"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:576
+#: modules/flow/classes/class-cartflows-flow-meta.php:605
 msgid "Enable Test Mode"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:583
+#: modules/flow/classes/class-cartflows-flow-meta.php:612
 msgid ""
 "If you are using WooCommerce plugin then test mode will add random products "
 "in your flow, so you can preview it easily while testing."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-meta.php:702
-#: modules/flow/view/meta-flow-steps.php:133
+#: modules/flow/classes/class-cartflows-flow-meta.php:732
+#: modules/flow/view/meta-flow-steps.php:145
 msgid "Add New Step"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:802
+#: modules/flow/classes/class-cartflows-step-post-type.php:166
+msgid "View Step"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:813
+#: modules/flow/classes/class-cartflows-step-post-type.php:165
+msgid "Edit Step"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:815
+msgid "Edit"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:822
+msgid "Clone Step"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:833
+msgid "Delete Step"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:835
+msgid "Delete"
+msgstr ""
+
+#: modules/flow/classes/class-cartflows-flow-meta.php:844
+#: modules/flow/classes/class-cartflows-flow-meta.php:846
+msgid "A/B Test"
 msgstr ""
 
 #: modules/flow/classes/class-cartflows-flow-post-type.php:69
@@ -1511,62 +1567,63 @@ msgstr ""
 msgid "Slug"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:332
+#: modules/flow/classes/class-cartflows-flow-post-type.php:321
+#: modules/flow/classes/class-cartflows-flow-post-type.php:322
 msgid "Flows"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:354
-#: modules/flow/classes/class-cartflows-flow-post-type.php:360
+#: modules/flow/classes/class-cartflows-flow-post-type.php:344
+#: modules/flow/classes/class-cartflows-flow-post-type.php:350
 #: modules/flow/classes/class-cartflows-step-post-type.php:401
 #: modules/flow/classes/class-cartflows-step-post-type.php:407
 #. translators: %s: singular custom post type name
 msgid "%s updated."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:356
+#: modules/flow/classes/class-cartflows-flow-post-type.php:346
 #: modules/flow/classes/class-cartflows-step-post-type.php:403
 #. translators: %s: singular custom post type name
 msgid "Custom %s updated."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:358
+#: modules/flow/classes/class-cartflows-flow-post-type.php:348
 #: modules/flow/classes/class-cartflows-step-post-type.php:405
 #. translators: %s: singular custom post type name
 msgid "Custom %s deleted."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:362
+#: modules/flow/classes/class-cartflows-flow-post-type.php:352
 #: modules/flow/classes/class-cartflows-step-post-type.php:409
 #. translators: %1$s: singular custom post type name ,%2$s: date and time of
 #. the revision
 msgid "%1$s restored to revision from %2$s"
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:364
+#: modules/flow/classes/class-cartflows-flow-post-type.php:354
 #: modules/flow/classes/class-cartflows-step-post-type.php:411
 #. translators: %s: singular custom post type name
 msgid "%s published."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:366
+#: modules/flow/classes/class-cartflows-flow-post-type.php:356
 #: modules/flow/classes/class-cartflows-step-post-type.php:413
 #. translators: %s: singular custom post type name
 msgid "%s saved."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:368
+#: modules/flow/classes/class-cartflows-flow-post-type.php:358
 #: modules/flow/classes/class-cartflows-step-post-type.php:415
 #. translators: %s: singular custom post type name
 msgid "%s submitted."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:370
+#: modules/flow/classes/class-cartflows-flow-post-type.php:360
 #: modules/flow/classes/class-cartflows-step-post-type.php:417
 #. translators: %s: singular custom post type name
 msgid "%s scheduled for."
 msgstr ""
 
-#: modules/flow/classes/class-cartflows-flow-post-type.php:372
+#: modules/flow/classes/class-cartflows-flow-post-type.php:362
 #: modules/flow/classes/class-cartflows-step-post-type.php:419
 #. translators: %s: singular custom post type name
 msgid "%s draft updated."
@@ -1583,16 +1640,6 @@ msgstr ""
 
 #: modules/flow/classes/class-cartflows-step-post-type.php:164
 msgid "All Steps"
-msgstr ""
-
-#: modules/flow/classes/class-cartflows-step-post-type.php:165
-#: modules/flow/view/meta-flow-steps.php:106
-msgid "Edit Step"
-msgstr ""
-
-#: modules/flow/classes/class-cartflows-step-post-type.php:166
-#: modules/flow/view/meta-flow-steps.php:102
-msgid "View Step"
 msgstr ""
 
 #: modules/flow/classes/class-cartflows-step-post-type.php:168
@@ -1626,39 +1673,32 @@ msgstr ""
 msgid "Downsell (Woo)"
 msgstr ""
 
-#: modules/flow/view/meta-flow-steps.php:85
+#: modules/flow/view/view-flow-inner-step.php:30
+msgid "Control"
+msgstr ""
+
+#: modules/flow/view/view-flow-inner-step.php:32
+#. translators: %s badge count
+msgid "Variation-%s"
+msgstr ""
+
+#: modules/flow/view/view-flow-inner-step.php:44
 msgid "No Product Assigned"
 msgstr ""
 
-#: modules/flow/view/meta-flow-steps.php:89
+#: modules/flow/view/view-flow-inner-step.php:48
 msgid "Global Checkout - Remove selected checkout product"
 msgstr ""
 
-#: modules/flow/view/meta-flow-steps.php:108
-msgid "Edit"
-msgstr ""
-
-#: modules/flow/view/meta-flow-steps.php:113
-msgid "Clone Step"
-msgstr ""
-
-#: modules/flow/view/meta-flow-steps.php:118
-msgid "Delete Step"
-msgstr ""
-
-#: modules/flow/view/meta-flow-steps.php:120
-msgid "Delete"
-msgstr ""
-
-#: modules/flow/view/meta-flow-steps.php:149
+#: modules/flow/view/view-remote-importer.php:19
 msgid "Steps Library"
 msgstr ""
 
-#: modules/flow/view/meta-flow-steps.php:198
+#: modules/flow/view/view-remote-importer.php:68
 msgid "Create Step"
 msgstr ""
 
-#: modules/flow/view/meta-flow-steps.php:200
+#: modules/flow/view/view-remote-importer.php:70
 msgid "You need a Cartflows Pro version to import Upsell / Downsell"
 msgstr ""
 
@@ -1670,22 +1710,22 @@ msgstr ""
 msgid "Next Step Link"
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-markup.php:165
+#: modules/optin/classes/class-cartflows-optin-markup.php:178
 msgid "Please place shortcode on Optin step-type only."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-markup.php:225
+#: modules/optin/classes/class-cartflows-optin-markup.php:238
 msgid ""
 "No product is selected. Please select a Simple, Virtual and Free product "
 "from the meta settings."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-markup.php:242
+#: modules/optin/classes/class-cartflows-optin-markup.php:255
 msgid "Please update the selected product's price to zero (0)."
 msgstr ""
 
-#: modules/optin/classes/class-cartflows-optin-markup.php:251
-#: modules/optin/classes/class-cartflows-optin-markup.php:255
+#: modules/optin/classes/class-cartflows-optin-markup.php:264
+#: modules/optin/classes/class-cartflows-optin-markup.php:268
 msgid "Please select a Simple, Virtual and Free product."
 msgstr ""
 

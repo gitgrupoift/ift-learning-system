@@ -53,6 +53,32 @@ class Cartflows_Meta_Fields {
 		global $pagenow;
 		global $post;
 
+		$localize = array(
+			'ajax_url'     => admin_url( 'admin-ajax.php' ),
+			'google_fonts' => CartFlows_Font_Families::get_google_fonts(),
+			'system_fonts' => CartFlows_Font_Families::get_system_fonts(),
+			'font_weights' => array(
+				'100' => __( 'Thin 100', 'cartflows' ),
+				'200' => __( 'Extra-Light 200', 'cartflows' ),
+				'300' => __( 'Light 300', 'cartflows' ),
+				'400' => __( 'Normal 400', 'cartflows' ),
+				'500' => __( 'Medium 500', 'cartflows' ),
+				'600' => __( 'Semi-Bold 600', 'cartflows' ),
+				'700' => __( 'Bold 700', 'cartflows' ),
+				'800' => __( 'Extra-Bold 800', 'cartflows' ),
+				'900' => __( 'Ultra-Bold 900', 'cartflows' ),
+			),
+		);
+
+		$localize = apply_filters( 'wcf_js_localize', $localize );
+
+		$localize_script  = '<!-- script to print the admin localized variables -->';
+		$localize_script .= '<script type="text/javascript">';
+		$localize_script .= 'var wcf = ' . wp_json_encode( $localize ) . ';';
+		$localize_script .= '</script>';
+
+		echo $localize_script;
+
 		$screen = get_current_screen();
 
 		if (
@@ -75,25 +101,6 @@ class Cartflows_Meta_Fields {
 
 			wp_enqueue_style( 'wcf-admin-meta', CARTFLOWS_URL . 'admin/meta-assets/css/admin-edit.css', array( 'wp-color-picker' ), CARTFLOWS_VER );
 			wp_style_add_data( 'wcf-admin-meta', 'rtl', 'replace' );
-
-			$localize = array(
-				'ajax_url'     => admin_url( 'admin-ajax.php' ),
-				'google_fonts' => CartFlows_Font_Families::get_google_fonts(),
-				'system_fonts' => CartFlows_Font_Families::get_system_fonts(),
-				'font_weights' => array(
-					'100' => __( 'Thin 100', 'cartflows' ),
-					'200' => __( 'Extra-Light 200', 'cartflows' ),
-					'300' => __( 'Light 300', 'cartflows' ),
-					'400' => __( 'Normal 400', 'cartflows' ),
-					'500' => __( 'Medium 500', 'cartflows' ),
-					'600' => __( 'Semi-Bold 600', 'cartflows' ),
-					'700' => __( 'Bold 700', 'cartflows' ),
-					'800' => __( 'Extra-Bold 800', 'cartflows' ),
-					'900' => __( 'Ultra-Bold 900', 'cartflows' ),
-				),
-			);
-
-			wp_localize_script( 'jquery', 'wcf', apply_filters( 'wcf_js_localize', $localize ) );
 
 			do_action( 'cartflows_admin_meta_scripts' );
 		}

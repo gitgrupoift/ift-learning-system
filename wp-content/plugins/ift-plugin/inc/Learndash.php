@@ -193,12 +193,14 @@ class Learndash {
      */
     public function add_tabs($tabs) {
         
-        $tabs['description'] = array(
-            'id'      => 'description',
-			'icon'    => 'ld-icon-assignment',
-			'label'   => __( 'Descrição', 'ift-plugin' ),
-			'content' => self::description_tab(),
-		);
+        if (get_post_type(get_the_ID()) == 'sfwd-courses') {
+            $tabs['description'] = array(
+                'id'      => 'description',
+                'icon'    => 'ld-icon-assignment',
+                'label'   => __( 'Descrição', 'ift-plugin' ),
+                'content' => self::description_tab(),
+            );
+        }
         if ($this->current_user_has_role('lecturer')) {
             if(get_field('apresentacao_ficheiro')) {
             $tabs['instructor'] = array(

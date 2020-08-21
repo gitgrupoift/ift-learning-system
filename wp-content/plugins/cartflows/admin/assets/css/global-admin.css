@@ -51,6 +51,10 @@
  * Step Meta - All Page Css
  */
 
+.edit-post-layout .interface-interface-skeleton__content{
+   background-color: #fff;
+}
+
 .post-type-cartflows_step #delete-action {
     display: none;
 }
@@ -359,6 +363,7 @@
     color: #fff;
 }
 
+.wcf-flow-steps-meta-box .wcf-step-badge,
 .wcf-flow-steps-meta-box .wcf-new-step-badge,
 .wcf-flow-steps-meta-box .wcf-step-wrap .wcf-step .wcf-flow-badge,
 .wcf-flow-steps-meta-box .wcf-step-wrap.active .wcf-step .wcf-flow-badge{
@@ -372,6 +377,15 @@
     margin-left: 10px;
     text-align: center;
     vertical-align: middle;
+}
+
+.wcf-flow-steps-meta-box .wcf-abtest-control-badge {
+    background: #f16334;
+    color: #fff;
+}
+.wcf-flow-steps-meta-box .wcf-abtest-variation-badge {
+    background: #1e8cbe;
+    color: #fff;
 }
 
 #wcf-flow-settings .inside{
@@ -414,13 +428,13 @@
 }
 
 .wcf-flow-settings .wcf-flow-steps-wrap .wcf-action-button{
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: 1em;
-    line-height: 1em;
+    line-height: 0.9em;
     vertical-align: middle;
     text-align: center;
-    margin-left: 15px;
-    text-decoration: none;
+/*    margin-left: 15px;
+*/    text-decoration: none;
 }
 
 .wcf-flow-settings .wcf-action-button .dashicons{
@@ -432,7 +446,8 @@
 }
 
 .wcf-flow-settings .wcf-flow-steps-wrap .wcf-action-button .wcf-step-act-btn-text {
-    display: inline-block;
+   /* display: inline-block;
+    display: none !important;*/
     line-height: 1.5em;
 }
 
@@ -460,6 +475,7 @@
 }
 
 .wcf-step-wrap {
+    background: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -558,6 +574,11 @@ input[type="text"].error:focus{
 * 5. Upsell Meta Box (#wcf-upsell-settings)
 * ************************************************
 */
+
+.edit-post-meta-boxes-area #poststuff #wcf-checkout-settings h2.hndle{
+    border-bottom: 0px; 
+}
+
 .wcf-repeat-notice,
 #wcf-checkout-settings .wcf-checkout-table .wcf-checkout-style .wcf-cs-fields .wcf-cs-checkbox-field .field-wcf-advance-options-fields{
     border-top: 1px #ddd solid;
@@ -1173,7 +1194,34 @@ input[type="text"].error:focus{
     padding:10px;
 }
 
+/**
+* *******************************
+* A/B testing CSS Start
+* *******************************
+*/
 
+/* Dropdown menu Buttons */
+#wcf-edit-dropdown.wcf-edit-content a.wcf-action-button{
+    padding: 10px 15px;
+    border-left: 1px solid rgba(230, 230, 230, 0.5);
+}
+
+#wcf-edit-dropdown.wcf-edit-content a.wcf-action-button:hover{
+    background: #ffffff;
+    border-left: 1px solid #1e8cbe;
+}
+
+#wcf-edit-dropdown.wcf-edit-content a.wcf-action-button .wcf-step-act-btn-text{
+    margin-left: 5px;
+}
+/* Dropdown menu Buttons */
+
+
+/**
+* *******************************
+* A/B testing CSS End
+* *******************************
+*/
 
 /**
  * ******************************

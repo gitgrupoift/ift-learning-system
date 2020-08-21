@@ -28,23 +28,6 @@ function learndash_notifications_delete_sent_emails_record( $user_id, $course_id
 add_action( 'learndash_update_course_access', 'learndash_notifications_delete_sent_emails_record', 10, 4 );
 
 /**
- * Delete delayed emails in DB when user is enrolled from a course
- *
- * @param int 	$user_id 		ID of user who enroll
- * @param int 	$course_id 		ID of course enrolled into
- * @param array $access_list 	List of users who have access to the course
- * @param bool 	$remove 		True if remove user access from a course | false otherwise
- */
-function learndash_notifications_delete_delayed_emails_when_unenrolled( $user_id, $course_id, $access_list, $remove )
-{
-	if ( $remove === true ) {
-		learndash_notifications_delete_delayed_email_by_user_id_course_id( $user_id, $course_id );
-	}
-}
-
-add_action( 'learndash_update_course_access', 'learndash_notifications_delete_delayed_emails_when_unenrolled', 10, 4 );
-
-/**
  * Check for new scheduled notification when a notification is created or updated
  * @param  int 	  $n_id    ID of the post
  * @param  object $post    WP Post object

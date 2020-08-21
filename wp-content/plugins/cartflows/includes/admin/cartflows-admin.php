@@ -16,7 +16,7 @@
 				</div>
 				<div class="wcf-top-links">
 					<?php
-						esc_attr_e( 'Modernizing WordPress eCommerce!', 'cartflows' );
+						esc_attr_e( 'Generate More Leads & More Sales', 'cartflows' );
 					?>
 				</div>
 			</div>

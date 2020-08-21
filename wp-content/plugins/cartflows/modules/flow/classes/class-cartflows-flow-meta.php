@@ -257,8 +257,10 @@ class Cartflows_Flow_Meta {
 			$flow_id = intval( $_POST['post_id'] );
 			$step_id = intval( $_POST['step_id'] );
 		}
+
 		$result = array(
 			'status' => false,
+			'reload' => false,
 			/* translators: %s flow id */
 			'text'   => sprintf( __( 'Step not deleted for flow - %s', 'cartflows' ), $flow_id ),
 		);
@@ -267,32 +269,52 @@ class Cartflows_Flow_Meta {
 			wp_send_json( $result );
 		}
 
-		wp_delete_post( $step_id, true );
-
 		$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
 
 		if ( ! is_array( $flow_steps ) ) {
 			wp_send_json( $result );
 		}
 
-		foreach ( $flow_steps as $index => $data ) {
+		$is_ab_test = get_post_meta( $step_id, 'wcf-ab-test', true );
 
-			if ( intval( $data['id'] ) === $step_id ) {
-				unset( $flow_steps[ $index ] );
-				break;
+		if ( ! $is_ab_test ) {
+
+			foreach ( $flow_steps as $index => $data ) {
+
+				if ( intval( $data['id'] ) === $step_id ) {
+					unset( $flow_steps[ $index ] );
+					break;
+				}
 			}
+
+			/* Set index order properly */
+			$flow_steps = array_merge( $flow_steps );
+
+			/* Update latest data */
+			update_post_meta( $flow_id, 'wcf-steps', $flow_steps );
+
+			/* Delete step */
+			wp_delete_post( $step_id, true );
+
+			$result = array(
+				'status' => true,
+				'reload' => false,
+				/* translators: %s flow id */
+				'text'   => sprintf( __( 'Step deleted for flow - %s', 'cartflows' ), $flow_id ),
+			);
+
+		} else {
+
+			$result = array(
+				'status' => false,
+				'reload' => false,
+				/* translators: %s flow id */
+				'text'   => sprintf( __( 'This step can not be deleted.', 'cartflows' ), $flow_id ),
+			);
+			/**
+				Action do_action( 'cartflows_step_delete_ab_test', $step_id, $flow_id, $flow_steps );
+			*/
 		}
-
-		/* Set index order properly */
-		$flow_steps = array_merge( $flow_steps );
-
-		update_post_meta( $flow_id, 'wcf-steps', $flow_steps );
-
-		$result = array(
-			'status' => true,
-			/* translators: %s flow id */
-			'text'   => sprintf( __( 'Step deleted for flow - %s', 'cartflows' ), $flow_id ),
-		);
 
 		wp_send_json( $result );
 	}
@@ -326,15 +348,28 @@ class Cartflows_Flow_Meta {
 			wp_send_json( $result );
 		}
 
+		$flow_steps     = get_post_meta( $flow_id, 'wcf-steps', true );
+		$flow_steps_map = array();
+
+		foreach ( $flow_steps as $key => $value ) {
+			$flow_steps_map[ $value['id'] ] = $value;
+		}
+
 		$new_flow_steps = array();
 
 		foreach ( $step_ids as $index => $step_id ) {
 
-			$new_flow_steps[] = array(
-				'id'    => intval( $step_id ),
-				'title' => get_the_title( $step_id ),
-				'type'  => get_post_meta( $step_id, 'wcf-step-type', true ),
-			);
+			$new_flow_step_data = array();
+
+			if ( isset( $flow_steps_map[ $step_id ] ) ) {
+				$new_flow_step_data = $flow_steps_map[ $step_id ];
+			}
+
+			$new_flow_step_data['id']    = intval( $step_id );
+			$new_flow_step_data['title'] = get_the_title( $step_id );
+			$new_flow_step_data['type']  = get_post_meta( $step_id, 'wcf-step-type', true );
+
+			$new_flow_steps[] = $new_flow_step_data;
 		}
 
 		update_post_meta( $flow_id, 'wcf-steps', $new_flow_steps );
@@ -375,12 +410,6 @@ class Cartflows_Flow_Meta {
 
 			wp_enqueue_style( 'wcf-flow-meta', CARTFLOWS_URL . 'admin/assets/css/flow-admin-edit.css', '', CARTFLOWS_VER );
 			wp_style_add_data( 'wcf-flow-meta', 'rtl', 'replace' );
-
-			$localize = array(
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
-			);
-
-			wp_localize_script( 'jquery', 'cartflows', apply_filters( 'wcf_js_localize', $localize ) );
 		}
 	}
 
@@ -680,6 +709,7 @@ class Cartflows_Flow_Meta {
 			'wcf_add_flow_step',
 			'wcf_delete_flow_step',
 			'wcf_reorder_flow_steps',
+			'wcf_clone_flow_step',
 		);
 
 		foreach ( $ajax_actions as $action ) {
@@ -751,6 +781,82 @@ class Cartflows_Flow_Meta {
 
 		// Set gutenberg status here.
 		$this->is_gutenberg_editor_active = true;
+	}
+
+	/**
+	 * Get step action buttons
+	 *
+	 * @param int   $inner_step_id step id.
+	 * @param bool  $ab_test_ui ab test.
+	 * @param array $args ab test array.
+	 * @return array.
+	 */
+	public function get_step_action_buttons( $inner_step_id, $ab_test_ui, $args ) {
+
+		$action_buttons = apply_filters(
+			'cartflows_step_actions',
+			array(
+				'view'    => array(
+					'link'    => get_permalink( $inner_step_id ),
+					'class'   => 'wcf-step-view wcf-action-button wp-ui-text-highlight',
+					'tooltip' => esc_html__( 'View Step', 'cartflows' ),
+					'icon'    => 'dashicons-visibility',
+					'label'   => esc_html__( 'View', 'cartflows' ),
+					'attr'    => array(
+						'target' => '_blank',
+					),
+					'show'    => true,
+				),
+				'edit'    => array(
+					'link'    => get_edit_post_link( $inner_step_id ),
+					'class'   => 'wcf-step-edit wcf-action-button wp-ui-text-highlight',
+					'tooltip' => esc_html__( 'Edit Step', 'cartflows' ),
+					'icon'    => 'dashicons-edit',
+					'label'   => esc_html__( 'Edit', 'cartflows' ),
+					'show'    => true,
+				),
+				'clone'   => array(
+					'link'    => '#',
+					'target'  => '_blank',
+					'class'   => 'wcf-step-clone wcf-action-button wp-ui-text-highlight',
+					'tooltip' => esc_html__( 'Clone Step', 'cartflows' ),
+					'icon'    => 'dashicons-admin-page',
+					'label'   => esc_html__( 'Clone', 'cartflows' ),
+					'attr'    => array(
+						'data-id' => $inner_step_id,
+					),
+					'show'    => _is_cartflows_pro() ? true : false,
+				),
+				'delete'  => array(
+					'link'    => '#',
+					'class'   => 'wcf-step-delete wcf-action-button wp-ui-text-highlight',
+					'tooltip' => esc_html__( 'Delete Step', 'cartflows' ),
+					'icon'    => 'dashicons-trash',
+					'label'   => esc_html__( 'Delete', 'cartflows' ),
+					'attr'    => array(
+						'data-id' => $inner_step_id,
+					),
+					'show'    => true,
+				),
+				'ab-test' => array(
+					'link'    => '#',
+					'class'   => 'wcf-step-abtest wcf-action-button wp-ui-text-highlight',
+					'tooltip' => esc_html__( 'A/B Test', 'cartflows' ),
+					'icon'    => 'dashicons-forms',
+					'label'   => esc_html__( 'A/B Test', 'cartflows' ),
+					'show'    => true,
+					'attr'    => array(
+						'data-id' => $inner_step_id,
+					),
+					'show'    => _is_cartflows_pro() ? true : false,
+				),
+			),
+			$inner_step_id,
+			$ab_test_ui,
+			$args
+		);
+
+		return $action_buttons;
 	}
 }
 

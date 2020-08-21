@@ -240,7 +240,16 @@ class Cartflows_Frontend {
 	 */
 	public function init_actions() {
 
-		$this->set_flow_session();
+		if ( wcf()->utils->is_step_post_type() ) {
+
+			global $post;
+
+			$GLOBALS['wcf_step'] = wcf_get_step( $post->ID );
+
+			do_action( 'cartflows_wp', $post->ID );
+
+			$this->set_flow_session();
+		}
 	}
 
 	/**
@@ -250,33 +259,32 @@ class Cartflows_Frontend {
 	 */
 	public function set_flow_session() {
 
-		if ( wcf()->utils->is_step_post_type() ) {
-			global $wp;
-			add_action( 'wp_head', array( $this, 'noindex_flow' ) );
+		global $wp;
 
-			wcf()->utils->do_not_cache();
+		add_action( 'wp_head', array( $this, 'noindex_flow' ) );
 
-			if ( _is_wcf_thankyou_type() ) {
-				/* Set key to support pixel */
-				if ( isset( $_GET['wcf-key'] ) ) { //phpcs:ignore
+		wcf()->utils->do_not_cache();
 
-					$wcf_key = sanitize_text_field( wp_unslash( $_GET['wcf-key'] ) ); //phpcs:ignore
+		if ( _is_wcf_thankyou_type() ) {
+			/* Set key to support pixel */
+			if ( isset( $_GET['wcf-key'] ) ) { //phpcs:ignore
 
-					$_GET['key']     = $wcf_key;
-					$_REQUEST['key'] = $wcf_key;
-				}
+				$wcf_key = sanitize_text_field( wp_unslash( $_GET['wcf-key'] ) ); //phpcs:ignore
 
-				if ( isset( $_GET['wcf-order'] ) ) { //phpcs:ignore
+				$_GET['key']     = $wcf_key;
+				$_REQUEST['key'] = $wcf_key;
+			}
 
-					$wcf_order = intval( wp_unslash( $_GET['wcf-order'] ) ); //phpcs:ignore
+			if ( isset( $_GET['wcf-order'] ) ) { //phpcs:ignore
 
-					$_GET['order']              = $wcf_order;
-					$_REQUEST['order']          = $wcf_order;
-					$_GET['order-received']     = $wcf_order;
-					$_REQUEST['order-received'] = $wcf_order;
+				$wcf_order = intval( wp_unslash( $_GET['wcf-order'] ) ); //phpcs:ignore
 
-					$wp->set_query_var( 'order-received', $wcf_order );
-				}
+				$_GET['order']              = $wcf_order;
+				$_REQUEST['order']          = $wcf_order;
+				$_GET['order-received']     = $wcf_order;
+				$_REQUEST['order-received'] = $wcf_order;
+
+				$wp->set_query_var( 'order-received', $wcf_order );
 			}
 		}
 	}
@@ -402,32 +410,33 @@ class Cartflows_Frontend {
 	 */
 	public function global_flow_scripts() {
 
-		global $post;
+		global $post, $wcf_step;
 
-		$flow           = get_post_meta( $post->ID, 'wcf-flow-id', true );
-		$current_step   = $post->ID;
+		$flow           = $wcf_step->get_flow_id();
+		$current_step   = $wcf_step->get_current_step();
+		$control_step   = $wcf_step->get_control_step();
 		$next_step_link = '';
 		$compatibility  = Cartflows_Compatibility::get_instance();
 
 		if ( _is_wcf_landing_type() ) {
 
-			$next_step_id   = wcf()->utils->get_next_step_id( $flow, $current_step );
+			$next_step_id   = $wcf_step->get_direct_next_step_id();
 			$next_step_link = get_permalink( $next_step_id );
 		}
 
-		$page_template = get_post_meta( _get_wcf_step_id(), '_wp_page_template', true );
+		$page_template = get_post_meta( $current_step, '_wp_page_template', true );
 
-		$fb_active     = Cartflows_Helper::get_facebook_settings();
-		$wcf_ga_active = Cartflows_Helper::get_google_analytics_settings();
-		$params        = array();
-		$ga_param      = array();
+		$fb_active = Cartflows_Helper::get_facebook_settings();
+		$ga_active = Cartflows_Helper::get_google_analytics_settings();
+		$params    = array();
+		$ga_param  = array();
 
 		if ( 'enable' === $fb_active['facebook_pixel_tracking'] && Cartflows_Loader::get_instance()->is_woo_active ) {
 
 			$params = Cartflows_Helper::prepare_cart_data_fb_response();
 		}
 
-		if ( 'enable' === $wcf_ga_active['enable_google_analytics'] ) {
+		if ( 'enable' === $ga_active['enable_google_analytics'] ) {
 			$ga_param = Cartflows_Tracking::get_ga_items_list();
 		}
 
@@ -437,16 +446,24 @@ class Cartflows_Frontend {
 			'current_theme'    => $compatibility->get_current_theme(),
 			'current_flow'     => $flow,
 			'current_step'     => $current_step,
+			'control_step'     => $control_step,
 			'next_step'        => $next_step_link,
 			'page_template'    => $page_template,
 			'is_checkout_page' => _is_wcf_checkout_type(),
 			'params'           => $params,
 			'fb_active'        => $fb_active,
-			'wcf_ga_active'    => $wcf_ga_active,
+			'wcf_ga_active'    => $ga_active,
 			'ga_param'         => $ga_param,
 		);
 
-		wp_localize_script( 'jquery', 'cartflows', apply_filters( 'global_cartflows_js_localize', $localize ) );
+		$localize = apply_filters( 'global_cartflows_js_localize', $localize );
+
+		$localize_script  = '<!-- script to print the admin localized variables -->';
+		$localize_script .= '<script type="text/javascript">';
+		$localize_script .= 'var cartflows = ' . wp_json_encode( $localize ) . ';';
+		$localize_script .= '</script>';
+
+		echo $localize_script;
 
 		if ( _wcf_supported_template( $page_template ) ) {
 
@@ -595,7 +612,8 @@ class Cartflows_Frontend {
 
 		if ( $optin_id ) {
 
-			$next_step_id = wcf()->flow->get_next_step_id( $order );
+			$wcf_step_obj = wcf_get_step( $optin_id );
+			$next_step_id = $wcf_step_obj->get_direct_next_step_id();
 
 			if ( $next_step_id ) {
 

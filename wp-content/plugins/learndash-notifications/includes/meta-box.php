@@ -247,6 +247,7 @@ function learndash_notifications_get_meta_box_settings() {
 			'help_text' => __( 'How many days this email is delayed after the trigger occurs (default is 0).', 'learndash-notifications' ),
 			'label' => __( 'day(s)', 'learndash-notifications' ),
 			'hide' => 0,
+			'disabled' => 1,
 			'hide_on' => array( 'not_logged_in', 'course_expires', 'course_expires_after' ),
 			'default' => 0,
 			'size' => 2,

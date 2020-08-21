@@ -477,7 +477,8 @@ class Cartflows_Checkout_Markup {
 
 						$cart_item_data = array();
 
-						if ( ! empty( $custom_price ) ) {
+						// Set the Product's custom price even if it is zero. Discount may have applied.
+						if ( $custom_price >= 0 && '' !== $custom_price ) {
 
 							$cart_item_data = array(
 								'custom_price' => $custom_price,

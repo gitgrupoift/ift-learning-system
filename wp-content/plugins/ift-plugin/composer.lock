@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4793c72bd2dd742a1c733dbe2477eb7e",
+    "content-hash": "918ba01af61b1728345411c31ccaa338",
     "packages": [
+        {
+            "name": "bigbluebutton/bigbluebutton-api-php",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bigbluebutton/bigbluebutton-api-php.git",
+                "reference": "fe55f959406dd9dab511e1505c1a6ce568a30f7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bigbluebutton/bigbluebutton-api-php/zipball/fe55f959406dd9dab511e1505c1a6ce568a30f7d",
+                "reference": "fe55f959406dd9dab511e1505c1a6ce568a30f7d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "composer/composer": "1.7.*@dev",
+                "ext-mbstring": "*",
+                "friendsofphp/php-cs-fixer": "2.*",
+                "fzaninotto/faker": "~1.8.0",
+                "php": ">=7.0",
+                "php-coveralls/php-coveralls": "2.1.*",
+                "phpunit/phpunit": "6.*",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BigBlueButton\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ghazi Triki",
+                    "email": "ghazi.nocturne@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "BigBlueButton PHP API Library for PHP",
+            "homepage": "http://bigbluebutton.org/",
+            "keywords": [
+                "api",
+                "bbb",
+                "bigbluebutton"
+            ],
+            "time": "2020-04-02T15:39:35+00:00"
+        },
         {
             "name": "fabpot/goutte",
             "version": "v4.0.0",

@@ -311,27 +311,17 @@ class Cartflows_Flow_Post_Type {
 
 	/**
 	 * Register the admin menu for Custom Layouts
+	 * Add flows submenu
 	 *
 	 * @since 1.0.0
-	 *         Moved the menu under Appearance -> Custom Layouts
-	public function register_admin_menu() {
-		add_submenu_page(
-			CARTFLOWS_SLUG,
-			__( 'Flows', 'wcf' ),
-			__( 'Flows', 'wcf' ),
-			'edit_pages',
-			'edit.php?post_type=' . CARTFLOWS_FLOW_POST_TYPE
-		);
-	}
 	 */
 	public function register_as_submenu() {
-
-		global $submenu;
-
-		$submenu[ CARTFLOWS_SLUG ][0] = array( //phpcs:ignore
+		add_submenu_page(
+			CARTFLOWS_SLUG,
+			__( 'Flows', 'cartflows' ),
 			__( 'Flows', 'cartflows' ),
 			'edit_pages',
-			'edit.php?post_type=' . CARTFLOWS_FLOW_POST_TYPE,
+			'edit.php?post_type=' . CARTFLOWS_FLOW_POST_TYPE
 		);
 	}
 

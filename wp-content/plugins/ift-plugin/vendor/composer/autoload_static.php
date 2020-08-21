@@ -50,6 +50,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         array (
             'Goutte\\' => 7,
         ),
+        'B' => 
+        array (
+            'BigBlueButton\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -132,6 +136,10 @@ class ComposerStaticInit2b7fdce83387d9449eb0e63f0ca11748
         'Goutte\\' => 
         array (
             0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
+        ),
+        'BigBlueButton\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bigbluebutton/bigbluebutton-api-php/src',
         ),
     );
 

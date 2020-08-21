@@ -10,6 +10,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "fabpot/goutte": "^4.0"
+        "fabpot/goutte": "^4.0",
+        "bigbluebutton/bigbluebutton-api-php": "~2.0.0"
     }
 }

@@ -123,8 +123,12 @@ class Cartflows_Flow_Frontend {
 
 		if ( $flow_id ) {
 
-			$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
-			$step_id    = wcf()->utils->get_checkout_id_from_order( $order->get_id() );
+			$step_id = wcf()->utils->get_checkout_id_from_order( $order->get_id() );
+
+			// Get control step and flow steps.
+			$wcf_step_obj = wcf_get_step( $step_id );
+			$flow_steps   = $wcf_step_obj->get_flow_steps();
+			$control_step = $wcf_step_obj->get_control_step();
 
 			if ( is_array( $flow_steps ) ) {
 
@@ -141,7 +145,7 @@ class Cartflows_Flow_Frontend {
 						}
 					} else {
 
-						if ( intval( $data['id'] ) === $step_id ) {
+						if ( intval( $data['id'] ) === $control_step ) {
 
 							$current_step_found = true;
 						}
@@ -169,8 +173,12 @@ class Cartflows_Flow_Frontend {
 
 		if ( $flow_id ) {
 
-			$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
-			$step_id    = wcf()->utils->get_checkout_id_from_order( $order->get_id() );
+			$step_id = wcf()->utils->get_checkout_id_from_order( $order->get_id() );
+
+			// Get control step and flow steps.
+			$wcf_step_obj = wcf_get_step( $step_id );
+			$flow_steps   = $wcf_step_obj->get_flow_steps();
+			$control_step = $wcf_step_obj->get_control_step();
 
 			if ( is_array( $flow_steps ) ) {
 
@@ -187,7 +195,7 @@ class Cartflows_Flow_Frontend {
 						}
 					} else {
 
-						if ( intval( $data['id'] ) === $step_id ) {
+						if ( intval( $data['id'] ) === $control_step ) {
 
 							$current_step_found = true;
 						}
@@ -197,47 +205,6 @@ class Cartflows_Flow_Frontend {
 		}
 
 		return $thankyou_step_id;
-	}
-
-	/**
-	 * Check thank you page exists.
-	 *
-	 * @since 1.0.0
-	 * @param array $order order data.
-	 *
-	 * @return bool
-	 */
-	public function get_next_step_id( $order ) {
-
-		$next_step_id = false;
-
-		$flow_id = wcf()->utils->get_flow_id_from_order( $order->get_id() );
-
-		if ( $flow_id ) {
-
-			$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
-			$step_id    = wcf()->utils->get_optin_id_from_order( $order->get_id() );
-
-			if ( is_array( $flow_steps ) ) {
-
-				foreach ( $flow_steps as $index => $data ) {
-
-					if ( intval( $data['id'] ) === $step_id ) {
-
-						$next_step_index = $index + 1;
-
-						if ( isset( $flow_steps[ $next_step_index ] ) ) {
-
-							$next_step_id = intval( $flow_steps[ $next_step_index ]['id'] );
-						}
-
-						break;
-					}
-				}
-			}
-		}
-
-		return $next_step_id;
 	}
 }
 

@@ -316,3 +316,34 @@
 .wcf_permalink_settings .form-field-desc p{
 	word-break: break-all;
 }
+
+/***************************************************************
+ * CartFlows Home
+ ****************************************************************/
+
+/* Stat box */
+.wcf-col-33 {
+	width: 33.33%;
+}
+.wcf-col-50 {
+	width: 50%;
+}
+.wcf-stats-grid-container {
+	align-content: space-between;
+	border-top: 1px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
+}
+.wcf-stats-box {
+    padding: 15px;
+	box-sizing: border-box;
+	border-right: 1px solid #dfdfdf;
+}
+.wcf-stats-box:last-child {
+    border: 0;
+}
+/*.wcf-stats-grid-container:last-of-type {
+    border-top: 0;
+}*/
+.wcf-stats-buttons {
+	padding: 15px 0;
+}
