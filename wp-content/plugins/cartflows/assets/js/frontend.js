@@ -50,7 +50,7 @@
 				fbq('init', facebook_pixel);
 				fbq('track', 'PageView', {'plugin': 'CartFlows'});
 				if ('enable' === initial_checkout_event) {
-					if ('1' === is_checkout_page) {
+					if ( true === is_checkout_page) {
 						fbq('track', 'AddToCart', cartflows.params);
 						fbq('track', 'InitiateCheckout', cartflows.params);
 					}
@@ -92,7 +92,7 @@
 				//Common page view event for cartflows pages.
 				gtag('event', 'page_view', { send_to: google_a_id, non_interaction : true } );
 			}
-			if( "1" === is_checkout_page  ){
+			if( true === is_checkout_page  ){
 				var param = cartflows.ga_param;
 					
 					var event_data = { 

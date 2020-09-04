@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Rachel Gibson",
+    "component_1": 85,
+    "component_2": 66,
+    "component_3": 65,
+    "grade": 72
+  },
+  {
+    "name": "Justin Nelson",
+    "component_1": 75,
+    "component_2": false,
+    "component_3": 100,
+    "grade": 91
+  },
+  {
+    "name": "Rebecca Carr",
+    "component_1": false,
+    "component_2": 74,
+    "component_3": 83,
+    "grade": 85
+  },
+  {
+    "name": "Rebecca Wheeler",
+    "component_1": 62,
+    "component_2": 74,
+    "component_3": 76,
+    "grade": 70
+  }
+]

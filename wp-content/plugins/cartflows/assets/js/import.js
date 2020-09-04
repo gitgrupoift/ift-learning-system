@@ -1313,7 +1313,7 @@ var CartFlowsAjaxQueue = (function() {
 						btn.removeClass('importing updating-message')
 							.text('Import Failed!');
 
-						$('#wcf-start-from-scratch .inner').append( '<div class="wcf-notice-wrap"><div class="notice notice-warning"><p>Upgrade to Pro for adding more than one '+step_type.charAt(0).toUpperCase()+step_type.slice(1)+' step.</p></div></div>' );
+						$('#wcf-start-from-scratch .inner').append( '<div class="wcf-notice-wrap"><div class="notice notice-warning wcf-notice"><p>Upgrade to Pro for adding more than one '+step_type.charAt(0).toUpperCase()+step_type.slice(1)+' step.</p></div></div>' );
 
 						return;
 					}

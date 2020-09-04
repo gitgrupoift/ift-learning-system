@@ -91,8 +91,15 @@ class Cartflows_Optin_Markup {
 	public function remove_login_actions() {
 
 		if ( _is_wcf_doing_optin_ajax() ) {
+
+			if ( isset( $_POST['billing_email'] ) && ! empty( $_POST['billing_email'] ) ) { //phpcs:ignore
+
+				if ( email_exists( sanitize_email( wp_unslash( $_POST['billing_email'] ) ) ) ) { // phpcs:ignore
+					add_filter( 'woocommerce_checkout_registration_required', '__return_false' );
+				}
+			}
+
 			add_filter( 'woocommerce_checkout_registration_enabled', '__return_false' );
-			add_filter( 'woocommerce_checkout_registration_required', '__return_false' );
 		}
 	}
 

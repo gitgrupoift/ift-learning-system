@@ -152,7 +152,7 @@ if ( ! class_exists( 'CartFlows_Importer' ) ) :
 				return;
 			}
 
-			if ( isset( $_POST['cartflows-action-nonce'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cartflows-action-nonce'] ) ), 'cartflows-action-nonce' ) ) {
+			if ( ! isset( $_POST['cartflows-action-nonce'] ) || empty( $_POST['cartflows-action-nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cartflows-action-nonce'] ) ), 'cartflows-action-nonce' ) ) {
 				return;
 			}
 
@@ -262,7 +262,7 @@ if ( ! class_exists( 'CartFlows_Importer' ) ) :
 				return;
 			}
 
-			if ( isset( $_POST['cartflows-action-nonce'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cartflows-action-nonce'] ) ), 'cartflows-action-nonce' ) ) {
+			if ( ! isset( $_POST['cartflows-action-nonce'] ) || empty( $_POST['cartflows-action-nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cartflows-action-nonce'] ) ), 'cartflows-action-nonce' ) ) {
 				return;
 			}
 

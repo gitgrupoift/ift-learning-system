@@ -3,8 +3,8 @@ Contributors: brainstormforce, wpcrafter
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: woocommerce, funnel builder, sales funnels, elementor, beaver builder
 Requires at least: 4.4
-Tested up to: 5.4.2
-Stable tag: 1.5.15
+Tested up to: 5.5
+Stable tag: 1.5.16
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -126,6 +126,12 @@ Glad you asked! Most normal users have less than 3 funnels on a single website, 
 5. Easily edit anything with your page builder.
 
 == Changelog ==
+
+= Version 1.5.16 - Tuesday, 25th August 2020 =
+* Improvement: Hardened the security of the plugin.
+* Fix: User's account was not getting created from the Optin step.
+* Fix: Import notice was not displaying if the import step limit is over.
+* Fix: Facebook Pixel and Google Analytics tracking events were not getting triggered in some cases.
 
 = Version 1.5.15 - Wednesday, 12th August 2020 =
 * Improvement: Added Split Testing compatibility for a future release of CartFlows Pro.

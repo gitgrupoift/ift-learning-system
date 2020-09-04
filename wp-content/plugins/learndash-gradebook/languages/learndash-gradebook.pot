@@ -1,0 +1,1352 @@
+# Copyright (C) 2020 LearnDash_Gradebook
+# This file is distributed under the same license as the LearnDash_Gradebook package.
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnDash_Gradebook\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: learndash-gradebook-bootstrapper.php:58
+msgid "Minimum PHP version of 5.3.0 required. Current version is %s. Please contact your system administrator to upgrade PHP to its latest version."
+msgstr ""
+
+#: learndash-gradebook-bootstrapper.php:67
+msgid "Minimum WordPress version of 4.8.0 required. Current version is %s. Please contact your system administrator to upgrade WordPress to its latest version."
+msgstr ""
+
+#: learndash-gradebook-bootstrapper.php:75
+msgid "LearnDash LMS must be installed and activated."
+msgstr ""
+
+#: learndash-gradebook-bootstrapper.php:87
+msgid "LearnDash LMS must be at least version 2.3.0. Current version is %s."
+msgstr ""
+
+#: learndash-gradebook-bootstrapper.php:129
+msgid "%sLearnDash - Gradebook%s could not load because of the following errors:"
+msgstr ""
+
+#: learndash-gradebook.php:279
+msgid "Delete Row"
+msgstr ""
+
+#: learndash-gradebook.php:280
+msgid "Delete Column"
+msgstr ""
+
+#: learndash-gradebook.php:283
+msgid "No select options."
+msgstr ""
+
+#: learndash-gradebook.php:284
+msgid "The results could not be loaded"
+msgstr ""
+
+#. translators: %d is number of characters over input limit
+#: learndash-gradebook.php:286
+msgid "Please delete %d character"
+msgstr ""
+
+#. translators: %d is number of characters under input limit
+#: learndash-gradebook.php:288
+msgid "Please enter %d or more characters"
+msgstr ""
+
+#: learndash-gradebook.php:289
+msgid "Loading more results..."
+msgstr ""
+
+#. translators: %d is maximum number items selectable
+#: learndash-gradebook.php:291
+msgid "You can only select %d item"
+msgstr ""
+
+#: learndash-gradebook.php:292
+msgid "No results found"
+msgstr ""
+
+#: learndash-gradebook.php:293
+msgid "Searching..."
+msgstr ""
+
+#: learndash-gradebook.php:296
+msgid "New Row"
+msgstr ""
+
+#: learndash-gradebook.php:297
+msgid "Are you sure you want to delete this element?"
+msgstr ""
+
+#: learndash-gradebook.php:298, learndash-gradebook.php:346
+msgid "Delete"
+msgstr ""
+
+#: learndash-gradebook.php:299, admin/views/html-user-grades-page.php:364
+msgid "Add"
+msgstr ""
+
+#: learndash-gradebook.php:302
+msgid "Upload / Choose Media"
+msgstr ""
+
+#: learndash-gradebook.php:303
+msgid "Remove Media"
+msgstr ""
+
+#: learndash-gradebook.php:304
+msgid "Choose Media"
+msgstr ""
+
+#: learndash-gradebook.php:307
+msgid "No options available."
+msgstr ""
+
+#: learndash-gradebook.php:327, learndash-gradebook.php:337
+msgctxt "%s is the Plugin Name"
+msgid "Need some help with %s?"
+msgstr ""
+
+#: learndash-gradebook.php:328
+msgid "Subject"
+msgstr ""
+
+#: learndash-gradebook.php:329
+msgid "Message"
+msgstr ""
+
+#: learndash-gradebook.php:330
+msgid "Send"
+msgstr ""
+
+#: learndash-gradebook.php:331
+msgctxt "Both %s are used to place HTML for the <a> in the message"
+msgid "We make other cool plugins and share updates and special offers to anyone who %ssubscribes here%s."
+msgstr ""
+
+#: learndash-gradebook.php:332
+msgctxt "Only used by legacy browsers for JavaScript Form Validation"
+msgid "This field is required"
+msgstr ""
+
+#: learndash-gradebook.php:333
+msgid "Support message succesfully sent!"
+msgstr ""
+
+#: learndash-gradebook.php:334
+msgid "Could not send support message."
+msgstr ""
+
+#: learndash-gradebook.php:338
+msgid "Premium support is disabled. Please register your product and activate your license for this website to enable."
+msgstr ""
+
+#: learndash-gradebook.php:342
+msgctxt "%s is the Plugin Name"
+msgid "%s License"
+msgstr ""
+
+#: learndash-gradebook.php:343
+msgid "Deactivate"
+msgstr ""
+
+#: learndash-gradebook.php:344
+msgid "Activate"
+msgstr ""
+
+#: learndash-gradebook.php:345
+msgid "Delete and Deactivate"
+msgstr ""
+
+#: learndash-gradebook.php:347
+msgid "License Active"
+msgstr ""
+
+#: learndash-gradebook.php:348
+msgid "License Inactive"
+msgstr ""
+
+#: learndash-gradebook.php:349
+msgid "Save and Activate"
+msgstr ""
+
+#: learndash-gradebook.php:352
+msgctxt "%s is the Plugin Name"
+msgid "Register your copy of %s now to receive automatic updates and support."
+msgstr ""
+
+#: learndash-gradebook.php:353
+msgctxt "Both %s are used to place HTML for the <a> in the message"
+msgid "If you do not have a license key, you can %1$spurchase one%2$s."
+msgstr ""
+
+#: learndash-gradebook.php:355
+msgctxt "%s is the Plugin Name"
+msgid "%s license successfully activated."
+msgstr ""
+
+#: learndash-gradebook.php:356
+msgctxt "%s is the Plugin Name"
+msgid "%s license successfully deleted."
+msgstr ""
+
+#: learndash-gradebook.php:358
+msgctxt "%s is the Plugin Name"
+msgid "Error: could not deactivate the license for %s"
+msgstr ""
+
+#: learndash-gradebook.php:359
+msgctxt "%s is the Plugin Name"
+msgid "%s license successfully deactivated."
+msgstr ""
+
+#: learndash-gradebook.php:362
+msgctxt "%s is a localized timestamp"
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: learndash-gradebook.php:363
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: learndash-gradebook.php:364
+msgid "Invalid license."
+msgstr ""
+
+#: learndash-gradebook.php:365
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: learndash-gradebook.php:366
+msgctxt "%s is the Plugin Name"
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: learndash-gradebook.php:367
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: learndash-gradebook.php:368
+msgctxt "%s is the Plugin Name followed by the Store URL"
+msgid "%s cannot communicate with %s for License Key Validation. Please check your server configuration settings."
+msgstr ""
+
+#: learndash-gradebook.php:369
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: learndash-gradebook.php:372
+msgid "Enable Beta Releases"
+msgstr ""
+
+#: learndash-gradebook.php:373
+msgid "Beta Releases should not be considered as Stable. Enabling this on your Production Site is done at your own risk."
+msgstr ""
+
+#: learndash-gradebook.php:374
+msgctxt "%s is the Plugin Name"
+msgid "Beta Releases for %s enabled."
+msgstr ""
+
+#: learndash-gradebook.php:375
+msgctxt "%s is the Plugin Name"
+msgid "Beta Releases for %s disabled."
+msgstr ""
+
+#: learndash-gradebook.php:466
+msgid "No Users"
+msgstr ""
+
+#: learndash-gradebook.php:467
+msgid "- No Name -"
+msgstr ""
+
+#: learndash-gradebook.php:468
+msgid "Select a User"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:65, admin/class-ld-gb-admin-pages.php:66, admin/class-ld-gb-admin-pages.php:78, admin/class-ld-gb-admin-pages.php:79, admin/class-ld-gb-admin-pages.php:125, admin/class-ld-gb-admin-pages.php:245, admin/class-ld-gb-admin-pages.php:283, admin/class-ld-gb-adminpage-gradebook.php:112
+msgid "Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:89, admin/class-ld-gb-admin-pages.php:90
+msgid "LearnDash Gradebook Settings"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:99, admin/class-ld-gb-admin-pages.php:100, admin/class-ld-gb-quickstart.php:478, admin/class-ld-gb-quickstart.php:496
+msgid "User Grades"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:239
+msgid "Gradebook %s"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:296
+msgid "Manage Gradebooks"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:309
+msgid "Settings %s"
+msgstr ""
+
+#: admin/class-ld-gb-admin-pages.php:315, admin/class-ld-gb-quickstart.php:442, core/post-types/class-ld-gb-posttype-gradebook.php:244
+msgid "Settings"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-gradebook.php:70
+msgid "Error in loading information."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:124
+msgid "Click here if you would like to restart the Quickstart guide."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:131
+msgid "Copy this link and give it to any users (who have access) that you would like to have restart the Quickstart guide."
+msgstr ""
+
+#. translators: First %s is Quiz and second is Quizzes
+#: admin/class-ld-gb-adminpage-settings.php:143
+msgid "How the %s scores will be determined for students who have re-taken any %s. Either the best of all the scores or the most recently taken score."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:149
+msgid "Best"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:150
+msgid "Most Recent"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:157
+msgid "Grade Display Mode"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:163
+msgid "Letter"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:164
+msgid "Percentage"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:171
+msgid "Grade Rounding Precision"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:172
+msgid "The number of decimal places a grade will round to."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:183
+msgid "Grade Rounding Mode"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:189
+msgid "Round Up"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:190
+msgid "Round Down"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:191
+msgid "Closest"
+msgstr ""
+
+#. translators: First %s is Topic, second %s is Lesson, and third %s is Assignments
+#: admin/class-ld-gb-adminpage-settings.php:199
+msgid "Use the containing %s/%s name for %s in Gradebooks"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:200
+msgid "This will not apply when editing a Gradebook."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:210
+msgid "Disable Manual Grades"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:211
+msgid "If you do not want to allow Manual Grades to be entered, turn this option on."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:221
+msgid "Disable Component Grade Override"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:222
+msgid "If you do not want to allow overriding the Grade of a Component, turn this option on."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:232
+msgid "Gradebook Safe Mode"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:233
+msgid "If you are having issues loading the Gradebook, try enabling Safe Mode."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:243
+msgid "Restart Quickstart Guide"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:319
+msgid "View the Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:320
+msgid "Allow extra roles to view the Gradebook. Administrators and Group Leaders are always able to view the Gradebook."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:332
+msgid "Create and Edit their own Gradebooks"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:333
+msgid "Allow extra roles to edit and create their own Gradebooks. Administrators are able to edit any Gradebook."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:345
+msgid "Quickstart Guide Visibility"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:346
+msgid "Who can see the Quickstart Guide. NOTE: Some roles are not listed because they do not have enough capability to view LearnDash pages."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:402
+msgid "Letter Grade Scale"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:403, admin/class-ld-gb-adminpage-settings.php:427
+msgid "On save, this will automatically be sorted by grade."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:426
+msgid "Grade Color Scale"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:453, admin/class-ld-gb-adminpage-settings.php:538
+msgid "Licensing"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:525
+msgid "Licensing %s"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:532
+msgid "Please activate your license for ongoing updates and support."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:544
+msgid "General"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:545
+msgid "General Settings"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:550
+msgid "Roles"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:555
+msgid "Styles"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:864
+msgid "Letter Grade Scale requires a 0% grade to exist. It has been added manually."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-settings.php:878
+msgid "Grade Color Scale requires a 0% grade to exist. It has been added manually."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:67, admin/views/html-user-grades-page.php:368
+msgid "Change"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:68, admin/views/html-user-grades-page.php:382
+msgid "Close"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:69
+msgid "Could not edit grade."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:70
+msgid "Please fill out Name and Score"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:71
+msgid "Score can only contain numbers"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:72
+msgid "Processing"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:73
+msgid "Add Grade"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:74
+msgid "Are you sure you want to delete this grade?"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:75, admin/views/html-user-grades-page.php:124
+msgid "Override"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:76, admin/views/html-user-grades-page.php:120
+msgid "Modify"
+msgstr ""
+
+#. translators: First %s is user name and second %s is Gradebook name
+#: admin/class-ld-gb-adminpage-user-grades.php:98
+msgid "%s's grades for %s"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:158
+msgid "Could not edit grade. Error #1000"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:176
+msgid "Manual Grades have been disabled."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:227
+msgid "Could not edit grade. Error #1001"
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:249
+msgid "Overriding Component Grades has been disabled."
+msgstr ""
+
+#: admin/class-ld-gb-adminpage-user-grades.php:262
+msgid "Could not update component grade. Error #1000"
+msgstr ""
+
+#. translators: First %s is Quiz
+#. translators: First %s is Assignment
+#. translators: First %s is Lesson
+#. translators: First %s is Topic
+#: admin/class-ld-gb-adminpage-user-grades.php:329, admin/class-ld-gb-adminpage-user-grades.php:346, admin/class-ld-gb-adminpage-user-grades.php:363, admin/class-ld-gb-adminpage-user-grades.php:380
+msgid "Successfully edited %s grade."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:96
+msgid "My Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:187, admin/class-ld-gb-quickstart.php:246, admin/class-ld-gb-quickstart.php:282
+msgid "Quizzes"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:193, admin/class-ld-gb-quickstart.php:299
+msgid "Assignments"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:243, admin/includes/class-ld-gb-gradebook-list-table.php:92, admin/includes/class-ld-gb-gradebook-list-table.php:108
+msgid "User"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:245, admin/includes/class-ld-gb-gradebook-list-table.php:109, templates/report-card/overall-grade.php:17
+msgid "Overall Grade"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:247
+msgid "Test 1"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:248
+msgid "Reading Assignments"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:288
+msgid "Quiz A"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:293
+msgid "Quiz B"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:305
+msgid "Assignment A"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:310
+msgid "Takehome Assignment"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:329
+msgid "Next"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:330
+msgid "Previous"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:331
+msgid "Could not disable quickstart."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:332
+msgid "This feature is disabled for this Quickstart Guide."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:352, admin/class-ld-gb-quickstart.php:591
+msgid "LearnDash Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:354
+msgid "Congratulations on installing LearnDash Gradebook!"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:355
+msgid "To begin the Quick Start guide, click the button below. Otherwise you may click \"Dismiss\" to exit the guide at any time."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:361
+msgid "Begin Guide"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:370, admin/views/html-no-gradebooks.php:21
+msgid "Create a Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:372
+msgid "The first thing to do is create a Gradebook. You can have as many as you like, even if only just one."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:373
+msgid "Note: All data on this page is just an example and will not be saved."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:374, admin/class-ld-gb-quickstart.php:391, admin/class-ld-gb-quickstart.php:410, admin/class-ld-gb-quickstart.php:428, admin/class-ld-gb-quickstart.php:447, admin/class-ld-gb-quickstart.php:464, admin/class-ld-gb-quickstart.php:482, admin/class-ld-gb-quickstart.php:501, admin/class-ld-gb-quickstart.php:520, admin/class-ld-gb-quickstart.php:540, admin/class-ld-gb-quickstart.php:559, admin/class-ld-gb-quickstart.php:577
+msgid "Further instructions"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:388
+msgid "Gradebook Title"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:390
+msgid "First thing's first, give your Gradebook a title."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:405, core/post-types/class-ld-gb-posttype-gradebook.php:209
+msgid "Grading"
+msgstr ""
+
+#. translators: First %s is Course and second %s is Courses
+#: admin/class-ld-gb-quickstart.php:408
+msgid "Next you need to setup what will count towards the students' grade for this Gradebook. You can either select a %s or set it to \"All %s\"."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:409
+msgid "You will then need to add Components. Each Component is something that will have a grade factored and be visible to the students. EG: Biology, Tests, etc."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:424, core/post-types/class-ld-gb-posttype-gradebook.php:236
+msgid "Weighting"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:426
+msgid "By default, all Components have an equal weight in final grade calculations. You may change this to a a weighted system, where each Component can have a custom weight."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:427
+msgid "To do so, simply turn it on here and then enter the weight for each Component."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:444
+msgid "Here you can find some extra settings."
+msgstr ""
+
+#. translators: First %s is Lessons, second %s is Topics, third %s is Lessons, and fourth %s is Topics
+#: admin/class-ld-gb-quickstart.php:446
+msgid "Completion Grading applies to %s and %s. By default, they will not count towards the final grade until they are marked complete, at which point they count for a 100% grade. If you set this to \"Fail until completion\", then any %s and %s not yet marked complete will count for a 0% grade."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:461, core/post-types/class-ld-gb-posttype-gradebook.php:216
+msgid "Report Card"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:463
+msgid "Copy and paste this shortcode and use it to insert a Report Card for this Gradebook on any page."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:480
+msgid "Use this user search for to quickly find users and view or edit their grades for this Gradebook."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:481
+msgid "The next Quickstart page will be the user Grades for your profile, which you would get to using this user search tool."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:498
+msgid "This is the page you will use to edit any user's grades."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:499
+msgid "Above you can see some example data containing a couple of Grading Components as well as some example grades."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:500
+msgid "Normally when using this tool you would be able to add special statuses to each grade as well as add any number of Manual Grades. Manual Grades can be anything you want and contain any grade score. This could be a takehome project, attendance, etc."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:516
+msgid "Gradebook Settings"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:518
+msgid "This is where you manage the settings for this Gradebook plugin."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:519
+msgid "You can make any changes desired and then click \"Save Changes\" at the bottom of this page."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:535
+msgid "License"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:537
+msgid "It is very important that you enter and activate your license immediatley. If you do not, you will not have access to important LearnDash Gradebook plugin updates."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:538
+msgid "If you have it, enter your license NOW. This guide will continue once finished."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:539, admin/class-ld-gb-quickstart.php:558
+msgid "Click \"Next\" when you are ready to move on."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:555
+msgid "Support"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:557
+msgid "Once you register LearnDash - Gradebook, you will have access to premium support here."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:573
+msgid "The Gradebook"
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:575
+msgid "This is where you view the Gradebook. The Gradebook is the report on all of your students and all of their respective grades."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:576
+msgid "Note: All above data is just an example and will not be saved."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:593
+msgid "Congratulations! You have completed the LearnDash Gradebook Quickstart tutorial."
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:595
+msgid "If you need any more help, please visit the %splugin documentation page%s. "
+msgstr ""
+
+#: admin/class-ld-gb-quickstart.php:599
+msgid "Click \"Dismiss\" to exit the Quickstart guide."
+msgstr ""
+
+#: admin/class-ld-gb-welcome-page.php:39, admin/class-ld-gb-welcome-page.php:40
+msgid "Welcome to LearnDash Gradebook"
+msgstr ""
+
+#: core/class-ld-gb-upgrade.php:121
+msgid "LearnDash Gradebook needs to upgrade the database. It is strongly recommended you backup your database first."
+msgstr ""
+
+#: core/class-ld-gb-upgrade.php:124
+msgid "Upgrade"
+msgstr ""
+
+#: core/class-ld-gb-upgrade.php:141
+msgid "LearnDash Gradebook has successfully upgraded!"
+msgstr ""
+
+#: core/ld-gb-functions.php:155
+msgid "Manual Grade"
+msgstr ""
+
+#: core/ld-gb-functions.php:159
+msgid "Error: Invalid Component"
+msgstr ""
+
+#: core/ld-gb-functions.php:251
+msgid "Incomplete"
+msgstr ""
+
+#: core/ld-gb-functions.php:255
+msgid "Pending Approval"
+msgstr ""
+
+#: core/ld-gb-functions.php:677, core/ld-gb-functions.php:892
+msgid "A user_id must be provided."
+msgstr ""
+
+#: core/ld-gb-functions.php:687, core/ld-gb-functions.php:902
+msgid "A component index must be provided."
+msgstr ""
+
+#: core/ld-gb-functions.php:697, core/ld-gb-functions.php:912
+msgid "A gradebook id must be provided."
+msgstr ""
+
+#: core/ld-gb-functions.php:714
+msgid "Grade must be a valid number greater than 0"
+msgstr ""
+
+#: core/ld-gb-functions.php:736
+msgid "A Manual Grade of the same name already exists in this Component."
+msgstr ""
+
+#: core/ld-gb-functions.php:784
+msgid "No change detected."
+msgstr ""
+
+#: core/ld-gb-functions.php:798
+msgid "Could not save manual grade. Error #1002"
+msgstr ""
+
+#: core/ld-gb-functions.php:827
+msgid "Successfully changed manual grade"
+msgstr ""
+
+#: core/ld-gb-functions.php:854
+msgid "Successfully added manual grade"
+msgstr ""
+
+#: core/ld-gb-functions.php:922
+msgid "The name of the Manual Grade you want to delete must be defined."
+msgstr ""
+
+#: core/ld-gb-functions.php:943
+msgid "Could not delete manual grade. Error #1002"
+msgstr ""
+
+#: core/ld-gb-functions.php:961
+msgid "Could not delete manual grade. Error #1001"
+msgstr ""
+
+#: core/ld-gb-functions.php:986
+msgid "Successfully deleted manual grade"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:93, core/post-types/class-ld-gb-posttype-gradebook.php:227
+msgid "Users"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:228, core/post-types/class-ld-gb-posttype-gradebook.php:268
+msgid "View/Edit User Grades"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:320
+msgid "No Gradebooks Created Yet"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:337
+msgid "- All Users -"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:358
+msgid "Showing Gradebook for:"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:363
+msgid "No Groups Available"
+msgstr ""
+
+#: admin/includes/class-ld-gb-gradebook-list-table.php:526
+msgid "No users to show."
+msgstr ""
+
+#: admin/views/html-dashboard-widget-no-gradebooks.php:11
+msgid "There are no Gradebooks to view yet."
+msgstr ""
+
+#. translators: %s is name of the current Gradebook
+#: admin/views/html-dashboard-widget.php:19
+msgid "Showing Gradebook for: %s"
+msgstr ""
+
+#: admin/views/html-dashboard-widget.php:27
+msgid "Change Gradebook to:"
+msgstr ""
+
+#: admin/views/html-dashboard-widget.php:42
+msgid "Change Group to:"
+msgstr ""
+
+#: admin/views/html-dashboard-widget.php:85
+msgid "For more detailed information on all users, visit the %sGradebook Page%s."
+msgstr ""
+
+#: admin/views/html-gradebook.php:26
+msgid "Search Users"
+msgstr ""
+
+#: admin/views/html-no-gradebooks.php:15
+msgid "You don't have any Gradebooks created yet."
+msgstr ""
+
+#: admin/views/html-no-gradebooks.php:26
+msgid "Once you create one or more Gradebooks, you can view the student report for each one here."
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:62
+msgid "Return to the Gradebook"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:66
+msgid "Return to the Gradebook Editing"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:81
+msgid "To go back to the Gradebook %sclick here%s."
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:93
+msgid "Grade for %s"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:140
+msgid "Weight: %s"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:150, admin/views/html-user-grades-page.php:378
+msgid "Cancel"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:167
+msgid "Submit"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:171, admin/views/html-user-grades-page.php:252
+msgid "Remove"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:184
+msgid "Grade is being overridden."
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:194, admin/views/html-user-grades-page.php:315, core/post-types/class-ld-gb-posttype-gradebook.php:377, core/post-types/class-ld-gb-posttype-gradebook.php:668, core/post-types/views/metabox-gradebook-weighting.php:45, templates/report-card/component/grades-header.php:20
+msgid "Name"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:198, admin/views/html-user-grades-page.php:326, templates/report-card/component/grades-header.php:24
+msgid "Score"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:245
+msgid "Edit"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:337
+msgid "Status"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:343
+msgid "No Special Status"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:347
+msgid "- No Special Status -"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:350
+msgid "- No Statuses -"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:397
+msgid "No Grades Yet"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:407
+msgid "Add Manual Grade"
+msgstr ""
+
+#: admin/views/html-user-grades-page.php:414
+msgid "No Components setup."
+msgstr ""
+
+#. translators: %s is the current plugin version.
+#: admin/views/html-welcome-page.php:19
+msgid "Welcome to LearnDash - Gradebook %s"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:26
+msgid "Thank you for updating to the latest version! LearnDash - Gradebook 1.2.0 introduces the ability to have Multiple Gradebooks, among many other features."
+msgstr ""
+
+#: admin/views/html-welcome-page.php:31
+msgid "What's New"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:35
+msgid "Credits"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:43
+msgid "Enjoy the power and flexibility of having Multiple Gradebooks."
+msgstr ""
+
+#. translators: First %s is Course, second %s is Quizzes. Then the remainder %s are for wrapping a link to the Manage Gradebooks page
+#: admin/views/html-welcome-page.php:50
+msgid "Ever wanted to have a Gradebook for a specific %s? Or maybe a Gradebook for all of your %s just because? Well, now you can! You can create as many custom Gradebooks as your heart desires. Head on over to the %sManage Gradebooks%s section and get started now!"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:59
+msgid "If you're upgrading from an old version of LearnDash - Gradebook, you will see a Gradebook already created for you that contains all of your previous settings."
+msgstr ""
+
+#: admin/views/html-welcome-page.php:65
+msgid "What Else?"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:70
+msgid "Premium Support from Your Website"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:74
+msgid "It's now easier than ever to get in touch with our support team. There is a new Support Sidebar that shows up on all of the Gradebook Setting's pages. Once you activate your license with the website, you will be able to send support messages directly from the sidebar."
+msgstr ""
+
+#. translators: First %s is Assignments
+#: admin/views/html-welcome-page.php:82
+msgid "Integrate more tightly with LearnDash LMS %s."
+msgstr ""
+
+#. translators: First %s is Assignment, second %s is Assignment, third %s is Assignments, fourth %s is Lesson, fifth %s is Topic, and sixth %s is Assignment
+#: admin/views/html-welcome-page.php:89
+msgid "Previously, you had to add %s points into a new Gradebook field on each %s. Now you can simply use the native \"Points\" system for %s! Simply enable points from the %s or %s you desire, and then each %s will have a place to enter points, which will automatically average into a 0-100% scale."
+msgstr ""
+
+#: admin/views/html-welcome-page.php:100
+msgid "LearnDash - Gradebook is created by the team at Real Big Plugins."
+msgstr ""
+
+#: admin/views/html-welcome-page.php:108
+msgid "Gradebook Lead Developer"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:115, admin/views/html-welcome-page.php:122
+msgid "Gradebook Contributor"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:128
+msgid "A very special thanks to Grant Aldrich for helping push this release, as well as keen insight from a professional in the academic field."
+msgstr ""
+
+#: admin/views/html-welcome-page.php:131
+msgid "External Libraries"
+msgstr ""
+
+#: admin/views/html-welcome-page.php:143
+msgid "Go to Gradebooks page &rarr;"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:106
+msgctxt "post type general name"
+msgid "Gradebooks"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:107
+msgctxt "post type singular name"
+msgid "Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:108
+msgctxt "admin menu"
+msgid "Gradebooks"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:109
+msgctxt "add new on admin bar"
+msgid "Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:110
+msgctxt "gradebook"
+msgid "Add New"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:111
+msgid "Add New Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:112
+msgid "New Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:113
+msgid "Edit Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:114
+msgid "View Gradebook"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:115
+msgid "All Gradebooks"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:116
+msgid "Search Gradebooks"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:117
+msgid "Parent Gradebooks:"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:118
+msgid "No gradebooks found."
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:119
+msgid "No gradebooks found in Trash."
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:131
+msgid "Student Gradebook for LearnDash LMS."
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:280
+msgid "In order to show a report card for this Gradebook on your site, copy and paste the following shortcode wherever you like."
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:305
+msgid "At least one Component must exist."
+msgstr ""
+
+#. translators: First %s is Course, second %s is Courses, third is Courses, forth is Lessons, fifth is Topics, and sixth is Courses
+#: core/post-types/class-ld-gb-posttype-gradebook.php:323
+msgid "Select a %s to use for this Gradebook. If \"All %s\" is selected, all active %s will count towards the Gradebook grade. Note: %s and %s cannot be graded when \"All %s\" is selected."
+msgstr ""
+
+#. translators: First %s is Courses
+#. translators: First %s is Courses
+#. translators: First %s is Courses
+#. translators: First %s is Lessons
+#. translators: First %s is Topics
+#. translators: First %s is Quizzes
+#. translators: First %s is Assignments
+#: core/post-types/class-ld-gb-posttype-gradebook.php:326, core/post-types/class-ld-gb-posttype-gradebook.php:330, core/post-types/class-ld-gb-posttype-gradebook.php:336, core/post-types/class-ld-gb-posttype-gradebook.php:418, core/post-types/class-ld-gb-posttype-gradebook.php:464, core/post-types/class-ld-gb-posttype-gradebook.php:503, core/post-types/class-ld-gb-posttype-gradebook.php:545
+msgid "All %s"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:328
+msgid "Make a Selection"
+msgstr ""
+
+#. translators: First %s is Courses
+#. translators: First %s is Lessons
+#. translators: First %s is Topics
+#. translators: First %s is Quizzes
+#. translators: First %s is Assignments
+#: core/post-types/class-ld-gb-posttype-gradebook.php:338, core/post-types/class-ld-gb-posttype-gradebook.php:410, core/post-types/class-ld-gb-posttype-gradebook.php:456, core/post-types/class-ld-gb-posttype-gradebook.php:495, core/post-types/class-ld-gb-posttype-gradebook.php:537
+msgid "No %s Available"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:366
+msgid "Components"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:368
+msgid "Delete Component"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:369
+msgid "Are you sure you want to delete this Component? This cannot be undone"
+msgstr ""
+
+#. translators: First %s is Lesson
+#. translators: First %s is Topic
+#. translators: First %s is Quiz
+#. translators: First %s is Assignment
+#: core/post-types/class-ld-gb-posttype-gradebook.php:385, core/post-types/class-ld-gb-posttype-gradebook.php:430, core/post-types/class-ld-gb-posttype-gradebook.php:476, core/post-types/class-ld-gb-posttype-gradebook.php:515
+msgid "%s Grading"
+msgstr ""
+
+#. translators: First %s is Lessons
+#. translators: First %s is Topics
+#: core/post-types/class-ld-gb-posttype-gradebook.php:393, core/post-types/class-ld-gb-posttype-gradebook.php:439
+msgid "%s will be graded based on completion."
+msgstr ""
+
+#. translators: First %s is Lessons
+#. translators: First %s is Lessons
+#. translators: First %s is Topics
+#. translators: First %s is Topics
+#. translators: First %s is Quizzes
+#. translators: First %s is Quizzes
+#. translators: First %s is Assignments
+#. translators: First %s is Assignments
+#. translators: First %s is Lessons
+#. translators: First %s is Lessons
+#. translators: First %s is Topics
+#. translators: First %s is Topics
+#: core/post-types/class-ld-gb-posttype-gradebook.php:405, core/post-types/class-ld-gb-posttype-gradebook.php:408, core/post-types/class-ld-gb-posttype-gradebook.php:451, core/post-types/class-ld-gb-posttype-gradebook.php:454, core/post-types/class-ld-gb-posttype-gradebook.php:490, core/post-types/class-ld-gb-posttype-gradebook.php:493, core/post-types/class-ld-gb-posttype-gradebook.php:532, core/post-types/class-ld-gb-posttype-gradebook.php:535, core/post-types/class-ld-gb-posttype-gradebook.php:574, core/post-types/class-ld-gb-posttype-gradebook.php:580, core/post-types/class-ld-gb-posttype-gradebook.php:601, core/post-types/class-ld-gb-posttype-gradebook.php:607
+msgid "No %s"
+msgstr ""
+
+#. translators: First %s is Lessons and second %s is Lessons
+#. translators: First %s is Topics and second %s is Topics
+#. translators: First %s is Quizzes and second %s is Quizzes
+#: core/post-types/class-ld-gb-posttype-gradebook.php:422, core/post-types/class-ld-gb-posttype-gradebook.php:468, core/post-types/class-ld-gb-posttype-gradebook.php:507
+msgid "Enabling this will cause all %s to be factored into the Component grade. This will override any %s you have selected and instead include everything."
+msgstr ""
+
+#. translators: First %s is Topics
+#: core/post-types/class-ld-gb-posttype-gradebook.php:437
+msgid "%s"
+msgstr ""
+
+#. translators: First %s is Assignments, second %s is Assignments, third is Lessons, and forth is Topics
+#: core/post-types/class-ld-gb-posttype-gradebook.php:549
+msgid "Enabling this will cause all %s to be factored into the Component grade. This will override any %s you have selected, as well as any %s or %s, and instead include everything."
+msgstr ""
+
+#. translators: First %s is Assignments and second %s is Lessons
+#. translators: First %s is Assignments and second %s is Topics
+#: core/post-types/class-ld-gb-posttype-gradebook.php:563, core/post-types/class-ld-gb-posttype-gradebook.php:590
+msgid "%s from %s"
+msgstr ""
+
+#. translators: First %s is Assignments, second %s is Lessons, third is Assignments, and forth is Assignments
+#. translators: First %s is Assignments, second %s is Topics, third is Assignments, and forth is Assignments
+#: core/post-types/class-ld-gb-posttype-gradebook.php:576, core/post-types/class-ld-gb-posttype-gradebook.php:603
+msgid "Only %s belonging to these %s will be graded. This will override any selected %s. Also, if \"All %s\" is selected, this will be overriden."
+msgstr ""
+
+#. translators: First %s is Lessons and second %s is Assignment
+#. translators: First %s is Topics and second %s is Assignment
+#: core/post-types/class-ld-gb-posttype-gradebook.php:582, core/post-types/class-ld-gb-posttype-gradebook.php:609
+msgid "No %s with %s Uploads Available"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:648
+msgid "Completion Grading"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:651
+msgid "Only count on completion"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:652
+msgid "Fail until completion"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:659
+msgid "Include All Users In Gradebook"
+msgstr ""
+
+#. translators: First %s is Course, second %s is Course, and third is Course
+#: core/post-types/class-ld-gb-posttype-gradebook.php:661
+msgid "If this Gradebook has a %s set, only students enrolled in that %s will show in the Gradebook. If you would to show all users in this Gradebook, despite a %s selected, enable this."
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:672
+msgid "Grade"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:676
+msgid "Date Created"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:680
+msgid "Date Modified"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:687
+msgid "Ascending"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:691
+msgid "Descending"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:699
+msgid "Order Component Resources By"
+msgstr ""
+
+#: core/post-types/class-ld-gb-posttype-gradebook.php:706
+msgid "Component Resource Order"
+msgstr ""
+
+#: core/shortcodes/class-ld-gb-sc-overallgrade.php:44
+msgid "Please log in to view your overall grade."
+msgstr ""
+
+#: core/shortcodes/class-ld-gb-sc-overallgrade.php:63
+msgid "You must define a Gradebook ID."
+msgstr ""
+
+#: core/shortcodes/class-ld-gb-sc-overallgrade.php:72, core/shortcodes/class-ld-gb-sc-reportcard.php:149
+msgid "Cannot get user."
+msgstr ""
+
+#: core/shortcodes/class-ld-gb-sc-reportcard.php:44
+msgid "Please log in to view your report card."
+msgstr ""
+
+#: templates/overall-grade/overall-grade-error.php:14
+msgid "Sorry, but your Overall Grade cannot be displayed right now. Please try again later."
+msgstr ""
+
+#: templates/report-card/expand-collapse.php:17
+msgid "Expand All"
+msgstr ""
+
+#: templates/report-card/expand-collapse.php:19
+msgid "Collapse All"
+msgstr ""
+
+#: templates/report-card/report-card-error.php:16
+msgid "Sorry, but the Report Card cannot be displayed right now. Please try again later."
+msgstr ""
+
+#: templates/report-card/title.php:16
+msgid "Report Card for: %s"
+msgstr ""
+
+#. translators: %s is the current weight inside some HTML
+#: core/post-types/views/metabox-gradebook-weighting.php:20
+msgid "Total weights must equal 100. Current weight is %s."
+msgstr ""
+
+#: core/post-types/views/metabox-gradebook-weighting.php:31
+msgid "Enable Gradebook Weighting"
+msgstr ""
+
+#: core/post-types/views/metabox-gradebook-weighting.php:32
+msgid "If enabled, each Component will have a custom weight used when factoring the final grade. If disabled, all Components will have equal weights."
+msgstr ""
+
+#: core/post-types/views/metabox-gradebook-weighting.php:49
+msgid "Weight %"
+msgstr ""
+
+#: templates/report-card/component/grades-header.php:16
+msgid "Type"
+msgstr ""
+
+#. translators: %1$s is the component name, %2$d is the component weight
+#: templates/report-card/component/title.php:19
+msgid "%1$s (Weight - %2$d%%)"
+msgstr ""

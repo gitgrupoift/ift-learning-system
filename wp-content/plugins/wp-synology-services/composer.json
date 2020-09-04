@@ -1,0 +1,18 @@
+{
+    "name": "projetoshift/wp-synology-services",
+    "description": "Connects with Synology services and APIs, integrates and provides a number of features for Synology customers who manage with Wordpress websites and apps.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Projeto Shift",
+            "email": "geral@meuppt.pt"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SynologyPS\\": "includes/",
+            "SynologyPS\\Api\\": "includes/api/"
+        }
+    }
+}

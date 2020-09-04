@@ -1,3 +1,9 @@
+Version 1.5.16 - Tuesday, 25th August 2020
+- Improvement: Hardened the security of the plugin.
+- Fix: User's account was not getting created from the Optin step.
+- Fix: Import notice was not displaying if the import step limit is over.
+- Fix: Facebook Pixel and Google Analytics tracking events were not getting triggered in some cases.
+
 Version 1.5.15 - Wednesday, 12th August 2020
 - Improvement: Added Split Testing compatibility for a future release of CartFlows Pro.
 - Improvement: Added WordPress 5.5 Compatibility.
